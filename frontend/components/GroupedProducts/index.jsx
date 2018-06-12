@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import List from '@shopgate/pwa-common/components/List';
+import Product from './components/Product';
 import connect from './connector';
 import styles from './style';
 
@@ -14,11 +16,13 @@ const GroupedProducts = ({ products }) => {
   }
 
   return (
-    <ul className={styles.container}>
-      {products.map(({ name, id }) => (
-        <li key={id}>{name}</li>
+    <List className={styles.productList}>
+      {products.map(product => (
+        <List.Item className={styles.productListItem} key={product.id}>
+          <Product product={product} />
+        </List.Item>
       ))}
-    </ul>
+    </List>
   );
 };
 
