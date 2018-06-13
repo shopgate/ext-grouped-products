@@ -40,7 +40,8 @@ export const getProductChildren = () => (dispatch, getState) => {
       // TODO remove when availability is implemented
       // istanbul ignore next
       if (process.env.NODE_ENV !== 'test') {
-        const { featureImageUrl } = getCurrentBaseProduct(state);
+        const { featuredImageUrl } = getCurrentBaseProduct(state);
+
         products = products.map((product) => {
           if (!product.availability) {
             // eslint-disable-next-line no-param-reassign
@@ -53,11 +54,11 @@ export const getProductChildren = () => (dispatch, getState) => {
             };
           }
 
-          if (!product.featureImageUrl) {
+          if (!product.featuredImageUrl) {
             // eslint-disable-next-line no-param-reassign
             product = {
               ...product,
-              featureImageUrl,
+              featuredImageUrl,
             };
           }
 
