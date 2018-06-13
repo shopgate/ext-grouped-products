@@ -146,10 +146,6 @@ class AddToCartPicker extends Component {
 
     return (
       <Fragment>
-        <style>
-          { /* Inject a new value for the sheet header border radius */ }
-          { styles.sheetOverwrites }
-        </style>
         <BasePicker
           items={pickerItems}
           className={styles.buttonContainer}

@@ -1,7 +1,5 @@
 import set from 'lodash/set';
-import get from 'lodash/get';
 import cloneDeep from 'lodash/cloneDeep';
-import merge from 'lodash/merge';
 
 const availability = {
   text: 'Lorem Ipsum',
@@ -24,6 +22,7 @@ const price = {
   unitPriceStriked: 0,
   msrp: 0,
   discount: 0,
+  info: '',
 };
 
 const product = {
@@ -35,15 +34,28 @@ const product = {
   stock,
 };
 
-let discounted = cloneDeep({
+// eslint-disable-next-line import/no-mutable-exports
+let discountedMsrp = cloneDeep({
   ...product,
   id: '4711',
-  name: 'A discounted product',
+  name: 'A discounted product with msrp',
 });
 
-discounted = set(discounted, ['price', 'msrp'], 10.0);
-discounted = set(discounted, ['price', 'discount'], 50);
+discountedMsrp = set(discountedMsrp, ['price', 'msrp'], 10.0);
+discountedMsrp = set(discountedMsrp, ['price', 'discount'], 50);
 
+// eslint-disable-next-line import/no-mutable-exports
+let discountedStrike = cloneDeep({
+  ...product,
+  id: '4711',
+  name: 'A discounted product with stike price and info',
+});
+
+discountedStrike = set(discountedStrike, ['price', 'unitPriceStriked'], 10.0);
+discountedStrike = set(discountedStrike, ['price', 'discount'], 50);
+discountedStrike = set(discountedStrike, ['price', 'info'], '5 EUR / kg');
+
+// eslint-disable-next-line import/no-mutable-exports
 let notOrderable = cloneDeep({
   ...product,
   id: '1234',
@@ -69,6 +81,7 @@ const mockedState = {
 export {
   mockedState,
   product as mockedProduct,
-  discounted as mockedDiscountedProduct,
+  discountedMsrp as mockedMsrpProduct,
+  discountedStrike as mockedStrikePriceProduct,
   notOrderable as mockedNotOrderableProduct,
 };

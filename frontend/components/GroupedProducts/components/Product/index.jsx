@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import I18n from '@shopgate/pwa-common/components/I18n';
 import Grid from '@shopgate/pwa-common/components/Grid';
 import Image from '@shopgate/pwa-common/components/Image';
 import Ellipsis from '@shopgate/pwa-common/components/Ellipsis';
@@ -9,25 +10,24 @@ import PriceStriked from '@shopgate/pwa-ui-shared/PriceStriked';
 import PriceInfo from '@shopgate/pwa-ui-shared/PriceInfo';
 import AddToCartPicker from '../../../AddToCartPicker';
 import styles from './style';
-import connect from './connector';
 
 /**
  * The Product component to render a single grouped product.
  * @param {Object} props The component props.
  * @return {JSX}
  */
-const Product = ({ baseProduct, product }) => (
+const Product = ({ product }) => (
   <Grid>
     <Grid.Item shrink={0} className={styles.imageContainer}>
-      <Image itemProp="image" src={baseProduct.featuredImageUrl} alt={product.name} />
+      <Image itemProp="image" src={product.featuredImageUrl} alt={product.name} />
     </Grid.Item>
     <Grid.Item grow={4} className={styles.metaContainer}>
       <Ellipsis className={styles.headline}>{product.name}</Ellipsis>
       <Availability
         className={styles.availability}
         showWhenAvailable
-        text="Mocked Available"
-        state="ok"
+        text={product.availability.text}
+        state={product.availability.state}
       />
     </Grid.Item>
     <Grid.Item grow={1} className={styles.buttonContainer}>
@@ -37,11 +37,18 @@ const Product = ({ baseProduct, product }) => (
         productId={product.id}
       />
       {(product.price.msrp > 0 && product.price.unitPrice !== product.price.msrp) && (
-      <PriceStriked
-        value={product.price.msrp}
-        currency={product.price.currency}
-        className={styles.priceStriked}
-      />
+        <div className={styles.priceStrikedContainer}>
+          <I18n.Text
+            className={styles.msrpLabel}
+            string="price.msrp"
+          />
+          <PriceStriked
+            value={product.price.msrp}
+            currency={product.price.currency}
+            className={styles.priceStriked}
+          />
+        </div>
+
       )}
       {(!product.price.msrp && product.price.unitPriceStriked > 0) && (
         <PriceStriked
@@ -65,8 +72,7 @@ const Product = ({ baseProduct, product }) => (
 );
 
 Product.propTypes = {
-  baseProduct: PropTypes.shape().isRequired,
   product: PropTypes.shape().isRequired,
 };
 
-export default connect(Product);
+export default Product;

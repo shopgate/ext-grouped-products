@@ -1,7 +1,7 @@
 import { css } from 'glamor';
 import { themeConfig } from '@shopgate/pwa-common/helpers/config';
 
-const { variables } = themeConfig;
+const { colors, variables } = themeConfig;
 
 const imageContainer = css({
   width: 80,
@@ -30,6 +30,16 @@ const price = css({
   justifyContent: 'flex-end',
 }).toString();
 
+const msrpLabel = css({
+  color: colors.shade3,
+  fontSize: '0.875rem',
+  marginRight: variables.gap.small / 2,
+}).toString();
+
+const priceStrikedContainer = css({
+  display: 'inline-flex',
+}).toString();
+
 const priceStriked = css({
   fontSize: '0.875rem',
 }).toString();
@@ -45,6 +55,8 @@ export default {
   headline,
   availability,
   price,
+  priceStrikedContainer,
+  msrpLabel,
   priceStriked,
   priceInfo,
 };
