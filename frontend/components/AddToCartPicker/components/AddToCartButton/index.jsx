@@ -1,4 +1,5 @@
 import AddToCartButton from '@shopgate/pwa-ui-shared/AddToCartButton';
+import { logger } from '@shopgate/pwa-core/helpers';
 
 /**
  * The PickerAddToCartButton component.
@@ -9,7 +10,13 @@ class PickerAddToCartButton extends AddToCartButton {
       return;
     }
 
-    this.props.openList();
+    const { openList } = this.props;
+
+    if (typeof openList === 'function') {
+      this.props.openList();
+    } else {
+      logger.error('No openList() prop provided');
+    }
   }
 
   /**
