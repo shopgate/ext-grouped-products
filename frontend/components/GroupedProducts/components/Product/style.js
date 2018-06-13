@@ -1,6 +1,13 @@
 import { css } from 'glamor';
+import { themeConfig } from '@shopgate/pwa-common/helpers/config';
+
+const { variables } = themeConfig;
 
 const imageContainer = css({
+  width: 80,
+  minHeight: 80,
+  boxSizing: 'content-box',
+  paddingRight: variables.gap.small,
 }).toString();
 
 const metaContainer = css({
@@ -8,6 +15,7 @@ const metaContainer = css({
 
 const buttonContainer = css({
   textAlign: 'right',
+  paddingLeft: variables.gap.small,
 }).toString();
 
 const headline = css({
@@ -15,7 +23,7 @@ const headline = css({
 }).toString();
 
 const availability = css({
-  fontSize: '0.75rem',
+  fontSize: '0.875rem',
 }).toString();
 
 const price = css({

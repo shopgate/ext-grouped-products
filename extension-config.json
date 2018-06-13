@@ -25,5 +25,12 @@
     }
   ],
   "configuration": {
+    "maxQuantityPickerEntries": {
+      "type": "static",
+      "destination": "frontend",
+      "params": {
+        "value": 50
+      }
+    }
   }
 }

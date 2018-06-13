@@ -8,8 +8,8 @@ const productList = css({
 }).toString();
 
 const productListItem = css({
-  marginTop: 2,
-  marginBottom: 2,
+  marginTop: 3,
+  marginBottom: 3,
   padding: variables.gap.big,
   position: 'relative',
   background: colors.light,

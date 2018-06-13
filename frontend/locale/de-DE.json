@@ -1,5 +1,7 @@
 {
-  "myExt": {
-    "dummy": "Dummy"
+  "grouped_products": {
+    "add_to_cart_picker": {
+      "headline": "Menge"
+    }
   }
 }
