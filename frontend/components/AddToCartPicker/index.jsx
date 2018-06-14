@@ -4,6 +4,7 @@ import BasePicker from '@shopgate/pwa-common/components/Picker';
 import Sheet from '@shopgate/pwa-ui-shared/Sheet';
 import List from './components/List';
 import AddToCartButton from './components/AddToCartButton';
+import { maxQuantityPickerEntries } from '../../config';
 import styles from './style';
 import connect from './connector';
 
@@ -13,7 +14,6 @@ import connect from './connector';
 class AddToCartPicker extends Component {
   static propTypes = {
     addProductToCart: PropTypes.func.isRequired,
-    maxEntries: PropTypes.number.isRequired,
     productId: PropTypes.string.isRequired,
     stock: PropTypes.shape({
       ignoreQuantity: PropTypes.bool,
@@ -24,6 +24,7 @@ class AddToCartPicker extends Component {
       maxOrderQuantity: PropTypes.number,
     }).isRequired,
     clickDelay: PropTypes.number,
+    maxEntries: PropTypes.number,
   };
 
   static defaultProps = {
@@ -32,6 +33,7 @@ class AddToCartPicker extends Component {
      * to let animations complete first.
      */
     clickDelay: 150,
+    maxEntries: maxQuantityPickerEntries,
   };
 
   static contextTypes = {
@@ -59,7 +61,7 @@ class AddToCartPicker extends Component {
 
     // Prepare a list component for the BasePicker
     this.listComponent = ({
-      items, onSelect, onClose,
+      items, onSelect,
     }) => (
       <List>
         {items.map(item => (
@@ -69,7 +71,6 @@ class AddToCartPicker extends Component {
             onClick={() => {
                 setTimeout(() => {
                   onSelect(item.value);
-                  onClose();
                 }, this.props.clickDelay);
               }}
           />
@@ -93,14 +94,16 @@ class AddToCartPicker extends Component {
     const items = [];
 
     // Prepare the picker entries - for now min- and maxOrderQuantity is not considered.
-    for (let value = 1; value <= maxEntries; value += 1) {
+    for (let i = 0; i <= maxEntries; i += 1) {
       if (ignoreQuantity) {
         if (items.length === maxEntries) {
           break;
         }
-      } else if (items.length === maxEntries || value >= quantity) {
+      } else if (items.length === maxEntries || i >= quantity) {
         break;
       }
+
+      const value = i + 1;
 
       items.push({
         label: `${value}`,
@@ -133,9 +136,9 @@ class AddToCartPicker extends Component {
     const pickerItems = this.createPickerItems();
     const isOrderable = orderable || pickerItems.length > 0;
 
-    // Setup required and dynamic button props.s
+    // Setup required and dynamic button props.
     const buttonProps = {
-      handleAddToCart: () => {},
+      handleAddToCart: /* istanbul ignore next */ () => {},
       isDisabled: !isOrderable,
       isLoading: false,
       addedQuantity: this.state.addedQuantity,

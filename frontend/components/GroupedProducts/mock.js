@@ -8,7 +8,7 @@ const availability = {
 
 const stock = {
   ignoreQuantity: false,
-  quantity: 30,
+  quantity: 4,
   info: 'Info',
   orderable: true,
   minOrderQuantity: 1,
@@ -65,23 +65,20 @@ let notOrderable = cloneDeep({
 notOrderable = set(notOrderable, ['stock', 'orderable'], false);
 notOrderable = set(notOrderable, ['stock', 'quantity'], 0);
 
-const mockedState = {
-  product: {
-    currentProduct: {
-      productId: '1337',
-    },
-    productsById: {
-      1337: {
-        productData: product,
-      },
-    },
-  },
-};
+// eslint-disable-next-line import/no-mutable-exports
+let ignoredQuantity = cloneDeep({
+  ...product,
+  id: '1234',
+  name: 'A product with low and ignored quantity',
+});
+
+ignoredQuantity = set(ignoredQuantity, ['stock', 'ignoreQuantity'], true);
+ignoredQuantity = set(ignoredQuantity, ['stock', 'quantity'], 30);
 
 export {
-  mockedState,
   product as mockedProduct,
   discountedMsrp as mockedMsrpProduct,
   discountedStrike as mockedStrikePriceProduct,
   notOrderable as mockedNotOrderableProduct,
+  ignoredQuantity as mockedLowQuantityProduct,
 };

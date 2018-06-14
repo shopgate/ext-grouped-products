@@ -38,7 +38,7 @@ exports[`<Product /> should render a msrp discounted product as expected 1`] = `
           "maxOrderQuantity": 1000,
           "minOrderQuantity": 1,
           "orderable": true,
-          "quantity": 30,
+          "quantity": 4,
         },
       }
     }
@@ -155,7 +155,7 @@ exports[`<Product /> should render a msrp discounted product as expected 1`] = `
                   "maxOrderQuantity": 1000,
                   "minOrderQuantity": 1,
                   "orderable": true,
-                  "quantity": 30,
+                  "quantity": 4,
                 }
               }
             >
@@ -171,7 +171,7 @@ exports[`<Product /> should render a msrp discounted product as expected 1`] = `
                     "maxOrderQuantity": 1000,
                     "minOrderQuantity": 1,
                     "orderable": true,
-                    "quantity": 30,
+                    "quantity": 4,
                   }
                 }
               >
@@ -209,106 +209,6 @@ exports[`<Product /> should render a msrp discounted product as expected 1`] = `
                       Object {
                         "label": "4",
                         "value": 4,
-                      },
-                      Object {
-                        "label": "5",
-                        "value": 5,
-                      },
-                      Object {
-                        "label": "6",
-                        "value": 6,
-                      },
-                      Object {
-                        "label": "7",
-                        "value": 7,
-                      },
-                      Object {
-                        "label": "8",
-                        "value": 8,
-                      },
-                      Object {
-                        "label": "9",
-                        "value": 9,
-                      },
-                      Object {
-                        "label": "10",
-                        "value": 10,
-                      },
-                      Object {
-                        "label": "11",
-                        "value": 11,
-                      },
-                      Object {
-                        "label": "12",
-                        "value": 12,
-                      },
-                      Object {
-                        "label": "13",
-                        "value": 13,
-                      },
-                      Object {
-                        "label": "14",
-                        "value": 14,
-                      },
-                      Object {
-                        "label": "15",
-                        "value": 15,
-                      },
-                      Object {
-                        "label": "16",
-                        "value": 16,
-                      },
-                      Object {
-                        "label": "17",
-                        "value": 17,
-                      },
-                      Object {
-                        "label": "18",
-                        "value": 18,
-                      },
-                      Object {
-                        "label": "19",
-                        "value": 19,
-                      },
-                      Object {
-                        "label": "20",
-                        "value": 20,
-                      },
-                      Object {
-                        "label": "21",
-                        "value": 21,
-                      },
-                      Object {
-                        "label": "22",
-                        "value": 22,
-                      },
-                      Object {
-                        "label": "23",
-                        "value": 23,
-                      },
-                      Object {
-                        "label": "24",
-                        "value": 24,
-                      },
-                      Object {
-                        "label": "25",
-                        "value": 25,
-                      },
-                      Object {
-                        "label": "26",
-                        "value": 26,
-                      },
-                      Object {
-                        "label": "27",
-                        "value": 27,
-                      },
-                      Object {
-                        "label": "28",
-                        "value": 28,
-                      },
-                      Object {
-                        "label": "29",
-                        "value": 29,
                       },
                     ]
                   }
@@ -888,7 +788,7 @@ exports[`<Product /> should render a regular product as expected 1`] = `
           "maxOrderQuantity": 1000,
           "minOrderQuantity": 1,
           "orderable": true,
-          "quantity": 30,
+          "quantity": 4,
         },
       }
     }
@@ -1005,7 +905,7 @@ exports[`<Product /> should render a regular product as expected 1`] = `
                   "maxOrderQuantity": 1000,
                   "minOrderQuantity": 1,
                   "orderable": true,
-                  "quantity": 30,
+                  "quantity": 4,
                 }
               }
             >
@@ -1021,7 +921,7 @@ exports[`<Product /> should render a regular product as expected 1`] = `
                     "maxOrderQuantity": 1000,
                     "minOrderQuantity": 1,
                     "orderable": true,
-                    "quantity": 30,
+                    "quantity": 4,
                   }
                 }
               >
@@ -1059,106 +959,6 @@ exports[`<Product /> should render a regular product as expected 1`] = `
                       Object {
                         "label": "4",
                         "value": 4,
-                      },
-                      Object {
-                        "label": "5",
-                        "value": 5,
-                      },
-                      Object {
-                        "label": "6",
-                        "value": 6,
-                      },
-                      Object {
-                        "label": "7",
-                        "value": 7,
-                      },
-                      Object {
-                        "label": "8",
-                        "value": 8,
-                      },
-                      Object {
-                        "label": "9",
-                        "value": 9,
-                      },
-                      Object {
-                        "label": "10",
-                        "value": 10,
-                      },
-                      Object {
-                        "label": "11",
-                        "value": 11,
-                      },
-                      Object {
-                        "label": "12",
-                        "value": 12,
-                      },
-                      Object {
-                        "label": "13",
-                        "value": 13,
-                      },
-                      Object {
-                        "label": "14",
-                        "value": 14,
-                      },
-                      Object {
-                        "label": "15",
-                        "value": 15,
-                      },
-                      Object {
-                        "label": "16",
-                        "value": 16,
-                      },
-                      Object {
-                        "label": "17",
-                        "value": 17,
-                      },
-                      Object {
-                        "label": "18",
-                        "value": 18,
-                      },
-                      Object {
-                        "label": "19",
-                        "value": 19,
-                      },
-                      Object {
-                        "label": "20",
-                        "value": 20,
-                      },
-                      Object {
-                        "label": "21",
-                        "value": 21,
-                      },
-                      Object {
-                        "label": "22",
-                        "value": 22,
-                      },
-                      Object {
-                        "label": "23",
-                        "value": 23,
-                      },
-                      Object {
-                        "label": "24",
-                        "value": 24,
-                      },
-                      Object {
-                        "label": "25",
-                        "value": 25,
-                      },
-                      Object {
-                        "label": "26",
-                        "value": 26,
-                      },
-                      Object {
-                        "label": "27",
-                        "value": 27,
-                      },
-                      Object {
-                        "label": "28",
-                        "value": 28,
-                      },
-                      Object {
-                        "label": "29",
-                        "value": 29,
                       },
                     ]
                   }
@@ -1352,7 +1152,7 @@ exports[`<Product /> should render a strike price discounted product as expected
           "maxOrderQuantity": 1000,
           "minOrderQuantity": 1,
           "orderable": true,
-          "quantity": 30,
+          "quantity": 4,
         },
       }
     }
@@ -1469,7 +1269,7 @@ exports[`<Product /> should render a strike price discounted product as expected
                   "maxOrderQuantity": 1000,
                   "minOrderQuantity": 1,
                   "orderable": true,
-                  "quantity": 30,
+                  "quantity": 4,
                 }
               }
             >
@@ -1485,7 +1285,7 @@ exports[`<Product /> should render a strike price discounted product as expected
                     "maxOrderQuantity": 1000,
                     "minOrderQuantity": 1,
                     "orderable": true,
-                    "quantity": 30,
+                    "quantity": 4,
                   }
                 }
               >
@@ -1523,106 +1323,6 @@ exports[`<Product /> should render a strike price discounted product as expected
                       Object {
                         "label": "4",
                         "value": 4,
-                      },
-                      Object {
-                        "label": "5",
-                        "value": 5,
-                      },
-                      Object {
-                        "label": "6",
-                        "value": 6,
-                      },
-                      Object {
-                        "label": "7",
-                        "value": 7,
-                      },
-                      Object {
-                        "label": "8",
-                        "value": 8,
-                      },
-                      Object {
-                        "label": "9",
-                        "value": 9,
-                      },
-                      Object {
-                        "label": "10",
-                        "value": 10,
-                      },
-                      Object {
-                        "label": "11",
-                        "value": 11,
-                      },
-                      Object {
-                        "label": "12",
-                        "value": 12,
-                      },
-                      Object {
-                        "label": "13",
-                        "value": 13,
-                      },
-                      Object {
-                        "label": "14",
-                        "value": 14,
-                      },
-                      Object {
-                        "label": "15",
-                        "value": 15,
-                      },
-                      Object {
-                        "label": "16",
-                        "value": 16,
-                      },
-                      Object {
-                        "label": "17",
-                        "value": 17,
-                      },
-                      Object {
-                        "label": "18",
-                        "value": 18,
-                      },
-                      Object {
-                        "label": "19",
-                        "value": 19,
-                      },
-                      Object {
-                        "label": "20",
-                        "value": 20,
-                      },
-                      Object {
-                        "label": "21",
-                        "value": 21,
-                      },
-                      Object {
-                        "label": "22",
-                        "value": 22,
-                      },
-                      Object {
-                        "label": "23",
-                        "value": 23,
-                      },
-                      Object {
-                        "label": "24",
-                        "value": 24,
-                      },
-                      Object {
-                        "label": "25",
-                        "value": 25,
-                      },
-                      Object {
-                        "label": "26",
-                        "value": 26,
-                      },
-                      Object {
-                        "label": "27",
-                        "value": 27,
-                      },
-                      Object {
-                        "label": "28",
-                        "value": 28,
-                      },
-                      Object {
-                        "label": "29",
-                        "value": 29,
                       },
                     ]
                   }

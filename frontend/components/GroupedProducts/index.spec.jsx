@@ -4,7 +4,6 @@ import configureStore from 'redux-mock-store';
 import { mount } from 'enzyme';
 import mockRenderOptions from '@shopgate/pwa-common/helpers/mocks/mockRenderOptions';
 import {
-  mockedState,
   mockedProduct,
   mockedMsrpProduct,
 } from './mock';
@@ -20,11 +19,10 @@ const mockedStore = configureStore();
 
 /**
  * Creates component with provided store state.
- * @param {Object} props Additional props.
  * @return {ReactWrapper}
  */
 const createComponent = () => {
-  const store = mockedStore(mockedState);
+  const store = mockedStore({});
 
   return mount(
     <Provider store={store}>
