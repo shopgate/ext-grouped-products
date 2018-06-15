@@ -1,6 +1,6 @@
 import {
-  stateWithoutChildren,
-  stateWithChildren,
+  stateWithoutGroupedProducts,
+  stateWithGroupedProducts,
 } from '../selectors/index.mock';
 import { productIsReady$ } from '../streams';
 import { getProductChildren } from '../actions';
@@ -40,7 +40,7 @@ describe('Grouped products subscriptions', () => {
     it('should not fetch children when the product does not have children', () => {
       callback({
         dispatch,
-        getState: () => stateWithoutChildren,
+        getState: () => stateWithoutGroupedProducts,
       });
 
       expect(dispatch).toHaveBeenCalledTimes(1);
@@ -50,7 +50,7 @@ describe('Grouped products subscriptions', () => {
     it('should fetch children when the product has children', () => {
       callback({
         dispatch,
-        getState: () => stateWithChildren,
+        getState: () => stateWithGroupedProducts,
       });
 
       expect(dispatch).toHaveBeenCalledTimes(2);

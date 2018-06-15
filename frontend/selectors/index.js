@@ -4,7 +4,7 @@ import {
   getCurrentBaseProductId,
   getProductById,
 } from '@shopgate/pwa-common-commerce/product/selectors/product';
-import { generateHash } from '../helpers';
+import { generateHash, isGmdTheme } from '../helpers';
 
 /**
  * Retrieves the resultsByHash collection from the state.
@@ -57,6 +57,26 @@ export const getGroupedProducts = createSelector(
 );
 
 /**
+ * Checks if a grouped product is orderable.
+ * @param {Object} state The current application state.
+ * @param {string} productId The id of the inspected product.
+ * @return {boolean}
+ */
+export const isGroupedProductOrderable = createSelector(
+  (state, productId) => productId,
+  getGroupedProducts,
+  (productId, products) => {
+    if (!productId) {
+      return false;
+    }
+
+    const product = products.find(({ id }) => id === productId) || {};
+    const { stock: { orderable = false } = {} } = product;
+    return orderable;
+  }
+);
+
+/**
  * Determines if the current base product has grouped products.
  * @param {Object} state The current application state.
  * @return {boolean}
@@ -71,4 +91,13 @@ export const hasGroupedProducts = createSelector(
     const { flags: { hasChildren = false } } = baseProduct;
     return hasChildren;
   }
+);
+
+/**
+ * Determines if the main AddToCartButton should be visible.
+ * @return {boolean}
+ */
+export const isMainAddToCartButtonVisible = createSelector(
+  hasGroupedProducts,
+  hasPoducts => isGmdTheme() && !hasPoducts
 );

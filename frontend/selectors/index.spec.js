@@ -5,14 +5,16 @@ import {
   expectedResultsByHashEntry,
   expectedProductDataFromResultsByHash,
   stateWithoutCurrentProduct,
-  stateWithoutChildren,
+  stateWithoutGroupedProducts,
   stateWithoutFlag,
-  stateWithChildren,
+  stateWithGroupedProducts,
 } from './index.mock';
 import {
   getResultsByHashEntry,
   getGroupedProducts,
   hasGroupedProducts,
+  isGroupedProductOrderable,
+  isMainAddToCartButtonVisible,
 } from './index';
 
 describe('Grouped products selectors', () => {
@@ -55,6 +57,33 @@ describe('Grouped products selectors', () => {
     });
   });
 
+  describe('isGroupedProductOrderable()', () => {
+    it('should return false when no productId was passed', () => {
+      const result = isGroupedProductOrderable(stateWithResultsByHash);
+      expect(result).toBe(false);
+    });
+
+    it('should return false when a wrong productId was passed', () => {
+      const result = isGroupedProductOrderable(stateWithResultsByHash, 'foobar');
+      expect(result).toBe(false);
+    });
+
+    it('should return false when a productId of a product without stock was passed', () => {
+      const result = isGroupedProductOrderable(stateWithResultsByHash, '1985');
+      expect(result).toBe(false);
+    });
+
+    it('should return false when a productId of a not orderable product was passed', () => {
+      const result = isGroupedProductOrderable(stateWithResultsByHash, '1234');
+      expect(result).toBe(false);
+    });
+
+    it('should return true when a productId of an orderable product was passed', () => {
+      const result = isGroupedProductOrderable(stateWithResultsByHash, '4711');
+      expect(result).toBe(true);
+    });
+  });
+
   describe('hasGroupedProducts()', () => {
     it('should return false when no current product is set', () => {
       const result = hasGroupedProducts(stateWithoutCurrentProduct);
@@ -62,7 +91,7 @@ describe('Grouped products selectors', () => {
     });
 
     it('should return false when the current product has no children', () => {
-      const result = hasGroupedProducts(stateWithoutChildren);
+      const result = hasGroupedProducts(stateWithoutGroupedProducts);
       expect(result).toBe(false);
     });
 
@@ -72,8 +101,34 @@ describe('Grouped products selectors', () => {
     });
 
     it('should return true when the current product has children', () => {
-      const result = hasGroupedProducts(stateWithChildren);
+      const result = hasGroupedProducts(stateWithGroupedProducts);
       expect(result).toBe(true);
+    });
+  });
+
+  describe('isMainAddToCartButtonVisible()', () => {
+    it('should return true if the gmd theme is active but no grouped products are available', () => {
+      global.process.env.THEME = 'gmd';
+      const result = isMainAddToCartButtonVisible(stateWithoutGroupedProducts);
+      expect(result).toBe(true);
+    });
+
+    it('should return false if the gmd theme is active and grouped products are available', () => {
+      global.process.env.THEME = 'gmd';
+      const result = isMainAddToCartButtonVisible(stateWithGroupedProducts);
+      expect(result).toBe(false);
+    });
+
+    it('should return false if the gmd theme is active but no grouped products are available', () => {
+      global.process.env.THEME = 'ios';
+      const result = isMainAddToCartButtonVisible(stateWithoutGroupedProducts);
+      expect(result).toBe(false);
+    });
+
+    it('should return false if the gmd theme is active and grouped products are available', () => {
+      global.process.env.THEME = 'ios';
+      const result = isMainAddToCartButtonVisible(stateWithGroupedProducts);
+      expect(result).toBe(false);
     });
   });
 });

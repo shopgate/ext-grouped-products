@@ -5,7 +5,7 @@ exports[`<Product /> should render a msrp discounted product as expected 1`] = `
   store={
     Object {
       "clearActions": [Function],
-      "dispatch": [Function],
+      "dispatch": [MockFunction],
       "getActions": [Function],
       "getState": [Function],
       "replaceReducer": [Function],
@@ -13,7 +13,7 @@ exports[`<Product /> should render a msrp discounted product as expected 1`] = `
     }
   }
 >
-  <Product
+  <Connect(Product)
     product={
       Object {
         "availability": Object {
@@ -43,126 +43,156 @@ exports[`<Product /> should render a msrp discounted product as expected 1`] = `
       }
     }
   >
-    <Grid
-      className=""
-      component="ul"
-      wrap={false}
+    <Product
+      addToCartButtonProps={
+        Object {
+          "isDisabled": false,
+          "isOrderable": true,
+        }
+      }
+      handleAddToCart={[Function]}
+      product={
+        Object {
+          "availability": Object {
+            "state": "ok",
+            "text": "Lorem Ipsum",
+          },
+          "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+          "id": "4711",
+          "name": "A discounted product with msrp",
+          "price": Object {
+            "currency": "EUR",
+            "discount": 50,
+            "info": "",
+            "msrp": 10,
+            "unitPrice": 5,
+            "unitPriceMin": 0,
+            "unitPriceStriked": 0,
+          },
+          "stock": Object {
+            "ignoreQuantity": false,
+            "info": "Info",
+            "maxOrderQuantity": 1000,
+            "minOrderQuantity": 1,
+            "orderable": true,
+            "quantity": 4,
+          },
+        }
+      }
     >
-      <ul
-        className=" css-h7r55a"
+      <Grid
+        className=""
+        component="ul"
+        wrap={false}
       >
-        <GridItem
-          className="css-sg184b"
-          component="li"
-          grow={0}
-          shrink={0}
+        <ul
+          className=" css-h7r55a"
         >
-          <li
-            className="css-sg184b css-1l9a57c"
+          <GridItem
+            className="css-sg184b"
+            component="li"
+            grow={0}
+            shrink={0}
           >
-            <Image
-              alt="A discounted product with msrp"
-              animating={true}
-              backgroundColor="#f2f2f2"
-              className=""
-              forcePlaceholder={false}
-              highestResolutionLoaded={[Function]}
-              itemProp="image"
-              onError={null}
-              onLoad={null}
-              ratio={null}
-              resolutions={
-                Array [
-                  Object {
-                    "blur": 2,
-                    "height": 50,
-                    "width": 50,
-                  },
-                  Object {
-                    "height": 440,
-                    "width": 440,
-                  },
-                ]
-              }
-              src="https://cdn.acme.com/kitten.jpg"
-              transition={null}
+            <li
+              className="css-sg184b css-1l9a57c"
             >
-              <div
-                className="css-326p2s "
-              />
-            </Image>
-          </li>
-        </GridItem>
-        <GridItem
-          className="css-nil"
-          component="li"
-          grow={4}
-          shrink={1}
-        >
-          <li
-            className="css-nil css-ke56yp"
-          >
-            <Ellipsis
-              className="css-ud99sa"
-              ellipsis="..."
-              rows={3}
-            >
-              <Dotdotdot
-                clamp={3}
-                className="css-ud99sa"
-                ellipsis="..."
-                tagName="div"
-                truncationChar="…"
-                useNativeClamp={true}
+              <Image
+                alt="A discounted product with msrp"
+                animating={true}
+                backgroundColor="#f2f2f2"
+                className=""
+                forcePlaceholder={false}
+                highestResolutionLoaded={[Function]}
+                itemProp="image"
+                onError={null}
+                onLoad={null}
+                ratio={null}
+                resolutions={
+                  Array [
+                    Object {
+                      "blur": 2,
+                      "height": 50,
+                      "width": 50,
+                    },
+                    Object {
+                      "height": 440,
+                      "width": 440,
+                    },
+                  ]
+                }
+                src="https://cdn.acme.com/kitten.jpg"
+                transition={null}
               >
                 <div
-                  className="css-ud99sa"
-                >
-                  A discounted product with msrp
-                </div>
-              </Dotdotdot>
-            </Ellipsis>
-            <Availability
-              className="css-117ocmm"
-              showWhenAvailable={true}
-              state="ok"
-              text="Lorem Ipsum"
-            >
-              <div
-                className="css-117ocmm css-1ixzglu"
-                data-test-id="availabilityText: Lorem Ipsum"
-              >
-                Lorem Ipsum
-              </div>
-            </Availability>
-          </li>
-        </GridItem>
-        <GridItem
-          className="css-1onmrls"
-          component="li"
-          grow={1}
-          shrink={1}
-        >
-          <li
-            className="css-1onmrls css-1gs0ko2"
+                  className="css-326p2s "
+                />
+              </Image>
+            </li>
+          </GridItem>
+          <GridItem
+            className="css-nil"
+            component="li"
+            grow={4}
+            shrink={1}
           >
-            <Connect(AddToCartPicker)
-              productId="4711"
-              stock={
-                Object {
-                  "ignoreQuantity": false,
-                  "info": "Info",
-                  "maxOrderQuantity": 1000,
-                  "minOrderQuantity": 1,
-                  "orderable": true,
-                  "quantity": 4,
-                }
-              }
+            <li
+              className="css-nil css-ke56yp"
+            >
+              <Ellipsis
+                className="css-ud99sa"
+                ellipsis="..."
+                rows={3}
+              >
+                <Dotdotdot
+                  clamp={3}
+                  className="css-ud99sa"
+                  ellipsis="..."
+                  tagName="div"
+                  truncationChar="…"
+                  useNativeClamp={true}
+                >
+                  <div
+                    className="css-ud99sa"
+                  >
+                    A discounted product with msrp
+                  </div>
+                </Dotdotdot>
+              </Ellipsis>
+              <Availability
+                className="css-117ocmm"
+                showWhenAvailable={true}
+                state="ok"
+                text="Lorem Ipsum"
+              >
+                <div
+                  className="css-117ocmm css-1ixzglu"
+                  data-test-id="availabilityText: Lorem Ipsum"
+                >
+                  Lorem Ipsum
+                </div>
+              </Availability>
+            </li>
+          </GridItem>
+          <GridItem
+            className="css-1onmrls"
+            component="li"
+            grow={1}
+            shrink={1}
+          >
+            <li
+              className="css-1onmrls css-1gs0ko2"
             >
               <AddToCartPicker
-                addProductToCart={[Function]}
+                buttonProps={
+                  Object {
+                    "isDisabled": false,
+                    "isOrderable": true,
+                    "type": "grouped",
+                  }
+                }
                 clickDelay={150}
-                maxEntries={50}
+                handleAddToCart={[Function]}
                 productId="4711"
                 stock={
                   Object {
@@ -180,12 +210,14 @@ exports[`<Product /> should render a msrp discounted product as expected 1`] = `
                   buttonProps={
                     Object {
                       "addedQuantity": 0,
-                      "className": "css-mbcx74",
+                      "className": "css-l6qlih",
                       "handleAddToCart": [Function],
+                      "hasLoading": true,
                       "isDisabled": false,
                       "isLoading": false,
                       "isOrderable": true,
                       "noShadow": true,
+                      "type": "grouped",
                     }
                   }
                   className="css-1ej66kr"
@@ -226,10 +258,10 @@ exports[`<Product /> should render a msrp discounted product as expected 1`] = `
                     <PickerAddToCartButton
                       addedQuantity={0}
                       buttonSize={40}
-                      className="css-mbcx74"
+                      className="css-l6qlih"
                       disabled={false}
                       handleAddToCart={[Function]}
-                      hasLoading={false}
+                      hasLoading={true}
                       iconSize={20}
                       isDisabled={false}
                       isLoading={false}
@@ -237,13 +269,44 @@ exports[`<Product /> should render a msrp discounted product as expected 1`] = `
                       label="Pick ..."
                       noShadow={true}
                       openList={[Function]}
+                      type="grouped"
                       value=""
                     >
                       <button
-                        className="css-mbcx74 css-zby7a7 css-31obrv"
+                        className="css-l6qlih css-zby7a7 css-31obrv"
                         data-test-id="AddToCartButton"
                         onClick={[Function]}
                       >
+                        <div
+                          className="css-rukjns css-1gleer"
+                          style={
+                            Object {
+                              "opacity": 0,
+                            }
+                          }
+                        >
+                          <IndicatorCircle
+                            color="#5ccee3"
+                            paused={true}
+                            size={32}
+                            strokeWidth={5}
+                          >
+                            <svg
+                              className="css-17zev8s"
+                              height={32}
+                              viewBox="25 25 50 50"
+                              width={32}
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <circle
+                                className="css-1n2s8pv"
+                                cx="50"
+                                cy="50"
+                                r="20"
+                              />
+                            </svg>
+                          </IndicatorCircle>
+                        </div>
                         <div
                           className="css-rukjns"
                           style={
@@ -328,80 +391,80 @@ exports[`<Product /> should render a msrp discounted product as expected 1`] = `
                   </div>
                 </Picker>
               </AddToCartPicker>
-            </Connect(AddToCartPicker)>
-            <div
-              className="css-h0biv2"
-            >
-              <Translate
-                className="css-14aq3ya"
-                params={Object {}}
-                string="price.msrp"
+              <div
+                className="css-h0biv2"
               >
-                <span
+                <Translate
                   className="css-14aq3ya"
+                  params={Object {}}
+                  string="price.msrp"
                 >
-                  price.msrp
-                </span>
-              </Translate>
-              <PriceStriked
-                className="css-117ocmm"
+                  <span
+                    className="css-14aq3ya"
+                  >
+                    price.msrp
+                  </span>
+                </Translate>
+                <PriceStriked
+                  className="css-117ocmm"
+                  currency="EUR"
+                  value={10}
+                >
+                  <div
+                    className="css-1sagvrb css-117ocmm "
+                  >
+                    <span
+                      data-test-id="strikedPrice: 10"
+                    >
+                      <FormatPrice
+                        className=""
+                        currency="EUR"
+                        fractions={true}
+                        price={10}
+                      >
+                        <span
+                          className=""
+                        >
+                          p
+                        </span>
+                      </FormatPrice>
+                    </span>
+                  </div>
+                </PriceStriked>
+              </div>
+              <Price
+                className="css-1h9wty7"
                 currency="EUR"
-                value={10}
+                discounted={true}
+                fractions={true}
+                taxDisclaimer={false}
+                unitPrice={5}
+                unitPriceMin={0}
               >
                 <div
-                  className="css-1sagvrb css-117ocmm "
+                  className="css-izofhs css-1h9wty7 css-1ncyhu"
+                  data-test-id="minPrice: 0 price: 5 currency: EUR"
                 >
-                  <span
-                    data-test-id="strikedPrice: 10"
-                  >
-                    <FormatPrice
-                      className=""
-                      currency="EUR"
-                      fractions={true}
-                      price={10}
-                    >
-                      <span
-                        className=""
-                      >
-                        p
-                      </span>
-                    </FormatPrice>
-                  </span>
-                </div>
-              </PriceStriked>
-            </div>
-            <Price
-              className="css-1h9wty7"
-              currency="EUR"
-              discounted={true}
-              fractions={true}
-              taxDisclaimer={false}
-              unitPrice={5}
-              unitPriceMin={0}
-            >
-              <div
-                className="css-izofhs css-1h9wty7 css-1ncyhu"
-                data-test-id="minPrice: 0 price: 5 currency: EUR"
-              >
-                <FormatPrice
-                  className=""
-                  currency="EUR"
-                  fractions={true}
-                  price={5}
-                >
-                  <span
+                  <FormatPrice
                     className=""
+                    currency="EUR"
+                    fractions={true}
+                    price={5}
                   >
-                    p
-                  </span>
-                </FormatPrice>
-              </div>
-            </Price>
-          </li>
-        </GridItem>
-      </ul>
-    </Grid>
-  </Product>
+                    <span
+                      className=""
+                    >
+                      p
+                    </span>
+                  </FormatPrice>
+                </div>
+              </Price>
+            </li>
+          </GridItem>
+        </ul>
+      </Grid>
+    </Product>
+  </Connect(Product)>
 </Provider>
 `;
 
@@ -410,7 +473,7 @@ exports[`<Product /> should render a not orderable product as expected 1`] = `
   store={
     Object {
       "clearActions": [Function],
-      "dispatch": [Function],
+      "dispatch": [MockFunction],
       "getActions": [Function],
       "getState": [Function],
       "replaceReducer": [Function],
@@ -418,7 +481,7 @@ exports[`<Product /> should render a not orderable product as expected 1`] = `
     }
   }
 >
-  <Product
+  <Connect(Product)
     product={
       Object {
         "availability": Object {
@@ -426,7 +489,7 @@ exports[`<Product /> should render a not orderable product as expected 1`] = `
           "text": "Lorem Ipsum",
         },
         "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
-        "id": "1234",
+        "id": "foo",
         "name": "A not orderable product",
         "price": Object {
           "currency": "EUR",
@@ -448,127 +511,157 @@ exports[`<Product /> should render a not orderable product as expected 1`] = `
       }
     }
   >
-    <Grid
-      className=""
-      component="ul"
-      wrap={false}
+    <Product
+      addToCartButtonProps={
+        Object {
+          "isDisabled": true,
+          "isOrderable": false,
+        }
+      }
+      handleAddToCart={[Function]}
+      product={
+        Object {
+          "availability": Object {
+            "state": "ok",
+            "text": "Lorem Ipsum",
+          },
+          "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+          "id": "foo",
+          "name": "A not orderable product",
+          "price": Object {
+            "currency": "EUR",
+            "discount": 0,
+            "info": "",
+            "msrp": 0,
+            "unitPrice": 5,
+            "unitPriceMin": 0,
+            "unitPriceStriked": 0,
+          },
+          "stock": Object {
+            "ignoreQuantity": false,
+            "info": "Info",
+            "maxOrderQuantity": 1000,
+            "minOrderQuantity": 1,
+            "orderable": false,
+            "quantity": 0,
+          },
+        }
+      }
     >
-      <ul
-        className=" css-h7r55a"
+      <Grid
+        className=""
+        component="ul"
+        wrap={false}
       >
-        <GridItem
-          className="css-sg184b"
-          component="li"
-          grow={0}
-          shrink={0}
+        <ul
+          className=" css-h7r55a"
         >
-          <li
-            className="css-sg184b css-1l9a57c"
+          <GridItem
+            className="css-sg184b"
+            component="li"
+            grow={0}
+            shrink={0}
           >
-            <Image
-              alt="A not orderable product"
-              animating={true}
-              backgroundColor="#f2f2f2"
-              className=""
-              forcePlaceholder={false}
-              highestResolutionLoaded={[Function]}
-              itemProp="image"
-              onError={null}
-              onLoad={null}
-              ratio={null}
-              resolutions={
-                Array [
-                  Object {
-                    "blur": 2,
-                    "height": 50,
-                    "width": 50,
-                  },
-                  Object {
-                    "height": 440,
-                    "width": 440,
-                  },
-                ]
-              }
-              src="https://cdn.acme.com/kitten.jpg"
-              transition={null}
+            <li
+              className="css-sg184b css-1l9a57c"
             >
-              <div
-                className="css-326p2s "
-              />
-            </Image>
-          </li>
-        </GridItem>
-        <GridItem
-          className="css-nil"
-          component="li"
-          grow={4}
-          shrink={1}
-        >
-          <li
-            className="css-nil css-ke56yp"
-          >
-            <Ellipsis
-              className="css-ud99sa"
-              ellipsis="..."
-              rows={3}
-            >
-              <Dotdotdot
-                clamp={3}
-                className="css-ud99sa"
-                ellipsis="..."
-                tagName="div"
-                truncationChar="…"
-                useNativeClamp={true}
+              <Image
+                alt="A not orderable product"
+                animating={true}
+                backgroundColor="#f2f2f2"
+                className=""
+                forcePlaceholder={false}
+                highestResolutionLoaded={[Function]}
+                itemProp="image"
+                onError={null}
+                onLoad={null}
+                ratio={null}
+                resolutions={
+                  Array [
+                    Object {
+                      "blur": 2,
+                      "height": 50,
+                      "width": 50,
+                    },
+                    Object {
+                      "height": 440,
+                      "width": 440,
+                    },
+                  ]
+                }
+                src="https://cdn.acme.com/kitten.jpg"
+                transition={null}
               >
                 <div
-                  className="css-ud99sa"
-                >
-                  A not orderable product
-                </div>
-              </Dotdotdot>
-            </Ellipsis>
-            <Availability
-              className="css-117ocmm"
-              showWhenAvailable={true}
-              state="ok"
-              text="Lorem Ipsum"
-            >
-              <div
-                className="css-117ocmm css-1ixzglu"
-                data-test-id="availabilityText: Lorem Ipsum"
-              >
-                Lorem Ipsum
-              </div>
-            </Availability>
-          </li>
-        </GridItem>
-        <GridItem
-          className="css-1onmrls"
-          component="li"
-          grow={1}
-          shrink={1}
-        >
-          <li
-            className="css-1onmrls css-1gs0ko2"
+                  className="css-326p2s "
+                />
+              </Image>
+            </li>
+          </GridItem>
+          <GridItem
+            className="css-nil"
+            component="li"
+            grow={4}
+            shrink={1}
           >
-            <Connect(AddToCartPicker)
-              productId="1234"
-              stock={
-                Object {
-                  "ignoreQuantity": false,
-                  "info": "Info",
-                  "maxOrderQuantity": 1000,
-                  "minOrderQuantity": 1,
-                  "orderable": false,
-                  "quantity": 0,
-                }
-              }
+            <li
+              className="css-nil css-ke56yp"
+            >
+              <Ellipsis
+                className="css-ud99sa"
+                ellipsis="..."
+                rows={3}
+              >
+                <Dotdotdot
+                  clamp={3}
+                  className="css-ud99sa"
+                  ellipsis="..."
+                  tagName="div"
+                  truncationChar="…"
+                  useNativeClamp={true}
+                >
+                  <div
+                    className="css-ud99sa"
+                  >
+                    A not orderable product
+                  </div>
+                </Dotdotdot>
+              </Ellipsis>
+              <Availability
+                className="css-117ocmm"
+                showWhenAvailable={true}
+                state="ok"
+                text="Lorem Ipsum"
+              >
+                <div
+                  className="css-117ocmm css-1ixzglu"
+                  data-test-id="availabilityText: Lorem Ipsum"
+                >
+                  Lorem Ipsum
+                </div>
+              </Availability>
+            </li>
+          </GridItem>
+          <GridItem
+            className="css-1onmrls"
+            component="li"
+            grow={1}
+            shrink={1}
+          >
+            <li
+              className="css-1onmrls css-1gs0ko2"
             >
               <AddToCartPicker
-                addProductToCart={[Function]}
+                buttonProps={
+                  Object {
+                    "isDisabled": true,
+                    "isOrderable": false,
+                    "type": "grouped",
+                  }
+                }
                 clickDelay={150}
-                maxEntries={50}
-                productId="1234"
+                handleAddToCart={[Function]}
+                productId="foo"
                 stock={
                   Object {
                     "ignoreQuantity": false,
@@ -585,12 +678,14 @@ exports[`<Product /> should render a not orderable product as expected 1`] = `
                   buttonProps={
                     Object {
                       "addedQuantity": 0,
-                      "className": "css-mbcx74",
+                      "className": "css-nil",
                       "handleAddToCart": [Function],
+                      "hasLoading": true,
                       "isDisabled": true,
                       "isLoading": false,
                       "isOrderable": false,
                       "noShadow": true,
+                      "type": "grouped",
                     }
                   }
                   className="css-1ej66kr"
@@ -612,10 +707,10 @@ exports[`<Product /> should render a not orderable product as expected 1`] = `
                     <PickerAddToCartButton
                       addedQuantity={0}
                       buttonSize={40}
-                      className="css-mbcx74"
+                      className="css-nil"
                       disabled={false}
                       handleAddToCart={[Function]}
-                      hasLoading={false}
+                      hasLoading={true}
                       iconSize={20}
                       isDisabled={true}
                       isLoading={false}
@@ -623,13 +718,44 @@ exports[`<Product /> should render a not orderable product as expected 1`] = `
                       label="Pick ..."
                       noShadow={true}
                       openList={[Function]}
+                      type="grouped"
                       value=""
                     >
                       <button
-                        className="css-mbcx74 css-zby7a7 css-15s4nvk"
+                        className="css-nil css-zby7a7 css-15s4nvk"
                         data-test-id="AddToCartButton"
                         onClick={[Function]}
                       >
+                        <div
+                          className="css-rukjns css-1gleer"
+                          style={
+                            Object {
+                              "opacity": 0,
+                            }
+                          }
+                        >
+                          <IndicatorCircle
+                            color="#5ccee3"
+                            paused={true}
+                            size={32}
+                            strokeWidth={5}
+                          >
+                            <svg
+                              className="css-17zev8s"
+                              height={32}
+                              viewBox="25 25 50 50"
+                              width={32}
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <circle
+                                className="css-1n2s8pv"
+                                cx="50"
+                                cy="50"
+                                r="20"
+                              />
+                            </svg>
+                          </IndicatorCircle>
+                        </div>
                         <div
                           className="css-rukjns"
                           style={
@@ -714,39 +840,39 @@ exports[`<Product /> should render a not orderable product as expected 1`] = `
                   </div>
                 </Picker>
               </AddToCartPicker>
-            </Connect(AddToCartPicker)>
-            <Price
-              className="css-1h9wty7"
-              currency="EUR"
-              discounted={false}
-              fractions={true}
-              taxDisclaimer={false}
-              unitPrice={5}
-              unitPriceMin={0}
-            >
-              <div
-                className="css-izofhs css-1h9wty7"
-                data-test-id="minPrice: 0 price: 5 currency: EUR"
+              <Price
+                className="css-1h9wty7"
+                currency="EUR"
+                discounted={false}
+                fractions={true}
+                taxDisclaimer={false}
+                unitPrice={5}
+                unitPriceMin={0}
               >
-                <FormatPrice
-                  className=""
-                  currency="EUR"
-                  fractions={true}
-                  price={5}
+                <div
+                  className="css-izofhs css-1h9wty7"
+                  data-test-id="minPrice: 0 price: 5 currency: EUR"
                 >
-                  <span
+                  <FormatPrice
                     className=""
+                    currency="EUR"
+                    fractions={true}
+                    price={5}
                   >
-                    p
-                  </span>
-                </FormatPrice>
-              </div>
-            </Price>
-          </li>
-        </GridItem>
-      </ul>
-    </Grid>
-  </Product>
+                    <span
+                      className=""
+                    >
+                      p
+                    </span>
+                  </FormatPrice>
+                </div>
+              </Price>
+            </li>
+          </GridItem>
+        </ul>
+      </Grid>
+    </Product>
+  </Connect(Product)>
 </Provider>
 `;
 
@@ -755,7 +881,7 @@ exports[`<Product /> should render a regular product as expected 1`] = `
   store={
     Object {
       "clearActions": [Function],
-      "dispatch": [Function],
+      "dispatch": [MockFunction],
       "getActions": [Function],
       "getState": [Function],
       "replaceReducer": [Function],
@@ -763,7 +889,7 @@ exports[`<Product /> should render a regular product as expected 1`] = `
     }
   }
 >
-  <Product
+  <Connect(Product)
     product={
       Object {
         "availability": Object {
@@ -793,126 +919,156 @@ exports[`<Product /> should render a regular product as expected 1`] = `
       }
     }
   >
-    <Grid
-      className=""
-      component="ul"
-      wrap={false}
+    <Product
+      addToCartButtonProps={
+        Object {
+          "isDisabled": false,
+          "isOrderable": true,
+        }
+      }
+      handleAddToCart={[Function]}
+      product={
+        Object {
+          "availability": Object {
+            "state": "ok",
+            "text": "Lorem Ipsum",
+          },
+          "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+          "id": "1337",
+          "name": "A shiny product",
+          "price": Object {
+            "currency": "EUR",
+            "discount": 0,
+            "info": "",
+            "msrp": 0,
+            "unitPrice": 5,
+            "unitPriceMin": 0,
+            "unitPriceStriked": 0,
+          },
+          "stock": Object {
+            "ignoreQuantity": false,
+            "info": "Info",
+            "maxOrderQuantity": 1000,
+            "minOrderQuantity": 1,
+            "orderable": true,
+            "quantity": 4,
+          },
+        }
+      }
     >
-      <ul
-        className=" css-h7r55a"
+      <Grid
+        className=""
+        component="ul"
+        wrap={false}
       >
-        <GridItem
-          className="css-sg184b"
-          component="li"
-          grow={0}
-          shrink={0}
+        <ul
+          className=" css-h7r55a"
         >
-          <li
-            className="css-sg184b css-1l9a57c"
+          <GridItem
+            className="css-sg184b"
+            component="li"
+            grow={0}
+            shrink={0}
           >
-            <Image
-              alt="A shiny product"
-              animating={true}
-              backgroundColor="#f2f2f2"
-              className=""
-              forcePlaceholder={false}
-              highestResolutionLoaded={[Function]}
-              itemProp="image"
-              onError={null}
-              onLoad={null}
-              ratio={null}
-              resolutions={
-                Array [
-                  Object {
-                    "blur": 2,
-                    "height": 50,
-                    "width": 50,
-                  },
-                  Object {
-                    "height": 440,
-                    "width": 440,
-                  },
-                ]
-              }
-              src="https://cdn.acme.com/kitten.jpg"
-              transition={null}
+            <li
+              className="css-sg184b css-1l9a57c"
             >
-              <div
-                className="css-326p2s "
-              />
-            </Image>
-          </li>
-        </GridItem>
-        <GridItem
-          className="css-nil"
-          component="li"
-          grow={4}
-          shrink={1}
-        >
-          <li
-            className="css-nil css-ke56yp"
-          >
-            <Ellipsis
-              className="css-ud99sa"
-              ellipsis="..."
-              rows={3}
-            >
-              <Dotdotdot
-                clamp={3}
-                className="css-ud99sa"
-                ellipsis="..."
-                tagName="div"
-                truncationChar="…"
-                useNativeClamp={true}
+              <Image
+                alt="A shiny product"
+                animating={true}
+                backgroundColor="#f2f2f2"
+                className=""
+                forcePlaceholder={false}
+                highestResolutionLoaded={[Function]}
+                itemProp="image"
+                onError={null}
+                onLoad={null}
+                ratio={null}
+                resolutions={
+                  Array [
+                    Object {
+                      "blur": 2,
+                      "height": 50,
+                      "width": 50,
+                    },
+                    Object {
+                      "height": 440,
+                      "width": 440,
+                    },
+                  ]
+                }
+                src="https://cdn.acme.com/kitten.jpg"
+                transition={null}
               >
                 <div
-                  className="css-ud99sa"
-                >
-                  A shiny product
-                </div>
-              </Dotdotdot>
-            </Ellipsis>
-            <Availability
-              className="css-117ocmm"
-              showWhenAvailable={true}
-              state="ok"
-              text="Lorem Ipsum"
-            >
-              <div
-                className="css-117ocmm css-1ixzglu"
-                data-test-id="availabilityText: Lorem Ipsum"
-              >
-                Lorem Ipsum
-              </div>
-            </Availability>
-          </li>
-        </GridItem>
-        <GridItem
-          className="css-1onmrls"
-          component="li"
-          grow={1}
-          shrink={1}
-        >
-          <li
-            className="css-1onmrls css-1gs0ko2"
+                  className="css-326p2s "
+                />
+              </Image>
+            </li>
+          </GridItem>
+          <GridItem
+            className="css-nil"
+            component="li"
+            grow={4}
+            shrink={1}
           >
-            <Connect(AddToCartPicker)
-              productId="1337"
-              stock={
-                Object {
-                  "ignoreQuantity": false,
-                  "info": "Info",
-                  "maxOrderQuantity": 1000,
-                  "minOrderQuantity": 1,
-                  "orderable": true,
-                  "quantity": 4,
-                }
-              }
+            <li
+              className="css-nil css-ke56yp"
+            >
+              <Ellipsis
+                className="css-ud99sa"
+                ellipsis="..."
+                rows={3}
+              >
+                <Dotdotdot
+                  clamp={3}
+                  className="css-ud99sa"
+                  ellipsis="..."
+                  tagName="div"
+                  truncationChar="…"
+                  useNativeClamp={true}
+                >
+                  <div
+                    className="css-ud99sa"
+                  >
+                    A shiny product
+                  </div>
+                </Dotdotdot>
+              </Ellipsis>
+              <Availability
+                className="css-117ocmm"
+                showWhenAvailable={true}
+                state="ok"
+                text="Lorem Ipsum"
+              >
+                <div
+                  className="css-117ocmm css-1ixzglu"
+                  data-test-id="availabilityText: Lorem Ipsum"
+                >
+                  Lorem Ipsum
+                </div>
+              </Availability>
+            </li>
+          </GridItem>
+          <GridItem
+            className="css-1onmrls"
+            component="li"
+            grow={1}
+            shrink={1}
+          >
+            <li
+              className="css-1onmrls css-1gs0ko2"
             >
               <AddToCartPicker
-                addProductToCart={[Function]}
+                buttonProps={
+                  Object {
+                    "isDisabled": false,
+                    "isOrderable": true,
+                    "type": "grouped",
+                  }
+                }
                 clickDelay={150}
-                maxEntries={50}
+                handleAddToCart={[Function]}
                 productId="1337"
                 stock={
                   Object {
@@ -930,12 +1086,14 @@ exports[`<Product /> should render a regular product as expected 1`] = `
                   buttonProps={
                     Object {
                       "addedQuantity": 0,
-                      "className": "css-mbcx74",
+                      "className": "css-l6qlih",
                       "handleAddToCart": [Function],
+                      "hasLoading": true,
                       "isDisabled": false,
                       "isLoading": false,
                       "isOrderable": true,
                       "noShadow": true,
+                      "type": "grouped",
                     }
                   }
                   className="css-1ej66kr"
@@ -976,10 +1134,10 @@ exports[`<Product /> should render a regular product as expected 1`] = `
                     <PickerAddToCartButton
                       addedQuantity={0}
                       buttonSize={40}
-                      className="css-mbcx74"
+                      className="css-l6qlih"
                       disabled={false}
                       handleAddToCart={[Function]}
-                      hasLoading={false}
+                      hasLoading={true}
                       iconSize={20}
                       isDisabled={false}
                       isLoading={false}
@@ -987,13 +1145,44 @@ exports[`<Product /> should render a regular product as expected 1`] = `
                       label="Pick ..."
                       noShadow={true}
                       openList={[Function]}
+                      type="grouped"
                       value=""
                     >
                       <button
-                        className="css-mbcx74 css-zby7a7 css-31obrv"
+                        className="css-l6qlih css-zby7a7 css-31obrv"
                         data-test-id="AddToCartButton"
                         onClick={[Function]}
                       >
+                        <div
+                          className="css-rukjns css-1gleer"
+                          style={
+                            Object {
+                              "opacity": 0,
+                            }
+                          }
+                        >
+                          <IndicatorCircle
+                            color="#5ccee3"
+                            paused={true}
+                            size={32}
+                            strokeWidth={5}
+                          >
+                            <svg
+                              className="css-17zev8s"
+                              height={32}
+                              viewBox="25 25 50 50"
+                              width={32}
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <circle
+                                className="css-1n2s8pv"
+                                cx="50"
+                                cy="50"
+                                r="20"
+                              />
+                            </svg>
+                          </IndicatorCircle>
+                        </div>
                         <div
                           className="css-rukjns"
                           style={
@@ -1078,39 +1267,39 @@ exports[`<Product /> should render a regular product as expected 1`] = `
                   </div>
                 </Picker>
               </AddToCartPicker>
-            </Connect(AddToCartPicker)>
-            <Price
-              className="css-1h9wty7"
-              currency="EUR"
-              discounted={false}
-              fractions={true}
-              taxDisclaimer={false}
-              unitPrice={5}
-              unitPriceMin={0}
-            >
-              <div
-                className="css-izofhs css-1h9wty7"
-                data-test-id="minPrice: 0 price: 5 currency: EUR"
+              <Price
+                className="css-1h9wty7"
+                currency="EUR"
+                discounted={false}
+                fractions={true}
+                taxDisclaimer={false}
+                unitPrice={5}
+                unitPriceMin={0}
               >
-                <FormatPrice
-                  className=""
-                  currency="EUR"
-                  fractions={true}
-                  price={5}
+                <div
+                  className="css-izofhs css-1h9wty7"
+                  data-test-id="minPrice: 0 price: 5 currency: EUR"
                 >
-                  <span
+                  <FormatPrice
                     className=""
+                    currency="EUR"
+                    fractions={true}
+                    price={5}
                   >
-                    p
-                  </span>
-                </FormatPrice>
-              </div>
-            </Price>
-          </li>
-        </GridItem>
-      </ul>
-    </Grid>
-  </Product>
+                    <span
+                      className=""
+                    >
+                      p
+                    </span>
+                  </FormatPrice>
+                </div>
+              </Price>
+            </li>
+          </GridItem>
+        </ul>
+      </Grid>
+    </Product>
+  </Connect(Product)>
 </Provider>
 `;
 
@@ -1119,7 +1308,7 @@ exports[`<Product /> should render a strike price discounted product as expected
   store={
     Object {
       "clearActions": [Function],
-      "dispatch": [Function],
+      "dispatch": [MockFunction],
       "getActions": [Function],
       "getState": [Function],
       "replaceReducer": [Function],
@@ -1127,7 +1316,7 @@ exports[`<Product /> should render a strike price discounted product as expected
     }
   }
 >
-  <Product
+  <Connect(Product)
     product={
       Object {
         "availability": Object {
@@ -1135,7 +1324,7 @@ exports[`<Product /> should render a strike price discounted product as expected
           "text": "Lorem Ipsum",
         },
         "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
-        "id": "4711",
+        "id": "1985",
         "name": "A discounted product with stike price and info",
         "price": Object {
           "currency": "EUR",
@@ -1157,127 +1346,157 @@ exports[`<Product /> should render a strike price discounted product as expected
       }
     }
   >
-    <Grid
-      className=""
-      component="ul"
-      wrap={false}
+    <Product
+      addToCartButtonProps={
+        Object {
+          "isDisabled": false,
+          "isOrderable": true,
+        }
+      }
+      handleAddToCart={[Function]}
+      product={
+        Object {
+          "availability": Object {
+            "state": "ok",
+            "text": "Lorem Ipsum",
+          },
+          "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+          "id": "1985",
+          "name": "A discounted product with stike price and info",
+          "price": Object {
+            "currency": "EUR",
+            "discount": 50,
+            "info": "5 EUR / kg",
+            "msrp": 0,
+            "unitPrice": 5,
+            "unitPriceMin": 0,
+            "unitPriceStriked": 10,
+          },
+          "stock": Object {
+            "ignoreQuantity": false,
+            "info": "Info",
+            "maxOrderQuantity": 1000,
+            "minOrderQuantity": 1,
+            "orderable": true,
+            "quantity": 4,
+          },
+        }
+      }
     >
-      <ul
-        className=" css-h7r55a"
+      <Grid
+        className=""
+        component="ul"
+        wrap={false}
       >
-        <GridItem
-          className="css-sg184b"
-          component="li"
-          grow={0}
-          shrink={0}
+        <ul
+          className=" css-h7r55a"
         >
-          <li
-            className="css-sg184b css-1l9a57c"
+          <GridItem
+            className="css-sg184b"
+            component="li"
+            grow={0}
+            shrink={0}
           >
-            <Image
-              alt="A discounted product with stike price and info"
-              animating={true}
-              backgroundColor="#f2f2f2"
-              className=""
-              forcePlaceholder={false}
-              highestResolutionLoaded={[Function]}
-              itemProp="image"
-              onError={null}
-              onLoad={null}
-              ratio={null}
-              resolutions={
-                Array [
-                  Object {
-                    "blur": 2,
-                    "height": 50,
-                    "width": 50,
-                  },
-                  Object {
-                    "height": 440,
-                    "width": 440,
-                  },
-                ]
-              }
-              src="https://cdn.acme.com/kitten.jpg"
-              transition={null}
+            <li
+              className="css-sg184b css-1l9a57c"
             >
-              <div
-                className="css-326p2s "
-              />
-            </Image>
-          </li>
-        </GridItem>
-        <GridItem
-          className="css-nil"
-          component="li"
-          grow={4}
-          shrink={1}
-        >
-          <li
-            className="css-nil css-ke56yp"
-          >
-            <Ellipsis
-              className="css-ud99sa"
-              ellipsis="..."
-              rows={3}
-            >
-              <Dotdotdot
-                clamp={3}
-                className="css-ud99sa"
-                ellipsis="..."
-                tagName="div"
-                truncationChar="…"
-                useNativeClamp={true}
+              <Image
+                alt="A discounted product with stike price and info"
+                animating={true}
+                backgroundColor="#f2f2f2"
+                className=""
+                forcePlaceholder={false}
+                highestResolutionLoaded={[Function]}
+                itemProp="image"
+                onError={null}
+                onLoad={null}
+                ratio={null}
+                resolutions={
+                  Array [
+                    Object {
+                      "blur": 2,
+                      "height": 50,
+                      "width": 50,
+                    },
+                    Object {
+                      "height": 440,
+                      "width": 440,
+                    },
+                  ]
+                }
+                src="https://cdn.acme.com/kitten.jpg"
+                transition={null}
               >
                 <div
-                  className="css-ud99sa"
-                >
-                  A discounted product with stike price and info
-                </div>
-              </Dotdotdot>
-            </Ellipsis>
-            <Availability
-              className="css-117ocmm"
-              showWhenAvailable={true}
-              state="ok"
-              text="Lorem Ipsum"
-            >
-              <div
-                className="css-117ocmm css-1ixzglu"
-                data-test-id="availabilityText: Lorem Ipsum"
-              >
-                Lorem Ipsum
-              </div>
-            </Availability>
-          </li>
-        </GridItem>
-        <GridItem
-          className="css-1onmrls"
-          component="li"
-          grow={1}
-          shrink={1}
-        >
-          <li
-            className="css-1onmrls css-1gs0ko2"
+                  className="css-326p2s "
+                />
+              </Image>
+            </li>
+          </GridItem>
+          <GridItem
+            className="css-nil"
+            component="li"
+            grow={4}
+            shrink={1}
           >
-            <Connect(AddToCartPicker)
-              productId="4711"
-              stock={
-                Object {
-                  "ignoreQuantity": false,
-                  "info": "Info",
-                  "maxOrderQuantity": 1000,
-                  "minOrderQuantity": 1,
-                  "orderable": true,
-                  "quantity": 4,
-                }
-              }
+            <li
+              className="css-nil css-ke56yp"
+            >
+              <Ellipsis
+                className="css-ud99sa"
+                ellipsis="..."
+                rows={3}
+              >
+                <Dotdotdot
+                  clamp={3}
+                  className="css-ud99sa"
+                  ellipsis="..."
+                  tagName="div"
+                  truncationChar="…"
+                  useNativeClamp={true}
+                >
+                  <div
+                    className="css-ud99sa"
+                  >
+                    A discounted product with stike price and info
+                  </div>
+                </Dotdotdot>
+              </Ellipsis>
+              <Availability
+                className="css-117ocmm"
+                showWhenAvailable={true}
+                state="ok"
+                text="Lorem Ipsum"
+              >
+                <div
+                  className="css-117ocmm css-1ixzglu"
+                  data-test-id="availabilityText: Lorem Ipsum"
+                >
+                  Lorem Ipsum
+                </div>
+              </Availability>
+            </li>
+          </GridItem>
+          <GridItem
+            className="css-1onmrls"
+            component="li"
+            grow={1}
+            shrink={1}
+          >
+            <li
+              className="css-1onmrls css-1gs0ko2"
             >
               <AddToCartPicker
-                addProductToCart={[Function]}
+                buttonProps={
+                  Object {
+                    "isDisabled": false,
+                    "isOrderable": true,
+                    "type": "grouped",
+                  }
+                }
                 clickDelay={150}
-                maxEntries={50}
-                productId="4711"
+                handleAddToCart={[Function]}
+                productId="1985"
                 stock={
                   Object {
                     "ignoreQuantity": false,
@@ -1294,12 +1513,14 @@ exports[`<Product /> should render a strike price discounted product as expected
                   buttonProps={
                     Object {
                       "addedQuantity": 0,
-                      "className": "css-mbcx74",
+                      "className": "css-l6qlih",
                       "handleAddToCart": [Function],
+                      "hasLoading": true,
                       "isDisabled": false,
                       "isLoading": false,
                       "isOrderable": true,
                       "noShadow": true,
+                      "type": "grouped",
                     }
                   }
                   className="css-1ej66kr"
@@ -1340,10 +1561,10 @@ exports[`<Product /> should render a strike price discounted product as expected
                     <PickerAddToCartButton
                       addedQuantity={0}
                       buttonSize={40}
-                      className="css-mbcx74"
+                      className="css-l6qlih"
                       disabled={false}
                       handleAddToCart={[Function]}
-                      hasLoading={false}
+                      hasLoading={true}
                       iconSize={20}
                       isDisabled={false}
                       isLoading={false}
@@ -1351,13 +1572,44 @@ exports[`<Product /> should render a strike price discounted product as expected
                       label="Pick ..."
                       noShadow={true}
                       openList={[Function]}
+                      type="grouped"
                       value=""
                     >
                       <button
-                        className="css-mbcx74 css-zby7a7 css-31obrv"
+                        className="css-l6qlih css-zby7a7 css-31obrv"
                         data-test-id="AddToCartButton"
                         onClick={[Function]}
                       >
+                        <div
+                          className="css-rukjns css-1gleer"
+                          style={
+                            Object {
+                              "opacity": 0,
+                            }
+                          }
+                        >
+                          <IndicatorCircle
+                            color="#5ccee3"
+                            paused={true}
+                            size={32}
+                            strokeWidth={5}
+                          >
+                            <svg
+                              className="css-17zev8s"
+                              height={32}
+                              viewBox="25 25 50 50"
+                              width={32}
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <circle
+                                className="css-1n2s8pv"
+                                cx="50"
+                                cy="50"
+                                r="20"
+                              />
+                            </svg>
+                          </IndicatorCircle>
+                        </div>
                         <div
                           className="css-rukjns"
                           style={
@@ -1442,23 +1694,50 @@ exports[`<Product /> should render a strike price discounted product as expected
                   </div>
                 </Picker>
               </AddToCartPicker>
-            </Connect(AddToCartPicker)>
-            <PriceStriked
-              className="css-117ocmm"
-              currency="EUR"
-              value={10}
-            >
-              <div
-                className="css-1sagvrb css-117ocmm "
+              <PriceStriked
+                className="css-117ocmm"
+                currency="EUR"
+                value={10}
               >
-                <span
-                  data-test-id="strikedPrice: 10"
+                <div
+                  className="css-1sagvrb css-117ocmm "
+                >
+                  <span
+                    data-test-id="strikedPrice: 10"
+                  >
+                    <FormatPrice
+                      className=""
+                      currency="EUR"
+                      fractions={true}
+                      price={10}
+                    >
+                      <span
+                        className=""
+                      >
+                        p
+                      </span>
+                    </FormatPrice>
+                  </span>
+                </div>
+              </PriceStriked>
+              <Price
+                className="css-1h9wty7"
+                currency="EUR"
+                discounted={true}
+                fractions={true}
+                taxDisclaimer={false}
+                unitPrice={5}
+                unitPriceMin={0}
+              >
+                <div
+                  className="css-izofhs css-1h9wty7 css-1ncyhu"
+                  data-test-id="minPrice: 0 price: 5 currency: EUR"
                 >
                   <FormatPrice
                     className=""
                     currency="EUR"
                     fractions={true}
-                    price={10}
+                    price={5}
                   >
                     <span
                       className=""
@@ -1466,54 +1745,27 @@ exports[`<Product /> should render a strike price discounted product as expected
                       p
                     </span>
                   </FormatPrice>
-                </span>
-              </div>
-            </PriceStriked>
-            <Price
-              className="css-1h9wty7"
-              currency="EUR"
-              discounted={true}
-              fractions={true}
-              taxDisclaimer={false}
-              unitPrice={5}
-              unitPriceMin={0}
-            >
-              <div
-                className="css-izofhs css-1h9wty7 css-1ncyhu"
-                data-test-id="minPrice: 0 price: 5 currency: EUR"
+                </div>
+              </Price>
+              <PriceInfo
+                className="css-7hzrhp"
+                text="5 EUR / kg"
               >
-                <FormatPrice
-                  className=""
-                  currency="EUR"
-                  fractions={true}
-                  price={5}
-                >
-                  <span
-                    className=""
-                  >
-                    p
-                  </span>
-                </FormatPrice>
-              </div>
-            </Price>
-            <PriceInfo
-              className="css-7hzrhp"
-              text="5 EUR / kg"
-            >
-              <div
-                className="css-1kqiarg css-7hzrhp"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "5 EUR / kg",
+                <div
+                  className="css-1kqiarg css-7hzrhp"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "5 EUR / kg",
+                    }
                   }
-                }
-                data-test-id="priceInfo: 5 EUR / kg"
-              />
-            </PriceInfo>
-          </li>
-        </GridItem>
-      </ul>
-    </Grid>
-  </Product>
+                  data-test-id="priceInfo: 5 EUR / kg"
+                />
+              </PriceInfo>
+            </li>
+          </GridItem>
+        </ul>
+      </Grid>
+    </Product>
+  </Connect(Product)>
 </Provider>
 `;

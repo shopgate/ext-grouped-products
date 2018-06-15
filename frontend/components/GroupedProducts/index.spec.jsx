@@ -1,28 +1,22 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
+import cloneDeep from 'lodash/cloneDeep';
+import set from 'lodash/set';
 import { mount } from 'enzyme';
 import mockRenderOptions from '@shopgate/pwa-common/helpers/mocks/mockRenderOptions';
-import {
-  mockedProduct,
-  mockedMsrpProduct,
-} from './mock';
-
-import { getGroupedProducts } from '../../selectors';
+import { mockedState } from './mock';
 import GroupedProducts from './index';
-
-jest.mock('../../selectors', () => ({
-  getGroupedProducts: jest.fn(),
-}));
 
 const mockedStore = configureStore();
 
 /**
  * Creates component with provided store state.
+ * @param {Object} state A mocked state.
  * @return {ReactWrapper}
  */
-const createComponent = () => {
-  const store = mockedStore({});
+const createComponent = (state) => {
+  const store = mockedStore(state);
 
   return mount(
     <Provider store={store}>
@@ -38,16 +32,15 @@ describe('<GroupedProducts />', () => {
   });
 
   it('should not render when no grouped products are available', () => {
-    getGroupedProducts.mockReturnValue([]);
-    const component = createComponent();
+    const state = set(cloneDeep(mockedState), ['product', 'resultsByHash'], {});
+    const component = createComponent(state);
     expect(component).toMatchSnapshot();
     expect(component.find('GroupedProducts').html()).toBe(null);
   });
 
   it('should render when grouped products are available', () => {
-    getGroupedProducts.mockReturnValue([mockedProduct, mockedMsrpProduct]);
-    const component = createComponent();
+    const component = createComponent(mockedState);
     expect(component).toMatchSnapshot();
-    expect(component.find('ListItem')).toHaveLength(2);
+    expect(component.find('ListItem')).toHaveLength(5);
   });
 });

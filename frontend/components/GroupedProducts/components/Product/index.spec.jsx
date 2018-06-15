@@ -2,8 +2,10 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import { mount } from 'enzyme';
+import addProductsToCart from '@shopgate/pwa-common-commerce/cart/actions/addProductsToCart';
 import mockRenderOptions from '@shopgate/pwa-common/helpers/mocks/mockRenderOptions';
 import {
+  mockedState,
   mockedProduct,
   mockedMsrpProduct,
   mockedStrikePriceProduct,
@@ -11,15 +13,21 @@ import {
 } from '../../mock';
 import Product from './index';
 
+jest.mock('@shopgate/pwa-common-commerce/cart/actions/addProductsToCart', () => jest.fn());
+
+jest.useFakeTimers();
+
 const mockedStore = configureStore();
+const mockedDispatch = jest.fn();
 
 /**
  * Creates component with provided store state.
- * @param {Object} props Additional props.
+ * @param {Object} props Mocked component props.
  * @return {ReactWrapper}
  */
 const createComponent = (props) => {
-  const store = mockedStore({});
+  const store = mockedStore(mockedState);
+  store.dispatch = mockedDispatch;
 
   return mount(
     <Provider store={store}>
@@ -71,6 +79,11 @@ describe('<Product />', () => {
     expect(buttonColumn.find('Price').at(0).prop('unitPrice')).toBe(unitPrice);
     expect(buttonColumn.find('Price').at(0).prop('unitPriceMin')).toBe(unitPriceMin);
     expect(buttonColumn.find('PriceStriked').exists()).toBe(false);
+
+    // Connector
+    const { isOrderable, isDisabled } = component.find('AddToCartPicker').prop('buttonProps');
+    expect(isOrderable).toBe(true);
+    expect(isDisabled).toBe(false);
   });
 
   it('should render a msrp discounted product as expected', () => {
@@ -133,5 +146,25 @@ describe('<Product />', () => {
   it('should render a not orderable product as expected', () => {
     const component = createComponent({ product: mockedNotOrderableProduct });
     expect(component).toMatchSnapshot();
+
+    // Connector
+    const { isOrderable, isDisabled } = component.find('AddToCartPicker').prop('buttonProps');
+    expect(isOrderable).toBe(false);
+    expect(isDisabled).toBe(true);
+  });
+
+  it('should dispatch the addProductsToCart action like expected', () => {
+    const component = createComponent({ product: mockedProduct });
+    const handleAddToCart = component.find('Product').prop('handleAddToCart');
+
+    const quantity = 5;
+    const productId = mockedProduct.id;
+
+    handleAddToCart(quantity);
+    expect(mockedDispatch).toHaveBeenCalledTimes(1);
+    expect(mockedDispatch).toHaveBeenLastCalledWith(addProductsToCart([
+      productId,
+      quantity,
+    ]));
   });
 });

@@ -1,22 +1,38 @@
-import AddToCartButton from '@shopgate/pwa-ui-shared/AddToCartButton';
 import { logger } from '@shopgate/pwa-core/helpers';
+import AddToCartButton from '@shopgate/pwa-ui-shared/AddToCartButton';
 
 /**
  * The PickerAddToCartButton component.
  */
 class PickerAddToCartButton extends AddToCartButton {
+  /**
+   * Click handler for the button.
+   * @return {boolean}
+   */
   handleClick = () => {
-    if (this.state.showCheckmark || this.props.isLoading || this.props.isDisabled) {
-      return;
+    const { showCheckmark } = this.state;
+    const {
+      isDisabled,
+      isLoading,
+      isOrderable,
+      openList,
+    } = this.props;
+
+    if (showCheckmark || isLoading || isDisabled) {
+      return false;
     }
 
-    const { openList } = this.props;
+    if (!isOrderable) {
+      return false;
+    }
 
     if (typeof openList === 'function') {
       this.props.openList();
     } else {
       logger.error('No openList() prop provided');
     }
+
+    return true;
   }
 
   /**

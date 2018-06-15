@@ -7,11 +7,16 @@ const buttonContainer = css({
   marginBottom: variables.gap.small,
 }).toString();
 
+const buttonDisabled = css({
+
+}).toString();
+
 const button = css({
-  boxShadow: `0 0 0 2px ${colors.primary}`,
+  boxShadow: `inset 0 0 0 2px ${colors.primary}`,
 }).toString();
 
 export default {
   buttonContainer,
+  buttonDisabled,
   button,
 };

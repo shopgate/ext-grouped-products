@@ -9,14 +9,16 @@ import Price from '@shopgate/pwa-ui-shared/Price';
 import PriceStriked from '@shopgate/pwa-ui-shared/PriceStriked';
 import PriceInfo from '@shopgate/pwa-ui-shared/PriceInfo';
 import AddToCartPicker from '../../../AddToCartPicker';
+import { ADD_TO_CART_BUTTON_TYPE_GROUPED } from '../../../../constants';
 import styles from './style';
+import connect from './connector';
 
 /**
  * The Product component to render a single grouped product.
  * @param {Object} props The component props.
  * @return {JSX}
  */
-const Product = ({ product }) => (
+const Product = ({ product, handleAddToCart, addToCartButtonProps }) => (
   <Grid>
     <Grid.Item shrink={0} className={styles.imageContainer}>
       <Image itemProp="image" src={product.featuredImageUrl} alt={product.name} />
@@ -32,9 +34,14 @@ const Product = ({ product }) => (
     </Grid.Item>
     <Grid.Item grow={1} className={styles.buttonContainer}>
       <AddToCartPicker
+        buttonProps={{
+          ...addToCartButtonProps,
+          type: ADD_TO_CART_BUTTON_TYPE_GROUPED,
+        }}
         className={styles.button}
-        stock={product.stock}
+        handleAddToCart={handleAddToCart}
         productId={product.id}
+        stock={product.stock}
       />
       {(product.price.msrp > 0 && product.price.unitPrice !== product.price.msrp) && (
         <div className={styles.priceStrikedContainer}>
@@ -48,7 +55,6 @@ const Product = ({ product }) => (
             className={styles.priceStriked}
           />
         </div>
-
       )}
       {(!product.price.msrp && product.price.unitPriceStriked > 0) && (
         <PriceStriked
@@ -72,7 +78,13 @@ const Product = ({ product }) => (
 );
 
 Product.propTypes = {
+  handleAddToCart: PropTypes.func.isRequired,
   product: PropTypes.shape().isRequired,
+  addToCartButtonProps: PropTypes.shape(),
 };
 
-export default Product;
+Product.defaultProps = {
+  addToCartButtonProps: {},
+};
+
+export default connect(Product);

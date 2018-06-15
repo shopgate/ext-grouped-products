@@ -3,10 +3,10 @@ import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import { mount } from 'enzyme';
 import mockRenderOptions from '@shopgate/pwa-common/helpers/mocks/mockRenderOptions';
-import addProductsToCart from '@shopgate/pwa-common-commerce/cart/actions/addProductsToCart';
 import {
+  mockedState,
   mockedProduct,
-  mockedLowQuantityProduct,
+  mockedIgnoredQuantityProduct,
 } from '../GroupedProducts/mock';
 
 import AddToCartPicker from './index';
@@ -36,7 +36,7 @@ try {
 jest.mock('@shopgate/pwa-ui-shared/Sheet', () => ({ children }) => children);
 
 const mockedStore = configureStore();
-const mockDispatch = jest.fn();
+const mockHandleAddToCart = jest.fn();
 
 /**
  * Creates component with provided store state.
@@ -44,13 +44,12 @@ const mockDispatch = jest.fn();
  * @return {ReactWrapper}
  */
 const createComponent = (product) => {
-  const store = mockedStore({});
-  store.dispatch = mockDispatch;
+  const store = mockedStore(mockedState);
 
   const { id, stock } = product;
   return mount(
     <Provider store={store}>
-      <AddToCartPicker productId={id} stock={stock} />
+      <AddToCartPicker productId={id} stock={stock} handleAddToCart={mockHandleAddToCart} />
     </Provider>,
     mockRenderOptions
   );
@@ -69,12 +68,13 @@ describe('<AddToCartPicker />', () => {
     expect(component.find(AddToCartPicker).first().prop('stock')).toEqual(stock);
 
     const pickerEntry = component.find('ListItem Item').first();
+    const quantity = parseInt(pickerEntry.text(), 10);
 
     pickerEntry.simulate('click');
     jest.runAllTimers();
 
-    expect(mockDispatch).toHaveBeenCalledTimes(1);
-    expect(mockDispatch).toHaveBeenCalledWith(addProductsToCart());
+    expect(mockHandleAddToCart).toHaveBeenCalledTimes(1);
+    expect(mockHandleAddToCart).toHaveBeenCalledWith(quantity);
   });
 
   it('should create picker items like expected when quantity is not ignored', () => {
@@ -93,7 +93,7 @@ describe('<AddToCartPicker />', () => {
   });
 
   it('should create picker items like expected when quantity is ignored', () => {
-    const component = createComponent(mockedLowQuantityProduct);
+    const component = createComponent(mockedIgnoredQuantityProduct);
     const picker = component.find('Picker').first();
     const pickerItems = picker.prop('items');
     expect(pickerItems).toHaveLength(5);

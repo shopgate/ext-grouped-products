@@ -1,5 +1,6 @@
 import set from 'lodash/set';
 import cloneDeep from 'lodash/cloneDeep';
+import { generateHash } from '../../helpers';
 
 const availability = {
   text: 'Lorem Ipsum',
@@ -47,7 +48,7 @@ discountedMsrp = set(discountedMsrp, ['price', 'discount'], 50);
 // eslint-disable-next-line import/no-mutable-exports
 let discountedStrike = cloneDeep({
   ...product,
-  id: '4711',
+  id: '1985',
   name: 'A discounted product with stike price and info',
 });
 
@@ -58,7 +59,7 @@ discountedStrike = set(discountedStrike, ['price', 'info'], '5 EUR / kg');
 // eslint-disable-next-line import/no-mutable-exports
 let notOrderable = cloneDeep({
   ...product,
-  id: '1234',
+  id: 'foo',
   name: 'A not orderable product',
 });
 
@@ -69,16 +70,54 @@ notOrderable = set(notOrderable, ['stock', 'quantity'], 0);
 let ignoredQuantity = cloneDeep({
   ...product,
   id: '1234',
-  name: 'A product with low and ignored quantity',
+  name: 'A product with ignored quantity',
 });
 
 ignoredQuantity = set(ignoredQuantity, ['stock', 'ignoreQuantity'], true);
 ignoredQuantity = set(ignoredQuantity, ['stock', 'quantity'], 30);
 
+const mockedState = {
+  product: {
+    currentProduct: {
+      productId: '1337',
+    },
+    resultsByHash: {
+      [generateHash('1337')]: {
+        isFetching: false,
+        products: [
+          product.id,
+          discountedMsrp.id,
+          discountedStrike.id,
+          notOrderable.id,
+          ignoredQuantity.id,
+        ],
+      },
+    },
+    productsById: {
+      [product.id]: {
+        productData: product,
+      },
+      [discountedMsrp.id]: {
+        productData: discountedMsrp,
+      },
+      [discountedStrike.id]: {
+        productData: discountedStrike,
+      },
+      [notOrderable.id]: {
+        productData: notOrderable,
+      },
+      [ignoredQuantity.id]: {
+        productData: ignoredQuantity,
+      },
+    },
+  },
+};
+
 export {
+  mockedState,
   product as mockedProduct,
   discountedMsrp as mockedMsrpProduct,
   discountedStrike as mockedStrikePriceProduct,
   notOrderable as mockedNotOrderableProduct,
-  ignoredQuantity as mockedLowQuantityProduct,
+  ignoredQuantity as mockedIgnoredQuantityProduct,
 };

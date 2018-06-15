@@ -4,27 +4,24 @@ import BasePicker from '@shopgate/pwa-common/components/Picker';
 import Sheet from '@shopgate/pwa-ui-shared/Sheet';
 import List from './components/List';
 import AddToCartButton from './components/AddToCartButton';
-import { maxQuantityPickerEntries } from '../../config';
+import { ADD_TO_CART_BUTTON_TYPE_DEFAULT } from '../../constants';
+import { createPickerItems } from '../../helpers';
 import styles from './style';
-import connect from './connector';
 
 /**
  * The AddToCartPicker component.
  */
 class AddToCartPicker extends Component {
   static propTypes = {
-    addProductToCart: PropTypes.func.isRequired,
-    productId: PropTypes.string.isRequired,
+    handleAddToCart: PropTypes.func.isRequired,
+    buttonProps: PropTypes.shape(),
+    clickDelay: PropTypes.number,
+    productId: PropTypes.string,
     stock: PropTypes.shape({
       ignoreQuantity: PropTypes.bool,
       quantity: PropTypes.number,
-      info: PropTypes.string,
       orderable: PropTypes.bool,
-      minOrderQuantity: PropTypes.number,
-      maxOrderQuantity: PropTypes.number,
-    }).isRequired,
-    clickDelay: PropTypes.number,
-    maxEntries: PropTypes.number,
+    }),
   };
 
   static defaultProps = {
@@ -32,8 +29,18 @@ class AddToCartPicker extends Component {
      * Time in ms that delays picker interaction in order
      * to let animations complete first.
      */
+    buttonProps: {
+      handleAddToCart: /* istanbul ignore next */ () => {},
+      isDisabled: false,
+      isLoading: false,
+      isOrderable: true,
+      hasLoading: true,
+      noShadow: true,
+      type: ADD_TO_CART_BUTTON_TYPE_DEFAULT,
+    },
     clickDelay: 150,
-    maxEntries: maxQuantityPickerEntries,
+    productId: '',
+    stock: null,
   };
 
   static contextTypes = {
@@ -80,38 +87,14 @@ class AddToCartPicker extends Component {
   }
 
   /**
-   * Creates items for the picker.
-   * @return {Array}
+   * Returns the props for the picker button.
+   * @return {Object}
    */
-  createPickerItems = () => {
-    const {
-      ignoreQuantity,
-      quantity,
-    } = this.props.stock;
-
-    const { maxEntries } = this.props;
-
-    const items = [];
-
-    // Prepare the picker entries - for now min- and maxOrderQuantity is not considered.
-    for (let i = 0; i <= maxEntries; i += 1) {
-      if (ignoreQuantity) {
-        if (items.length === maxEntries) {
-          break;
-        }
-      } else if (items.length === maxEntries || i >= quantity) {
-        break;
-      }
-
-      const value = i + 1;
-
-      items.push({
-        label: `${value}`,
-        value,
-      });
-    }
-
-    return items;
+  get buttonProps() {
+    return {
+      ...this.constructor.defaultProps.buttonProps,
+      ...this.props.buttonProps,
+    };
   }
 
   /**
@@ -119,7 +102,7 @@ class AddToCartPicker extends Component {
    * @param {number} quantity The desired quantity.
    */
   handleAddToCart = (quantity) => {
-    this.props.addProductToCart(quantity);
+    this.props.handleAddToCart(quantity);
 
     this.setState({
       addedQuantity: this.state.addedQuantity + quantity,
@@ -131,20 +114,13 @@ class AddToCartPicker extends Component {
    * @returns {JSX}
    */
   render() {
-    const { orderable } = this.props.stock;
+    const pickerItems = createPickerItems(this.props.stock);
+    const { isDisabled } = this.buttonProps;
 
-    const pickerItems = this.createPickerItems();
-    const isOrderable = orderable || pickerItems.length > 0;
-
-    // Setup required and dynamic button props.
     const buttonProps = {
-      handleAddToCart: /* istanbul ignore next */ () => {},
-      isDisabled: !isOrderable,
-      isLoading: false,
+      ...this.buttonProps,
       addedQuantity: this.state.addedQuantity,
-      noShadow: true,
-      className: styles.button,
-      isOrderable,
+      className: (isDisabled ? styles.buttonDisabled : styles.button),
     };
 
     return (
@@ -163,4 +139,4 @@ class AddToCartPicker extends Component {
   }
 }
 
-export default connect(AddToCartPicker);
+export default AddToCartPicker;

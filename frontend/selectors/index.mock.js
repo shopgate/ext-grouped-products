@@ -16,7 +16,7 @@ export const stateWithoutCurrentProduct = {
   },
 };
 
-export const stateWithChildren = {
+export const stateWithGroupedProducts = {
   product: {
     currentProduct: {
       productId: '1337',
@@ -33,25 +33,36 @@ export const stateWithChildren = {
       4711: {
         productData: {
           id: '4711',
+          stock: {
+            orderable: true,
+          },
         },
       },
       1234: {
         productData: {
           id: '1234',
+          stock: {
+            orderable: false,
+          },
+        },
+      },
+      1985: {
+        productData: {
+          id: '1985',
         },
       },
     },
   },
 };
 
-export const stateWithoutChildren = set(
-  cloneDeep(stateWithChildren),
+export const stateWithoutGroupedProducts = set(
+  cloneDeep(stateWithGroupedProducts),
   'product.productsById.1337.productData.flags.hasChildren',
   false
 );
 
 export const stateWithoutFlag = set(
-  cloneDeep(stateWithChildren),
+  cloneDeep(stateWithGroupedProducts),
   'product.productsById.1337.productData.flags',
   {}
 );
@@ -61,7 +72,7 @@ export const stateWithoutFlag = set(
  */
 
 export const stateWithEmptyResultsByHash = merge(
-  cloneDeep(stateWithChildren),
+  cloneDeep(stateWithGroupedProducts),
   {
     product: {
       resultsByHash: {},
@@ -82,7 +93,7 @@ export const stateWithResultsByHash = set(
   resultsByHashPath,
   {
     isFetching: false,
-    products: ['4711', '1234'],
+    products: ['4711', '1234', '1985'],
   }
 );
 
@@ -91,5 +102,8 @@ export const expectedResultsByHashEntry = get(
   resultsByHashPath
 );
 
-export const expectedProductDataFromResultsByHash = [{ id: '4711' }, { id: '1234' }];
-
+export const expectedProductDataFromResultsByHash = [
+  { id: '4711', stock: { orderable: true } },
+  { id: '1234', stock: { orderable: false } },
+  { id: '1985' },
+];

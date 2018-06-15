@@ -41,6 +41,9 @@ describe('<AddToCartButton />', () => {
     component.setProps({ ...buttonProps, isDisabled: true });
     component.simulate('click');
     expect(openListSpy).toHaveBeenCalledTimes(1);
+    component.setProps({ ...buttonProps, isOrderable: false });
+    component.simulate('click');
+    expect(openListSpy).toHaveBeenCalledTimes(1);
     component.setProps({ ...buttonProps, isLoading: true });
     component.simulate('click');
     expect(openListSpy).toHaveBeenCalledTimes(1);
