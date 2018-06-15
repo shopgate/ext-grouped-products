@@ -127,12 +127,12 @@ class AddToCartPicker extends Component {
       <Fragment>
         <BasePicker
           items={pickerItems}
-          className={styles.buttonContainer}
           modalComponent={this.modalComponent}
           buttonProps={buttonProps}
           buttonComponent={AddToCartButton}
           listComponent={this.listComponent}
           onChange={this.handleAddToCart}
+          className={styles.buttonContainera}
         />
       </Fragment>
     );

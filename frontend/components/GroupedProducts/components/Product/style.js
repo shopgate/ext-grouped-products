@@ -18,6 +18,10 @@ const buttonContainer = css({
   paddingLeft: variables.gap.small,
 }).toString();
 
+const button = css({
+  marginBottom: variables.gap.small,
+}).toString();
+
 const headline = css({
   fontWeight: 500,
 }).toString();
@@ -52,6 +56,7 @@ export default {
   imageContainer,
   metaContainer,
   buttonContainer,
+  button,
   headline,
   availability,
   price,

@@ -54,7 +54,7 @@ exports[`<AddToCartPicker /> should render the component as expected 1`] = `
           "type": "default",
         }
       }
-      className="css-1ej66kr"
+      className=""
       disabled={false}
       duration={300}
       isOpen={false}
@@ -87,7 +87,7 @@ exports[`<AddToCartPicker /> should render the component as expected 1`] = `
       value={null}
     >
       <div
-        className="css-1ej66kr"
+        className=""
       >
         <PickerAddToCartButton
           addedQuantity={0}

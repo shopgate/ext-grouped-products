@@ -191,6 +191,7 @@ exports[`<Product /> should render a msrp discounted product as expected 1`] = `
                     "type": "grouped",
                   }
                 }
+                className="css-1ej66kr"
                 clickDelay={150}
                 handleAddToCart={[Function]}
                 productId="4711"
@@ -220,7 +221,7 @@ exports[`<Product /> should render a msrp discounted product as expected 1`] = `
                       "type": "grouped",
                     }
                   }
-                  className="css-1ej66kr"
+                  className=""
                   disabled={false}
                   duration={300}
                   isOpen={false}
@@ -253,7 +254,7 @@ exports[`<Product /> should render a msrp discounted product as expected 1`] = `
                   value={null}
                 >
                   <div
-                    className="css-1ej66kr"
+                    className=""
                   >
                     <PickerAddToCartButton
                       addedQuantity={0}
@@ -659,6 +660,7 @@ exports[`<Product /> should render a not orderable product as expected 1`] = `
                     "type": "grouped",
                   }
                 }
+                className="css-1ej66kr"
                 clickDelay={150}
                 handleAddToCart={[Function]}
                 productId="foo"
@@ -678,7 +680,7 @@ exports[`<Product /> should render a not orderable product as expected 1`] = `
                   buttonProps={
                     Object {
                       "addedQuantity": 0,
-                      "className": "css-nil",
+                      "className": "css-xv46o",
                       "handleAddToCart": [Function],
                       "hasLoading": true,
                       "isDisabled": true,
@@ -688,7 +690,7 @@ exports[`<Product /> should render a not orderable product as expected 1`] = `
                       "type": "grouped",
                     }
                   }
-                  className="css-1ej66kr"
+                  className=""
                   disabled={false}
                   duration={300}
                   isOpen={false}
@@ -702,12 +704,12 @@ exports[`<Product /> should render a not orderable product as expected 1`] = `
                   value={null}
                 >
                   <div
-                    className="css-1ej66kr"
+                    className=""
                   >
                     <PickerAddToCartButton
                       addedQuantity={0}
                       buttonSize={40}
-                      className="css-nil"
+                      className="css-xv46o"
                       disabled={false}
                       handleAddToCart={[Function]}
                       hasLoading={true}
@@ -722,7 +724,7 @@ exports[`<Product /> should render a not orderable product as expected 1`] = `
                       value=""
                     >
                       <button
-                        className="css-nil css-zby7a7 css-15s4nvk"
+                        className="css-xv46o css-zby7a7 css-15s4nvk"
                         data-test-id="AddToCartButton"
                         onClick={[Function]}
                       >
@@ -1067,6 +1069,7 @@ exports[`<Product /> should render a regular product as expected 1`] = `
                     "type": "grouped",
                   }
                 }
+                className="css-1ej66kr"
                 clickDelay={150}
                 handleAddToCart={[Function]}
                 productId="1337"
@@ -1096,7 +1099,7 @@ exports[`<Product /> should render a regular product as expected 1`] = `
                       "type": "grouped",
                     }
                   }
-                  className="css-1ej66kr"
+                  className=""
                   disabled={false}
                   duration={300}
                   isOpen={false}
@@ -1129,7 +1132,7 @@ exports[`<Product /> should render a regular product as expected 1`] = `
                   value={null}
                 >
                   <div
-                    className="css-1ej66kr"
+                    className=""
                   >
                     <PickerAddToCartButton
                       addedQuantity={0}
@@ -1494,6 +1497,7 @@ exports[`<Product /> should render a strike price discounted product as expected
                     "type": "grouped",
                   }
                 }
+                className="css-1ej66kr"
                 clickDelay={150}
                 handleAddToCart={[Function]}
                 productId="1985"
@@ -1523,7 +1527,7 @@ exports[`<Product /> should render a strike price discounted product as expected
                       "type": "grouped",
                     }
                   }
-                  className="css-1ej66kr"
+                  className=""
                   disabled={false}
                   duration={300}
                   isOpen={false}
@@ -1556,7 +1560,7 @@ exports[`<Product /> should render a strike price discounted product as expected
                   value={null}
                 >
                   <div
-                    className="css-1ej66kr"
+                    className=""
                   >
                     <PickerAddToCartButton
                       addedQuantity={0}

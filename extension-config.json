@@ -15,6 +15,12 @@
       "type": "portals"
     },
     {
+      "id": "CTAButtons",
+      "path": "frontend/components/CTAButtons/index.jsx",
+      "target": "product.ctas",
+      "type": "portals"
+    },
+    {
       "id": "Subscribers",
       "path": "frontend/subscriptions/index.js",
       "type": "subscribers"

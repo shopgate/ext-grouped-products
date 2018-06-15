@@ -1,14 +1,14 @@
 import { css } from 'glamor';
 import { themeConfig } from '@shopgate/pwa-common/helpers/config';
 
-const { variables, colors } = themeConfig;
+const { colors } = themeConfig;
 
 const buttonContainer = css({
-  marginBottom: variables.gap.small,
+  display: 'inherit',
 }).toString();
 
 const buttonDisabled = css({
-
+  boxShadow: 'none',
 }).toString();
 
 const button = css({
