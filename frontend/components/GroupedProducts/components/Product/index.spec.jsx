@@ -10,7 +10,7 @@ import {
   mockedMsrpProduct,
   mockedStrikePriceProduct,
   mockedNotOrderableProduct,
-} from '../../mock';
+} from '../../../mock';
 import Product from './index';
 
 jest.mock('@shopgate/pwa-common-commerce/cart/actions/addProductsToCart', () => jest.fn());
