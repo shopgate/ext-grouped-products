@@ -5,7 +5,7 @@ import cloneDeep from 'lodash/cloneDeep';
 import set from 'lodash/set';
 import { mount } from 'enzyme';
 import mockRenderOptions from '@shopgate/pwa-common/helpers/mocks/mockRenderOptions';
-import { mockedState } from './mock';
+import { mockedState } from '../mock';
 import GroupedProducts from './index';
 
 const mockedStore = configureStore();

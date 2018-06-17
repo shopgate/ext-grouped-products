@@ -7,7 +7,7 @@ import {
   mockedState,
   mockedProduct,
   mockedIgnoredQuantityProduct,
-} from '../GroupedProducts/mock';
+} from '../mock';
 
 import AddToCartPicker from './index';
 

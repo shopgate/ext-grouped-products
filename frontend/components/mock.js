@@ -1,6 +1,6 @@
 import set from 'lodash/set';
 import cloneDeep from 'lodash/cloneDeep';
-import { generateHash } from '../../helpers';
+import { generateHash } from '../helpers';
 
 const availability = {
   text: 'Lorem Ipsum',

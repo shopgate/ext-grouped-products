@@ -5,7 +5,7 @@ import { generateHash, createPickerItems, isGmdTheme } from './index';
 import {
   mockedProduct,
   mockedIgnoredQuantityProduct,
-} from '../components/GroupedProducts/mock';
+} from '../components/mock';
 
 jest.mock('../config', () => ({
   maxQuantityPickerEntries: 5,
