@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import addProductsToCart from '@shopgate/pwa-common-commerce/cart/actions/addProductsToCart';
-import { isGroupedProductOrderable } from '../../../../selectors';
+import { isGroupedProductOrderable, isProductOnFavoriteList } from '../../../../selectors';
 
 /**
  * Maps the contents of the state to the component props.
@@ -10,9 +10,10 @@ import { isGroupedProductOrderable } from '../../../../selectors';
  */
 const mapStateToProps = (state, { product }) => ({
   addToCartButtonProps: {
-    isOrderable: isGroupedProductOrderable(state, product.id),
-    isDisabled: !isGroupedProductOrderable(state, product.id),
+    isOrderable: isGroupedProductOrderable(state, { productId: product.id }),
+    isDisabled: !isGroupedProductOrderable(state, { productId: product.id }),
   },
+  isFavorite: isProductOnFavoriteList(state, { productId: product.id }),
 });
 
 /**

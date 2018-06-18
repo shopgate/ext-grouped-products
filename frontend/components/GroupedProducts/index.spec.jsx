@@ -2,6 +2,7 @@ import cloneDeep from 'lodash/cloneDeep';
 import set from 'lodash/set';
 import { createWrappedComponent } from '../mockStore';
 import { mockedState } from '../mock';
+import { THEME_GMD } from '../../constants';
 import GroupedProducts from './index';
 
 /**
@@ -14,6 +15,7 @@ const createComponent = state => createWrappedComponent(GroupedProducts, state);
 describe('<GroupedProducts />', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    global.process.env.THEME = THEME_GMD;
   });
 
   it('should not render when no grouped products are available', () => {

@@ -35,7 +35,7 @@ class AddToCartPicker extends Component {
       isLoading: false,
       isOrderable: true,
       hasLoading: true,
-      noShadow: true,
+      noShadow: false,
       type: ADD_TO_CART_BUTTON_TYPE_DEFAULT,
     },
     clickDelay: 150,
@@ -91,10 +91,22 @@ class AddToCartPicker extends Component {
    * @return {Object}
    */
   get buttonProps() {
-    return {
+    let props = {
       ...this.constructor.defaultProps.buttonProps,
       ...this.props.buttonProps,
+      addedQuantity: this.state.addedQuantity,
+      className: null,
     };
+
+    if (props.noShadow) {
+      // Inject additional classes when the button is rendered without a shadow.
+      props = {
+        ...props,
+        className: props.isDisabled ? styles.buttonFlatDisabled : styles.buttonFlat,
+      };
+    }
+
+    return props;
   }
 
   /**
@@ -115,13 +127,6 @@ class AddToCartPicker extends Component {
    */
   render() {
     const pickerItems = createPickerItems(this.props.stock);
-    const { isDisabled } = this.buttonProps;
-
-    const buttonProps = {
-      ...this.buttonProps,
-      addedQuantity: this.state.addedQuantity,
-      className: (isDisabled ? styles.buttonDisabled : styles.button),
-    };
 
     return (
       <Fragment>
@@ -129,7 +134,7 @@ class AddToCartPicker extends Component {
           items={pickerItems}
           className={styles.buttonContainer}
           modalComponent={this.modalComponent}
-          buttonProps={buttonProps}
+          buttonProps={this.buttonProps}
           buttonComponent={AddToCartButton}
           listComponent={this.listComponent}
           onChange={this.handleAddToCart}

@@ -1,6 +1,12 @@
 import { generateResultHash } from '@shopgate/pwa-common/helpers/redux';
-import { SHOPGATE_CATALOG_GET_PRODUCT_CHILDREN } from '../constants';
-import { generateHash, createPickerItems, isGmdTheme } from './index';
+import { SHOPGATE_CATALOG_GET_PRODUCT_CHILDREN, THEME_GMD, THEME_IOS } from '../constants';
+import {
+  generateHash,
+  createPickerItems,
+  isGmdTheme,
+  renderFlatButtons,
+  hasFavorites,
+} from './index';
 
 import {
   mockedProduct,
@@ -9,6 +15,12 @@ import {
 
 jest.mock('../config', () => ({
   maxQuantityPickerEntries: 5,
+}));
+
+let mockedHasFavorites = true;
+
+jest.mock('@shopgate/pwa-common/helpers/config', () => ({
+  get hasFavorites() { return mockedHasFavorites; },
 }));
 
 describe('Grouped products helpers', () => {
@@ -64,13 +76,36 @@ describe('Grouped products helpers', () => {
 
   describe('isGmdTheme()', () => {
     it('should return false for gmd', () => {
-      global.process.env.THEME = 'gmd';
+      global.process.env.THEME = THEME_GMD;
       expect(isGmdTheme()).toBe(true);
     });
 
     it('should return true for ios', () => {
-      global.process.env.THEME = 'ios';
+      global.process.env.THEME = THEME_IOS;
       expect(isGmdTheme()).toBe(false);
+    });
+  });
+
+  describe('renderFlatButtons()', () => {
+    it('should return false at gmd', () => {
+      global.process.env.THEME = THEME_IOS;
+      expect(renderFlatButtons()).toBe(true);
+    });
+
+    it('should return true at ios', () => {
+      global.process.env.THEME = THEME_GMD;
+      expect(renderFlatButtons()).toBe(false);
+    });
+  });
+
+  describe('hasFavorites()', () => {
+    it('should return true when the config setting is set to true', () => {
+      expect(hasFavorites()).toBe(true);
+    });
+
+    it('should return false when the config setting is set to false', () => {
+      mockedHasFavorites = false;
+      expect(hasFavorites()).toBe(false);
     });
   });
 });

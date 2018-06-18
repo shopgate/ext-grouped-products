@@ -1,7 +1,7 @@
 import { css } from 'glamor';
 import { themeConfig } from '@shopgate/pwa-common/helpers/config';
 
-const { colors, variables } = themeConfig;
+const { variables } = themeConfig;
 
 const imageContainer = css({
   width: 80,
@@ -18,8 +18,9 @@ const buttonContainer = css({
   paddingLeft: variables.gap.small,
 }).toString();
 
-const button = css({
-  marginBottom: variables.gap.small,
+const buttonContainerFav = css({
+  textAlign: 'center',
+  paddingLeft: variables.gap.small,
 }).toString();
 
 const headline = css({
@@ -30,38 +31,21 @@ const availability = css({
   fontSize: '0.875rem',
 }).toString();
 
-const price = css({
-  justifyContent: 'flex-end',
+const favButton = css({
+  display: 'inline',
 }).toString();
 
-const msrpLabel = css({
-  color: colors.shade3,
-  fontSize: '0.875rem',
-  marginRight: variables.gap.small / 2,
-}).toString();
-
-const priceStrikedContainer = css({
-  display: 'inline-flex',
-}).toString();
-
-const priceStriked = css({
-  fontSize: '0.875rem',
-}).toString();
-
-const priceInfo = css({
-  fontSize: '0.75rem',
+const ripple = css({
+  padding: 8,
 }).toString();
 
 export default {
   imageContainer,
   metaContainer,
-  buttonContainer,
-  button,
   headline,
   availability,
-  price,
-  priceStrikedContainer,
-  msrpLabel,
-  priceStriked,
-  priceInfo,
+  buttonContainer,
+  buttonContainerFav,
+  favButton,
+  ripple,
 };

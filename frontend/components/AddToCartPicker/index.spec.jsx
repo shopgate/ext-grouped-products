@@ -1,9 +1,9 @@
 import { createWrappedComponent } from '../mockStore';
-
 import {
   mockedState,
   mockedProduct,
   mockedIgnoredQuantityProduct,
+  mockedNotOrderableProduct,
 } from '../mock';
 
 import AddToCartPicker from './index';
@@ -37,12 +37,14 @@ const mockHandleAddToCart = jest.fn();
 /**
  * Creates a component with a provided store state.
  * @param {Object} product A product to set the component props for.
+ * @param {Object} [buttonProps={}] Mocked button props.
  * @return {ReactWrapper}
  */
-const createComponent = (product) => {
+const createComponent = (product, buttonProps = {}) => {
   const { id, stock } = product;
 
   const mockedProps = {
+    buttonProps,
     productId: id,
     handleAddToCart: mockHandleAddToCart,
     stock,
@@ -101,5 +103,24 @@ describe('<AddToCartPicker />', () => {
       label: '5',
       value: 5,
     });
+  });
+
+  it('should render a button with a shadow', () => {
+    const component = createComponent(mockedProduct, { noShadow: false });
+    expect(component.find('PickerAddToCartButton').first().prop('noShadow')).toBe(false);
+  });
+
+  it('should render a flat button', () => {
+    const component = createComponent(mockedProduct, { noShadow: true });
+    expect(component.find('PickerAddToCartButton').first().prop('noShadow')).toBe(true);
+  });
+
+  it('should render a flat disabled button', () => {
+    const component = createComponent(mockedNotOrderableProduct, {
+      noShadow: true,
+      isDisabled: true,
+    });
+    expect(component.find('PickerAddToCartButton').first().prop('noShadow')).toBe(true);
+    expect(component.find('PickerAddToCartButton').first().prop('isDisabled')).toBe(true);
   });
 });

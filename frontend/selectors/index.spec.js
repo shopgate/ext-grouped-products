@@ -1,3 +1,4 @@
+import { THEME_GMD, THEME_IOS } from '../constants';
 import {
   stateWithEmptyResultsByHash,
   stateWithFetchingResultsByHash,
@@ -14,6 +15,7 @@ import {
   getGroupedProducts,
   hasGroupedProducts,
   isGroupedProductOrderable,
+  isProductOnFavoriteList,
   isMainAddToCartButtonVisible,
 } from './index';
 
@@ -58,28 +60,28 @@ describe('Grouped products selectors', () => {
   });
 
   describe('isGroupedProductOrderable()', () => {
-    it('should return false when no productId was passed', () => {
+    it('should return false when no props with a productId was passed', () => {
       const result = isGroupedProductOrderable(stateWithResultsByHash);
       expect(result).toBe(false);
     });
 
     it('should return false when a wrong productId was passed', () => {
-      const result = isGroupedProductOrderable(stateWithResultsByHash, 'foobar');
+      const result = isGroupedProductOrderable(stateWithResultsByHash, { productId: 'foobar' });
       expect(result).toBe(false);
     });
 
     it('should return false when a productId of a product without stock was passed', () => {
-      const result = isGroupedProductOrderable(stateWithResultsByHash, '1985');
+      const result = isGroupedProductOrderable(stateWithResultsByHash, { productId: '1985' });
       expect(result).toBe(false);
     });
 
     it('should return false when a productId of a not orderable product was passed', () => {
-      const result = isGroupedProductOrderable(stateWithResultsByHash, '1234');
+      const result = isGroupedProductOrderable(stateWithResultsByHash, { productId: '1234' });
       expect(result).toBe(false);
     });
 
     it('should return true when a productId of an orderable product was passed', () => {
-      const result = isGroupedProductOrderable(stateWithResultsByHash, '4711');
+      const result = isGroupedProductOrderable(stateWithResultsByHash, { productId: '4711' });
       expect(result).toBe(true);
     });
   });
@@ -106,27 +108,44 @@ describe('Grouped products selectors', () => {
     });
   });
 
+  describe('isProductOnFavoriteList()', () => {
+    it('should return false when no props with a productId where passed', () => {
+      const result = isProductOnFavoriteList(stateWithGroupedProducts);
+      expect(result).toBe(false);
+    });
+
+    it('should return false when a productId is not on the list', () => {
+      const result = isProductOnFavoriteList(stateWithGroupedProducts, { product: '4711' });
+      expect(result).toBe(false);
+    });
+
+    it('should return true when a product is on the list', () => {
+      const result = isProductOnFavoriteList(stateWithGroupedProducts, { productId: '1337' });
+      expect(result).toBe(true);
+    });
+  });
+
   describe('isMainAddToCartButtonVisible()', () => {
     it('should return true if the gmd theme is active but no grouped products are available', () => {
-      global.process.env.THEME = 'gmd';
+      global.process.env.THEME = THEME_GMD;
       const result = isMainAddToCartButtonVisible(stateWithoutGroupedProducts);
       expect(result).toBe(true);
     });
 
     it('should return false if the gmd theme is active and grouped products are available', () => {
-      global.process.env.THEME = 'gmd';
+      global.process.env.THEME = THEME_GMD;
       const result = isMainAddToCartButtonVisible(stateWithGroupedProducts);
       expect(result).toBe(false);
     });
 
     it('should return false if the gmd theme is active but no grouped products are available', () => {
-      global.process.env.THEME = 'ios';
+      global.process.env.THEME = THEME_IOS;
       const result = isMainAddToCartButtonVisible(stateWithoutGroupedProducts);
       expect(result).toBe(false);
     });
 
     it('should return false if the gmd theme is active and grouped products are available', () => {
-      global.process.env.THEME = 'ios';
+      global.process.env.THEME = THEME_IOS;
       const result = isMainAddToCartButtonVisible(stateWithGroupedProducts);
       expect(result).toBe(false);
     });

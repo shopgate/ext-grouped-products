@@ -3,8 +3,6 @@ import { createWrappedComponent } from '../../../mockStore';
 import {
   mockedState,
   mockedProduct,
-  mockedMsrpProduct,
-  mockedStrikePriceProduct,
   mockedNotOrderableProduct,
 } from '../../../mock';
 import Product from './index';
@@ -28,13 +26,19 @@ describe('<Product />', () => {
     jest.clearAllMocks();
   });
 
-  it('should render a regular product as expected', () => {
+  it('should render as expected when the favorite list is not active', () => {
     const {
-      id, name, featuredImageUrl, stock, availability, price,
+      id, name, featuredImageUrl, stock, availability,
     } = mockedProduct;
 
-    const component = createComponent({ product: mockedProduct });
+    const component = createComponent({
+      product: mockedProduct,
+      hasFavorites: false,
+    });
+
     expect(component).toMatchSnapshot();
+    expect(component.find('FavoritesButton').exists()).toBe(false);
+
     const columns = component.find('GridItem');
     const imageColumn = columns.at(0);
     const metaColumn = columns.at(1);
@@ -56,13 +60,7 @@ describe('<Product />', () => {
     expect(buttonColumn.find('AddToCartPicker').at(0).prop('stock')).toEqual(stock);
     expect(buttonColumn.find('AddToCartPicker').at(0).prop('productId')).toBe(id);
 
-    const { currency, unitPrice, unitPriceMin } = price;
-    expect(buttonColumn.find('Price').exists()).toBe(true);
-    expect(buttonColumn.find('Price').at(0).prop('currency')).toBe(currency);
-    expect(buttonColumn.find('Price').at(0).prop('discounted')).toBe(false);
-    expect(buttonColumn.find('Price').at(0).prop('unitPrice')).toBe(unitPrice);
-    expect(buttonColumn.find('Price').at(0).prop('unitPriceMin')).toBe(unitPriceMin);
-    expect(buttonColumn.find('PriceStriked').exists()).toBe(false);
+    expect(buttonColumn.find('ProductPrice').exists()).toBe(true);
 
     // Connector
     const { isOrderable, isDisabled } = component.find('AddToCartPicker').prop('buttonProps');
@@ -70,71 +68,51 @@ describe('<Product />', () => {
     expect(isDisabled).toBe(false);
   });
 
-  it('should render a msrp discounted product as expected', () => {
-    const { price } = mockedMsrpProduct;
+  it('should render as expected when the favorite list is not active', () => {
+    const component = createComponent({
+      product: mockedNotOrderableProduct,
+      hasFavorites: true,
+    });
 
-    const component = createComponent({ product: mockedMsrpProduct });
     expect(component).toMatchSnapshot();
+
     const columns = component.find('GridItem');
-    const imageColumn = columns.at(0);
     const metaColumn = columns.at(1);
     const buttonColumn = columns.at(2);
+
     expect(columns).toHaveLength(3);
 
-    expect(imageColumn.find('Image').exists()).toBe(true);
-    expect(metaColumn.find('Ellipsis').exists()).toBe(true);
-    expect(metaColumn.find('Availability').exists()).toBe(true);
-    expect(buttonColumn.find('AddToCartPicker').exists()).toBe(true);
-
-    const {
-      currency, unitPrice, unitPriceMin, msrp,
-    } = price;
-    expect(buttonColumn.find('PriceStriked').exists()).toBe(true);
-    expect(buttonColumn.find('PriceStriked').at(0).prop('currency')).toBe(currency);
-    expect(buttonColumn.find('PriceStriked').at(0).prop('value')).toBe(msrp);
-
-    expect(buttonColumn.find('Price').exists()).toBe(true);
-    expect(buttonColumn.find('Price').at(0).prop('currency')).toBe(currency);
-    expect(buttonColumn.find('Price').at(0).prop('discounted')).toBe(true);
-    expect(buttonColumn.find('Price').at(0).prop('unitPrice')).toBe(unitPrice);
-    expect(buttonColumn.find('Price').at(0).prop('unitPriceMin')).toBe(unitPriceMin);
-  });
-
-  it('should render a strike price discounted product as expected', () => {
-    const { price } = mockedStrikePriceProduct;
-
-    const component = createComponent({ product: mockedStrikePriceProduct });
-    expect(component).toMatchSnapshot();
-
-    const columns = component.find('GridItem');
-    const buttonColumn = columns.at(2);
-
-    const {
-      currency, unitPrice, unitPriceMin, unitPriceStriked, info,
-    } = price;
-
-    expect(buttonColumn.find('PriceStriked').exists()).toBe(true);
-    expect(buttonColumn.find('PriceStriked').at(0).prop('currency')).toBe(currency);
-    expect(buttonColumn.find('PriceStriked').at(0).prop('value')).toBe(unitPriceStriked);
-
-    expect(buttonColumn.find('Price').exists()).toBe(true);
-    expect(buttonColumn.find('Price').at(0).prop('currency')).toBe(currency);
-    expect(buttonColumn.find('Price').at(0).prop('discounted')).toBe(true);
-    expect(buttonColumn.find('Price').at(0).prop('unitPrice')).toBe(unitPrice);
-    expect(buttonColumn.find('Price').at(0).prop('unitPriceMin')).toBe(unitPriceMin);
-
-    expect(buttonColumn.find('PriceInfo').exists()).toBe(true);
-    expect(buttonColumn.find('PriceInfo').at(0).prop('text')).toBe(info);
-  });
-
-  it('should render a not orderable product as expected', () => {
-    const component = createComponent({ product: mockedNotOrderableProduct });
-    expect(component).toMatchSnapshot();
+    expect(metaColumn.find('ProductPrice').exists()).toBe(true);
+    expect(buttonColumn.find('FavoritesButton').exists()).toBe(true);
 
     // Connector
     const { isOrderable, isDisabled } = component.find('AddToCartPicker').prop('buttonProps');
     expect(isOrderable).toBe(false);
     expect(isDisabled).toBe(true);
+  });
+
+  it('should render as expected with regular buttons', () => {
+    const component = createComponent({
+      product: mockedProduct,
+      hasFavorites: true,
+      renderFlatButtons: false,
+    });
+
+    expect(component).toMatchSnapshot();
+    expect(component.find('AddToCartPicker').prop('buttonProps').noShadow).toBe(false);
+    expect(component.find('FavoritesButton').prop('noShadow')).toBe(false);
+  });
+
+  it('should render as expected with flat buttons', () => {
+    const component = createComponent({
+      product: mockedProduct,
+      hasFavorites: true,
+      renderFlatButtons: true,
+    });
+
+    expect(component).toMatchSnapshot();
+    expect(component.find('AddToCartPicker').prop('buttonProps').noShadow).toBe(true);
+    expect(component.find('FavoritesButton').prop('noShadow')).toBe(true);
   });
 
   it('should dispatch the addProductsToCart action like expected', () => {
