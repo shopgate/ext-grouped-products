@@ -1,9 +1,5 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import configureStore from 'redux-mock-store';
-import { mount } from 'enzyme';
 import addProductsToCart from '@shopgate/pwa-common-commerce/cart/actions/addProductsToCart';
-import mockRenderOptions from '@shopgate/pwa-common/helpers/mocks/mockRenderOptions';
+import { createWrappedComponent } from '../../../mockStore';
 import {
   mockedState,
   mockedProduct,
@@ -17,27 +13,15 @@ jest.mock('@shopgate/pwa-common-commerce/cart/actions/addProductsToCart', () => 
 
 jest.useFakeTimers();
 
-const mockedStore = configureStore();
 const mockedDispatch = jest.fn();
 
 /**
- * Creates component with provided store state.
- * @param {Object} props Mocked component props.
+ * Creates a component with a provided store state.
+ * @param {Object} props Component props.
  * @return {ReactWrapper}
  */
-const createComponent = (props) => {
-  const store = mockedStore(mockedState);
-  store.dispatch = mockedDispatch;
-
-  return mount(
-    <Provider store={store}>
-      <Product
-        {...props}
-      />
-    </Provider>,
-    mockRenderOptions
-  );
-};
+const createComponent = props =>
+  createWrappedComponent(Product, mockedState, props, mockedDispatch);
 
 describe('<Product />', () => {
   beforeEach(() => {
@@ -161,6 +145,7 @@ describe('<Product />', () => {
     const productId = mockedProduct.id;
 
     handleAddToCart(quantity);
+
     expect(mockedDispatch).toHaveBeenCalledTimes(1);
     expect(mockedDispatch).toHaveBeenLastCalledWith(addProductsToCart([
       productId,

@@ -1,0 +1,628 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CTAButtons /> should not render the AddToCartPicker for grouped products 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(CTAButtons)>
+    <CTAButtons
+      addToCartButtonProps={
+        Object {
+          "isDisabled": false,
+          "isLoading": false,
+          "isOrderable": true,
+        }
+      }
+      handleAddToCart={[Function]}
+      isAddToCartButtonVisible={false}
+      isFavorite={true}
+      product={
+        Object {
+          "availability": Object {
+            "state": "ok",
+            "text": "Lorem Ipsum",
+          },
+          "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+          "flags": Object {
+            "hasChildren": true,
+            "hasVariants": false,
+          },
+          "id": "1337",
+          "name": "A shiny product",
+          "price": Object {
+            "currency": "EUR",
+            "discount": 0,
+            "info": "",
+            "msrp": 0,
+            "unitPrice": 5,
+            "unitPriceMin": 0,
+            "unitPriceStriked": 0,
+          },
+          "stock": Object {
+            "ignoreQuantity": false,
+            "info": "Info",
+            "maxOrderQuantity": 1000,
+            "minOrderQuantity": 1,
+            "orderable": true,
+            "quantity": 4,
+          },
+        }
+      }
+    >
+      <div
+        className="css-1ldzh7h"
+      >
+        <Connect(FavoritesButton)
+          active={true}
+          className="css-h7rvbh"
+          productId="1337"
+          rippleClassName="css-1tdptiz"
+        >
+          <FavoritesButton
+            active={true}
+            addFavorites={[Function]}
+            className="css-h7rvbh"
+            noShadow={false}
+            onRippleComplete={[Function]}
+            once={false}
+            productId="1337"
+            removeFavorites={[Function]}
+            removeThrottle={0}
+            removeWithRelatives={false}
+            rippleClassName="css-1tdptiz"
+          />
+        </Connect(FavoritesButton)>
+      </div>
+    </CTAButtons>
+  </Connect(CTAButtons)>
+</Provider>
+`;
+
+exports[`<CTAButtons /> should render both buttons 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(CTAButtons)>
+    <CTAButtons
+      addToCartButtonProps={
+        Object {
+          "isDisabled": false,
+          "isLoading": false,
+          "isOrderable": true,
+        }
+      }
+      handleAddToCart={[Function]}
+      isAddToCartButtonVisible={true}
+      isFavorite={true}
+      product={
+        Object {
+          "availability": Object {
+            "state": "ok",
+            "text": "Lorem Ipsum",
+          },
+          "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+          "flags": Object {
+            "hasChildren": false,
+            "hasVariants": false,
+          },
+          "id": "1337",
+          "name": "A shiny product",
+          "price": Object {
+            "currency": "EUR",
+            "discount": 0,
+            "info": "",
+            "msrp": 0,
+            "unitPrice": 5,
+            "unitPriceMin": 0,
+            "unitPriceStriked": 0,
+          },
+          "stock": Object {
+            "ignoreQuantity": false,
+            "info": "Info",
+            "maxOrderQuantity": 1000,
+            "minOrderQuantity": 1,
+            "orderable": true,
+            "quantity": 4,
+          },
+        }
+      }
+    >
+      <div
+        className="css-1ldzh7h"
+      >
+        <Connect(FavoritesButton)
+          active={true}
+          className="css-h7rvbh"
+          productId="1337"
+          rippleClassName="css-1tdptiz"
+        >
+          <FavoritesButton
+            active={true}
+            addFavorites={[Function]}
+            className="css-h7rvbh"
+            noShadow={false}
+            onRippleComplete={[Function]}
+            once={false}
+            productId="1337"
+            removeFavorites={[Function]}
+            removeThrottle={0}
+            removeWithRelatives={false}
+            rippleClassName="css-1tdptiz"
+          />
+        </Connect(FavoritesButton)>
+        <AddToCartPicker
+          buttonProps={
+            Object {
+              "buttonSize": 56,
+              "iconSize": 24,
+              "isDisabled": false,
+              "isLoading": false,
+              "isOrderable": true,
+              "type": "default",
+            }
+          }
+          clickDelay={150}
+          handleAddToCart={[Function]}
+          productId="1337"
+          stock={
+            Object {
+              "ignoreQuantity": false,
+              "info": "Info",
+              "maxOrderQuantity": 1000,
+              "minOrderQuantity": 1,
+              "orderable": true,
+              "quantity": 4,
+            }
+          }
+        >
+          <Picker
+            buttonComponent={[Function]}
+            buttonProps={
+              Object {
+                "addedQuantity": 0,
+                "buttonSize": 56,
+                "className": "css-l6qlih",
+                "handleAddToCart": [Function],
+                "hasLoading": true,
+                "iconSize": 24,
+                "isDisabled": false,
+                "isLoading": false,
+                "isOrderable": true,
+                "noShadow": true,
+                "type": "default",
+              }
+            }
+            className=""
+            disabled={false}
+            duration={300}
+            isOpen={false}
+            items={
+              Array [
+                Object {
+                  "label": "1",
+                  "value": 1,
+                },
+                Object {
+                  "label": "2",
+                  "value": 2,
+                },
+                Object {
+                  "label": "3",
+                  "value": 3,
+                },
+                Object {
+                  "label": "4",
+                  "value": 4,
+                },
+              ]
+            }
+            label=""
+            listComponent={[Function]}
+            modalComponent={[Function]}
+            onChange={[Function]}
+            onClose={[Function]}
+            placeholder="Pick ..."
+            value={null}
+          >
+            <div
+              className=""
+            >
+              <PickerAddToCartButton
+                addedQuantity={0}
+                buttonSize={56}
+                className="css-l6qlih"
+                disabled={false}
+                handleAddToCart={[Function]}
+                hasLoading={true}
+                iconSize={24}
+                isDisabled={false}
+                isLoading={false}
+                isOrderable={true}
+                label="Pick ..."
+                noShadow={true}
+                openList={[Function]}
+                type="default"
+                value=""
+              >
+                <button
+                  className="css-l6qlih css-18zsv7s css-31obrv"
+                  data-test-id="AddToCartButton"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="css-rukjns css-1gleer"
+                    style={
+                      Object {
+                        "opacity": 0,
+                      }
+                    }
+                  >
+                    <IndicatorCircle
+                      color="#5ccee3"
+                      paused={true}
+                      size={32}
+                      strokeWidth={5}
+                    >
+                      <svg
+                        className="css-17zev8s"
+                        height={32}
+                        viewBox="25 25 50 50"
+                        width={32}
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          className="css-1n2s8pv"
+                          cx="50"
+                          cy="50"
+                          r="20"
+                        />
+                      </svg>
+                    </IndicatorCircle>
+                  </div>
+                  <div
+                    className="css-rukjns"
+                    style={
+                      Object {
+                        "opacity": 1,
+                        "transform": "translate3d(0, 300%, 0)",
+                      }
+                    }
+                  >
+                    <Tick>
+                      <Icon
+                        className=""
+                        color={null}
+                        content="<path d=\\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\\"/>"
+                        size="inherit"
+                        viewBox="0 0 24 24"
+                      >
+                        <svg
+                          className="css-yys9hb "
+                          dangerouslySetInnerHTML={
+                            Object {
+                              "__html": "<path d=\\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\\"/>",
+                            }
+                          }
+                          style={
+                            Object {
+                              "fill": null,
+                              "fontSize": "inherit",
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        />
+                      </Icon>
+                    </Tick>
+                  </div>
+                  <div
+                    className="css-rukjns"
+                    onAnimationEnd={[Function]}
+                    style={
+                      Object {
+                        "opacity": 1,
+                        "transform": "translate3d(0, -50%, 0)",
+                      }
+                    }
+                  >
+                    <CartPlus>
+                      <Icon
+                        className=""
+                        color={null}
+                        content="<path d=\\"M0 0h24v24H0zm18.31 6l-2.76 5z\\" fill=\\"none\\"/><path d=\\"M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z\\"/>"
+                        size="inherit"
+                        viewBox="0 0 24 24"
+                      >
+                        <svg
+                          className="css-yys9hb "
+                          dangerouslySetInnerHTML={
+                            Object {
+                              "__html": "<path d=\\"M0 0h24v24H0zm18.31 6l-2.76 5z\\" fill=\\"none\\"/><path d=\\"M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z\\"/>",
+                            }
+                          }
+                          style={
+                            Object {
+                              "fill": null,
+                              "fontSize": "inherit",
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        />
+                      </Icon>
+                    </CartPlus>
+                  </div>
+                </button>
+              </PickerAddToCartButton>
+              <Portal
+                isOpened={true}
+                onClose={[Function]}
+                onOpen={[Function]}
+                onUpdate={[Function]}
+              />
+            </div>
+          </Picker>
+        </AddToCartPicker>
+      </div>
+    </CTAButtons>
+  </Connect(CTAButtons)>
+</Provider>
+`;
+
+exports[`<CTAButtons /> should render both buttons when no "currentProduct" is available yet 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(CTAButtons)>
+    <CTAButtons
+      addToCartButtonProps={
+        Object {
+          "isDisabled": false,
+          "isLoading": true,
+          "isOrderable": false,
+        }
+      }
+      handleAddToCart={[Function]}
+      isAddToCartButtonVisible={true}
+      isFavorite={true}
+      product={Object {}}
+    >
+      <div
+        className="css-1ldzh7h"
+      >
+        <Connect(FavoritesButton)
+          active={true}
+          className="css-h7rvbh"
+          rippleClassName="css-1tdptiz"
+        >
+          <FavoritesButton
+            active={true}
+            addFavorites={[Function]}
+            className="css-h7rvbh"
+            noShadow={false}
+            onRippleComplete={[Function]}
+            once={false}
+            productId={null}
+            removeFavorites={[Function]}
+            removeThrottle={0}
+            removeWithRelatives={false}
+            rippleClassName="css-1tdptiz"
+          />
+        </Connect(FavoritesButton)>
+        <AddToCartPicker
+          buttonProps={
+            Object {
+              "buttonSize": 56,
+              "iconSize": 24,
+              "isDisabled": false,
+              "isLoading": true,
+              "isOrderable": false,
+              "type": "default",
+            }
+          }
+          clickDelay={150}
+          handleAddToCart={[Function]}
+          productId=""
+          stock={null}
+        >
+          <Picker
+            buttonComponent={[Function]}
+            buttonProps={
+              Object {
+                "addedQuantity": 0,
+                "buttonSize": 56,
+                "className": "css-l6qlih",
+                "handleAddToCart": [Function],
+                "hasLoading": true,
+                "iconSize": 24,
+                "isDisabled": false,
+                "isLoading": true,
+                "isOrderable": false,
+                "noShadow": true,
+                "type": "default",
+              }
+            }
+            className=""
+            disabled={false}
+            duration={300}
+            isOpen={false}
+            items={Array []}
+            label=""
+            listComponent={[Function]}
+            modalComponent={[Function]}
+            onChange={[Function]}
+            onClose={[Function]}
+            placeholder="Pick ..."
+            value={null}
+          >
+            <div
+              className=""
+            >
+              <PickerAddToCartButton
+                addedQuantity={0}
+                buttonSize={56}
+                className="css-l6qlih"
+                disabled={false}
+                handleAddToCart={[Function]}
+                hasLoading={true}
+                iconSize={24}
+                isDisabled={false}
+                isLoading={true}
+                isOrderable={false}
+                label="Pick ..."
+                noShadow={true}
+                openList={[Function]}
+                type="default"
+                value=""
+              >
+                <button
+                  className="css-l6qlih css-18zsv7s css-31obrv"
+                  data-test-id="AddToCartButton"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="css-rukjns css-1gleer"
+                    style={
+                      Object {
+                        "opacity": 1,
+                      }
+                    }
+                  >
+                    <IndicatorCircle
+                      color="#5ccee3"
+                      paused={false}
+                      size={32}
+                      strokeWidth={5}
+                    >
+                      <svg
+                        className="css-17zev8s"
+                        height={32}
+                        viewBox="25 25 50 50"
+                        width={32}
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          className="css-1n2s8pv"
+                          cx="50"
+                          cy="50"
+                          r="20"
+                        />
+                      </svg>
+                    </IndicatorCircle>
+                  </div>
+                  <div
+                    className="css-rukjns"
+                    style={
+                      Object {
+                        "opacity": 0,
+                        "transform": "translate3d(0, 300%, 0)",
+                      }
+                    }
+                  >
+                    <Tick>
+                      <Icon
+                        className=""
+                        color={null}
+                        content="<path d=\\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\\"/>"
+                        size="inherit"
+                        viewBox="0 0 24 24"
+                      >
+                        <svg
+                          className="css-yys9hb "
+                          dangerouslySetInnerHTML={
+                            Object {
+                              "__html": "<path d=\\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\\"/>",
+                            }
+                          }
+                          style={
+                            Object {
+                              "fill": null,
+                              "fontSize": "inherit",
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        />
+                      </Icon>
+                    </Tick>
+                  </div>
+                  <div
+                    className="css-rukjns"
+                    onAnimationEnd={[Function]}
+                    style={
+                      Object {
+                        "opacity": 0,
+                        "transform": "translate3d(0, -50%, 0)",
+                      }
+                    }
+                  >
+                    <CartPlus>
+                      <Icon
+                        className=""
+                        color={null}
+                        content="<path d=\\"M0 0h24v24H0zm18.31 6l-2.76 5z\\" fill=\\"none\\"/><path d=\\"M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z\\"/>"
+                        size="inherit"
+                        viewBox="0 0 24 24"
+                      >
+                        <svg
+                          className="css-yys9hb "
+                          dangerouslySetInnerHTML={
+                            Object {
+                              "__html": "<path d=\\"M0 0h24v24H0zm18.31 6l-2.76 5z\\" fill=\\"none\\"/><path d=\\"M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z\\"/>",
+                            }
+                          }
+                          style={
+                            Object {
+                              "fill": null,
+                              "fontSize": "inherit",
+                            }
+                          }
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        />
+                      </Icon>
+                    </CartPlus>
+                  </div>
+                </button>
+              </PickerAddToCartButton>
+              <Portal
+                isOpened={true}
+                onClose={[Function]}
+                onOpen={[Function]}
+                onUpdate={[Function]}
+              />
+            </div>
+          </Picker>
+        </AddToCartPicker>
+      </div>
+    </CTAButtons>
+  </Connect(CTAButtons)>
+</Provider>
+`;

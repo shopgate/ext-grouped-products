@@ -46,6 +46,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
               "text": "Lorem Ipsum",
             },
             "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+            "flags": Object {
+              "hasChildren": true,
+              "hasVariants": false,
+            },
             "id": "1337",
             "name": "A shiny product",
             "price": Object {
@@ -72,6 +76,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
               "text": "Lorem Ipsum",
             },
             "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+            "flags": Object {
+              "hasChildren": true,
+              "hasVariants": false,
+            },
             "id": "4711",
             "name": "A discounted product with msrp",
             "price": Object {
@@ -98,6 +106,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
               "text": "Lorem Ipsum",
             },
             "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+            "flags": Object {
+              "hasChildren": true,
+              "hasVariants": false,
+            },
             "id": "1985",
             "name": "A discounted product with stike price and info",
             "price": Object {
@@ -124,6 +136,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
               "text": "Lorem Ipsum",
             },
             "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+            "flags": Object {
+              "hasChildren": true,
+              "hasVariants": false,
+            },
             "id": "foo",
             "name": "A not orderable product",
             "price": Object {
@@ -150,6 +166,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
               "text": "Lorem Ipsum",
             },
             "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+            "flags": Object {
+              "hasChildren": true,
+              "hasVariants": false,
+            },
             "id": "1234",
             "name": "A product with ignored quantity",
             "price": Object {
@@ -180,12 +200,12 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
           className="css-gkw1j5 css-5bomak"
         >
           <ListItem
-            className="css-izecxm"
+            className="css-hlnx4j"
             isSelected={false}
             key="1337"
           >
             <li
-              className="css-1p5q8vq css-izecxm css-16gj3o1"
+              className="css-1p5q8vq css-hlnx4j css-16gj3o1"
             >
               <Connect(Product)
                 product={
@@ -195,6 +215,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                       "text": "Lorem Ipsum",
                     },
                     "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+                    "flags": Object {
+                      "hasChildren": true,
+                      "hasVariants": false,
+                    },
                     "id": "1337",
                     "name": "A shiny product",
                     "price": Object {
@@ -232,6 +256,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                         "text": "Lorem Ipsum",
                       },
                       "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+                      "flags": Object {
+                        "hasChildren": true,
+                        "hasVariants": false,
+                      },
                       "id": "1337",
                       "name": "A shiny product",
                       "price": Object {
@@ -602,12 +630,12 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
             </li>
           </ListItem>
           <ListItem
-            className="css-izecxm"
+            className="css-hlnx4j"
             isSelected={false}
             key="4711"
           >
             <li
-              className="css-1p5q8vq css-izecxm css-16gj3o1"
+              className="css-1p5q8vq css-hlnx4j css-16gj3o1"
             >
               <Connect(Product)
                 product={
@@ -617,6 +645,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                       "text": "Lorem Ipsum",
                     },
                     "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+                    "flags": Object {
+                      "hasChildren": true,
+                      "hasVariants": false,
+                    },
                     "id": "4711",
                     "name": "A discounted product with msrp",
                     "price": Object {
@@ -654,6 +686,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                         "text": "Lorem Ipsum",
                       },
                       "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+                      "flags": Object {
+                        "hasChildren": true,
+                        "hasVariants": false,
+                      },
                       "id": "4711",
                       "name": "A discounted product with msrp",
                       "price": Object {
@@ -1065,12 +1101,12 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
             </li>
           </ListItem>
           <ListItem
-            className="css-izecxm"
+            className="css-hlnx4j"
             isSelected={false}
             key="1985"
           >
             <li
-              className="css-1p5q8vq css-izecxm css-16gj3o1"
+              className="css-1p5q8vq css-hlnx4j css-16gj3o1"
             >
               <Connect(Product)
                 product={
@@ -1080,6 +1116,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                       "text": "Lorem Ipsum",
                     },
                     "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+                    "flags": Object {
+                      "hasChildren": true,
+                      "hasVariants": false,
+                    },
                     "id": "1985",
                     "name": "A discounted product with stike price and info",
                     "price": Object {
@@ -1117,6 +1157,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                         "text": "Lorem Ipsum",
                       },
                       "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+                      "flags": Object {
+                        "hasChildren": true,
+                        "hasVariants": false,
+                      },
                       "id": "1985",
                       "name": "A discounted product with stike price and info",
                       "price": Object {
@@ -1527,12 +1571,12 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
             </li>
           </ListItem>
           <ListItem
-            className="css-izecxm"
+            className="css-hlnx4j"
             isSelected={false}
             key="foo"
           >
             <li
-              className="css-1p5q8vq css-izecxm css-16gj3o1"
+              className="css-1p5q8vq css-hlnx4j css-16gj3o1"
             >
               <Connect(Product)
                 product={
@@ -1542,6 +1586,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                       "text": "Lorem Ipsum",
                     },
                     "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+                    "flags": Object {
+                      "hasChildren": true,
+                      "hasVariants": false,
+                    },
                     "id": "foo",
                     "name": "A not orderable product",
                     "price": Object {
@@ -1579,6 +1627,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                         "text": "Lorem Ipsum",
                       },
                       "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+                      "flags": Object {
+                        "hasChildren": true,
+                        "hasVariants": false,
+                      },
                       "id": "foo",
                       "name": "A not orderable product",
                       "price": Object {
@@ -1930,12 +1982,12 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
             </li>
           </ListItem>
           <ListItem
-            className="css-izecxm"
+            className="css-hlnx4j"
             isSelected={false}
             key="1234"
           >
             <li
-              className="css-1p5q8vq css-izecxm css-16gj3o1"
+              className="css-1p5q8vq css-hlnx4j css-16gj3o1"
             >
               <Connect(Product)
                 product={
@@ -1945,6 +1997,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                       "text": "Lorem Ipsum",
                     },
                     "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+                    "flags": Object {
+                      "hasChildren": true,
+                      "hasVariants": false,
+                    },
                     "id": "1234",
                     "name": "A product with ignored quantity",
                     "price": Object {
@@ -1982,6 +2038,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                         "text": "Lorem Ipsum",
                       },
                       "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+                      "flags": Object {
+                        "hasChildren": true,
+                        "hasVariants": false,
+                      },
                       "id": "1234",
                       "name": "A product with ignored quantity",
                       "price": Object {

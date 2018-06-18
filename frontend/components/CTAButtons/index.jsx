@@ -21,7 +21,7 @@ const CTAButtons = (props) => {
     type: ADD_TO_CART_BUTTON_TYPE_DEFAULT,
   };
 
-  const { id, stock } = props.product || {};
+  const { id, stock } = props.product;
 
   return (
     <div className={styles.buttons}>
@@ -45,16 +45,15 @@ const CTAButtons = (props) => {
 };
 
 CTAButtons.propTypes = {
+  handleAddToCart: PropTypes.func.isRequired,
   isFavorite: PropTypes.bool.isRequired,
   addToCartButtonProps: PropTypes.shape(),
-  handleAddToCart: PropTypes.func,
   isAddToCartButtonVisible: PropTypes.bool,
   product: PropTypes.shape(),
 };
 
 CTAButtons.defaultProps = {
   addToCartButtonProps: {},
-  handleAddToCart: () => {},
   isAddToCartButtonVisible: true,
   product: {},
 };

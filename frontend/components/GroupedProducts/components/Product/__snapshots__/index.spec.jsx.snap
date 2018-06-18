@@ -21,6 +21,10 @@ exports[`<Product /> should render a msrp discounted product as expected 1`] = `
           "text": "Lorem Ipsum",
         },
         "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+        "flags": Object {
+          "hasChildren": true,
+          "hasVariants": false,
+        },
         "id": "4711",
         "name": "A discounted product with msrp",
         "price": Object {
@@ -58,6 +62,10 @@ exports[`<Product /> should render a msrp discounted product as expected 1`] = `
             "text": "Lorem Ipsum",
           },
           "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+          "flags": Object {
+            "hasChildren": true,
+            "hasVariants": false,
+          },
           "id": "4711",
           "name": "A discounted product with msrp",
           "price": Object {
@@ -490,6 +498,10 @@ exports[`<Product /> should render a not orderable product as expected 1`] = `
           "text": "Lorem Ipsum",
         },
         "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+        "flags": Object {
+          "hasChildren": true,
+          "hasVariants": false,
+        },
         "id": "foo",
         "name": "A not orderable product",
         "price": Object {
@@ -527,6 +539,10 @@ exports[`<Product /> should render a not orderable product as expected 1`] = `
             "text": "Lorem Ipsum",
           },
           "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+          "flags": Object {
+            "hasChildren": true,
+            "hasVariants": false,
+          },
           "id": "foo",
           "name": "A not orderable product",
           "price": Object {
@@ -899,6 +915,10 @@ exports[`<Product /> should render a regular product as expected 1`] = `
           "text": "Lorem Ipsum",
         },
         "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+        "flags": Object {
+          "hasChildren": true,
+          "hasVariants": false,
+        },
         "id": "1337",
         "name": "A shiny product",
         "price": Object {
@@ -936,6 +956,10 @@ exports[`<Product /> should render a regular product as expected 1`] = `
             "text": "Lorem Ipsum",
           },
           "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+          "flags": Object {
+            "hasChildren": true,
+            "hasVariants": false,
+          },
           "id": "1337",
           "name": "A shiny product",
           "price": Object {
@@ -1327,6 +1351,10 @@ exports[`<Product /> should render a strike price discounted product as expected
           "text": "Lorem Ipsum",
         },
         "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+        "flags": Object {
+          "hasChildren": true,
+          "hasVariants": false,
+        },
         "id": "1985",
         "name": "A discounted product with stike price and info",
         "price": Object {
@@ -1364,6 +1392,10 @@ exports[`<Product /> should render a strike price discounted product as expected
             "text": "Lorem Ipsum",
           },
           "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+          "flags": Object {
+            "hasChildren": true,
+            "hasVariants": false,
+          },
           "id": "1985",
           "name": "A discounted product with stike price and info",
           "price": Object {

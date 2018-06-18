@@ -25,7 +25,7 @@ const mapStateToProps = state => ({
   },
   isAddToCartButtonVisible: isMainAddToCartButtonVisible(state),
   isFavorite: isCurrentProductOnFavoriteList(state),
-  product: getCurrentProduct(state),
+  product: getCurrentProduct(state) || {},
 });
 
 /**

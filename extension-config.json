@@ -21,6 +21,12 @@
       "type": "portals"
     },
     {
+      "id": "ProductHeader",
+      "path": "frontend/components/ProductHeader/index.jsx",
+      "target": "product.header.before",
+      "type": "portals"
+    },
+    {
       "id": "Subscribers",
       "path": "frontend/subscriptions/index.js",
       "type": "subscribers"

@@ -1,8 +1,5 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import configureStore from 'redux-mock-store';
-import { mount } from 'enzyme';
-import mockRenderOptions from '@shopgate/pwa-common/helpers/mocks/mockRenderOptions';
+import { createWrappedComponent } from '../mockStore';
+
 import {
   mockedState,
   mockedProduct,
@@ -35,24 +32,23 @@ try {
 
 jest.mock('@shopgate/pwa-ui-shared/Sheet', () => ({ children }) => children);
 
-const mockedStore = configureStore();
 const mockHandleAddToCart = jest.fn();
 
 /**
- * Creates component with provided store state.
+ * Creates a component with a provided store state.
  * @param {Object} product A product to set the component props for.
  * @return {ReactWrapper}
  */
 const createComponent = (product) => {
-  const store = mockedStore(mockedState);
-
   const { id, stock } = product;
-  return mount(
-    <Provider store={store}>
-      <AddToCartPicker productId={id} stock={stock} handleAddToCart={mockHandleAddToCart} />
-    </Provider>,
-    mockRenderOptions
-  );
+
+  const mockedProps = {
+    productId: id,
+    handleAddToCart: mockHandleAddToCart,
+    stock,
+  };
+
+  return createWrappedComponent(AddToCartPicker, mockedState, mockedProps);
 };
 
 jest.useFakeTimers();

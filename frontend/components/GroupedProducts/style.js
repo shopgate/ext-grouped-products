@@ -8,7 +8,9 @@ const productList = css({
 }).toString();
 
 const productListItem = css({
-  marginTop: 3,
+  ':not(:first-child)': {
+    marginTop: 3,
+  },
   marginBottom: 3,
   padding: variables.gap.big,
   position: 'relative',

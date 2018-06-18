@@ -1,30 +1,15 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import configureStore from 'redux-mock-store';
 import cloneDeep from 'lodash/cloneDeep';
 import set from 'lodash/set';
-import { mount } from 'enzyme';
-import mockRenderOptions from '@shopgate/pwa-common/helpers/mocks/mockRenderOptions';
+import { createWrappedComponent } from '../mockStore';
 import { mockedState } from '../mock';
 import GroupedProducts from './index';
 
-const mockedStore = configureStore();
-
 /**
- * Creates component with provided store state.
+ * Creates a component with a provided store state.
  * @param {Object} state A mocked state.
  * @return {ReactWrapper}
  */
-const createComponent = (state) => {
-  const store = mockedStore(state);
-
-  return mount(
-    <Provider store={store}>
-      <GroupedProducts />
-    </Provider>,
-    mockRenderOptions
-  );
-};
+const createComponent = state => createWrappedComponent(GroupedProducts, state);
 
 describe('<GroupedProducts />', () => {
   beforeEach(() => {
