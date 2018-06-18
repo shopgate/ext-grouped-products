@@ -199,18 +199,18 @@ exports[`<CTAButtons /> should render both buttons 1`] = `
               Object {
                 "addedQuantity": 0,
                 "buttonSize": 56,
-                "className": "css-l6qlih",
+                "className": null,
                 "handleAddToCart": [Function],
                 "hasLoading": true,
                 "iconSize": 24,
                 "isDisabled": false,
                 "isLoading": false,
                 "isOrderable": true,
-                "noShadow": true,
+                "noShadow": false,
                 "type": "default",
               }
             }
-            className="css-coffhr"
+            className="css-ibd9un"
             disabled={false}
             duration={300}
             isOpen={false}
@@ -243,12 +243,12 @@ exports[`<CTAButtons /> should render both buttons 1`] = `
             value={null}
           >
             <div
-              className="css-coffhr"
+              className="css-ibd9un"
             >
               <PickerAddToCartButton
                 addedQuantity={0}
                 buttonSize={56}
-                className="css-l6qlih"
+                className={null}
                 disabled={false}
                 handleAddToCart={[Function]}
                 hasLoading={true}
@@ -257,13 +257,13 @@ exports[`<CTAButtons /> should render both buttons 1`] = `
                 isLoading={false}
                 isOrderable={true}
                 label="Pick ..."
-                noShadow={true}
+                noShadow={false}
                 openList={[Function]}
                 type="default"
                 value=""
               >
                 <button
-                  className="css-l6qlih css-18zsv7s css-31obrv"
+                  className="null css-wuq2ta css-31obrv"
                   data-test-id="AddToCartButton"
                   onClick={[Function]}
                 >
@@ -458,18 +458,18 @@ exports[`<CTAButtons /> should render both buttons when no "currentProduct" is a
               Object {
                 "addedQuantity": 0,
                 "buttonSize": 56,
-                "className": "css-l6qlih",
+                "className": null,
                 "handleAddToCart": [Function],
                 "hasLoading": true,
                 "iconSize": 24,
                 "isDisabled": false,
                 "isLoading": true,
                 "isOrderable": false,
-                "noShadow": true,
+                "noShadow": false,
                 "type": "default",
               }
             }
-            className="css-coffhr"
+            className="css-ibd9un"
             disabled={false}
             duration={300}
             isOpen={false}
@@ -483,12 +483,12 @@ exports[`<CTAButtons /> should render both buttons when no "currentProduct" is a
             value={null}
           >
             <div
-              className="css-coffhr"
+              className="css-ibd9un"
             >
               <PickerAddToCartButton
                 addedQuantity={0}
                 buttonSize={56}
-                className="css-l6qlih"
+                className={null}
                 disabled={false}
                 handleAddToCart={[Function]}
                 hasLoading={true}
@@ -497,13 +497,13 @@ exports[`<CTAButtons /> should render both buttons when no "currentProduct" is a
                 isLoading={true}
                 isOrderable={false}
                 label="Pick ..."
-                noShadow={true}
+                noShadow={false}
                 openList={[Function]}
                 type="default"
                 value=""
               >
                 <button
-                  className="css-l6qlih css-18zsv7s css-31obrv"
+                  className="null css-wuq2ta css-31obrv"
                   data-test-id="AddToCartButton"
                   onClick={[Function]}
                 >

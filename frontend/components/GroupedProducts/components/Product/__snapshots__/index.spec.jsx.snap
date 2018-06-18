@@ -22,6 +22,10 @@ exports[`<Product /> should render as expected when the favorite list is not act
           "text": "Lorem Ipsum",
         },
         "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+        "flags": Object {
+          "hasChildren": true,
+          "hasVariants": false,
+        },
         "id": "1337",
         "name": "A shiny product",
         "price": Object {
@@ -53,7 +57,7 @@ exports[`<Product /> should render as expected when the favorite list is not act
       }
       handleAddToCart={[Function]}
       hasFavorites={false}
-      isFavorite={false}
+      isFavorite={true}
       product={
         Object {
           "availability": Object {
@@ -61,6 +65,10 @@ exports[`<Product /> should render as expected when the favorite list is not act
             "text": "Lorem Ipsum",
           },
           "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+          "flags": Object {
+            "hasChildren": true,
+            "hasVariants": false,
+          },
           "id": "1337",
           "name": "A shiny product",
           "price": Object {
@@ -473,6 +481,10 @@ exports[`<Product /> should render as expected when the favorite list is not act
           "text": "Lorem Ipsum",
         },
         "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+        "flags": Object {
+          "hasChildren": true,
+          "hasVariants": false,
+        },
         "id": "foo",
         "name": "A not orderable product",
         "price": Object {
@@ -512,6 +524,10 @@ exports[`<Product /> should render as expected when the favorite list is not act
             "text": "Lorem Ipsum",
           },
           "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+          "flags": Object {
+            "hasChildren": true,
+            "hasVariants": false,
+          },
           "id": "foo",
           "name": "A not orderable product",
           "price": Object {
@@ -926,6 +942,10 @@ exports[`<Product /> should render as expected with flat buttons 1`] = `
           "text": "Lorem Ipsum",
         },
         "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+        "flags": Object {
+          "hasChildren": true,
+          "hasVariants": false,
+        },
         "id": "1337",
         "name": "A shiny product",
         "price": Object {
@@ -958,7 +978,7 @@ exports[`<Product /> should render as expected with flat buttons 1`] = `
       }
       handleAddToCart={[Function]}
       hasFavorites={true}
-      isFavorite={false}
+      isFavorite={true}
       product={
         Object {
           "availability": Object {
@@ -966,6 +986,10 @@ exports[`<Product /> should render as expected with flat buttons 1`] = `
             "text": "Lorem Ipsum",
           },
           "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+          "flags": Object {
+            "hasChildren": true,
+            "hasVariants": false,
+          },
           "id": "1337",
           "name": "A shiny product",
           "price": Object {
@@ -1348,14 +1372,14 @@ exports[`<Product /> should render as expected with flat buttons 1`] = `
                 </Picker>
               </AddToCartPicker>
               <Connect(FavoritesButton)
-                active={false}
+                active={true}
                 className="css-1dps91a"
                 noShadow={true}
                 productId="1337"
                 rippleClassName="css-1tdptiz"
               >
                 <FavoritesButton
-                  active={false}
+                  active={true}
                   addFavorites={[Function]}
                   className="css-1dps91a"
                   noShadow={true}
@@ -1399,6 +1423,10 @@ exports[`<Product /> should render as expected with regular buttons 1`] = `
           "text": "Lorem Ipsum",
         },
         "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+        "flags": Object {
+          "hasChildren": true,
+          "hasVariants": false,
+        },
         "id": "1337",
         "name": "A shiny product",
         "price": Object {
@@ -1431,7 +1459,7 @@ exports[`<Product /> should render as expected with regular buttons 1`] = `
       }
       handleAddToCart={[Function]}
       hasFavorites={true}
-      isFavorite={false}
+      isFavorite={true}
       product={
         Object {
           "availability": Object {
@@ -1439,6 +1467,10 @@ exports[`<Product /> should render as expected with regular buttons 1`] = `
             "text": "Lorem Ipsum",
           },
           "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+          "flags": Object {
+            "hasChildren": true,
+            "hasVariants": false,
+          },
           "id": "1337",
           "name": "A shiny product",
           "price": Object {
@@ -1821,14 +1853,14 @@ exports[`<Product /> should render as expected with regular buttons 1`] = `
                 </Picker>
               </AddToCartPicker>
               <Connect(FavoritesButton)
-                active={false}
+                active={true}
                 className="css-1dps91a"
                 noShadow={false}
                 productId="1337"
                 rippleClassName="css-1tdptiz"
               >
                 <FavoritesButton
-                  active={false}
+                  active={true}
                   addFavorites={[Function]}
                   className="css-1dps91a"
                   noShadow={false}
