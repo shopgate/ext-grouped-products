@@ -210,7 +210,7 @@ exports[`<CTAButtons /> should render both buttons 1`] = `
                 "type": "default",
               }
             }
-            className=""
+            className="css-coffhr"
             disabled={false}
             duration={300}
             isOpen={false}
@@ -243,7 +243,7 @@ exports[`<CTAButtons /> should render both buttons 1`] = `
             value={null}
           >
             <div
-              className=""
+              className="css-coffhr"
             >
               <PickerAddToCartButton
                 addedQuantity={0}
@@ -469,7 +469,7 @@ exports[`<CTAButtons /> should render both buttons when no "currentProduct" is a
                 "type": "default",
               }
             }
-            className=""
+            className="css-coffhr"
             disabled={false}
             duration={300}
             isOpen={false}
@@ -483,7 +483,7 @@ exports[`<CTAButtons /> should render both buttons when no "currentProduct" is a
             value={null}
           >
             <div
-              className=""
+              className="css-coffhr"
             >
               <PickerAddToCartButton
                 addedQuantity={0}

@@ -229,7 +229,7 @@ exports[`<Product /> should render a msrp discounted product as expected 1`] = `
                       "type": "grouped",
                     }
                   }
-                  className=""
+                  className="css-coffhr"
                   disabled={false}
                   duration={300}
                   isOpen={false}
@@ -262,7 +262,7 @@ exports[`<Product /> should render a msrp discounted product as expected 1`] = `
                   value={null}
                 >
                   <div
-                    className=""
+                    className="css-coffhr"
                   >
                     <PickerAddToCartButton
                       addedQuantity={0}
@@ -706,7 +706,7 @@ exports[`<Product /> should render a not orderable product as expected 1`] = `
                       "type": "grouped",
                     }
                   }
-                  className=""
+                  className="css-coffhr"
                   disabled={false}
                   duration={300}
                   isOpen={false}
@@ -720,7 +720,7 @@ exports[`<Product /> should render a not orderable product as expected 1`] = `
                   value={null}
                 >
                   <div
-                    className=""
+                    className="css-coffhr"
                   >
                     <PickerAddToCartButton
                       addedQuantity={0}
@@ -1123,7 +1123,7 @@ exports[`<Product /> should render a regular product as expected 1`] = `
                       "type": "grouped",
                     }
                   }
-                  className=""
+                  className="css-coffhr"
                   disabled={false}
                   duration={300}
                   isOpen={false}
@@ -1156,7 +1156,7 @@ exports[`<Product /> should render a regular product as expected 1`] = `
                   value={null}
                 >
                   <div
-                    className=""
+                    className="css-coffhr"
                   >
                     <PickerAddToCartButton
                       addedQuantity={0}
@@ -1559,7 +1559,7 @@ exports[`<Product /> should render a strike price discounted product as expected
                       "type": "grouped",
                     }
                   }
-                  className=""
+                  className="css-coffhr"
                   disabled={false}
                   duration={300}
                   isOpen={false}
@@ -1592,7 +1592,7 @@ exports[`<Product /> should render a strike price discounted product as expected
                   value={null}
                 >
                   <div
-                    className=""
+                    className="css-coffhr"
                   >
                     <PickerAddToCartButton
                       addedQuantity={0}

@@ -54,7 +54,7 @@ exports[`<AddToCartPicker /> should render the component as expected 1`] = `
           "type": "default",
         }
       }
-      className=""
+      className="css-coffhr"
       disabled={false}
       duration={300}
       isOpen={false}
@@ -87,7 +87,7 @@ exports[`<AddToCartPicker /> should render the component as expected 1`] = `
       value={null}
     >
       <div
-        className=""
+        className="css-coffhr"
       >
         <PickerAddToCartButton
           addedQuantity={0}
