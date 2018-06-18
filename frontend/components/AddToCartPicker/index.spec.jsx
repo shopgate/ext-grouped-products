@@ -1,12 +1,9 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import configureStore from 'redux-mock-store';
-import { mount } from 'enzyme';
-import mockRenderOptions from '@shopgate/pwa-common/helpers/mocks/mockRenderOptions';
+import { createWrappedComponent } from '../mockStore';
 import {
   mockedState,
   mockedProduct,
   mockedIgnoredQuantityProduct,
+  mockedNotOrderableProduct,
 } from '../mock';
 
 import AddToCartPicker from './index';
@@ -35,24 +32,25 @@ try {
 
 jest.mock('@shopgate/pwa-ui-shared/Sheet', () => ({ children }) => children);
 
-const mockedStore = configureStore();
 const mockHandleAddToCart = jest.fn();
 
 /**
- * Creates component with provided store state.
+ * Creates a component with a provided store state.
  * @param {Object} product A product to set the component props for.
+ * @param {Object} [buttonProps={}] Mocked button props.
  * @return {ReactWrapper}
  */
-const createComponent = (product) => {
-  const store = mockedStore(mockedState);
-
+const createComponent = (product, buttonProps = {}) => {
   const { id, stock } = product;
-  return mount(
-    <Provider store={store}>
-      <AddToCartPicker productId={id} stock={stock} handleAddToCart={mockHandleAddToCart} />
-    </Provider>,
-    mockRenderOptions
-  );
+
+  const mockedProps = {
+    buttonProps,
+    productId: id,
+    handleAddToCart: mockHandleAddToCart,
+    stock,
+  };
+
+  return createWrappedComponent(AddToCartPicker, mockedState, mockedProps);
 };
 
 jest.useFakeTimers();
@@ -105,5 +103,24 @@ describe('<AddToCartPicker />', () => {
       label: '5',
       value: 5,
     });
+  });
+
+  it('should render a button with a shadow', () => {
+    const component = createComponent(mockedProduct, { noShadow: false });
+    expect(component.find('PickerAddToCartButton').first().prop('noShadow')).toBe(false);
+  });
+
+  it('should render a flat button', () => {
+    const component = createComponent(mockedProduct, { noShadow: true });
+    expect(component.find('PickerAddToCartButton').first().prop('noShadow')).toBe(true);
+  });
+
+  it('should render a flat disabled button', () => {
+    const component = createComponent(mockedNotOrderableProduct, {
+      noShadow: true,
+      isDisabled: true,
+    });
+    expect(component.find('PickerAddToCartButton').first().prop('noShadow')).toBe(true);
+    expect(component.find('PickerAddToCartButton').first().prop('isDisabled')).toBe(true);
   });
 });

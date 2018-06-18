@@ -1,10 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<StyleOverwrites /> should render as expected 1`] = `
+exports[`<StyleOverwrites /> should not render when the gmd theme is active 1`] = `""`;
+
+exports[`<StyleOverwrites /> should render as expected when the gmd theme is not active 1`] = `
 <style>
   
-.css-h69706 { border-radius: 10px 10px 0 0; }
-.css-1aon90l { max-height: calc(100vh - 71px - var(--safe-area-inset-top)); }
-    
+  .css-h69706 { border-radius: 10px 10px 0 0; }
+  .css-1aon90l { max-height: calc(100vh - 71px - var(--safe-area-inset-top)); }
+      
 </style>
 `;

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import List from '@shopgate/pwa-common/components/List';
+import { hasFavorites, renderFlatButtons } from '../../helpers';
 import Product from './components/Product';
 import connect from './connector';
 import styles from './style';
@@ -19,7 +20,11 @@ const GroupedProducts = ({ products }) => {
     <List className={styles.productList}>
       {products.map(product => (
         <List.Item className={styles.productListItem} key={product.id}>
-          <Product product={product} />
+          <Product
+            product={product}
+            hasFavorites={hasFavorites()}
+            renderFlatButtons={renderFlatButtons()}
+          />
         </List.Item>
       ))}
     </List>

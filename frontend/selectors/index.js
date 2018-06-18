@@ -4,6 +4,7 @@ import {
   getCurrentBaseProductId,
   getProductById,
 } from '@shopgate/pwa-common-commerce/product/selectors/product';
+import { getFavoritesProductsIds } from '@shopgate/pwa-common-commerce/favorites/selectors';
 import { generateHash, isGmdTheme } from '../helpers';
 
 /**
@@ -59,13 +60,14 @@ export const getGroupedProducts = createSelector(
 /**
  * Checks if a grouped product is orderable.
  * @param {Object} state The current application state.
- * @param {string} productId The id of the inspected product.
+ * @param {Object} props A component props object.
+ * @param {string} props.productId The id of the inspected product.
  * @return {boolean}
  */
 export const isGroupedProductOrderable = createSelector(
-  (state, productId) => productId,
   getGroupedProducts,
-  (productId, products) => {
+  (state, props = {}) => props.productId,
+  (products, productId) => {
     if (!productId) {
       return false;
     }
@@ -91,6 +93,19 @@ export const hasGroupedProducts = createSelector(
     const { flags: { hasChildren = false } } = baseProduct;
     return hasChildren;
   }
+);
+
+/**
+ * Checks if a product is an the favorite list.
+ * @param {Object} state The current application state.
+ * @param {Object} props A component props object.
+ * @param {string} props.productId The id of the inspected product.
+ * @return {boolean}
+ */
+export const isProductOnFavoriteList = createSelector(
+  getFavoritesProductsIds,
+  (state, props = {}) => props.productId,
+  (productIds, productId) => !!productIds.find(id => id === productId)
 );
 
 /**

@@ -14,17 +14,7 @@ exports[`<AddToCartPicker /> should render the component as expected 1`] = `
   }
 >
   <AddToCartPicker
-    buttonProps={
-      Object {
-        "handleAddToCart": [Function],
-        "hasLoading": true,
-        "isDisabled": false,
-        "isLoading": false,
-        "isOrderable": true,
-        "noShadow": true,
-        "type": "default",
-      }
-    }
+    buttonProps={Object {}}
     clickDelay={150}
     handleAddToCart={[MockFunction]}
     productId="1337"
@@ -44,17 +34,17 @@ exports[`<AddToCartPicker /> should render the component as expected 1`] = `
       buttonProps={
         Object {
           "addedQuantity": 0,
-          "className": "css-l6qlih",
+          "className": null,
           "handleAddToCart": [Function],
           "hasLoading": true,
           "isDisabled": false,
           "isLoading": false,
           "isOrderable": true,
-          "noShadow": true,
+          "noShadow": false,
           "type": "default",
         }
       }
-      className="css-1ej66kr"
+      className="css-ibd9un"
       disabled={false}
       duration={300}
       isOpen={false}
@@ -87,12 +77,12 @@ exports[`<AddToCartPicker /> should render the component as expected 1`] = `
       value={null}
     >
       <div
-        className="css-1ej66kr"
+        className="css-ibd9un"
       >
         <PickerAddToCartButton
           addedQuantity={0}
           buttonSize={40}
-          className="css-l6qlih"
+          className={null}
           disabled={false}
           handleAddToCart={[Function]}
           hasLoading={true}
@@ -101,13 +91,13 @@ exports[`<AddToCartPicker /> should render the component as expected 1`] = `
           isLoading={false}
           isOrderable={true}
           label="Pick ..."
-          noShadow={true}
+          noShadow={false}
           openList={[Function]}
           type="default"
           value=""
         >
           <button
-            className="css-l6qlih css-zby7a7 css-31obrv"
+            className="null css-68omm3 css-31obrv"
             data-test-id="AddToCartButton"
             onClick={[Function]}
           >

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Product /> should render a msrp discounted product as expected 1`] = `
+exports[`<Product /> should render as expected when the favorite list is not active 1`] = `
 <Provider
   store={
     Object {
@@ -14,882 +14,7 @@ exports[`<Product /> should render a msrp discounted product as expected 1`] = `
   }
 >
   <Connect(Product)
-    product={
-      Object {
-        "availability": Object {
-          "state": "ok",
-          "text": "Lorem Ipsum",
-        },
-        "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
-        "id": "4711",
-        "name": "A discounted product with msrp",
-        "price": Object {
-          "currency": "EUR",
-          "discount": 50,
-          "info": "",
-          "msrp": 10,
-          "unitPrice": 5,
-          "unitPriceMin": 0,
-          "unitPriceStriked": 0,
-        },
-        "stock": Object {
-          "ignoreQuantity": false,
-          "info": "Info",
-          "maxOrderQuantity": 1000,
-          "minOrderQuantity": 1,
-          "orderable": true,
-          "quantity": 4,
-        },
-      }
-    }
-  >
-    <Product
-      addToCartButtonProps={
-        Object {
-          "isDisabled": false,
-          "isOrderable": true,
-        }
-      }
-      handleAddToCart={[Function]}
-      product={
-        Object {
-          "availability": Object {
-            "state": "ok",
-            "text": "Lorem Ipsum",
-          },
-          "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
-          "id": "4711",
-          "name": "A discounted product with msrp",
-          "price": Object {
-            "currency": "EUR",
-            "discount": 50,
-            "info": "",
-            "msrp": 10,
-            "unitPrice": 5,
-            "unitPriceMin": 0,
-            "unitPriceStriked": 0,
-          },
-          "stock": Object {
-            "ignoreQuantity": false,
-            "info": "Info",
-            "maxOrderQuantity": 1000,
-            "minOrderQuantity": 1,
-            "orderable": true,
-            "quantity": 4,
-          },
-        }
-      }
-    >
-      <Grid
-        className=""
-        component="ul"
-        wrap={false}
-      >
-        <ul
-          className=" css-h7r55a"
-        >
-          <GridItem
-            className="css-sg184b"
-            component="li"
-            grow={0}
-            shrink={0}
-          >
-            <li
-              className="css-sg184b css-1l9a57c"
-            >
-              <Image
-                alt="A discounted product with msrp"
-                animating={true}
-                backgroundColor="#f2f2f2"
-                className=""
-                forcePlaceholder={false}
-                highestResolutionLoaded={[Function]}
-                itemProp="image"
-                onError={null}
-                onLoad={null}
-                ratio={null}
-                resolutions={
-                  Array [
-                    Object {
-                      "blur": 2,
-                      "height": 50,
-                      "width": 50,
-                    },
-                    Object {
-                      "height": 440,
-                      "width": 440,
-                    },
-                  ]
-                }
-                src="https://cdn.acme.com/kitten.jpg"
-                transition={null}
-              >
-                <div
-                  className="css-326p2s "
-                />
-              </Image>
-            </li>
-          </GridItem>
-          <GridItem
-            className="css-nil"
-            component="li"
-            grow={4}
-            shrink={1}
-          >
-            <li
-              className="css-nil css-ke56yp"
-            >
-              <Ellipsis
-                className="css-ud99sa"
-                ellipsis="..."
-                rows={3}
-              >
-                <Dotdotdot
-                  clamp={3}
-                  className="css-ud99sa"
-                  ellipsis="..."
-                  tagName="div"
-                  truncationChar="…"
-                  useNativeClamp={true}
-                >
-                  <div
-                    className="css-ud99sa"
-                  >
-                    A discounted product with msrp
-                  </div>
-                </Dotdotdot>
-              </Ellipsis>
-              <Availability
-                className="css-117ocmm"
-                showWhenAvailable={true}
-                state="ok"
-                text="Lorem Ipsum"
-              >
-                <div
-                  className="css-117ocmm css-1ixzglu"
-                  data-test-id="availabilityText: Lorem Ipsum"
-                >
-                  Lorem Ipsum
-                </div>
-              </Availability>
-            </li>
-          </GridItem>
-          <GridItem
-            className="css-1onmrls"
-            component="li"
-            grow={1}
-            shrink={1}
-          >
-            <li
-              className="css-1onmrls css-1gs0ko2"
-            >
-              <AddToCartPicker
-                buttonProps={
-                  Object {
-                    "isDisabled": false,
-                    "isOrderable": true,
-                    "type": "grouped",
-                  }
-                }
-                clickDelay={150}
-                handleAddToCart={[Function]}
-                productId="4711"
-                stock={
-                  Object {
-                    "ignoreQuantity": false,
-                    "info": "Info",
-                    "maxOrderQuantity": 1000,
-                    "minOrderQuantity": 1,
-                    "orderable": true,
-                    "quantity": 4,
-                  }
-                }
-              >
-                <Picker
-                  buttonComponent={[Function]}
-                  buttonProps={
-                    Object {
-                      "addedQuantity": 0,
-                      "className": "css-l6qlih",
-                      "handleAddToCart": [Function],
-                      "hasLoading": true,
-                      "isDisabled": false,
-                      "isLoading": false,
-                      "isOrderable": true,
-                      "noShadow": true,
-                      "type": "grouped",
-                    }
-                  }
-                  className="css-1ej66kr"
-                  disabled={false}
-                  duration={300}
-                  isOpen={false}
-                  items={
-                    Array [
-                      Object {
-                        "label": "1",
-                        "value": 1,
-                      },
-                      Object {
-                        "label": "2",
-                        "value": 2,
-                      },
-                      Object {
-                        "label": "3",
-                        "value": 3,
-                      },
-                      Object {
-                        "label": "4",
-                        "value": 4,
-                      },
-                    ]
-                  }
-                  label=""
-                  listComponent={[Function]}
-                  modalComponent={[Function]}
-                  onChange={[Function]}
-                  onClose={[Function]}
-                  placeholder="Pick ..."
-                  value={null}
-                >
-                  <div
-                    className="css-1ej66kr"
-                  >
-                    <PickerAddToCartButton
-                      addedQuantity={0}
-                      buttonSize={40}
-                      className="css-l6qlih"
-                      disabled={false}
-                      handleAddToCart={[Function]}
-                      hasLoading={true}
-                      iconSize={20}
-                      isDisabled={false}
-                      isLoading={false}
-                      isOrderable={true}
-                      label="Pick ..."
-                      noShadow={true}
-                      openList={[Function]}
-                      type="grouped"
-                      value=""
-                    >
-                      <button
-                        className="css-l6qlih css-zby7a7 css-31obrv"
-                        data-test-id="AddToCartButton"
-                        onClick={[Function]}
-                      >
-                        <div
-                          className="css-rukjns css-1gleer"
-                          style={
-                            Object {
-                              "opacity": 0,
-                            }
-                          }
-                        >
-                          <IndicatorCircle
-                            color="#5ccee3"
-                            paused={true}
-                            size={32}
-                            strokeWidth={5}
-                          >
-                            <svg
-                              className="css-17zev8s"
-                              height={32}
-                              viewBox="25 25 50 50"
-                              width={32}
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <circle
-                                className="css-1n2s8pv"
-                                cx="50"
-                                cy="50"
-                                r="20"
-                              />
-                            </svg>
-                          </IndicatorCircle>
-                        </div>
-                        <div
-                          className="css-rukjns"
-                          style={
-                            Object {
-                              "opacity": 1,
-                              "transform": "translate3d(0, 300%, 0)",
-                            }
-                          }
-                        >
-                          <Tick>
-                            <Icon
-                              className=""
-                              color={null}
-                              content="<path d=\\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\\"/>"
-                              size="inherit"
-                              viewBox="0 0 24 24"
-                            >
-                              <svg
-                                className="css-yys9hb "
-                                dangerouslySetInnerHTML={
-                                  Object {
-                                    "__html": "<path d=\\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\\"/>",
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "fill": null,
-                                    "fontSize": "inherit",
-                                  }
-                                }
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                              />
-                            </Icon>
-                          </Tick>
-                        </div>
-                        <div
-                          className="css-rukjns"
-                          onAnimationEnd={[Function]}
-                          style={
-                            Object {
-                              "opacity": 1,
-                              "transform": "translate3d(0, -50%, 0)",
-                            }
-                          }
-                        >
-                          <CartPlus>
-                            <Icon
-                              className=""
-                              color={null}
-                              content="<path d=\\"M0 0h24v24H0zm18.31 6l-2.76 5z\\" fill=\\"none\\"/><path d=\\"M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z\\"/>"
-                              size="inherit"
-                              viewBox="0 0 24 24"
-                            >
-                              <svg
-                                className="css-yys9hb "
-                                dangerouslySetInnerHTML={
-                                  Object {
-                                    "__html": "<path d=\\"M0 0h24v24H0zm18.31 6l-2.76 5z\\" fill=\\"none\\"/><path d=\\"M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z\\"/>",
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "fill": null,
-                                    "fontSize": "inherit",
-                                  }
-                                }
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                              />
-                            </Icon>
-                          </CartPlus>
-                        </div>
-                      </button>
-                    </PickerAddToCartButton>
-                    <Portal
-                      isOpened={true}
-                      onClose={[Function]}
-                      onOpen={[Function]}
-                      onUpdate={[Function]}
-                    />
-                  </div>
-                </Picker>
-              </AddToCartPicker>
-              <div
-                className="css-h0biv2"
-              >
-                <Translate
-                  className="css-14aq3ya"
-                  params={Object {}}
-                  string="price.msrp"
-                >
-                  <span
-                    className="css-14aq3ya"
-                  >
-                    price.msrp
-                  </span>
-                </Translate>
-                <PriceStriked
-                  className="css-117ocmm"
-                  currency="EUR"
-                  value={10}
-                >
-                  <div
-                    className="css-1sagvrb css-117ocmm "
-                  >
-                    <span
-                      data-test-id="strikedPrice: 10"
-                    >
-                      <FormatPrice
-                        className=""
-                        currency="EUR"
-                        fractions={true}
-                        price={10}
-                      >
-                        <span
-                          className=""
-                        >
-                          p
-                        </span>
-                      </FormatPrice>
-                    </span>
-                  </div>
-                </PriceStriked>
-              </div>
-              <Price
-                className="css-1h9wty7"
-                currency="EUR"
-                discounted={true}
-                fractions={true}
-                taxDisclaimer={false}
-                unitPrice={5}
-                unitPriceMin={0}
-              >
-                <div
-                  className="css-izofhs css-1h9wty7 css-1ncyhu"
-                  data-test-id="minPrice: 0 price: 5 currency: EUR"
-                >
-                  <FormatPrice
-                    className=""
-                    currency="EUR"
-                    fractions={true}
-                    price={5}
-                  >
-                    <span
-                      className=""
-                    >
-                      p
-                    </span>
-                  </FormatPrice>
-                </div>
-              </Price>
-            </li>
-          </GridItem>
-        </ul>
-      </Grid>
-    </Product>
-  </Connect(Product)>
-</Provider>
-`;
-
-exports[`<Product /> should render a not orderable product as expected 1`] = `
-<Provider
-  store={
-    Object {
-      "clearActions": [Function],
-      "dispatch": [MockFunction],
-      "getActions": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-    }
-  }
->
-  <Connect(Product)
-    product={
-      Object {
-        "availability": Object {
-          "state": "ok",
-          "text": "Lorem Ipsum",
-        },
-        "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
-        "id": "foo",
-        "name": "A not orderable product",
-        "price": Object {
-          "currency": "EUR",
-          "discount": 0,
-          "info": "",
-          "msrp": 0,
-          "unitPrice": 5,
-          "unitPriceMin": 0,
-          "unitPriceStriked": 0,
-        },
-        "stock": Object {
-          "ignoreQuantity": false,
-          "info": "Info",
-          "maxOrderQuantity": 1000,
-          "minOrderQuantity": 1,
-          "orderable": false,
-          "quantity": 0,
-        },
-      }
-    }
-  >
-    <Product
-      addToCartButtonProps={
-        Object {
-          "isDisabled": true,
-          "isOrderable": false,
-        }
-      }
-      handleAddToCart={[Function]}
-      product={
-        Object {
-          "availability": Object {
-            "state": "ok",
-            "text": "Lorem Ipsum",
-          },
-          "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
-          "id": "foo",
-          "name": "A not orderable product",
-          "price": Object {
-            "currency": "EUR",
-            "discount": 0,
-            "info": "",
-            "msrp": 0,
-            "unitPrice": 5,
-            "unitPriceMin": 0,
-            "unitPriceStriked": 0,
-          },
-          "stock": Object {
-            "ignoreQuantity": false,
-            "info": "Info",
-            "maxOrderQuantity": 1000,
-            "minOrderQuantity": 1,
-            "orderable": false,
-            "quantity": 0,
-          },
-        }
-      }
-    >
-      <Grid
-        className=""
-        component="ul"
-        wrap={false}
-      >
-        <ul
-          className=" css-h7r55a"
-        >
-          <GridItem
-            className="css-sg184b"
-            component="li"
-            grow={0}
-            shrink={0}
-          >
-            <li
-              className="css-sg184b css-1l9a57c"
-            >
-              <Image
-                alt="A not orderable product"
-                animating={true}
-                backgroundColor="#f2f2f2"
-                className=""
-                forcePlaceholder={false}
-                highestResolutionLoaded={[Function]}
-                itemProp="image"
-                onError={null}
-                onLoad={null}
-                ratio={null}
-                resolutions={
-                  Array [
-                    Object {
-                      "blur": 2,
-                      "height": 50,
-                      "width": 50,
-                    },
-                    Object {
-                      "height": 440,
-                      "width": 440,
-                    },
-                  ]
-                }
-                src="https://cdn.acme.com/kitten.jpg"
-                transition={null}
-              >
-                <div
-                  className="css-326p2s "
-                />
-              </Image>
-            </li>
-          </GridItem>
-          <GridItem
-            className="css-nil"
-            component="li"
-            grow={4}
-            shrink={1}
-          >
-            <li
-              className="css-nil css-ke56yp"
-            >
-              <Ellipsis
-                className="css-ud99sa"
-                ellipsis="..."
-                rows={3}
-              >
-                <Dotdotdot
-                  clamp={3}
-                  className="css-ud99sa"
-                  ellipsis="..."
-                  tagName="div"
-                  truncationChar="…"
-                  useNativeClamp={true}
-                >
-                  <div
-                    className="css-ud99sa"
-                  >
-                    A not orderable product
-                  </div>
-                </Dotdotdot>
-              </Ellipsis>
-              <Availability
-                className="css-117ocmm"
-                showWhenAvailable={true}
-                state="ok"
-                text="Lorem Ipsum"
-              >
-                <div
-                  className="css-117ocmm css-1ixzglu"
-                  data-test-id="availabilityText: Lorem Ipsum"
-                >
-                  Lorem Ipsum
-                </div>
-              </Availability>
-            </li>
-          </GridItem>
-          <GridItem
-            className="css-1onmrls"
-            component="li"
-            grow={1}
-            shrink={1}
-          >
-            <li
-              className="css-1onmrls css-1gs0ko2"
-            >
-              <AddToCartPicker
-                buttonProps={
-                  Object {
-                    "isDisabled": true,
-                    "isOrderable": false,
-                    "type": "grouped",
-                  }
-                }
-                clickDelay={150}
-                handleAddToCart={[Function]}
-                productId="foo"
-                stock={
-                  Object {
-                    "ignoreQuantity": false,
-                    "info": "Info",
-                    "maxOrderQuantity": 1000,
-                    "minOrderQuantity": 1,
-                    "orderable": false,
-                    "quantity": 0,
-                  }
-                }
-              >
-                <Picker
-                  buttonComponent={[Function]}
-                  buttonProps={
-                    Object {
-                      "addedQuantity": 0,
-                      "className": "css-nil",
-                      "handleAddToCart": [Function],
-                      "hasLoading": true,
-                      "isDisabled": true,
-                      "isLoading": false,
-                      "isOrderable": false,
-                      "noShadow": true,
-                      "type": "grouped",
-                    }
-                  }
-                  className="css-1ej66kr"
-                  disabled={false}
-                  duration={300}
-                  isOpen={false}
-                  items={Array []}
-                  label=""
-                  listComponent={[Function]}
-                  modalComponent={[Function]}
-                  onChange={[Function]}
-                  onClose={[Function]}
-                  placeholder="Pick ..."
-                  value={null}
-                >
-                  <div
-                    className="css-1ej66kr"
-                  >
-                    <PickerAddToCartButton
-                      addedQuantity={0}
-                      buttonSize={40}
-                      className="css-nil"
-                      disabled={false}
-                      handleAddToCart={[Function]}
-                      hasLoading={true}
-                      iconSize={20}
-                      isDisabled={true}
-                      isLoading={false}
-                      isOrderable={false}
-                      label="Pick ..."
-                      noShadow={true}
-                      openList={[Function]}
-                      type="grouped"
-                      value=""
-                    >
-                      <button
-                        className="css-nil css-zby7a7 css-15s4nvk"
-                        data-test-id="AddToCartButton"
-                        onClick={[Function]}
-                      >
-                        <div
-                          className="css-rukjns css-1gleer"
-                          style={
-                            Object {
-                              "opacity": 0,
-                            }
-                          }
-                        >
-                          <IndicatorCircle
-                            color="#5ccee3"
-                            paused={true}
-                            size={32}
-                            strokeWidth={5}
-                          >
-                            <svg
-                              className="css-17zev8s"
-                              height={32}
-                              viewBox="25 25 50 50"
-                              width={32}
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <circle
-                                className="css-1n2s8pv"
-                                cx="50"
-                                cy="50"
-                                r="20"
-                              />
-                            </svg>
-                          </IndicatorCircle>
-                        </div>
-                        <div
-                          className="css-rukjns"
-                          style={
-                            Object {
-                              "opacity": 1,
-                              "transform": "translate3d(0, 300%, 0)",
-                            }
-                          }
-                        >
-                          <Tick>
-                            <Icon
-                              className=""
-                              color={null}
-                              content="<path d=\\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\\"/>"
-                              size="inherit"
-                              viewBox="0 0 24 24"
-                            >
-                              <svg
-                                className="css-yys9hb "
-                                dangerouslySetInnerHTML={
-                                  Object {
-                                    "__html": "<path d=\\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\\"/>",
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "fill": null,
-                                    "fontSize": "inherit",
-                                  }
-                                }
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                              />
-                            </Icon>
-                          </Tick>
-                        </div>
-                        <div
-                          className="css-rukjns"
-                          onAnimationEnd={[Function]}
-                          style={
-                            Object {
-                              "opacity": 1,
-                              "transform": "translate3d(0, -50%, 0)",
-                            }
-                          }
-                        >
-                          <CartPlus>
-                            <Icon
-                              className=""
-                              color={null}
-                              content="<path d=\\"M0 0h24v24H0zm18.31 6l-2.76 5z\\" fill=\\"none\\"/><path d=\\"M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z\\"/>"
-                              size="inherit"
-                              viewBox="0 0 24 24"
-                            >
-                              <svg
-                                className="css-yys9hb "
-                                dangerouslySetInnerHTML={
-                                  Object {
-                                    "__html": "<path d=\\"M0 0h24v24H0zm18.31 6l-2.76 5z\\" fill=\\"none\\"/><path d=\\"M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z\\"/>",
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "fill": null,
-                                    "fontSize": "inherit",
-                                  }
-                                }
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                              />
-                            </Icon>
-                          </CartPlus>
-                        </div>
-                      </button>
-                    </PickerAddToCartButton>
-                    <Portal
-                      isOpened={true}
-                      onClose={[Function]}
-                      onOpen={[Function]}
-                      onUpdate={[Function]}
-                    />
-                  </div>
-                </Picker>
-              </AddToCartPicker>
-              <Price
-                className="css-1h9wty7"
-                currency="EUR"
-                discounted={false}
-                fractions={true}
-                taxDisclaimer={false}
-                unitPrice={5}
-                unitPriceMin={0}
-              >
-                <div
-                  className="css-izofhs css-1h9wty7"
-                  data-test-id="minPrice: 0 price: 5 currency: EUR"
-                >
-                  <FormatPrice
-                    className=""
-                    currency="EUR"
-                    fractions={true}
-                    price={5}
-                  >
-                    <span
-                      className=""
-                    >
-                      p
-                    </span>
-                  </FormatPrice>
-                </div>
-              </Price>
-            </li>
-          </GridItem>
-        </ul>
-      </Grid>
-    </Product>
-  </Connect(Product)>
-</Provider>
-`;
-
-exports[`<Product /> should render a regular product as expected 1`] = `
-<Provider
-  store={
-    Object {
-      "clearActions": [Function],
-      "dispatch": [MockFunction],
-      "getActions": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-    }
-  }
->
-  <Connect(Product)
+    hasFavorites={false}
     product={
       Object {
         "availability": Object {
@@ -927,6 +52,8 @@ exports[`<Product /> should render a regular product as expected 1`] = `
         }
       }
       handleAddToCart={[Function]}
+      hasFavorites={false}
+      isFavorite={false}
       product={
         Object {
           "availability": Object {
@@ -955,6 +82,7 @@ exports[`<Product /> should render a regular product as expected 1`] = `
           },
         }
       }
+      renderFlatButtons={false}
     >
       <Grid
         className=""
@@ -1053,17 +181,18 @@ exports[`<Product /> should render a regular product as expected 1`] = `
           <GridItem
             className="css-1onmrls"
             component="li"
-            grow={1}
+            grow={0}
             shrink={1}
           >
             <li
-              className="css-1onmrls css-1gs0ko2"
+              className="css-1onmrls"
             >
               <AddToCartPicker
                 buttonProps={
                   Object {
                     "isDisabled": false,
                     "isOrderable": true,
+                    "noShadow": false,
                     "type": "grouped",
                   }
                 }
@@ -1086,17 +215,17 @@ exports[`<Product /> should render a regular product as expected 1`] = `
                   buttonProps={
                     Object {
                       "addedQuantity": 0,
-                      "className": "css-l6qlih",
+                      "className": null,
                       "handleAddToCart": [Function],
                       "hasLoading": true,
                       "isDisabled": false,
                       "isLoading": false,
                       "isOrderable": true,
-                      "noShadow": true,
+                      "noShadow": false,
                       "type": "grouped",
                     }
                   }
-                  className="css-1ej66kr"
+                  className="css-ibd9un"
                   disabled={false}
                   duration={300}
                   isOpen={false}
@@ -1129,12 +258,12 @@ exports[`<Product /> should render a regular product as expected 1`] = `
                   value={null}
                 >
                   <div
-                    className="css-1ej66kr"
+                    className="css-ibd9un"
                   >
                     <PickerAddToCartButton
                       addedQuantity={0}
                       buttonSize={40}
-                      className="css-l6qlih"
+                      className={null}
                       disabled={false}
                       handleAddToCart={[Function]}
                       hasLoading={true}
@@ -1143,13 +272,13 @@ exports[`<Product /> should render a regular product as expected 1`] = `
                       isLoading={false}
                       isOrderable={true}
                       label="Pick ..."
-                      noShadow={true}
+                      noShadow={false}
                       openList={[Function]}
                       type="grouped"
                       value=""
                     >
                       <button
-                        className="css-l6qlih css-zby7a7 css-31obrv"
+                        className="null css-68omm3 css-31obrv"
                         data-test-id="AddToCartButton"
                         onClick={[Function]}
                       >
@@ -1267,33 +396,52 @@ exports[`<Product /> should render a regular product as expected 1`] = `
                   </div>
                 </Picker>
               </AddToCartPicker>
-              <Price
-                className="css-1h9wty7"
-                currency="EUR"
-                discounted={false}
-                fractions={true}
-                taxDisclaimer={false}
-                unitPrice={5}
-                unitPriceMin={0}
+              <ProductPrice
+                price={
+                  Object {
+                    "currency": "EUR",
+                    "discount": 0,
+                    "info": "",
+                    "msrp": 0,
+                    "unitPrice": 5,
+                    "unitPriceMin": 0,
+                    "unitPriceStriked": 0,
+                  }
+                }
+                renderLine={false}
               >
                 <div
-                  className="css-izofhs css-1h9wty7"
-                  data-test-id="minPrice: 0 price: 5 currency: EUR"
+                  className="css-nil"
                 >
-                  <FormatPrice
-                    className=""
+                  <Price
+                    className="css-fisw11"
                     currency="EUR"
+                    discounted={false}
                     fractions={true}
-                    price={5}
+                    taxDisclaimer={false}
+                    unitPrice={5}
+                    unitPriceMin={0}
                   >
-                    <span
-                      className=""
+                    <div
+                      className="css-izofhs css-fisw11"
+                      data-test-id="minPrice: 0 price: 5 currency: EUR"
                     >
-                      p
-                    </span>
-                  </FormatPrice>
+                      <FormatPrice
+                        className=""
+                        currency="EUR"
+                        fractions={true}
+                        price={5}
+                      >
+                        <span
+                          className=""
+                        >
+                          p
+                        </span>
+                      </FormatPrice>
+                    </div>
+                  </Price>
                 </div>
-              </Price>
+              </ProductPrice>
             </li>
           </GridItem>
         </ul>
@@ -1303,7 +451,7 @@ exports[`<Product /> should render a regular product as expected 1`] = `
 </Provider>
 `;
 
-exports[`<Product /> should render a strike price discounted product as expected 1`] = `
+exports[`<Product /> should render as expected when the favorite list is not active 2`] = `
 <Provider
   store={
     Object {
@@ -1317,6 +465,7 @@ exports[`<Product /> should render a strike price discounted product as expected
   }
 >
   <Connect(Product)
+    hasFavorites={true}
     product={
       Object {
         "availability": Object {
@@ -1324,24 +473,24 @@ exports[`<Product /> should render a strike price discounted product as expected
           "text": "Lorem Ipsum",
         },
         "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
-        "id": "1985",
-        "name": "A discounted product with stike price and info",
+        "id": "foo",
+        "name": "A not orderable product",
         "price": Object {
           "currency": "EUR",
-          "discount": 50,
-          "info": "5 EUR / kg",
+          "discount": 0,
+          "info": "",
           "msrp": 0,
           "unitPrice": 5,
           "unitPriceMin": 0,
-          "unitPriceStriked": 10,
+          "unitPriceStriked": 0,
         },
         "stock": Object {
           "ignoreQuantity": false,
           "info": "Info",
           "maxOrderQuantity": 1000,
           "minOrderQuantity": 1,
-          "orderable": true,
-          "quantity": 4,
+          "orderable": false,
+          "quantity": 0,
         },
       }
     }
@@ -1349,11 +498,13 @@ exports[`<Product /> should render a strike price discounted product as expected
     <Product
       addToCartButtonProps={
         Object {
-          "isDisabled": false,
-          "isOrderable": true,
+          "isDisabled": true,
+          "isOrderable": false,
         }
       }
       handleAddToCart={[Function]}
+      hasFavorites={true}
+      isFavorite={false}
       product={
         Object {
           "availability": Object {
@@ -1361,27 +512,28 @@ exports[`<Product /> should render a strike price discounted product as expected
             "text": "Lorem Ipsum",
           },
           "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
-          "id": "1985",
-          "name": "A discounted product with stike price and info",
+          "id": "foo",
+          "name": "A not orderable product",
           "price": Object {
             "currency": "EUR",
-            "discount": 50,
-            "info": "5 EUR / kg",
+            "discount": 0,
+            "info": "",
             "msrp": 0,
             "unitPrice": 5,
             "unitPriceMin": 0,
-            "unitPriceStriked": 10,
+            "unitPriceStriked": 0,
           },
           "stock": Object {
             "ignoreQuantity": false,
             "info": "Info",
             "maxOrderQuantity": 1000,
             "minOrderQuantity": 1,
-            "orderable": true,
-            "quantity": 4,
+            "orderable": false,
+            "quantity": 0,
           },
         }
       }
+      renderFlatButtons={false}
     >
       <Grid
         className=""
@@ -1401,7 +553,7 @@ exports[`<Product /> should render a strike price discounted product as expected
               className="css-sg184b css-1l9a57c"
             >
               <Image
-                alt="A discounted product with stike price and info"
+                alt="A not orderable product"
                 animating={true}
                 backgroundColor="#f2f2f2"
                 className=""
@@ -1458,10 +610,56 @@ exports[`<Product /> should render a strike price discounted product as expected
                   <div
                     className="css-ud99sa"
                   >
-                    A discounted product with stike price and info
+                    A not orderable product
                   </div>
                 </Dotdotdot>
               </Ellipsis>
+              <ProductPrice
+                price={
+                  Object {
+                    "currency": "EUR",
+                    "discount": 0,
+                    "info": "",
+                    "msrp": 0,
+                    "unitPrice": 5,
+                    "unitPriceMin": 0,
+                    "unitPriceStriked": 0,
+                  }
+                }
+                renderLine={true}
+              >
+                <div
+                  className="css-1yymqrw"
+                >
+                  <Price
+                    className="css-fisw11"
+                    currency="EUR"
+                    discounted={false}
+                    fractions={true}
+                    taxDisclaimer={false}
+                    unitPrice={5}
+                    unitPriceMin={0}
+                  >
+                    <div
+                      className="css-izofhs css-fisw11"
+                      data-test-id="minPrice: 0 price: 5 currency: EUR"
+                    >
+                      <FormatPrice
+                        className=""
+                        currency="EUR"
+                        fractions={true}
+                        price={5}
+                      >
+                        <span
+                          className=""
+                        >
+                          p
+                        </span>
+                      </FormatPrice>
+                    </div>
+                  </Price>
+                </div>
+              </ProductPrice>
               <Availability
                 className="css-117ocmm"
                 showWhenAvailable={true}
@@ -1478,25 +676,480 @@ exports[`<Product /> should render a strike price discounted product as expected
             </li>
           </GridItem>
           <GridItem
-            className="css-1onmrls"
+            className="css-1anng1p"
             component="li"
-            grow={1}
+            grow={0}
             shrink={1}
           >
             <li
-              className="css-1onmrls css-1gs0ko2"
+              className="css-1anng1p"
+            >
+              <AddToCartPicker
+                buttonProps={
+                  Object {
+                    "isDisabled": true,
+                    "isOrderable": false,
+                    "noShadow": false,
+                    "type": "grouped",
+                  }
+                }
+                clickDelay={150}
+                handleAddToCart={[Function]}
+                productId="foo"
+                stock={
+                  Object {
+                    "ignoreQuantity": false,
+                    "info": "Info",
+                    "maxOrderQuantity": 1000,
+                    "minOrderQuantity": 1,
+                    "orderable": false,
+                    "quantity": 0,
+                  }
+                }
+              >
+                <Picker
+                  buttonComponent={[Function]}
+                  buttonProps={
+                    Object {
+                      "addedQuantity": 0,
+                      "className": null,
+                      "handleAddToCart": [Function],
+                      "hasLoading": true,
+                      "isDisabled": true,
+                      "isLoading": false,
+                      "isOrderable": false,
+                      "noShadow": false,
+                      "type": "grouped",
+                    }
+                  }
+                  className="css-ibd9un"
+                  disabled={false}
+                  duration={300}
+                  isOpen={false}
+                  items={Array []}
+                  label=""
+                  listComponent={[Function]}
+                  modalComponent={[Function]}
+                  onChange={[Function]}
+                  onClose={[Function]}
+                  placeholder="Pick ..."
+                  value={null}
+                >
+                  <div
+                    className="css-ibd9un"
+                  >
+                    <PickerAddToCartButton
+                      addedQuantity={0}
+                      buttonSize={40}
+                      className={null}
+                      disabled={false}
+                      handleAddToCart={[Function]}
+                      hasLoading={true}
+                      iconSize={20}
+                      isDisabled={true}
+                      isLoading={false}
+                      isOrderable={false}
+                      label="Pick ..."
+                      noShadow={false}
+                      openList={[Function]}
+                      type="grouped"
+                      value=""
+                    >
+                      <button
+                        className="null css-68omm3 css-15s4nvk"
+                        data-test-id="AddToCartButton"
+                        onClick={[Function]}
+                      >
+                        <div
+                          className="css-rukjns css-1gleer"
+                          style={
+                            Object {
+                              "opacity": 0,
+                            }
+                          }
+                        >
+                          <IndicatorCircle
+                            color="#5ccee3"
+                            paused={true}
+                            size={32}
+                            strokeWidth={5}
+                          >
+                            <svg
+                              className="css-17zev8s"
+                              height={32}
+                              viewBox="25 25 50 50"
+                              width={32}
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <circle
+                                className="css-1n2s8pv"
+                                cx="50"
+                                cy="50"
+                                r="20"
+                              />
+                            </svg>
+                          </IndicatorCircle>
+                        </div>
+                        <div
+                          className="css-rukjns"
+                          style={
+                            Object {
+                              "opacity": 1,
+                              "transform": "translate3d(0, 300%, 0)",
+                            }
+                          }
+                        >
+                          <Tick>
+                            <Icon
+                              className=""
+                              color={null}
+                              content="<path d=\\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\\"/>"
+                              size="inherit"
+                              viewBox="0 0 24 24"
+                            >
+                              <svg
+                                className="css-yys9hb "
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "<path d=\\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\\"/>",
+                                  }
+                                }
+                                style={
+                                  Object {
+                                    "fill": null,
+                                    "fontSize": "inherit",
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                              />
+                            </Icon>
+                          </Tick>
+                        </div>
+                        <div
+                          className="css-rukjns"
+                          onAnimationEnd={[Function]}
+                          style={
+                            Object {
+                              "opacity": 1,
+                              "transform": "translate3d(0, -50%, 0)",
+                            }
+                          }
+                        >
+                          <CartPlus>
+                            <Icon
+                              className=""
+                              color={null}
+                              content="<path d=\\"M0 0h24v24H0zm18.31 6l-2.76 5z\\" fill=\\"none\\"/><path d=\\"M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z\\"/>"
+                              size="inherit"
+                              viewBox="0 0 24 24"
+                            >
+                              <svg
+                                className="css-yys9hb "
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "<path d=\\"M0 0h24v24H0zm18.31 6l-2.76 5z\\" fill=\\"none\\"/><path d=\\"M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z\\"/>",
+                                  }
+                                }
+                                style={
+                                  Object {
+                                    "fill": null,
+                                    "fontSize": "inherit",
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                              />
+                            </Icon>
+                          </CartPlus>
+                        </div>
+                      </button>
+                    </PickerAddToCartButton>
+                    <Portal
+                      isOpened={true}
+                      onClose={[Function]}
+                      onOpen={[Function]}
+                      onUpdate={[Function]}
+                    />
+                  </div>
+                </Picker>
+              </AddToCartPicker>
+              <Connect(FavoritesButton)
+                active={false}
+                className="css-1dps91a"
+                noShadow={false}
+                productId="foo"
+                rippleClassName="css-1tdptiz"
+              >
+                <FavoritesButton
+                  active={false}
+                  addFavorites={[Function]}
+                  className="css-1dps91a"
+                  noShadow={false}
+                  onRippleComplete={[Function]}
+                  once={false}
+                  productId="foo"
+                  removeFavorites={[Function]}
+                  removeThrottle={0}
+                  removeWithRelatives={false}
+                  rippleClassName="css-1tdptiz"
+                />
+              </Connect(FavoritesButton)>
+            </li>
+          </GridItem>
+        </ul>
+      </Grid>
+    </Product>
+  </Connect(Product)>
+</Provider>
+`;
+
+exports[`<Product /> should render as expected with flat buttons 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [MockFunction],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(Product)
+    hasFavorites={true}
+    product={
+      Object {
+        "availability": Object {
+          "state": "ok",
+          "text": "Lorem Ipsum",
+        },
+        "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+        "id": "1337",
+        "name": "A shiny product",
+        "price": Object {
+          "currency": "EUR",
+          "discount": 0,
+          "info": "",
+          "msrp": 0,
+          "unitPrice": 5,
+          "unitPriceMin": 0,
+          "unitPriceStriked": 0,
+        },
+        "stock": Object {
+          "ignoreQuantity": false,
+          "info": "Info",
+          "maxOrderQuantity": 1000,
+          "minOrderQuantity": 1,
+          "orderable": true,
+          "quantity": 4,
+        },
+      }
+    }
+    renderFlatButtons={true}
+  >
+    <Product
+      addToCartButtonProps={
+        Object {
+          "isDisabled": false,
+          "isOrderable": true,
+        }
+      }
+      handleAddToCart={[Function]}
+      hasFavorites={true}
+      isFavorite={false}
+      product={
+        Object {
+          "availability": Object {
+            "state": "ok",
+            "text": "Lorem Ipsum",
+          },
+          "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+          "id": "1337",
+          "name": "A shiny product",
+          "price": Object {
+            "currency": "EUR",
+            "discount": 0,
+            "info": "",
+            "msrp": 0,
+            "unitPrice": 5,
+            "unitPriceMin": 0,
+            "unitPriceStriked": 0,
+          },
+          "stock": Object {
+            "ignoreQuantity": false,
+            "info": "Info",
+            "maxOrderQuantity": 1000,
+            "minOrderQuantity": 1,
+            "orderable": true,
+            "quantity": 4,
+          },
+        }
+      }
+      renderFlatButtons={true}
+    >
+      <Grid
+        className=""
+        component="ul"
+        wrap={false}
+      >
+        <ul
+          className=" css-h7r55a"
+        >
+          <GridItem
+            className="css-sg184b"
+            component="li"
+            grow={0}
+            shrink={0}
+          >
+            <li
+              className="css-sg184b css-1l9a57c"
+            >
+              <Image
+                alt="A shiny product"
+                animating={true}
+                backgroundColor="#f2f2f2"
+                className=""
+                forcePlaceholder={false}
+                highestResolutionLoaded={[Function]}
+                itemProp="image"
+                onError={null}
+                onLoad={null}
+                ratio={null}
+                resolutions={
+                  Array [
+                    Object {
+                      "blur": 2,
+                      "height": 50,
+                      "width": 50,
+                    },
+                    Object {
+                      "height": 440,
+                      "width": 440,
+                    },
+                  ]
+                }
+                src="https://cdn.acme.com/kitten.jpg"
+                transition={null}
+              >
+                <div
+                  className="css-326p2s "
+                />
+              </Image>
+            </li>
+          </GridItem>
+          <GridItem
+            className="css-nil"
+            component="li"
+            grow={4}
+            shrink={1}
+          >
+            <li
+              className="css-nil css-ke56yp"
+            >
+              <Ellipsis
+                className="css-ud99sa"
+                ellipsis="..."
+                rows={3}
+              >
+                <Dotdotdot
+                  clamp={3}
+                  className="css-ud99sa"
+                  ellipsis="..."
+                  tagName="div"
+                  truncationChar="…"
+                  useNativeClamp={true}
+                >
+                  <div
+                    className="css-ud99sa"
+                  >
+                    A shiny product
+                  </div>
+                </Dotdotdot>
+              </Ellipsis>
+              <ProductPrice
+                price={
+                  Object {
+                    "currency": "EUR",
+                    "discount": 0,
+                    "info": "",
+                    "msrp": 0,
+                    "unitPrice": 5,
+                    "unitPriceMin": 0,
+                    "unitPriceStriked": 0,
+                  }
+                }
+                renderLine={true}
+              >
+                <div
+                  className="css-1yymqrw"
+                >
+                  <Price
+                    className="css-fisw11"
+                    currency="EUR"
+                    discounted={false}
+                    fractions={true}
+                    taxDisclaimer={false}
+                    unitPrice={5}
+                    unitPriceMin={0}
+                  >
+                    <div
+                      className="css-izofhs css-fisw11"
+                      data-test-id="minPrice: 0 price: 5 currency: EUR"
+                    >
+                      <FormatPrice
+                        className=""
+                        currency="EUR"
+                        fractions={true}
+                        price={5}
+                      >
+                        <span
+                          className=""
+                        >
+                          p
+                        </span>
+                      </FormatPrice>
+                    </div>
+                  </Price>
+                </div>
+              </ProductPrice>
+              <Availability
+                className="css-117ocmm"
+                showWhenAvailable={true}
+                state="ok"
+                text="Lorem Ipsum"
+              >
+                <div
+                  className="css-117ocmm css-1ixzglu"
+                  data-test-id="availabilityText: Lorem Ipsum"
+                >
+                  Lorem Ipsum
+                </div>
+              </Availability>
+            </li>
+          </GridItem>
+          <GridItem
+            className="css-1anng1p"
+            component="li"
+            grow={0}
+            shrink={1}
+          >
+            <li
+              className="css-1anng1p"
             >
               <AddToCartPicker
                 buttonProps={
                   Object {
                     "isDisabled": false,
                     "isOrderable": true,
+                    "noShadow": true,
                     "type": "grouped",
                   }
                 }
                 clickDelay={150}
                 handleAddToCart={[Function]}
-                productId="1985"
+                productId="1337"
                 stock={
                   Object {
                     "ignoreQuantity": false,
@@ -1523,7 +1176,7 @@ exports[`<Product /> should render a strike price discounted product as expected
                       "type": "grouped",
                     }
                   }
-                  className="css-1ej66kr"
+                  className="css-ibd9un"
                   disabled={false}
                   duration={300}
                   isOpen={false}
@@ -1556,7 +1209,7 @@ exports[`<Product /> should render a strike price discounted product as expected
                   value={null}
                 >
                   <div
-                    className="css-1ej66kr"
+                    className="css-ibd9un"
                   >
                     <PickerAddToCartButton
                       addedQuantity={0}
@@ -1694,73 +1347,500 @@ exports[`<Product /> should render a strike price discounted product as expected
                   </div>
                 </Picker>
               </AddToCartPicker>
-              <PriceStriked
-                className="css-117ocmm"
-                currency="EUR"
-                value={10}
+              <Connect(FavoritesButton)
+                active={false}
+                className="css-1dps91a"
+                noShadow={true}
+                productId="1337"
+                rippleClassName="css-1tdptiz"
               >
-                <div
-                  className="css-1sagvrb css-117ocmm "
-                >
-                  <span
-                    data-test-id="strikedPrice: 10"
-                  >
-                    <FormatPrice
-                      className=""
-                      currency="EUR"
-                      fractions={true}
-                      price={10}
-                    >
-                      <span
-                        className=""
-                      >
-                        p
-                      </span>
-                    </FormatPrice>
-                  </span>
-                </div>
-              </PriceStriked>
-              <Price
-                className="css-1h9wty7"
-                currency="EUR"
-                discounted={true}
-                fractions={true}
-                taxDisclaimer={false}
-                unitPrice={5}
-                unitPriceMin={0}
-              >
-                <div
-                  className="css-izofhs css-1h9wty7 css-1ncyhu"
-                  data-test-id="minPrice: 0 price: 5 currency: EUR"
-                >
-                  <FormatPrice
-                    className=""
-                    currency="EUR"
-                    fractions={true}
-                    price={5}
-                  >
-                    <span
-                      className=""
-                    >
-                      p
-                    </span>
-                  </FormatPrice>
-                </div>
-              </Price>
-              <PriceInfo
-                className="css-7hzrhp"
-                text="5 EUR / kg"
-              >
-                <div
-                  className="css-1kqiarg css-7hzrhp"
-                  dangerouslySetInnerHTML={
+                <FavoritesButton
+                  active={false}
+                  addFavorites={[Function]}
+                  className="css-1dps91a"
+                  noShadow={true}
+                  onRippleComplete={[Function]}
+                  once={false}
+                  productId="1337"
+                  removeFavorites={[Function]}
+                  removeThrottle={0}
+                  removeWithRelatives={false}
+                  rippleClassName="css-1tdptiz"
+                />
+              </Connect(FavoritesButton)>
+            </li>
+          </GridItem>
+        </ul>
+      </Grid>
+    </Product>
+  </Connect(Product)>
+</Provider>
+`;
+
+exports[`<Product /> should render as expected with regular buttons 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [MockFunction],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(Product)
+    hasFavorites={true}
+    product={
+      Object {
+        "availability": Object {
+          "state": "ok",
+          "text": "Lorem Ipsum",
+        },
+        "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+        "id": "1337",
+        "name": "A shiny product",
+        "price": Object {
+          "currency": "EUR",
+          "discount": 0,
+          "info": "",
+          "msrp": 0,
+          "unitPrice": 5,
+          "unitPriceMin": 0,
+          "unitPriceStriked": 0,
+        },
+        "stock": Object {
+          "ignoreQuantity": false,
+          "info": "Info",
+          "maxOrderQuantity": 1000,
+          "minOrderQuantity": 1,
+          "orderable": true,
+          "quantity": 4,
+        },
+      }
+    }
+    renderFlatButtons={false}
+  >
+    <Product
+      addToCartButtonProps={
+        Object {
+          "isDisabled": false,
+          "isOrderable": true,
+        }
+      }
+      handleAddToCart={[Function]}
+      hasFavorites={true}
+      isFavorite={false}
+      product={
+        Object {
+          "availability": Object {
+            "state": "ok",
+            "text": "Lorem Ipsum",
+          },
+          "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+          "id": "1337",
+          "name": "A shiny product",
+          "price": Object {
+            "currency": "EUR",
+            "discount": 0,
+            "info": "",
+            "msrp": 0,
+            "unitPrice": 5,
+            "unitPriceMin": 0,
+            "unitPriceStriked": 0,
+          },
+          "stock": Object {
+            "ignoreQuantity": false,
+            "info": "Info",
+            "maxOrderQuantity": 1000,
+            "minOrderQuantity": 1,
+            "orderable": true,
+            "quantity": 4,
+          },
+        }
+      }
+      renderFlatButtons={false}
+    >
+      <Grid
+        className=""
+        component="ul"
+        wrap={false}
+      >
+        <ul
+          className=" css-h7r55a"
+        >
+          <GridItem
+            className="css-sg184b"
+            component="li"
+            grow={0}
+            shrink={0}
+          >
+            <li
+              className="css-sg184b css-1l9a57c"
+            >
+              <Image
+                alt="A shiny product"
+                animating={true}
+                backgroundColor="#f2f2f2"
+                className=""
+                forcePlaceholder={false}
+                highestResolutionLoaded={[Function]}
+                itemProp="image"
+                onError={null}
+                onLoad={null}
+                ratio={null}
+                resolutions={
+                  Array [
                     Object {
-                      "__html": "5 EUR / kg",
+                      "blur": 2,
+                      "height": 50,
+                      "width": 50,
+                    },
+                    Object {
+                      "height": 440,
+                      "width": 440,
+                    },
+                  ]
+                }
+                src="https://cdn.acme.com/kitten.jpg"
+                transition={null}
+              >
+                <div
+                  className="css-326p2s "
+                />
+              </Image>
+            </li>
+          </GridItem>
+          <GridItem
+            className="css-nil"
+            component="li"
+            grow={4}
+            shrink={1}
+          >
+            <li
+              className="css-nil css-ke56yp"
+            >
+              <Ellipsis
+                className="css-ud99sa"
+                ellipsis="..."
+                rows={3}
+              >
+                <Dotdotdot
+                  clamp={3}
+                  className="css-ud99sa"
+                  ellipsis="..."
+                  tagName="div"
+                  truncationChar="…"
+                  useNativeClamp={true}
+                >
+                  <div
+                    className="css-ud99sa"
+                  >
+                    A shiny product
+                  </div>
+                </Dotdotdot>
+              </Ellipsis>
+              <ProductPrice
+                price={
+                  Object {
+                    "currency": "EUR",
+                    "discount": 0,
+                    "info": "",
+                    "msrp": 0,
+                    "unitPrice": 5,
+                    "unitPriceMin": 0,
+                    "unitPriceStriked": 0,
+                  }
+                }
+                renderLine={true}
+              >
+                <div
+                  className="css-1yymqrw"
+                >
+                  <Price
+                    className="css-fisw11"
+                    currency="EUR"
+                    discounted={false}
+                    fractions={true}
+                    taxDisclaimer={false}
+                    unitPrice={5}
+                    unitPriceMin={0}
+                  >
+                    <div
+                      className="css-izofhs css-fisw11"
+                      data-test-id="minPrice: 0 price: 5 currency: EUR"
+                    >
+                      <FormatPrice
+                        className=""
+                        currency="EUR"
+                        fractions={true}
+                        price={5}
+                      >
+                        <span
+                          className=""
+                        >
+                          p
+                        </span>
+                      </FormatPrice>
+                    </div>
+                  </Price>
+                </div>
+              </ProductPrice>
+              <Availability
+                className="css-117ocmm"
+                showWhenAvailable={true}
+                state="ok"
+                text="Lorem Ipsum"
+              >
+                <div
+                  className="css-117ocmm css-1ixzglu"
+                  data-test-id="availabilityText: Lorem Ipsum"
+                >
+                  Lorem Ipsum
+                </div>
+              </Availability>
+            </li>
+          </GridItem>
+          <GridItem
+            className="css-1anng1p"
+            component="li"
+            grow={0}
+            shrink={1}
+          >
+            <li
+              className="css-1anng1p"
+            >
+              <AddToCartPicker
+                buttonProps={
+                  Object {
+                    "isDisabled": false,
+                    "isOrderable": true,
+                    "noShadow": false,
+                    "type": "grouped",
+                  }
+                }
+                clickDelay={150}
+                handleAddToCart={[Function]}
+                productId="1337"
+                stock={
+                  Object {
+                    "ignoreQuantity": false,
+                    "info": "Info",
+                    "maxOrderQuantity": 1000,
+                    "minOrderQuantity": 1,
+                    "orderable": true,
+                    "quantity": 4,
+                  }
+                }
+              >
+                <Picker
+                  buttonComponent={[Function]}
+                  buttonProps={
+                    Object {
+                      "addedQuantity": 0,
+                      "className": null,
+                      "handleAddToCart": [Function],
+                      "hasLoading": true,
+                      "isDisabled": false,
+                      "isLoading": false,
+                      "isOrderable": true,
+                      "noShadow": false,
+                      "type": "grouped",
                     }
                   }
-                  data-test-id="priceInfo: 5 EUR / kg"
+                  className="css-ibd9un"
+                  disabled={false}
+                  duration={300}
+                  isOpen={false}
+                  items={
+                    Array [
+                      Object {
+                        "label": "1",
+                        "value": 1,
+                      },
+                      Object {
+                        "label": "2",
+                        "value": 2,
+                      },
+                      Object {
+                        "label": "3",
+                        "value": 3,
+                      },
+                      Object {
+                        "label": "4",
+                        "value": 4,
+                      },
+                    ]
+                  }
+                  label=""
+                  listComponent={[Function]}
+                  modalComponent={[Function]}
+                  onChange={[Function]}
+                  onClose={[Function]}
+                  placeholder="Pick ..."
+                  value={null}
+                >
+                  <div
+                    className="css-ibd9un"
+                  >
+                    <PickerAddToCartButton
+                      addedQuantity={0}
+                      buttonSize={40}
+                      className={null}
+                      disabled={false}
+                      handleAddToCart={[Function]}
+                      hasLoading={true}
+                      iconSize={20}
+                      isDisabled={false}
+                      isLoading={false}
+                      isOrderable={true}
+                      label="Pick ..."
+                      noShadow={false}
+                      openList={[Function]}
+                      type="grouped"
+                      value=""
+                    >
+                      <button
+                        className="null css-68omm3 css-31obrv"
+                        data-test-id="AddToCartButton"
+                        onClick={[Function]}
+                      >
+                        <div
+                          className="css-rukjns css-1gleer"
+                          style={
+                            Object {
+                              "opacity": 0,
+                            }
+                          }
+                        >
+                          <IndicatorCircle
+                            color="#5ccee3"
+                            paused={true}
+                            size={32}
+                            strokeWidth={5}
+                          >
+                            <svg
+                              className="css-17zev8s"
+                              height={32}
+                              viewBox="25 25 50 50"
+                              width={32}
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <circle
+                                className="css-1n2s8pv"
+                                cx="50"
+                                cy="50"
+                                r="20"
+                              />
+                            </svg>
+                          </IndicatorCircle>
+                        </div>
+                        <div
+                          className="css-rukjns"
+                          style={
+                            Object {
+                              "opacity": 1,
+                              "transform": "translate3d(0, 300%, 0)",
+                            }
+                          }
+                        >
+                          <Tick>
+                            <Icon
+                              className=""
+                              color={null}
+                              content="<path d=\\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\\"/>"
+                              size="inherit"
+                              viewBox="0 0 24 24"
+                            >
+                              <svg
+                                className="css-yys9hb "
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "<path d=\\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\\"/>",
+                                  }
+                                }
+                                style={
+                                  Object {
+                                    "fill": null,
+                                    "fontSize": "inherit",
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                              />
+                            </Icon>
+                          </Tick>
+                        </div>
+                        <div
+                          className="css-rukjns"
+                          onAnimationEnd={[Function]}
+                          style={
+                            Object {
+                              "opacity": 1,
+                              "transform": "translate3d(0, -50%, 0)",
+                            }
+                          }
+                        >
+                          <CartPlus>
+                            <Icon
+                              className=""
+                              color={null}
+                              content="<path d=\\"M0 0h24v24H0zm18.31 6l-2.76 5z\\" fill=\\"none\\"/><path d=\\"M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z\\"/>"
+                              size="inherit"
+                              viewBox="0 0 24 24"
+                            >
+                              <svg
+                                className="css-yys9hb "
+                                dangerouslySetInnerHTML={
+                                  Object {
+                                    "__html": "<path d=\\"M0 0h24v24H0zm18.31 6l-2.76 5z\\" fill=\\"none\\"/><path d=\\"M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z\\"/>",
+                                  }
+                                }
+                                style={
+                                  Object {
+                                    "fill": null,
+                                    "fontSize": "inherit",
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                              />
+                            </Icon>
+                          </CartPlus>
+                        </div>
+                      </button>
+                    </PickerAddToCartButton>
+                    <Portal
+                      isOpened={true}
+                      onClose={[Function]}
+                      onOpen={[Function]}
+                      onUpdate={[Function]}
+                    />
+                  </div>
+                </Picker>
+              </AddToCartPicker>
+              <Connect(FavoritesButton)
+                active={false}
+                className="css-1dps91a"
+                noShadow={false}
+                productId="1337"
+                rippleClassName="css-1tdptiz"
+              >
+                <FavoritesButton
+                  active={false}
+                  addFavorites={[Function]}
+                  className="css-1dps91a"
+                  noShadow={false}
+                  onRippleComplete={[Function]}
+                  once={false}
+                  productId="1337"
+                  removeFavorites={[Function]}
+                  removeThrottle={0}
+                  removeWithRelatives={false}
+                  rippleClassName="css-1tdptiz"
                 />
-              </PriceInfo>
+              </Connect(FavoritesButton)>
             </li>
           </GridItem>
         </ul>

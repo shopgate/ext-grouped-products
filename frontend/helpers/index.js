@@ -1,5 +1,6 @@
 import { generateResultHash } from '@shopgate/pwa-common/helpers/redux';
-import { SHOPGATE_CATALOG_GET_PRODUCT_CHILDREN } from '../constants';
+import appConfig from '@shopgate/pwa-common/helpers/config';
+import { SHOPGATE_CATALOG_GET_PRODUCT_CHILDREN, THEME_GMD } from '../constants';
 import { maxQuantityPickerEntries as maxEntries } from '../config';
 
 /**
@@ -55,4 +56,16 @@ export const createPickerItems = (stock) => {
  * Checks if the current theme is the GMD theme.
  * @return {boolean}
  */
-export const isGmdTheme = () => process.env.THEME.includes('gmd');
+export const isGmdTheme = () => process.env.THEME.includes(THEME_GMD);
+
+/**
+ * Tells if the extension shall render flat buttons.
+ * @return {boolean}
+ */
+export const renderFlatButtons = () => !isGmdTheme();
+
+/**
+ * Check if the favorite list feature is activated.
+ * @return {boolean}
+ */
+export const hasFavorites = () => appConfig.hasFavorites;
