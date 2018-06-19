@@ -29,6 +29,7 @@ const msrpLabel = css({
 
 const priceStrikedContainer = css({
   display: 'inline-flex',
+  alignItems: 'center',
 }).toString();
 
 const priceStriked = css({
