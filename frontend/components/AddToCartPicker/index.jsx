@@ -87,6 +87,17 @@ class AddToCartPicker extends Component {
   }
 
   /**
+   * Only update when the `addedQuantity` state changes. To avoid that the
+   * picker closes when the Redux state changes.
+   * @param {Object} nextProps The next component propss.
+   * @param {Object} nextState The next component state.
+   * @return {boolean}
+   */
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextState.addedQuantity !== this.state.addedQuantity;
+  }
+
+  /**
    * Returns the props for the picker button.
    * @return {Object}
    */
