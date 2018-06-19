@@ -8,7 +8,7 @@ const { variables } = themeConfig;
 
 /**
  * The StyleOverwrites components is supposed to
- * extend and overwrite iOS theme component classes.
+ * extend and overwrite iOS theme css classes.
  * @return {JSX}
  */
 const StyleOverwrites = () => {
