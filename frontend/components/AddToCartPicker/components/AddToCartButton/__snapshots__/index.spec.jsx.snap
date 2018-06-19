@@ -16,7 +16,7 @@ exports[`<AddToCartButton /> should render as expected 1`] = `
 >
   <button
     className="null css-zby7a7 css-31obrv"
-    data-test-id="AddToCartButton"
+    data-test-id="addToCartButton"
     onClick={[Function]}
   >
     <div

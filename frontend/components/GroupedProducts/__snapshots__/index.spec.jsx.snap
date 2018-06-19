@@ -454,7 +454,7 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                                 >
                                   <button
                                     className="null css-68omm3 css-31obrv"
-                                    data-test-id="AddToCartButton"
+                                    data-test-id="addToCartButton"
                                     onClick={[Function]}
                                   >
                                     <div
@@ -900,7 +900,7 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                                 >
                                   <button
                                     className="null css-68omm3 css-31obrv"
-                                    data-test-id="AddToCartButton"
+                                    data-test-id="addToCartButton"
                                     onClick={[Function]}
                                   >
                                     <div
@@ -1035,7 +1035,7 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                               className="css-nil"
                             >
                               <div
-                                className="css-h0biv2"
+                                className="css-1en8fmq"
                               >
                                 <Translate
                                   className="css-14aq3ya"
@@ -1387,7 +1387,7 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                                 >
                                   <button
                                     className="null css-68omm3 css-31obrv"
-                                    data-test-id="AddToCartButton"
+                                    data-test-id="addToCartButton"
                                     onClick={[Function]}
                                   >
                                     <div
@@ -1854,7 +1854,7 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                                 >
                                   <button
                                     className="null css-68omm3 css-15s4nvk"
-                                    data-test-id="AddToCartButton"
+                                    data-test-id="addToCartButton"
                                     onClick={[Function]}
                                   >
                                     <div
@@ -2484,7 +2484,7 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                                 >
                                   <button
                                     className="null css-68omm3 css-31obrv"
-                                    data-test-id="AddToCartButton"
+                                    data-test-id="addToCartButton"
                                     onClick={[Function]}
                                   >
                                     <div

@@ -98,7 +98,7 @@ exports[`<AddToCartPicker /> should render the component as expected 1`] = `
         >
           <button
             className="null css-68omm3 css-31obrv"
-            data-test-id="AddToCartButton"
+            data-test-id="addToCartButton"
             onClick={[Function]}
           >
             <div
