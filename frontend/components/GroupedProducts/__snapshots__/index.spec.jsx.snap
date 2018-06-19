@@ -200,12 +200,12 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
           className="css-gkw1j5 css-5bomak"
         >
           <ListItem
-            className="css-hlnx4j"
+            className="css-izecxm"
             isSelected={false}
             key="1337"
           >
             <li
-              className="css-1p5q8vq css-hlnx4j css-16gj3o1"
+              className="css-1p5q8vq css-izecxm css-16gj3o1"
             >
               <Connect(Product)
                 hasFavorites={false}
@@ -482,7 +482,7 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                                 >
                                   <button
                                     className="null css-68omm3 css-31obrv"
-                                    data-test-id="AddToCartButton"
+                                    data-test-id="addToCartButton"
                                     onClick={[Function]}
                                   >
                                     <div
@@ -654,12 +654,12 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
             </li>
           </ListItem>
           <ListItem
-            className="css-hlnx4j"
+            className="css-izecxm"
             isSelected={false}
             key="4711"
           >
             <li
-              className="css-1p5q8vq css-hlnx4j css-16gj3o1"
+              className="css-1p5q8vq css-izecxm css-16gj3o1"
             >
               <Connect(Product)
                 hasFavorites={false}
@@ -936,7 +936,7 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                                 >
                                   <button
                                     className="null css-68omm3 css-31obrv"
-                                    data-test-id="AddToCartButton"
+                                    data-test-id="addToCartButton"
                                     onClick={[Function]}
                                   >
                                     <div
@@ -1071,7 +1071,7 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                               className="css-nil"
                             >
                               <div
-                                className="css-h0biv2"
+                                className="css-1en8fmq"
                               >
                                 <Translate
                                   className="css-14aq3ya"
@@ -1149,12 +1149,12 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
             </li>
           </ListItem>
           <ListItem
-            className="css-hlnx4j"
+            className="css-izecxm"
             isSelected={false}
             key="1985"
           >
             <li
-              className="css-1p5q8vq css-hlnx4j css-16gj3o1"
+              className="css-1p5q8vq css-izecxm css-16gj3o1"
             >
               <Connect(Product)
                 hasFavorites={false}
@@ -1431,7 +1431,7 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                                 >
                                   <button
                                     className="null css-68omm3 css-31obrv"
-                                    data-test-id="AddToCartButton"
+                                    data-test-id="addToCartButton"
                                     onClick={[Function]}
                                   >
                                     <div
@@ -1643,12 +1643,12 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
             </li>
           </ListItem>
           <ListItem
-            className="css-hlnx4j"
+            className="css-izecxm"
             isSelected={false}
             key="foo"
           >
             <li
-              className="css-1p5q8vq css-hlnx4j css-16gj3o1"
+              className="css-1p5q8vq css-izecxm css-16gj3o1"
             >
               <Connect(Product)
                 hasFavorites={false}
@@ -1906,7 +1906,7 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                                 >
                                   <button
                                     className="null css-68omm3 css-15s4nvk"
-                                    data-test-id="AddToCartButton"
+                                    data-test-id="addToCartButton"
                                     onClick={[Function]}
                                   >
                                     <div
@@ -2078,12 +2078,12 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
             </li>
           </ListItem>
           <ListItem
-            className="css-hlnx4j"
+            className="css-izecxm"
             isSelected={false}
             key="1234"
           >
             <li
-              className="css-1p5q8vq css-hlnx4j css-16gj3o1"
+              className="css-1p5q8vq css-izecxm css-16gj3o1"
             >
               <Connect(Product)
                 hasFavorites={false}
@@ -2544,7 +2544,7 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                                 >
                                   <button
                                     className="null css-68omm3 css-31obrv"
-                                    data-test-id="AddToCartButton"
+                                    data-test-id="addToCartButton"
                                     onClick={[Function]}
                                   >
                                     <div

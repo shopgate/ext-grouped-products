@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import FavoritesButton from '@shopgate/pwa-ui-shared/FavoritesButton';
 import AddToCartPicker from '../AddToCartPicker';
 import { ADD_TO_CART_BUTTON_TYPE_DEFAULT } from '../../constants';
+import { renderFlatButtons } from '../../helpers';
 import styles from './style';
 import connect from './connector';
 
@@ -30,6 +31,7 @@ const CTAButtons = (props) => {
         productId={id}
         className={styles.favButton}
         rippleClassName={styles.ripple}
+        noShadow={renderFlatButtons()}
       />
 
       { props.isAddToCartButtonVisible && (
@@ -38,6 +40,7 @@ const CTAButtons = (props) => {
           handleAddToCart={props.handleAddToCart}
           productId={id}
           stock={stock}
+          noShadow={renderFlatButtons()}
         />
       )}
     </div>

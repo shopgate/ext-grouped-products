@@ -13,10 +13,6 @@ import ProductHeader from './index';
 const createComponent = state => createWrappedComponent(ProductHeader, state);
 
 describe('<ProductHeader />', () => {
-  beforeAll(() => {
-    global.process.env.THEME = 'gmd';
-  });
-
   it('should not render when the current product does not have children', () => {
     const component = createComponent(mockedStateWithRegularProduct);
 
@@ -28,7 +24,6 @@ describe('<ProductHeader />', () => {
     const component = createComponent(mockedState);
 
     expect(component).toMatchSnapshot();
-    expect(component.find('CTAButtons').exists()).toBe(true);
     expect(component.find('Rating').exists()).toBe(true);
   });
 });

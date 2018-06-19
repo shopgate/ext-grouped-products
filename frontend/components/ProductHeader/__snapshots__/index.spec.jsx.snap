@@ -16,7 +16,7 @@ exports[`<ProductHeader /> should not render when the current product does not h
   <Connect(ProductHeader)>
     <ProductHeader
       dispatch={[Function]}
-      isVisible={false}
+      isRendered={false}
     />
   </Connect(ProductHeader)>
 </Provider>
@@ -38,86 +38,15 @@ exports[`<ProductHeader /> should not render when the current product has childr
   <Connect(ProductHeader)>
     <ProductHeader
       dispatch={[Function]}
-      isVisible={true}
+      isRendered={true}
     >
       <div
         className={
           Object {
-            "data-css-qzkn57": "",
+            "data-css-i93p5x": "",
           }
         }
       >
-        <Connect(CTAButtons)>
-          <CTAButtons
-            addToCartButtonProps={
-              Object {
-                "isDisabled": false,
-                "isLoading": false,
-                "isOrderable": true,
-              }
-            }
-            handleAddToCart={[Function]}
-            isAddToCartButtonVisible={false}
-            isFavorite={true}
-            product={
-              Object {
-                "availability": Object {
-                  "state": "ok",
-                  "text": "Lorem Ipsum",
-                },
-                "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
-                "flags": Object {
-                  "hasChildren": true,
-                  "hasVariants": false,
-                },
-                "id": "1337",
-                "name": "A shiny product",
-                "price": Object {
-                  "currency": "EUR",
-                  "discount": 0,
-                  "info": "",
-                  "msrp": 0,
-                  "unitPrice": 5,
-                  "unitPriceMin": 0,
-                  "unitPriceStriked": 0,
-                },
-                "stock": Object {
-                  "ignoreQuantity": false,
-                  "info": "Info",
-                  "maxOrderQuantity": 1000,
-                  "minOrderQuantity": 1,
-                  "orderable": true,
-                  "quantity": 4,
-                },
-              }
-            }
-          >
-            <div
-              className="css-1ldzh7h"
-            >
-              <Connect(FavoritesButton)
-                active={true}
-                className="css-h7rvbh"
-                productId="1337"
-                rippleClassName="css-1tdptiz"
-              >
-                <FavoritesButton
-                  active={true}
-                  addFavorites={[Function]}
-                  className="css-h7rvbh"
-                  noShadow={false}
-                  onRippleComplete={[Function]}
-                  once={false}
-                  productId="1337"
-                  removeFavorites={[Function]}
-                  removeThrottle={0}
-                  removeWithRelatives={false}
-                  rippleClassName="css-1tdptiz"
-                />
-              </Connect(FavoritesButton)>
-            </div>
-          </CTAButtons>
-        </Connect(CTAButtons)>
         <Connect(Rating)>
           <Rating
             dispatch={[Function]}

@@ -64,6 +64,7 @@ exports[`<CTAButtons /> should not render the AddToCartPicker for grouped produc
         <Connect(FavoritesButton)
           active={true}
           className="css-h7rvbh"
+          noShadow={false}
           productId="1337"
           rippleClassName="css-1tdptiz"
         >
@@ -151,6 +152,7 @@ exports[`<CTAButtons /> should render both buttons 1`] = `
         <Connect(FavoritesButton)
           active={true}
           className="css-h7rvbh"
+          noShadow={false}
           productId="1337"
           rippleClassName="css-1tdptiz"
         >
@@ -181,6 +183,7 @@ exports[`<CTAButtons /> should render both buttons 1`] = `
           }
           clickDelay={150}
           handleAddToCart={[Function]}
+          noShadow={false}
           productId="1337"
           stock={
             Object {
@@ -264,7 +267,7 @@ exports[`<CTAButtons /> should render both buttons 1`] = `
               >
                 <button
                   className="null css-wuq2ta css-31obrv"
-                  data-test-id="AddToCartButton"
+                  data-test-id="addToCartButton"
                   onClick={[Function]}
                 >
                   <div
@@ -420,6 +423,7 @@ exports[`<CTAButtons /> should render both buttons when no "currentProduct" is a
         <Connect(FavoritesButton)
           active={true}
           className="css-h7rvbh"
+          noShadow={false}
           rippleClassName="css-1tdptiz"
         >
           <FavoritesButton
@@ -449,6 +453,7 @@ exports[`<CTAButtons /> should render both buttons when no "currentProduct" is a
           }
           clickDelay={150}
           handleAddToCart={[Function]}
+          noShadow={false}
           productId=""
           stock={null}
         >
@@ -504,7 +509,7 @@ exports[`<CTAButtons /> should render both buttons when no "currentProduct" is a
               >
                 <button
                   className="null css-wuq2ta css-31obrv"
-                  data-test-id="AddToCartButton"
+                  data-test-id="addToCartButton"
                   onClick={[Function]}
                 >
                   <div

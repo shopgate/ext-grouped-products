@@ -287,7 +287,7 @@ exports[`<Product /> should render as expected when the favorite list is not act
                     >
                       <button
                         className="null css-68omm3 css-31obrv"
-                        data-test-id="AddToCartButton"
+                        data-test-id="addToCartButton"
                         onClick={[Function]}
                       >
                         <div
@@ -773,7 +773,7 @@ exports[`<Product /> should render as expected when the favorite list is not act
                     >
                       <button
                         className="null css-68omm3 css-15s4nvk"
-                        data-test-id="AddToCartButton"
+                        data-test-id="addToCartButton"
                         onClick={[Function]}
                       >
                         <div
@@ -1254,7 +1254,7 @@ exports[`<Product /> should render as expected with flat buttons 1`] = `
                     >
                       <button
                         className="css-l6qlih css-zby7a7 css-31obrv"
-                        data-test-id="AddToCartButton"
+                        data-test-id="addToCartButton"
                         onClick={[Function]}
                       >
                         <div
@@ -1735,7 +1735,7 @@ exports[`<Product /> should render as expected with regular buttons 1`] = `
                     >
                       <button
                         className="null css-68omm3 css-31obrv"
-                        data-test-id="AddToCartButton"
+                        data-test-id="addToCartButton"
                         onClick={[Function]}
                       >
                         <div
