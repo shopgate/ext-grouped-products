@@ -1,10 +1,21 @@
-import { logger } from '@shopgate/pwa-core/helpers';
+import PropTypes from 'prop-types';
 import AddToCartButton from '@shopgate/pwa-ui-shared/AddToCartButton';
 
 /**
  * The PickerAddToCartButton component.
  */
 class PickerAddToCartButton extends AddToCartButton {
+  /**
+   * Extend the prop types of the parent component.
+   * @return {Object}
+   */
+  static get propTypes() {
+    return {
+      ...super.propTypes,
+      openList: PropTypes.func.isRequired,
+    };
+  }
+
   /**
    * Click handler for the button.
    * @return {boolean}
@@ -26,11 +37,7 @@ class PickerAddToCartButton extends AddToCartButton {
       return false;
     }
 
-    if (typeof openList === 'function') {
-      this.props.openList();
-    } else {
-      logger.error('No openList() prop provided');
-    }
+    openList();
 
     return true;
   }

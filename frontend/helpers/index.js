@@ -30,19 +30,10 @@ export const createPickerItems = (stock) => {
 
   const items = [];
 
-  for (let i = 0; i <= maxEntries; i += 1) {
-    if (ignoreQuantity) {
-      if (items.length === maxEntries) {
-        // When the quantity can be ignored the maximum number of entries can be created.
-        break;
-      }
-    } else if (items.length === maxEntries || i >= quantity) {
-      // When the quantity can't be ignored the maxium number of entries is limited.
-      break;
-    }
+  const max = ignoreQuantity ? maxEntries : Math.min(maxEntries, quantity);
 
+  for (let i = 0; i < max; i += 1) {
     const value = i + 1;
-
     items.push({
       label: `${value}`,
       value,

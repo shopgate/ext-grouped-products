@@ -1,13 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { logger } from '@shopgate/pwa-core/helpers';
 import AddToCartButton from './index';
-
-jest.mock('@shopgate/pwa-core/helpers', () => ({
-  logger: {
-    error: jest.fn(),
-  },
-}));
 
 const openListSpy = jest.fn();
 
@@ -64,13 +57,5 @@ describe('<AddToCartButton />', () => {
     component.simulate('click');
     expect(openListSpy).toHaveBeenCalledTimes(2);
     /* eslint-enable extra-rules/no-single-line-objects */
-  });
-
-  it('should log an error if no openList handler was injected', () => {
-    const component = mount(<AddToCartButton {...buttonProps} openList={null} />);
-    component.simulate('click');
-
-    expect(openListSpy).not.toHaveBeenCalled();
-    expect(logger.error).toHaveBeenCalledTimes(1);
   });
 });
