@@ -1,16 +1,9 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { logger } from '@shopgate/pwa-core/helpers';
 import event from '@shopgate/pwa-core/classes/Event';
 import { EVENT_ADD_TO_CART_MISSING_VARIANT } from '@shopgate/pwa-common-commerce/cart/constants';
 import { ADD_TO_CART_BUTTON_TYPE_DEFAULT } from '../../../../constants';
 import AddToCartButton from './index';
-
-jest.mock('@shopgate/pwa-core/helpers', () => ({
-  logger: {
-    error: jest.fn(),
-  },
-}));
 
 jest.mock('@shopgate/pwa-core/classes/Event', () => ({
   call: jest.fn(),
@@ -71,14 +64,6 @@ describe('<AddToCartButton />', () => {
     component.simulate('click');
     expect(openListSpy).toHaveBeenCalledTimes(2);
     /* eslint-enable extra-rules/no-single-line-objects */
-  });
-
-  it('should log an error if no openList handler was injected', () => {
-    const component = mount(<AddToCartButton {...buttonProps} openList={null} />);
-    component.simulate('click');
-
-    expect(openListSpy).not.toHaveBeenCalled();
-    expect(logger.error).toHaveBeenCalledTimes(1);
   });
 
   it('should trigger an event when a default button is not orderable', () => {

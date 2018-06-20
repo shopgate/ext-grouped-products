@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import BasePicker from '@shopgate/pwa-common/components/Picker';
 import Sheet from '@shopgate/pwa-ui-shared/Sheet';
@@ -89,7 +89,7 @@ class AddToCartPicker extends Component {
   /**
    * Only update when the `addedQuantity` state changes. To avoid that the
    * picker closes when the Redux state changes.
-   * @param {Object} nextProps The next component propss.
+   * @param {Object} nextProps The next component props.
    * @param {Object} nextState The next component state.
    * @return {boolean}
    */
@@ -140,17 +140,15 @@ class AddToCartPicker extends Component {
     const pickerItems = createPickerItems(this.props.stock);
 
     return (
-      <Fragment>
-        <BasePicker
-          items={pickerItems}
-          className={styles.buttonContainer}
-          modalComponent={this.modalComponent}
-          buttonProps={this.buttonProps}
-          buttonComponent={AddToCartButton}
-          listComponent={this.listComponent}
-          onChange={this.handleAddToCart}
-        />
-      </Fragment>
+      <BasePicker
+        items={pickerItems}
+        className={styles.buttonContainer}
+        modalComponent={this.modalComponent}
+        buttonProps={this.buttonProps}
+        buttonComponent={AddToCartButton}
+        listComponent={this.listComponent}
+        onChange={this.handleAddToCart}
+      />
     );
   }
 }

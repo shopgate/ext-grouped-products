@@ -14,7 +14,6 @@ const createComponent = state => createWrappedComponent(GroupedProducts, state);
 
 describe('<GroupedProducts />', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
     global.process.env.THEME = THEME_GMD;
   });
 

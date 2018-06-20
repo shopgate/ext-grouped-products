@@ -4,7 +4,13 @@ import { themeConfig } from '@shopgate/pwa-common/helpers/config';
 const { colors } = themeConfig;
 
 const item = css({
+  boxShadow: `0 1px 0 0 ${colors.darkGray}`,
+  marginBottom: 1,
   marginLeft: 72,
+  ' :last-child': {
+    marginBottom: 0,
+    boxShadow: 'none',
+  },
 }).toString();
 
 const itemNotLast = css({
