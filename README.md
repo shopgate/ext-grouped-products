@@ -1,5 +1,7 @@
 # Shopgate Connect - Grouped Products Extension
 
+[![Coverage Status](https://coveralls.io/repos/github/shopgate/ext-grouped-products/badge.svg?branch=master)](https://coveralls.io/github/shopgate/ext-grouped-products?branch=master)
+
 ## About Shopgate
 
 Shopgate is the leading mobile commerce platform.
