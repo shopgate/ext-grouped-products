@@ -3,6 +3,11 @@ import { shallow } from 'enzyme';
 import { THEME_GMD, THEME_IOS } from '../../constants';
 import StyleOverwrites from './index';
 
+jest.mock('@shopgate/pwa-ui-shared/Sheet/style', () => ({
+  container: 'container',
+  content: 'content',
+}));
+
 describe('<StyleOverwrites />', () => {
   it('should render as expected when the gmd theme is not active', () => {
     global.process.env.THEME = THEME_IOS;
