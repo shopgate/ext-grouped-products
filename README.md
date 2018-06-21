@@ -1,4 +1,4 @@
-# Shopgate Connect - Extension ext-grouped-products
+# Shopgate Connect - Grouped Products Extension
 
 ## About Shopgate
 
@@ -11,7 +11,7 @@ apps and mobile websites for the iPhone, iPad, Android smartphones and tablets.
 
 ## License
 
-Shopgate Cloud - Extension Boilerplate is available under the Apache License, Version 2.0.
+Shopgate Cloud - Grouped Products Extension is available under the Apache License, Version 2.0.
 
-See the [LICENSE](./LICENSE) file for more information.
+See the [LICENSE](./LICENSE.md) file for more information.
 

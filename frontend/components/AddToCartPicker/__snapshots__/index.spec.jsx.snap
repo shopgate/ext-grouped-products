@@ -1,0 +1,590 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AddToCartPicker /> should render the component as expected 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <AddToCartPicker
+    buttonProps={Object {}}
+    clickDelay={150}
+    handleAddToCart={[MockFunction]}
+    productId="1337"
+    stock={
+      Object {
+        "ignoreQuantity": false,
+        "info": "Info",
+        "maxOrderQuantity": 1000,
+        "minOrderQuantity": 1,
+        "orderable": true,
+        "quantity": 4,
+      }
+    }
+  >
+    <Picker
+      buttonComponent={[Function]}
+      buttonProps={
+        Object {
+          "addedQuantity": 0,
+          "className": null,
+          "handleAddToCart": [Function],
+          "hasLoading": true,
+          "isDisabled": false,
+          "isLoading": false,
+          "isOrderable": true,
+          "noShadow": false,
+          "type": "default",
+        }
+      }
+      className="css-ibd9un"
+      disabled={false}
+      duration={300}
+      isOpen={false}
+      items={
+        Array [
+          Object {
+            "label": "1",
+            "value": 1,
+          },
+          Object {
+            "label": "2",
+            "value": 2,
+          },
+          Object {
+            "label": "3",
+            "value": 3,
+          },
+          Object {
+            "label": "4",
+            "value": 4,
+          },
+        ]
+      }
+      label=""
+      listComponent={[Function]}
+      modalComponent={[Function]}
+      onChange={[Function]}
+      onClose={[Function]}
+      placeholder="Pick ..."
+      value={null}
+    >
+      <div
+        className="css-ibd9un"
+      >
+        <PickerAddToCartButton
+          addedQuantity={0}
+          buttonSize={40}
+          className={null}
+          disabled={false}
+          handleAddToCart={[Function]}
+          hasLoading={true}
+          iconSize={20}
+          isDisabled={false}
+          isLoading={false}
+          isOrderable={true}
+          label="Pick ..."
+          noShadow={false}
+          openList={[Function]}
+          type="default"
+          value=""
+        >
+          <button
+            className="null css-68omm3 css-31obrv"
+            data-test-id="addToCartButton"
+            onClick={[Function]}
+          >
+            <div
+              className="css-rukjns css-1gleer"
+              style={
+                Object {
+                  "opacity": 0,
+                }
+              }
+            >
+              <IndicatorCircle
+                color="#5ccee3"
+                paused={true}
+                size={32}
+                strokeWidth={5}
+              >
+                <svg
+                  className="css-17zev8s"
+                  height={32}
+                  viewBox="25 25 50 50"
+                  width={32}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    className="css-1n2s8pv"
+                    cx="50"
+                    cy="50"
+                    r="20"
+                  />
+                </svg>
+              </IndicatorCircle>
+            </div>
+            <div
+              className="css-rukjns"
+              style={
+                Object {
+                  "opacity": 1,
+                  "transform": "translate3d(0, 300%, 0)",
+                }
+              }
+            >
+              <Tick>
+                <Icon
+                  className=""
+                  color={null}
+                  content="<path d=\\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\\"/>"
+                  size="inherit"
+                  viewBox="0 0 24 24"
+                >
+                  <svg
+                    className="css-yys9hb "
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "<path d=\\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\\"/>",
+                      }
+                    }
+                    style={
+                      Object {
+                        "fill": null,
+                        "fontSize": "inherit",
+                      }
+                    }
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  />
+                </Icon>
+              </Tick>
+            </div>
+            <div
+              className="css-rukjns"
+              onAnimationEnd={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                  "transform": "translate3d(0, -50%, 0)",
+                }
+              }
+            >
+              <CartPlus>
+                <Icon
+                  className=""
+                  color={null}
+                  content="<path d=\\"M0 0h24v24H0zm18.31 6l-2.76 5z\\" fill=\\"none\\"/><path d=\\"M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z\\"/>"
+                  size="inherit"
+                  viewBox="0 0 24 24"
+                >
+                  <svg
+                    className="css-yys9hb "
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "<path d=\\"M0 0h24v24H0zm18.31 6l-2.76 5z\\" fill=\\"none\\"/><path d=\\"M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z\\"/>",
+                      }
+                    }
+                    style={
+                      Object {
+                        "fill": null,
+                        "fontSize": "inherit",
+                      }
+                    }
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  />
+                </Icon>
+              </CartPlus>
+            </div>
+          </button>
+        </PickerAddToCartButton>
+        <Component
+          isOpened={true}
+          onClose={[Function]}
+        >
+          <Component
+            duration={300}
+            isOpen={false}
+            onClose={[Function]}
+          >
+            <Component
+              duration={300}
+              isOpen={false}
+              onClose={[Function]}
+              title="grouped_products.add_to_cart_picker.headline"
+            >
+              <Component
+                items={
+                  Array [
+                    Object {
+                      "disabled": false,
+                      "label": "1",
+                      "value": 1,
+                    },
+                    Object {
+                      "disabled": false,
+                      "label": "2",
+                      "value": 2,
+                    },
+                    Object {
+                      "disabled": false,
+                      "label": "3",
+                      "value": 3,
+                    },
+                    Object {
+                      "disabled": false,
+                      "label": "4",
+                      "value": 4,
+                    },
+                  ]
+                }
+                onSelect={[Function]}
+                selectedIndex={-1}
+              >
+                <List>
+                  <List
+                    className=""
+                  >
+                    <ul
+                      className="css-gkw1j5 "
+                    >
+                      <ListItem
+                        className="css-17flzkh"
+                        isSelected={false}
+                        key="child-0/.$1"
+                      >
+                        <li
+                          className="css-1p5q8vq css-17flzkh css-16gj3o1"
+                        >
+                          <div
+                            className="css-1nnz83b"
+                          >
+                            <Item
+                              className={null}
+                              image={null}
+                              isDisabled={false}
+                              isSelected={false}
+                              key="1"
+                              link={null}
+                              onClick={[Function]}
+                              rightComponent={null}
+                              testId={null}
+                              title="1"
+                            >
+                              <div
+                                aria-hidden={true}
+                                data-test-id={null}
+                                onClick={[Function]}
+                              >
+                                <Glow
+                                  className={null}
+                                  color="#f7f7f7"
+                                  styles={
+                                    Object {
+                                      "container": null,
+                                      "glow": null,
+                                    }
+                                  }
+                                >
+                                  <div
+                                    aria-hidden={true}
+                                    className="css-13azwyo"
+                                    onTouchTap={[Function]}
+                                    style={null}
+                                  >
+                                    <div
+                                      className="css-1bmd5dz"
+                                      style={Object {}}
+                                    />
+                                    <Grid
+                                      className="css-1qcr7hz"
+                                      component="div"
+                                      wrap={false}
+                                    >
+                                      <div
+                                        className="css-1qcr7hz css-h7r55a"
+                                      >
+                                        <div
+                                          className="css-jwxytc"
+                                        />
+                                        <GridItem
+                                          className="css-10fxwvh"
+                                          component="div"
+                                          grow={1}
+                                          shrink={1}
+                                        >
+                                          <div
+                                            className="css-10fxwvh css-1gs0ko2"
+                                          >
+                                            1
+                                          </div>
+                                        </GridItem>
+                                      </div>
+                                    </Grid>
+                                  </div>
+                                </Glow>
+                              </div>
+                            </Item>
+                          </div>
+                        </li>
+                      </ListItem>
+                      <ListItem
+                        className="css-17flzkh"
+                        isSelected={false}
+                        key="child-1/.$2"
+                      >
+                        <li
+                          className="css-1p5q8vq css-17flzkh css-16gj3o1"
+                        >
+                          <div
+                            className="css-1nnz83b"
+                          >
+                            <Item
+                              className={null}
+                              image={null}
+                              isDisabled={false}
+                              isSelected={false}
+                              key="2"
+                              link={null}
+                              onClick={[Function]}
+                              rightComponent={null}
+                              testId={null}
+                              title="2"
+                            >
+                              <div
+                                aria-hidden={true}
+                                data-test-id={null}
+                                onClick={[Function]}
+                              >
+                                <Glow
+                                  className={null}
+                                  color="#f7f7f7"
+                                  styles={
+                                    Object {
+                                      "container": null,
+                                      "glow": null,
+                                    }
+                                  }
+                                >
+                                  <div
+                                    aria-hidden={true}
+                                    className="css-13azwyo"
+                                    onTouchTap={[Function]}
+                                    style={null}
+                                  >
+                                    <div
+                                      className="css-1bmd5dz"
+                                      style={Object {}}
+                                    />
+                                    <Grid
+                                      className="css-1qcr7hz"
+                                      component="div"
+                                      wrap={false}
+                                    >
+                                      <div
+                                        className="css-1qcr7hz css-h7r55a"
+                                      >
+                                        <div
+                                          className="css-jwxytc"
+                                        />
+                                        <GridItem
+                                          className="css-10fxwvh"
+                                          component="div"
+                                          grow={1}
+                                          shrink={1}
+                                        >
+                                          <div
+                                            className="css-10fxwvh css-1gs0ko2"
+                                          >
+                                            2
+                                          </div>
+                                        </GridItem>
+                                      </div>
+                                    </Grid>
+                                  </div>
+                                </Glow>
+                              </div>
+                            </Item>
+                          </div>
+                        </li>
+                      </ListItem>
+                      <ListItem
+                        className="css-17flzkh"
+                        isSelected={false}
+                        key="child-2/.$3"
+                      >
+                        <li
+                          className="css-1p5q8vq css-17flzkh css-16gj3o1"
+                        >
+                          <div
+                            className="css-1nnz83b"
+                          >
+                            <Item
+                              className={null}
+                              image={null}
+                              isDisabled={false}
+                              isSelected={false}
+                              key="3"
+                              link={null}
+                              onClick={[Function]}
+                              rightComponent={null}
+                              testId={null}
+                              title="3"
+                            >
+                              <div
+                                aria-hidden={true}
+                                data-test-id={null}
+                                onClick={[Function]}
+                              >
+                                <Glow
+                                  className={null}
+                                  color="#f7f7f7"
+                                  styles={
+                                    Object {
+                                      "container": null,
+                                      "glow": null,
+                                    }
+                                  }
+                                >
+                                  <div
+                                    aria-hidden={true}
+                                    className="css-13azwyo"
+                                    onTouchTap={[Function]}
+                                    style={null}
+                                  >
+                                    <div
+                                      className="css-1bmd5dz"
+                                      style={Object {}}
+                                    />
+                                    <Grid
+                                      className="css-1qcr7hz"
+                                      component="div"
+                                      wrap={false}
+                                    >
+                                      <div
+                                        className="css-1qcr7hz css-h7r55a"
+                                      >
+                                        <div
+                                          className="css-jwxytc"
+                                        />
+                                        <GridItem
+                                          className="css-10fxwvh"
+                                          component="div"
+                                          grow={1}
+                                          shrink={1}
+                                        >
+                                          <div
+                                            className="css-10fxwvh css-1gs0ko2"
+                                          >
+                                            3
+                                          </div>
+                                        </GridItem>
+                                      </div>
+                                    </Grid>
+                                  </div>
+                                </Glow>
+                              </div>
+                            </Item>
+                          </div>
+                        </li>
+                      </ListItem>
+                      <ListItem
+                        className="css-17flzkh"
+                        isSelected={false}
+                        key="child-3/.$4"
+                      >
+                        <li
+                          className="css-1p5q8vq css-17flzkh css-16gj3o1"
+                        >
+                          <div
+                            className="css-1nnz83b"
+                          >
+                            <Item
+                              className={null}
+                              image={null}
+                              isDisabled={false}
+                              isSelected={false}
+                              key="4"
+                              link={null}
+                              onClick={[Function]}
+                              rightComponent={null}
+                              testId={null}
+                              title="4"
+                            >
+                              <div
+                                aria-hidden={true}
+                                data-test-id={null}
+                                onClick={[Function]}
+                              >
+                                <Glow
+                                  className={null}
+                                  color="#f7f7f7"
+                                  styles={
+                                    Object {
+                                      "container": null,
+                                      "glow": null,
+                                    }
+                                  }
+                                >
+                                  <div
+                                    aria-hidden={true}
+                                    className="css-13azwyo"
+                                    onTouchTap={[Function]}
+                                    style={null}
+                                  >
+                                    <div
+                                      className="css-1bmd5dz"
+                                      style={Object {}}
+                                    />
+                                    <Grid
+                                      className="css-1qcr7hz"
+                                      component="div"
+                                      wrap={false}
+                                    >
+                                      <div
+                                        className="css-1qcr7hz css-h7r55a"
+                                      >
+                                        <div
+                                          className="css-jwxytc"
+                                        />
+                                        <GridItem
+                                          className="css-10fxwvh"
+                                          component="div"
+                                          grow={1}
+                                          shrink={1}
+                                        >
+                                          <div
+                                            className="css-10fxwvh css-1gs0ko2"
+                                          >
+                                            4
+                                          </div>
+                                        </GridItem>
+                                      </div>
+                                    </Grid>
+                                  </div>
+                                </Glow>
+                              </div>
+                            </Item>
+                          </div>
+                        </li>
+                      </ListItem>
+                    </ul>
+                  </List>
+                </List>
+              </Component>
+            </Component>
+          </Component>
+        </Component>
+      </div>
+    </Picker>
+  </AddToCartPicker>
+</Provider>
+`;

@@ -1,0 +1,42 @@
+{
+  "version": "0.1.0",
+  "id": "@shopgate/grouped-products",
+  "components": [
+    {
+      "id": "GroupedProducts",
+      "path": "frontend/components/GroupedProducts/index.jsx",
+      "target": "product.variant-select.before",
+      "type": "portals"
+    },
+    {
+      "id": "StyleOverwrites",
+      "path": "frontend/components/StyleOverwrites/index.jsx",
+      "target": "app.globals",
+      "type": "portals"
+    },
+    {
+      "id": "Subscribers",
+      "path": "frontend/subscriptions/index.js",
+      "type": "subscribers"
+    },
+    {
+      "type": "translations",
+      "path": "frontend/locale/en-US.json",
+      "id": "locale/en-US"
+    },
+    {
+      "type": "translations",
+      "path": "frontend/locale/de-DE.json",
+      "id": "locale/de-DE"
+    }
+  ],
+  "configuration": {
+    "maxQuantityPickerEntries": {
+      "type": "static",
+      "destination": "frontend",
+      "params": {
+        "value": 50
+      }
+    }
+  }
+}
