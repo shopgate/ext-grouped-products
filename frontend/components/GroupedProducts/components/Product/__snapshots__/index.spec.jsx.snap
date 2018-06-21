@@ -254,6 +254,7 @@ exports[`<Product /> should render as expected when the favorite list is not act
                   modalComponent={[Function]}
                   onChange={[Function]}
                   onClose={[Function]}
+                  onSelect={[Function]}
                   placeholder="Pick ..."
                   value={null}
                 >
@@ -625,6 +626,7 @@ exports[`<Product /> should render as expected when the favorite list is not act
                   modalComponent={[Function]}
                   onChange={[Function]}
                   onClose={[Function]}
+                  onSelect={[Function]}
                   placeholder="Pick ..."
                   value={null}
                 >
@@ -991,6 +993,7 @@ exports[`<Product /> should render as expected with flat buttons 1`] = `
                   modalComponent={[Function]}
                   onChange={[Function]}
                   onClose={[Function]}
+                  onSelect={[Function]}
                   placeholder="Pick ..."
                   value={null}
                 >
@@ -1357,6 +1360,7 @@ exports[`<Product /> should render as expected with regular buttons 1`] = `
                   modalComponent={[Function]}
                   onChange={[Function]}
                   onClose={[Function]}
+                  onSelect={[Function]}
                   placeholder="Pick ..."
                   value={null}
                 >

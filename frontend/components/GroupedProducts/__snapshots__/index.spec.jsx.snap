@@ -429,6 +429,7 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                               modalComponent={[Function]}
                               onChange={[Function]}
                               onClose={[Function]}
+                              onSelect={[Function]}
                               placeholder="Pick ..."
                               value={null}
                             >
@@ -768,6 +769,7 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                               modalComponent={[Function]}
                               onChange={[Function]}
                               onClose={[Function]}
+                              onSelect={[Function]}
                               placeholder="Pick ..."
                               value={null}
                             >
@@ -1148,6 +1150,7 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                               modalComponent={[Function]}
                               onChange={[Function]}
                               onClose={[Function]}
+                              onSelect={[Function]}
                               placeholder="Pick ..."
                               value={null}
                             >
@@ -1508,6 +1511,7 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                               modalComponent={[Function]}
                               onChange={[Function]}
                               onClose={[Function]}
+                              onSelect={[Function]}
                               placeholder="Pick ..."
                               value={null}
                             >
@@ -2031,6 +2035,7 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                               modalComponent={[Function]}
                               onChange={[Function]}
                               onClose={[Function]}
+                              onSelect={[Function]}
                               placeholder="Pick ..."
                               value={null}
                             >

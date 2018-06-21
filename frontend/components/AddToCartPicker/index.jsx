@@ -147,7 +147,7 @@ class AddToCartPicker extends Component {
         buttonProps={this.buttonProps}
         buttonComponent={AddToCartButton}
         listComponent={this.listComponent}
-        onChange={this.handleAddToCart}
+        onSelect={this.handleAddToCart}
       />
     );
   }
