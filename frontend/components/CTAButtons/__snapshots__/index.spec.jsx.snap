@@ -242,6 +242,7 @@ exports[`<CTAButtons /> should render both buttons 1`] = `
             modalComponent={[Function]}
             onChange={[Function]}
             onClose={[Function]}
+            onSelect={[Function]}
             placeholder="Pick ..."
             value={null}
           >
@@ -379,6 +380,7 @@ exports[`<CTAButtons /> should render both buttons when no "currentProduct" is a
             modalComponent={[Function]}
             onChange={[Function]}
             onClose={[Function]}
+            onSelect={[Function]}
             placeholder="Pick ..."
             value={null}
           >
