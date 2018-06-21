@@ -16,6 +16,11 @@ const mockedAddCurrentProductAction = {
 
 jest.mock('@shopgate/pwa-common-commerce/cart/actions/addCurrentProductToCart', () => () => mockedAddCurrentProductAction);
 
+jest.mock(
+  '@shopgate/pwa-ui-shared/AddToCartButton',
+  () => require('../AddToCartPicker/components/AddToCartButton/AddToCartButton.mock.js')
+);
+
 /**
  * Creates a component with a provided store state.
  * @param {Object} state A mocked state.
