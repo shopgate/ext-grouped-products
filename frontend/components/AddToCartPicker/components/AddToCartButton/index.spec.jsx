@@ -14,7 +14,8 @@ const buttonProps = {
   noShadow: true,
 };
 
-jest.mock('@shopgate/pwa-ui-shared/AddToCartButton', () => require('./AddToCartButton.mock.js'));
+jest.mock('@shopgate/pwa-ui-shared/AddToCartButton', () =>
+  require.requireActual('./AddToCartButton.mock.js'));
 
 jest.useFakeTimers();
 
