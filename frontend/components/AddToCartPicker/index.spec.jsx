@@ -11,6 +11,11 @@ import AddToCartPicker from './index';
 jest.mock('@shopgate/pwa-common-commerce/cart/actions/addProductsToCart', () =>
   jest.fn().mockReturnValue('mocked_add_products_to_cart_action'));
 
+jest.mock(
+  '@shopgate/pwa-ui-shared/AddToCartButton',
+  () => require('./components/AddToCartButton/AddToCartButton.mock.js')
+);
+
 jest.mock('../../config', () => ({
   maxQuantityPickerEntries: 5,
 }));

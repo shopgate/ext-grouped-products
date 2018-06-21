@@ -9,6 +9,11 @@ import Product from './index';
 
 jest.mock('@shopgate/pwa-common-commerce/cart/actions/addProductsToCart', () => jest.fn());
 
+jest.mock(
+  '@shopgate/pwa-ui-shared/AddToCartButton',
+  () =>
+    require('../../../AddToCartPicker/components/AddToCartButton/AddToCartButton.mock.js'));
+
 jest.useFakeTimers();
 
 const mockedDispatch = jest.fn();

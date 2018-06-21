@@ -1,3 +1,4 @@
+import { Component } from 'react';
 import cloneDeep from 'lodash/cloneDeep';
 import set from 'lodash/set';
 import { createWrappedComponent } from '../mockStore';
@@ -5,6 +6,10 @@ import { mockedState } from '../mock';
 import { THEME_GMD } from '../../constants';
 import GroupedProducts from './index';
 
+jest.mock(
+  '@shopgate/pwa-ui-shared/AddToCartButton',
+  () => require('../AddToCartPicker/components/AddToCartButton/AddToCartButton.mock.js')
+);
 /**
  * Creates a component with a provided store state.
  * @param {Object} state A mocked state.
