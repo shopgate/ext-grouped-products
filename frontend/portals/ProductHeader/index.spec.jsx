@@ -1,8 +1,8 @@
-import { createWrappedComponent } from '../mockStore';
+import { createWrappedComponent } from '../../components/mockStore';
 import {
   mockedState,
   mockedStateWithRegularProduct,
-} from '../mock';
+} from '../../components/mock';
 import ProductHeader from './index';
 
 /**

@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { THEME_GMD, THEME_IOS } from '../../constants';
+import { THEME_GMD, THEME_IOS } from '../../constants/index';
 import StyleOverwrites from './index';
 
 jest.mock('@shopgate/pwa-ui-shared/Sheet/style', () => ({

@@ -6,8 +6,8 @@ import Ellipsis from '@shopgate/pwa-common/components/Ellipsis';
 import FavoritesButton from '@shopgate/pwa-ui-shared/FavoritesButton';
 import Availability from '@shopgate/pwa-ui-shared/Availability';
 import { ADD_TO_CART_BUTTON_TYPE_GROUPED } from '../../../../constants';
-import AddToCartPicker from '../../../AddToCartPicker';
-import ProductPrice from './components/ProductPrice';
+import AddToCartPicker from '../../../../components/AddToCartPicker/index';
+import ProductPrice from './components/ProductPrice/index';
 import styles from './style';
 import connect from './connector';
 

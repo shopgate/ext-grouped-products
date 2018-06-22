@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FavoritesButton from '@shopgate/pwa-ui-shared/FavoritesButton';
-import AddToCartPicker from '../AddToCartPicker';
-import { ADD_TO_CART_BUTTON_TYPE_DEFAULT } from '../../constants';
-import { renderFlatButtons } from '../../helpers';
+import AddToCartPicker from '../../components/AddToCartPicker/index';
+import { ADD_TO_CART_BUTTON_TYPE_DEFAULT } from '../../constants/index';
+import { renderFlatButtons } from '../../helpers/index';
 import styles from './style';
 import connect from './connector';
 

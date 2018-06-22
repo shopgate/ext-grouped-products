@@ -10,7 +10,7 @@ import {
   isProductPageLoading,
   isProductPageOrderable,
 } from '@shopgate/pwa-common-commerce/product/selectors/page';
-import { isMainAddToCartButtonVisible } from '../../selectors';
+import { isMainAddToCartButtonVisible } from '../../selectors/index';
 
 /**
  * Maps the contents of the state to the component props.

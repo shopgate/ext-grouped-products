@@ -4,25 +4,25 @@
   "components": [
     {
       "id": "GroupedProducts",
-      "path": "frontend/components/GroupedProducts/index.jsx",
+      "path": "frontend/portals/GroupedProducts/index.jsx",
       "target": "product.variant-select.before",
       "type": "portals"
     },
     {
       "id": "StyleOverwrites",
-      "path": "frontend/components/StyleOverwrites/index.jsx",
+      "path": "frontend/portals/StyleOverwrites/index.jsx",
       "target": "app.globals",
       "type": "portals"
     },
     {
       "id": "CTAButtons",
-      "path": "frontend/components/CTAButtons/index.jsx",
+      "path": "frontend/portals/CTAButtons/index.jsx",
       "target": "product.ctas",
       "type": "portals"
     },
     {
       "id": "ProductHeader",
-      "path": "frontend/components/ProductHeader/index.jsx",
+      "path": "frontend/portals/ProductHeader/index.jsx",
       "target": "product.header.before",
       "type": "portals"
     },

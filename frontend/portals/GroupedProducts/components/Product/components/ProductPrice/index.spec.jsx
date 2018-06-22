@@ -4,7 +4,7 @@ import {
   mockedProduct,
   mockedMsrpProduct,
   mockedStrikePriceProduct,
-} from '../../../../../mock';
+} from '../../../../../../components/mock';
 import styles from './style';
 import ProductPrice from './index';
 
