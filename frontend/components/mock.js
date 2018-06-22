@@ -30,6 +30,10 @@ const product = {
   id: '1337',
   name: 'A shiny product',
   featuredImageUrl: 'https://cdn.acme.com/kitten.jpg',
+  flags: {
+    hasChildren: true,
+    hasVariants: false,
+  },
   availability,
   price,
   stock,
@@ -111,10 +115,33 @@ const mockedState = {
       },
     },
   },
+  favorites: {
+    products: {
+      isFetching: false,
+      ids: ['1337'],
+    },
+  },
 };
+
+const mockedStateWithRegularProduct = set(
+  cloneDeep(mockedState),
+  ['product', 'productsById', product.id, 'productData', 'flags'],
+  {
+    hasChildren: false,
+    hasVariants: false,
+  }
+);
+
+const mockedStateWithoutCurrentProductData = set(
+  cloneDeep(mockedState),
+  ['product', 'productsById', product.id],
+  undefined
+);
 
 export {
   mockedState,
+  mockedStateWithRegularProduct,
+  mockedStateWithoutCurrentProductData,
   product as mockedProduct,
   discountedMsrp as mockedMsrpProduct,
   discountedStrike as mockedStrikePriceProduct,

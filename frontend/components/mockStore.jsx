@@ -27,3 +27,10 @@ export const createWrappedComponent = (Component, state, props = {}, dispatch = 
     mockRenderOptions
   );
 };
+
+/**
+ * Returns the store from a wrapped component.
+ * @param {ReactWrapper} component The wrapped component.
+ * @return {Object}
+ */
+export const getStoreFromWrappedComponent = component => component.find('Provider').prop('store');

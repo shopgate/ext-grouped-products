@@ -1,7 +1,7 @@
 import { css } from 'glamor';
 import { themeConfig } from '@shopgate/pwa-common/helpers/config';
 
-const { variables, colors } = themeConfig;
+const { colors, variables } = themeConfig;
 
 const buttonContainer = css({
   marginBottom: variables.gap.xsmall,

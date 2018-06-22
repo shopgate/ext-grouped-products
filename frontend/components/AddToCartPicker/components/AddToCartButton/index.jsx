@@ -1,5 +1,8 @@
+import Event from '@shopgate/pwa-core/classes/Event';
 import PropTypes from 'prop-types';
 import AddToCartButton from '@shopgate/pwa-ui-shared/AddToCartButton';
+import { EVENT_ADD_TO_CART_MISSING_VARIANT } from '@shopgate/pwa-common-commerce/cart/constants';
+import { ADD_TO_CART_BUTTON_TYPE_DEFAULT } from '../../../../constants';
 
 /**
  * The PickerAddToCartButton component.
@@ -27,6 +30,7 @@ class PickerAddToCartButton extends AddToCartButton {
       isLoading,
       isOrderable,
       openList,
+      type,
     } = this.props;
 
     if (showCheckmark || isLoading || isDisabled) {
@@ -34,6 +38,11 @@ class PickerAddToCartButton extends AddToCartButton {
     }
 
     if (!isOrderable) {
+      if (type === ADD_TO_CART_BUTTON_TYPE_DEFAULT) {
+        // Fire an event, so that the UI can react on the failed "add to cart" attempt.
+        Event.call(EVENT_ADD_TO_CART_MISSING_VARIANT);
+      }
+
       return false;
     }
 

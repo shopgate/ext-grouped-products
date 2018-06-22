@@ -1,0 +1,425 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CTAButtons /> should not render the AddToCartPicker for grouped products 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(CTAButtons)>
+    <CTAButtons
+      addToCartButtonProps={
+        Object {
+          "isDisabled": false,
+          "isLoading": false,
+          "isOrderable": true,
+        }
+      }
+      handleAddToCart={[Function]}
+      isAddToCartButtonVisible={false}
+      isFavorite={true}
+      product={
+        Object {
+          "availability": Object {
+            "state": "ok",
+            "text": "Lorem Ipsum",
+          },
+          "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+          "flags": Object {
+            "hasChildren": true,
+            "hasVariants": false,
+          },
+          "id": "1337",
+          "name": "A shiny product",
+          "price": Object {
+            "currency": "EUR",
+            "discount": 0,
+            "info": "",
+            "msrp": 0,
+            "unitPrice": 5,
+            "unitPriceMin": 0,
+            "unitPriceStriked": 0,
+          },
+          "stock": Object {
+            "ignoreQuantity": false,
+            "info": "Info",
+            "maxOrderQuantity": 1000,
+            "minOrderQuantity": 1,
+            "orderable": true,
+            "quantity": 4,
+          },
+        }
+      }
+    >
+      <div
+        className="css-1ldzh7h"
+      >
+        <Connect(FavoritesButton)
+          active={true}
+          className="css-h7rvbh"
+          noShadow={false}
+          productId="1337"
+          rippleClassName="css-1tdptiz"
+        >
+          <FavoritesButton
+            active={true}
+            addFavorites={[Function]}
+            className="css-h7rvbh"
+            noShadow={false}
+            onRippleComplete={[Function]}
+            once={false}
+            productId="1337"
+            removeFavorites={[Function]}
+            removeThrottle={0}
+            removeWithRelatives={false}
+            rippleClassName="css-1tdptiz"
+          />
+        </Connect(FavoritesButton)>
+      </div>
+    </CTAButtons>
+  </Connect(CTAButtons)>
+</Provider>
+`;
+
+exports[`<CTAButtons /> should render both buttons 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(CTAButtons)>
+    <CTAButtons
+      addToCartButtonProps={
+        Object {
+          "isDisabled": false,
+          "isLoading": false,
+          "isOrderable": true,
+        }
+      }
+      handleAddToCart={[Function]}
+      isAddToCartButtonVisible={true}
+      isFavorite={true}
+      product={
+        Object {
+          "availability": Object {
+            "state": "ok",
+            "text": "Lorem Ipsum",
+          },
+          "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+          "flags": Object {
+            "hasChildren": false,
+            "hasVariants": false,
+          },
+          "id": "1337",
+          "name": "A shiny product",
+          "price": Object {
+            "currency": "EUR",
+            "discount": 0,
+            "info": "",
+            "msrp": 0,
+            "unitPrice": 5,
+            "unitPriceMin": 0,
+            "unitPriceStriked": 0,
+          },
+          "stock": Object {
+            "ignoreQuantity": false,
+            "info": "Info",
+            "maxOrderQuantity": 1000,
+            "minOrderQuantity": 1,
+            "orderable": true,
+            "quantity": 4,
+          },
+        }
+      }
+    >
+      <div
+        className="css-1ldzh7h"
+      >
+        <Connect(FavoritesButton)
+          active={true}
+          className="css-h7rvbh"
+          noShadow={false}
+          productId="1337"
+          rippleClassName="css-1tdptiz"
+        >
+          <FavoritesButton
+            active={true}
+            addFavorites={[Function]}
+            className="css-h7rvbh"
+            noShadow={false}
+            onRippleComplete={[Function]}
+            once={false}
+            productId="1337"
+            removeFavorites={[Function]}
+            removeThrottle={0}
+            removeWithRelatives={false}
+            rippleClassName="css-1tdptiz"
+          />
+        </Connect(FavoritesButton)>
+        <AddToCartPicker
+          buttonProps={
+            Object {
+              "buttonSize": 56,
+              "iconSize": 24,
+              "isDisabled": false,
+              "isLoading": false,
+              "isOrderable": true,
+              "type": "default",
+            }
+          }
+          clickDelay={150}
+          handleAddToCart={[Function]}
+          noShadow={false}
+          productId="1337"
+          stock={
+            Object {
+              "ignoreQuantity": false,
+              "info": "Info",
+              "maxOrderQuantity": 1000,
+              "minOrderQuantity": 1,
+              "orderable": true,
+              "quantity": 4,
+            }
+          }
+        >
+          <Picker
+            buttonComponent={[Function]}
+            buttonProps={
+              Object {
+                "addedQuantity": 0,
+                "buttonSize": 56,
+                "className": null,
+                "handleAddToCart": [Function],
+                "hasLoading": true,
+                "iconSize": 24,
+                "isDisabled": false,
+                "isLoading": false,
+                "isOrderable": true,
+                "noShadow": false,
+                "type": "default",
+              }
+            }
+            className="css-ibd9un"
+            disabled={false}
+            duration={300}
+            isOpen={false}
+            items={
+              Array [
+                Object {
+                  "label": "1",
+                  "value": 1,
+                },
+                Object {
+                  "label": "2",
+                  "value": 2,
+                },
+                Object {
+                  "label": "3",
+                  "value": 3,
+                },
+                Object {
+                  "label": "4",
+                  "value": 4,
+                },
+              ]
+            }
+            label=""
+            listComponent={[Function]}
+            modalComponent={[Function]}
+            onChange={[Function]}
+            onClose={[Function]}
+            onSelect={[Function]}
+            placeholder="Pick ..."
+            value={null}
+          >
+            <div
+              className="css-ibd9un"
+            >
+              <PickerAddToCartButton
+                addedQuantity={0}
+                buttonSize={56}
+                className={null}
+                disabled={false}
+                handleAddToCart={[Function]}
+                hasLoading={true}
+                iconSize={24}
+                isDisabled={false}
+                isLoading={false}
+                isOrderable={true}
+                label="Pick ..."
+                noShadow={false}
+                openList={[Function]}
+                type="default"
+                value=""
+              >
+                <button
+                  data-test-id="addToCartButton"
+                  onClick={[Function]}
+                />
+              </PickerAddToCartButton>
+              <Portal
+                isOpened={true}
+                onClose={[Function]}
+                onOpen={[Function]}
+                onUpdate={[Function]}
+              />
+            </div>
+          </Picker>
+        </AddToCartPicker>
+      </div>
+    </CTAButtons>
+  </Connect(CTAButtons)>
+</Provider>
+`;
+
+exports[`<CTAButtons /> should render both buttons when no "currentProduct" is available yet 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(CTAButtons)>
+    <CTAButtons
+      addToCartButtonProps={
+        Object {
+          "isDisabled": false,
+          "isLoading": true,
+          "isOrderable": false,
+        }
+      }
+      handleAddToCart={[Function]}
+      isAddToCartButtonVisible={true}
+      isFavorite={true}
+      product={Object {}}
+    >
+      <div
+        className="css-1ldzh7h"
+      >
+        <Connect(FavoritesButton)
+          active={true}
+          className="css-h7rvbh"
+          noShadow={false}
+          rippleClassName="css-1tdptiz"
+        >
+          <FavoritesButton
+            active={true}
+            addFavorites={[Function]}
+            className="css-h7rvbh"
+            noShadow={false}
+            onRippleComplete={[Function]}
+            once={false}
+            productId={null}
+            removeFavorites={[Function]}
+            removeThrottle={0}
+            removeWithRelatives={false}
+            rippleClassName="css-1tdptiz"
+          />
+        </Connect(FavoritesButton)>
+        <AddToCartPicker
+          buttonProps={
+            Object {
+              "buttonSize": 56,
+              "iconSize": 24,
+              "isDisabled": false,
+              "isLoading": true,
+              "isOrderable": false,
+              "type": "default",
+            }
+          }
+          clickDelay={150}
+          handleAddToCart={[Function]}
+          noShadow={false}
+          productId=""
+          stock={null}
+        >
+          <Picker
+            buttonComponent={[Function]}
+            buttonProps={
+              Object {
+                "addedQuantity": 0,
+                "buttonSize": 56,
+                "className": null,
+                "handleAddToCart": [Function],
+                "hasLoading": true,
+                "iconSize": 24,
+                "isDisabled": false,
+                "isLoading": true,
+                "isOrderable": false,
+                "noShadow": false,
+                "type": "default",
+              }
+            }
+            className="css-ibd9un"
+            disabled={false}
+            duration={300}
+            isOpen={false}
+            items={Array []}
+            label=""
+            listComponent={[Function]}
+            modalComponent={[Function]}
+            onChange={[Function]}
+            onClose={[Function]}
+            onSelect={[Function]}
+            placeholder="Pick ..."
+            value={null}
+          >
+            <div
+              className="css-ibd9un"
+            >
+              <PickerAddToCartButton
+                addedQuantity={0}
+                buttonSize={56}
+                className={null}
+                disabled={false}
+                handleAddToCart={[Function]}
+                hasLoading={true}
+                iconSize={24}
+                isDisabled={false}
+                isLoading={true}
+                isOrderable={false}
+                label="Pick ..."
+                noShadow={false}
+                openList={[Function]}
+                type="default"
+                value=""
+              >
+                <button
+                  data-test-id="addToCartButton"
+                  onClick={[Function]}
+                />
+              </PickerAddToCartButton>
+              <Portal
+                isOpened={true}
+                onClose={[Function]}
+                onOpen={[Function]}
+                onUpdate={[Function]}
+              />
+            </div>
+          </Picker>
+        </AddToCartPicker>
+      </div>
+    </CTAButtons>
+  </Connect(CTAButtons)>
+</Provider>
+`;

@@ -46,6 +46,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
               "text": "Lorem Ipsum",
             },
             "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+            "flags": Object {
+              "hasChildren": true,
+              "hasVariants": false,
+            },
             "id": "1337",
             "name": "A shiny product",
             "price": Object {
@@ -72,6 +76,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
               "text": "Lorem Ipsum",
             },
             "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+            "flags": Object {
+              "hasChildren": true,
+              "hasVariants": false,
+            },
             "id": "4711",
             "name": "A discounted product with msrp",
             "price": Object {
@@ -98,6 +106,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
               "text": "Lorem Ipsum",
             },
             "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+            "flags": Object {
+              "hasChildren": true,
+              "hasVariants": false,
+            },
             "id": "1985",
             "name": "A discounted product with stike price and info",
             "price": Object {
@@ -124,6 +136,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
               "text": "Lorem Ipsum",
             },
             "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+            "flags": Object {
+              "hasChildren": true,
+              "hasVariants": false,
+            },
             "id": "foo",
             "name": "A not orderable product",
             "price": Object {
@@ -150,6 +166,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
               "text": "Lorem Ipsum",
             },
             "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+            "flags": Object {
+              "hasChildren": true,
+              "hasVariants": false,
+            },
             "id": "1234",
             "name": "A product with ignored quantity",
             "price": Object {
@@ -196,6 +216,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                       "text": "Lorem Ipsum",
                     },
                     "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+                    "flags": Object {
+                      "hasChildren": true,
+                      "hasVariants": false,
+                    },
                     "id": "1337",
                     "name": "A shiny product",
                     "price": Object {
@@ -228,7 +252,7 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                   }
                   handleAddToCart={[Function]}
                   hasFavorites={false}
-                  isFavorite={false}
+                  isFavorite={true}
                   product={
                     Object {
                       "availability": Object {
@@ -236,6 +260,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                         "text": "Lorem Ipsum",
                       },
                       "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+                      "flags": Object {
+                        "hasChildren": true,
+                        "hasVariants": false,
+                      },
                       "id": "1337",
                       "name": "A shiny product",
                       "price": Object {
@@ -536,6 +564,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                       "text": "Lorem Ipsum",
                     },
                     "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+                    "flags": Object {
+                      "hasChildren": true,
+                      "hasVariants": false,
+                    },
                     "id": "4711",
                     "name": "A discounted product with msrp",
                     "price": Object {
@@ -576,6 +608,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                         "text": "Lorem Ipsum",
                       },
                       "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+                      "flags": Object {
+                        "hasChildren": true,
+                        "hasVariants": false,
+                      },
                       "id": "4711",
                       "name": "A discounted product with msrp",
                       "price": Object {
@@ -917,6 +953,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                       "text": "Lorem Ipsum",
                     },
                     "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+                    "flags": Object {
+                      "hasChildren": true,
+                      "hasVariants": false,
+                    },
                     "id": "1985",
                     "name": "A discounted product with stike price and info",
                     "price": Object {
@@ -957,6 +997,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                         "text": "Lorem Ipsum",
                       },
                       "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+                      "flags": Object {
+                        "hasChildren": true,
+                        "hasVariants": false,
+                      },
                       "id": "1985",
                       "name": "A discounted product with stike price and info",
                       "price": Object {
@@ -1297,6 +1341,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                       "text": "Lorem Ipsum",
                     },
                     "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+                    "flags": Object {
+                      "hasChildren": true,
+                      "hasVariants": false,
+                    },
                     "id": "foo",
                     "name": "A not orderable product",
                     "price": Object {
@@ -1337,6 +1385,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                         "text": "Lorem Ipsum",
                       },
                       "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+                      "flags": Object {
+                        "hasChildren": true,
+                        "hasVariants": false,
+                      },
                       "id": "foo",
                       "name": "A not orderable product",
                       "price": Object {
@@ -1618,6 +1670,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                       "text": "Lorem Ipsum",
                     },
                     "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+                    "flags": Object {
+                      "hasChildren": true,
+                      "hasVariants": false,
+                    },
                     "id": "1234",
                     "name": "A product with ignored quantity",
                     "price": Object {
@@ -1658,6 +1714,10 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                         "text": "Lorem Ipsum",
                       },
                       "featuredImageUrl": "https://cdn.acme.com/kitten.jpg",
+                      "flags": Object {
+                        "hasChildren": true,
+                        "hasVariants": false,
+                      },
                       "id": "1234",
                       "name": "A product with ignored quantity",
                       "price": Object {

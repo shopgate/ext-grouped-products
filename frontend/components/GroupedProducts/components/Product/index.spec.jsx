@@ -129,6 +129,7 @@ describe('<Product />', () => {
     const productId = mockedProduct.id;
 
     handleAddToCart(quantity);
+
     expect(mockedDispatch).toHaveBeenCalledTimes(1);
     expect(mockedDispatch).toHaveBeenLastCalledWith(addProductsToCart([
       productId,
