@@ -287,262 +287,489 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                   }
                   renderFlatButtons={false}
                 >
-                  <Grid
-                    className=""
-                    component="ul"
-                    wrap={false}
+                  <Portal
+                    name="grouped-product.before"
+                    props={
+                      Object {
+                        "productId": "1337",
+                      }
+                    }
+                  />
+                  <Portal
+                    name="grouped-product"
+                    props={
+                      Object {
+                        "productId": "1337",
+                      }
+                    }
                   >
-                    <ul
-                      className=" css-h7r55a"
+                    <Grid
+                      className=""
+                      component="ul"
+                      wrap={false}
                     >
-                      <GridItem
-                        className="css-sg184b"
-                        component="li"
-                        grow={0}
-                        shrink={0}
+                      <ul
+                        className=" css-h7r55a"
                       >
-                        <li
-                          className="css-sg184b css-1l9a57c"
+                        <GridItem
+                          className="css-sg184b"
+                          component="li"
+                          grow={0}
+                          shrink={0}
                         >
-                          <Image
-                            alt="A shiny product"
-                            animating={true}
-                            backgroundColor="#f2f2f2"
-                            className=""
-                            forcePlaceholder={false}
-                            highestResolutionLoaded={[Function]}
-                            itemProp="image"
-                            onError={null}
-                            onLoad={null}
-                            ratio={null}
-                            resolutions={
-                              Array [
+                          <li
+                            className="css-sg184b css-1l9a57c"
+                          >
+                            <Portal
+                              name="grouped-product.image.before"
+                              props={
                                 Object {
-                                  "blur": 2,
-                                  "height": 50,
-                                  "width": 50,
-                                },
-                                Object {
-                                  "height": 440,
-                                  "width": 440,
-                                },
-                              ]
-                            }
-                            src="https://cdn.acme.com/kitten.jpg"
-                            transition={null}
-                          >
-                            <div
-                              className="css-326p2s "
-                            />
-                          </Image>
-                        </li>
-                      </GridItem>
-                      <GridItem
-                        className="css-nil"
-                        component="li"
-                        grow={4}
-                        shrink={1}
-                      >
-                        <li
-                          className="css-nil css-ke56yp"
-                        >
-                          <Ellipsis
-                            className="css-ud99sa"
-                            ellipsis="..."
-                            rows={3}
-                          >
-                            <Dotdotdot
-                              clamp={3}
-                              className="css-ud99sa"
-                              ellipsis="..."
-                              tagName="div"
-                              truncationChar="…"
-                              useNativeClamp={true}
-                            >
-                              <div
-                                className="css-ud99sa"
-                              >
-                                A shiny product
-                              </div>
-                            </Dotdotdot>
-                          </Ellipsis>
-                          <Availability
-                            className="css-117ocmm"
-                            showWhenAvailable={true}
-                            state="ok"
-                            text="Lorem Ipsum"
-                          >
-                            <div
-                              className="css-117ocmm css-1ixzglu"
-                              data-test-id="availabilityText: Lorem Ipsum"
-                            >
-                              Lorem Ipsum
-                            </div>
-                          </Availability>
-                        </li>
-                      </GridItem>
-                      <GridItem
-                        className="css-1onmrls"
-                        component="li"
-                        grow={0}
-                        shrink={1}
-                      >
-                        <li
-                          className="css-1onmrls"
-                        >
-                          <AddToCartPicker
-                            buttonProps={
-                              Object {
-                                "isDisabled": false,
-                                "isOrderable": true,
-                                "noShadow": false,
-                                "type": "grouped",
-                              }
-                            }
-                            clickDelay={150}
-                            handleAddToCart={[Function]}
-                            productId="1337"
-                            stock={
-                              Object {
-                                "ignoreQuantity": false,
-                                "info": "Info",
-                                "maxOrderQuantity": 1000,
-                                "minOrderQuantity": 1,
-                                "orderable": true,
-                                "quantity": 4,
-                              }
-                            }
-                          >
-                            <Picker
-                              buttonComponent={[Function]}
-                              buttonProps={
-                                Object {
-                                  "addedQuantity": 0,
-                                  "className": null,
-                                  "handleAddToCart": [Function],
-                                  "hasLoading": true,
-                                  "isDisabled": false,
-                                  "isLoading": false,
-                                  "isOrderable": true,
-                                  "noShadow": false,
-                                  "type": "grouped",
+                                  "productId": "1337",
                                 }
                               }
-                              className="css-ibd9un"
-                              disabled={false}
-                              duration={300}
-                              isOpen={false}
-                              items={
-                                Array [
-                                  Object {
-                                    "label": "1",
-                                    "value": 1,
-                                  },
-                                  Object {
-                                    "label": "2",
-                                    "value": 2,
-                                  },
-                                  Object {
-                                    "label": "3",
-                                    "value": 3,
-                                  },
-                                  Object {
-                                    "label": "4",
-                                    "value": 4,
-                                  },
-                                ]
+                            />
+                            <Portal
+                              name="grouped-product.image"
+                              props={
+                                Object {
+                                  "productId": "1337",
+                                }
                               }
-                              label=""
-                              listComponent={[Function]}
-                              modalComponent={[Function]}
-                              onChange={[Function]}
-                              onClose={[Function]}
-                              onSelect={[Function]}
-                              placeholder="Pick ..."
-                              value={null}
                             >
-                              <div
-                                className="css-ibd9un"
-                              >
-                                <PickerAddToCartButton
-                                  addedQuantity={0}
-                                  className={null}
-                                  disabled={false}
-                                  handleAddToCart={[Function]}
-                                  hasLoading={true}
-                                  isDisabled={false}
-                                  isLoading={false}
-                                  isOrderable={true}
-                                  label="Pick ..."
-                                  noShadow={false}
-                                  openList={[Function]}
-                                  type="grouped"
-                                  value=""
-                                >
-                                  <button
-                                    data-test-id="addToCartButton"
-                                    onClick={[Function]}
-                                  />
-                                </PickerAddToCartButton>
-                                <Portal
-                                  isOpened={true}
-                                  onClose={[Function]}
-                                  onOpen={[Function]}
-                                  onUpdate={[Function]}
-                                />
-                              </div>
-                            </Picker>
-                          </AddToCartPicker>
-                          <ProductPrice
-                            price={
-                              Object {
-                                "currency": "EUR",
-                                "discount": 0,
-                                "info": "",
-                                "msrp": 0,
-                                "unitPrice": 5,
-                                "unitPriceMin": 0,
-                                "unitPriceStriked": 0,
-                              }
-                            }
-                            renderLine={false}
-                          >
-                            <div
-                              className="css-nil"
-                            >
-                              <Price
-                                className="css-fisw11"
-                                currency="EUR"
-                                discounted={false}
-                                fractions={true}
-                                taxDisclaimer={false}
-                                unitPrice={5}
-                                unitPriceMin={0}
+                              <Image
+                                alt="A shiny product"
+                                animating={true}
+                                backgroundColor="#f2f2f2"
+                                className=""
+                                forcePlaceholder={false}
+                                highestResolutionLoaded={[Function]}
+                                itemProp="image"
+                                onError={null}
+                                onLoad={null}
+                                ratio={null}
+                                resolutions={
+                                  Array [
+                                    Object {
+                                      "blur": 2,
+                                      "height": 50,
+                                      "width": 50,
+                                    },
+                                    Object {
+                                      "height": 440,
+                                      "width": 440,
+                                    },
+                                  ]
+                                }
+                                src="https://cdn.acme.com/kitten.jpg"
+                                transition={null}
                               >
                                 <div
-                                  className="css-izofhs css-fisw11"
-                                  data-test-id="minPrice: 0 price: 5 currency: EUR"
+                                  className="css-326p2s "
+                                />
+                              </Image>
+                            </Portal>
+                            <Portal
+                              name="grouped-product.image.after"
+                              props={
+                                Object {
+                                  "productId": "1337",
+                                }
+                              }
+                            />
+                          </li>
+                        </GridItem>
+                        <GridItem
+                          className="css-nil"
+                          component="li"
+                          grow={4}
+                          shrink={1}
+                        >
+                          <li
+                            className="css-nil css-ke56yp"
+                          >
+                            <Portal
+                              name="grouped-product.meta.before"
+                              props={
+                                Object {
+                                  "productId": "1337",
+                                }
+                              }
+                            />
+                            <Portal
+                              name="grouped-product.meta"
+                              props={
+                                Object {
+                                  "productId": "1337",
+                                }
+                              }
+                            >
+                              <Portal
+                                name="grouped-product.name.before"
+                                props={
+                                  Object {
+                                    "productId": "1337",
+                                  }
+                                }
+                              />
+                              <Portal
+                                name="grouped-product.name"
+                                props={
+                                  Object {
+                                    "productId": "1337",
+                                  }
+                                }
+                              >
+                                <Ellipsis
+                                  className="css-ud99sa"
+                                  ellipsis="..."
+                                  rows={3}
                                 >
-                                  <FormatPrice
-                                    className=""
-                                    currency="EUR"
-                                    fractions={true}
-                                    price={5}
+                                  <Dotdotdot
+                                    clamp={3}
+                                    className="css-ud99sa"
+                                    ellipsis="..."
+                                    tagName="div"
+                                    truncationChar="…"
+                                    useNativeClamp={true}
                                   >
-                                    <span
-                                      className=""
+                                    <div
+                                      className="css-ud99sa"
                                     >
-                                      p
-                                    </span>
-                                  </FormatPrice>
-                                </div>
-                              </Price>
-                            </div>
-                          </ProductPrice>
-                        </li>
-                      </GridItem>
-                    </ul>
-                  </Grid>
+                                      A shiny product
+                                    </div>
+                                  </Dotdotdot>
+                                </Ellipsis>
+                              </Portal>
+                              <Portal
+                                name="grouped-product.name.after"
+                                props={
+                                  Object {
+                                    "productId": "1337",
+                                  }
+                                }
+                              />
+                              <Portal
+                                name="grouped-product.availability.before"
+                                props={
+                                  Object {
+                                    "productId": "1337",
+                                  }
+                                }
+                              />
+                              <Portal
+                                name="grouped-product.availability"
+                                props={
+                                  Object {
+                                    "productId": "1337",
+                                  }
+                                }
+                              >
+                                <Availability
+                                  className="css-117ocmm"
+                                  showWhenAvailable={true}
+                                  state="ok"
+                                  text="Lorem Ipsum"
+                                >
+                                  <div
+                                    className="css-117ocmm css-1ixzglu"
+                                    data-test-id="availabilityText: Lorem Ipsum"
+                                  >
+                                    Lorem Ipsum
+                                  </div>
+                                </Availability>
+                              </Portal>
+                              <Portal
+                                name="grouped-product.availability.after"
+                                props={
+                                  Object {
+                                    "productId": "1337",
+                                  }
+                                }
+                              />
+                            </Portal>
+                            <Portal
+                              name="grouped-product.meta.after"
+                              props={
+                                Object {
+                                  "productId": "1337",
+                                }
+                              }
+                            />
+                          </li>
+                        </GridItem>
+                        <GridItem
+                          className="css-1onmrls"
+                          component="li"
+                          grow={0}
+                          shrink={1}
+                        >
+                          <li
+                            className="css-1onmrls"
+                          >
+                            <Portal
+                              name="grouped-product.cta.before"
+                              props={
+                                Object {
+                                  "productId": "1337",
+                                }
+                              }
+                            />
+                            <Portal
+                              name="grouped-product.cta"
+                              props={
+                                Object {
+                                  "productId": "1337",
+                                }
+                              }
+                            >
+                              <Portal
+                                name="grouped-product.add.before"
+                                props={
+                                  Object {
+                                    "productId": "1337",
+                                  }
+                                }
+                              />
+                              <Portal
+                                name="grouped-product.add-to-cart"
+                                props={
+                                  Object {
+                                    "productId": "1337",
+                                  }
+                                }
+                              >
+                                <AddToCartPicker
+                                  buttonProps={
+                                    Object {
+                                      "isDisabled": false,
+                                      "isOrderable": true,
+                                      "noShadow": false,
+                                      "type": "grouped",
+                                    }
+                                  }
+                                  clickDelay={150}
+                                  handleAddToCart={[Function]}
+                                  productId="1337"
+                                  stock={
+                                    Object {
+                                      "ignoreQuantity": false,
+                                      "info": "Info",
+                                      "maxOrderQuantity": 1000,
+                                      "minOrderQuantity": 1,
+                                      "orderable": true,
+                                      "quantity": 4,
+                                    }
+                                  }
+                                >
+                                  <Picker
+                                    buttonComponent={[Function]}
+                                    buttonProps={
+                                      Object {
+                                        "addedQuantity": 0,
+                                        "className": null,
+                                        "handleAddToCart": [Function],
+                                        "hasLoading": true,
+                                        "isDisabled": false,
+                                        "isLoading": false,
+                                        "isOrderable": true,
+                                        "noShadow": false,
+                                        "type": "grouped",
+                                      }
+                                    }
+                                    className="css-ibd9un"
+                                    disabled={false}
+                                    duration={300}
+                                    isOpen={false}
+                                    items={
+                                      Array [
+                                        Object {
+                                          "label": "1",
+                                          "value": 1,
+                                        },
+                                        Object {
+                                          "label": "2",
+                                          "value": 2,
+                                        },
+                                        Object {
+                                          "label": "3",
+                                          "value": 3,
+                                        },
+                                        Object {
+                                          "label": "4",
+                                          "value": 4,
+                                        },
+                                      ]
+                                    }
+                                    label=""
+                                    listComponent={[Function]}
+                                    modalComponent={[Function]}
+                                    onChange={[Function]}
+                                    onClose={[Function]}
+                                    onSelect={[Function]}
+                                    placeholder="Pick ..."
+                                    value={null}
+                                  >
+                                    <div
+                                      className="css-ibd9un"
+                                    >
+                                      <PickerAddToCartButton
+                                        addedQuantity={0}
+                                        className={null}
+                                        disabled={false}
+                                        handleAddToCart={[Function]}
+                                        hasLoading={true}
+                                        isDisabled={false}
+                                        isLoading={false}
+                                        isOrderable={true}
+                                        label="Pick ..."
+                                        noShadow={false}
+                                        openList={[Function]}
+                                        type="grouped"
+                                        value=""
+                                      >
+                                        <button
+                                          data-test-id="addToCartButton"
+                                          onClick={[Function]}
+                                        />
+                                      </PickerAddToCartButton>
+                                      <Portal
+                                        isOpened={true}
+                                        onClose={[Function]}
+                                        onOpen={[Function]}
+                                        onUpdate={[Function]}
+                                      />
+                                    </div>
+                                  </Picker>
+                                </AddToCartPicker>
+                              </Portal>
+                              <Portal
+                                name="grouped-product.add.after"
+                                props={
+                                  Object {
+                                    "productId": "1337",
+                                  }
+                                }
+                              />
+                              <ProductPrice
+                                price={
+                                  Object {
+                                    "currency": "EUR",
+                                    "discount": 0,
+                                    "info": "",
+                                    "msrp": 0,
+                                    "unitPrice": 5,
+                                    "unitPriceMin": 0,
+                                    "unitPriceStriked": 0,
+                                  }
+                                }
+                                renderLine={false}
+                              >
+                                <Portal
+                                  name="grouped-product.price.before"
+                                  props={
+                                    Object {
+                                      "price": Object {
+                                        "currency": "EUR",
+                                        "discount": 0,
+                                        "info": "",
+                                        "msrp": 0,
+                                        "unitPrice": 5,
+                                        "unitPriceMin": 0,
+                                        "unitPriceStriked": 0,
+                                      },
+                                      "renderLine": false,
+                                    }
+                                  }
+                                />
+                                <Portal
+                                  name="grouped-product.price"
+                                  props={
+                                    Object {
+                                      "price": Object {
+                                        "currency": "EUR",
+                                        "discount": 0,
+                                        "info": "",
+                                        "msrp": 0,
+                                        "unitPrice": 5,
+                                        "unitPriceMin": 0,
+                                        "unitPriceStriked": 0,
+                                      },
+                                      "renderLine": false,
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="css-nil"
+                                  >
+                                    <Price
+                                      className="css-fisw11"
+                                      currency="EUR"
+                                      discounted={false}
+                                      fractions={true}
+                                      taxDisclaimer={false}
+                                      unitPrice={5}
+                                      unitPriceMin={0}
+                                    >
+                                      <div
+                                        className="css-izofhs css-fisw11"
+                                        data-test-id="minPrice: 0 price: 5 currency: EUR"
+                                      >
+                                        <FormatPrice
+                                          className=""
+                                          currency="EUR"
+                                          fractions={true}
+                                          price={5}
+                                        >
+                                          <span
+                                            className=""
+                                          >
+                                            p
+                                          </span>
+                                        </FormatPrice>
+                                      </div>
+                                    </Price>
+                                  </div>
+                                </Portal>
+                                <Portal
+                                  name="grouped-product.price.after"
+                                  props={
+                                    Object {
+                                      "price": Object {
+                                        "currency": "EUR",
+                                        "discount": 0,
+                                        "info": "",
+                                        "msrp": 0,
+                                        "unitPrice": 5,
+                                        "unitPriceMin": 0,
+                                        "unitPriceStriked": 0,
+                                      },
+                                      "renderLine": false,
+                                    }
+                                  }
+                                />
+                              </ProductPrice>
+                            </Portal>
+                            <Portal
+                              name="grouped-product.cta.after"
+                              props={
+                                Object {
+                                  "productId": "1337",
+                                }
+                              }
+                            />
+                          </li>
+                        </GridItem>
+                      </ul>
+                    </Grid>
+                  </Portal>
+                  <Portal
+                    name="grouped-product.after"
+                    props={
+                      Object {
+                        "productId": "1337",
+                      }
+                    }
+                  />
                 </Product>
               </Connect(Product)>
             </li>
@@ -635,303 +862,530 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                   }
                   renderFlatButtons={false}
                 >
-                  <Grid
-                    className=""
-                    component="ul"
-                    wrap={false}
+                  <Portal
+                    name="grouped-product.before"
+                    props={
+                      Object {
+                        "productId": "4711",
+                      }
+                    }
+                  />
+                  <Portal
+                    name="grouped-product"
+                    props={
+                      Object {
+                        "productId": "4711",
+                      }
+                    }
                   >
-                    <ul
-                      className=" css-h7r55a"
+                    <Grid
+                      className=""
+                      component="ul"
+                      wrap={false}
                     >
-                      <GridItem
-                        className="css-sg184b"
-                        component="li"
-                        grow={0}
-                        shrink={0}
+                      <ul
+                        className=" css-h7r55a"
                       >
-                        <li
-                          className="css-sg184b css-1l9a57c"
+                        <GridItem
+                          className="css-sg184b"
+                          component="li"
+                          grow={0}
+                          shrink={0}
                         >
-                          <Image
-                            alt="A discounted product with msrp"
-                            animating={true}
-                            backgroundColor="#f2f2f2"
-                            className=""
-                            forcePlaceholder={false}
-                            highestResolutionLoaded={[Function]}
-                            itemProp="image"
-                            onError={null}
-                            onLoad={null}
-                            ratio={null}
-                            resolutions={
-                              Array [
+                          <li
+                            className="css-sg184b css-1l9a57c"
+                          >
+                            <Portal
+                              name="grouped-product.image.before"
+                              props={
                                 Object {
-                                  "blur": 2,
-                                  "height": 50,
-                                  "width": 50,
-                                },
-                                Object {
-                                  "height": 440,
-                                  "width": 440,
-                                },
-                              ]
-                            }
-                            src="https://cdn.acme.com/kitten.jpg"
-                            transition={null}
-                          >
-                            <div
-                              className="css-326p2s "
-                            />
-                          </Image>
-                        </li>
-                      </GridItem>
-                      <GridItem
-                        className="css-nil"
-                        component="li"
-                        grow={4}
-                        shrink={1}
-                      >
-                        <li
-                          className="css-nil css-ke56yp"
-                        >
-                          <Ellipsis
-                            className="css-ud99sa"
-                            ellipsis="..."
-                            rows={3}
-                          >
-                            <Dotdotdot
-                              clamp={3}
-                              className="css-ud99sa"
-                              ellipsis="..."
-                              tagName="div"
-                              truncationChar="…"
-                              useNativeClamp={true}
-                            >
-                              <div
-                                className="css-ud99sa"
-                              >
-                                A discounted product with msrp
-                              </div>
-                            </Dotdotdot>
-                          </Ellipsis>
-                          <Availability
-                            className="css-117ocmm"
-                            showWhenAvailable={true}
-                            state="ok"
-                            text="Lorem Ipsum"
-                          >
-                            <div
-                              className="css-117ocmm css-1ixzglu"
-                              data-test-id="availabilityText: Lorem Ipsum"
-                            >
-                              Lorem Ipsum
-                            </div>
-                          </Availability>
-                        </li>
-                      </GridItem>
-                      <GridItem
-                        className="css-1onmrls"
-                        component="li"
-                        grow={0}
-                        shrink={1}
-                      >
-                        <li
-                          className="css-1onmrls"
-                        >
-                          <AddToCartPicker
-                            buttonProps={
-                              Object {
-                                "isDisabled": false,
-                                "isOrderable": true,
-                                "noShadow": false,
-                                "type": "grouped",
-                              }
-                            }
-                            clickDelay={150}
-                            handleAddToCart={[Function]}
-                            productId="4711"
-                            stock={
-                              Object {
-                                "ignoreQuantity": false,
-                                "info": "Info",
-                                "maxOrderQuantity": 1000,
-                                "minOrderQuantity": 1,
-                                "orderable": true,
-                                "quantity": 4,
-                              }
-                            }
-                          >
-                            <Picker
-                              buttonComponent={[Function]}
-                              buttonProps={
-                                Object {
-                                  "addedQuantity": 0,
-                                  "className": null,
-                                  "handleAddToCart": [Function],
-                                  "hasLoading": true,
-                                  "isDisabled": false,
-                                  "isLoading": false,
-                                  "isOrderable": true,
-                                  "noShadow": false,
-                                  "type": "grouped",
+                                  "productId": "4711",
                                 }
                               }
-                              className="css-ibd9un"
-                              disabled={false}
-                              duration={300}
-                              isOpen={false}
-                              items={
-                                Array [
-                                  Object {
-                                    "label": "1",
-                                    "value": 1,
-                                  },
-                                  Object {
-                                    "label": "2",
-                                    "value": 2,
-                                  },
-                                  Object {
-                                    "label": "3",
-                                    "value": 3,
-                                  },
-                                  Object {
-                                    "label": "4",
-                                    "value": 4,
-                                  },
-                                ]
+                            />
+                            <Portal
+                              name="grouped-product.image"
+                              props={
+                                Object {
+                                  "productId": "4711",
+                                }
                               }
-                              label=""
-                              listComponent={[Function]}
-                              modalComponent={[Function]}
-                              onChange={[Function]}
-                              onClose={[Function]}
-                              onSelect={[Function]}
-                              placeholder="Pick ..."
-                              value={null}
                             >
-                              <div
-                                className="css-ibd9un"
-                              >
-                                <PickerAddToCartButton
-                                  addedQuantity={0}
-                                  className={null}
-                                  disabled={false}
-                                  handleAddToCart={[Function]}
-                                  hasLoading={true}
-                                  isDisabled={false}
-                                  isLoading={false}
-                                  isOrderable={true}
-                                  label="Pick ..."
-                                  noShadow={false}
-                                  openList={[Function]}
-                                  type="grouped"
-                                  value=""
-                                >
-                                  <button
-                                    data-test-id="addToCartButton"
-                                    onClick={[Function]}
-                                  />
-                                </PickerAddToCartButton>
-                                <Portal
-                                  isOpened={true}
-                                  onClose={[Function]}
-                                  onOpen={[Function]}
-                                  onUpdate={[Function]}
-                                />
-                              </div>
-                            </Picker>
-                          </AddToCartPicker>
-                          <ProductPrice
-                            price={
-                              Object {
-                                "currency": "EUR",
-                                "discount": 50,
-                                "info": "",
-                                "msrp": 10,
-                                "unitPrice": 5,
-                                "unitPriceMin": 0,
-                                "unitPriceStriked": 0,
-                              }
-                            }
-                            renderLine={false}
-                          >
-                            <div
-                              className="css-nil"
-                            >
-                              <div
-                                className="css-1en8fmq"
-                              >
-                                <Translate
-                                  className="css-14aq3ya"
-                                  params={Object {}}
-                                  string="price.msrp"
-                                >
-                                  <span
-                                    className="css-14aq3ya"
-                                  >
-                                    price.msrp
-                                  </span>
-                                </Translate>
-                                <PriceStriked
-                                  className="css-117ocmm"
-                                  currency="EUR"
-                                  value={10}
-                                >
-                                  <div
-                                    className="css-1sagvrb css-117ocmm "
-                                  >
-                                    <span
-                                      data-test-id="strikedPrice: 10"
-                                    >
-                                      <FormatPrice
-                                        className=""
-                                        currency="EUR"
-                                        fractions={true}
-                                        price={10}
-                                      >
-                                        <span
-                                          className=""
-                                        >
-                                          p
-                                        </span>
-                                      </FormatPrice>
-                                    </span>
-                                  </div>
-                                </PriceStriked>
-                              </div>
-                              <Price
-                                className="css-fisw11"
-                                currency="EUR"
-                                discounted={true}
-                                fractions={true}
-                                taxDisclaimer={false}
-                                unitPrice={5}
-                                unitPriceMin={0}
+                              <Image
+                                alt="A discounted product with msrp"
+                                animating={true}
+                                backgroundColor="#f2f2f2"
+                                className=""
+                                forcePlaceholder={false}
+                                highestResolutionLoaded={[Function]}
+                                itemProp="image"
+                                onError={null}
+                                onLoad={null}
+                                ratio={null}
+                                resolutions={
+                                  Array [
+                                    Object {
+                                      "blur": 2,
+                                      "height": 50,
+                                      "width": 50,
+                                    },
+                                    Object {
+                                      "height": 440,
+                                      "width": 440,
+                                    },
+                                  ]
+                                }
+                                src="https://cdn.acme.com/kitten.jpg"
+                                transition={null}
                               >
                                 <div
-                                  className="css-izofhs css-fisw11 css-1ncyhu"
-                                  data-test-id="minPrice: 0 price: 5 currency: EUR"
+                                  className="css-326p2s "
+                                />
+                              </Image>
+                            </Portal>
+                            <Portal
+                              name="grouped-product.image.after"
+                              props={
+                                Object {
+                                  "productId": "4711",
+                                }
+                              }
+                            />
+                          </li>
+                        </GridItem>
+                        <GridItem
+                          className="css-nil"
+                          component="li"
+                          grow={4}
+                          shrink={1}
+                        >
+                          <li
+                            className="css-nil css-ke56yp"
+                          >
+                            <Portal
+                              name="grouped-product.meta.before"
+                              props={
+                                Object {
+                                  "productId": "4711",
+                                }
+                              }
+                            />
+                            <Portal
+                              name="grouped-product.meta"
+                              props={
+                                Object {
+                                  "productId": "4711",
+                                }
+                              }
+                            >
+                              <Portal
+                                name="grouped-product.name.before"
+                                props={
+                                  Object {
+                                    "productId": "4711",
+                                  }
+                                }
+                              />
+                              <Portal
+                                name="grouped-product.name"
+                                props={
+                                  Object {
+                                    "productId": "4711",
+                                  }
+                                }
+                              >
+                                <Ellipsis
+                                  className="css-ud99sa"
+                                  ellipsis="..."
+                                  rows={3}
                                 >
-                                  <FormatPrice
-                                    className=""
-                                    currency="EUR"
-                                    fractions={true}
-                                    price={5}
+                                  <Dotdotdot
+                                    clamp={3}
+                                    className="css-ud99sa"
+                                    ellipsis="..."
+                                    tagName="div"
+                                    truncationChar="…"
+                                    useNativeClamp={true}
                                   >
-                                    <span
-                                      className=""
+                                    <div
+                                      className="css-ud99sa"
                                     >
-                                      p
-                                    </span>
-                                  </FormatPrice>
-                                </div>
-                              </Price>
-                            </div>
-                          </ProductPrice>
-                        </li>
-                      </GridItem>
-                    </ul>
-                  </Grid>
+                                      A discounted product with msrp
+                                    </div>
+                                  </Dotdotdot>
+                                </Ellipsis>
+                              </Portal>
+                              <Portal
+                                name="grouped-product.name.after"
+                                props={
+                                  Object {
+                                    "productId": "4711",
+                                  }
+                                }
+                              />
+                              <Portal
+                                name="grouped-product.availability.before"
+                                props={
+                                  Object {
+                                    "productId": "4711",
+                                  }
+                                }
+                              />
+                              <Portal
+                                name="grouped-product.availability"
+                                props={
+                                  Object {
+                                    "productId": "4711",
+                                  }
+                                }
+                              >
+                                <Availability
+                                  className="css-117ocmm"
+                                  showWhenAvailable={true}
+                                  state="ok"
+                                  text="Lorem Ipsum"
+                                >
+                                  <div
+                                    className="css-117ocmm css-1ixzglu"
+                                    data-test-id="availabilityText: Lorem Ipsum"
+                                  >
+                                    Lorem Ipsum
+                                  </div>
+                                </Availability>
+                              </Portal>
+                              <Portal
+                                name="grouped-product.availability.after"
+                                props={
+                                  Object {
+                                    "productId": "4711",
+                                  }
+                                }
+                              />
+                            </Portal>
+                            <Portal
+                              name="grouped-product.meta.after"
+                              props={
+                                Object {
+                                  "productId": "4711",
+                                }
+                              }
+                            />
+                          </li>
+                        </GridItem>
+                        <GridItem
+                          className="css-1onmrls"
+                          component="li"
+                          grow={0}
+                          shrink={1}
+                        >
+                          <li
+                            className="css-1onmrls"
+                          >
+                            <Portal
+                              name="grouped-product.cta.before"
+                              props={
+                                Object {
+                                  "productId": "4711",
+                                }
+                              }
+                            />
+                            <Portal
+                              name="grouped-product.cta"
+                              props={
+                                Object {
+                                  "productId": "4711",
+                                }
+                              }
+                            >
+                              <Portal
+                                name="grouped-product.add.before"
+                                props={
+                                  Object {
+                                    "productId": "4711",
+                                  }
+                                }
+                              />
+                              <Portal
+                                name="grouped-product.add-to-cart"
+                                props={
+                                  Object {
+                                    "productId": "4711",
+                                  }
+                                }
+                              >
+                                <AddToCartPicker
+                                  buttonProps={
+                                    Object {
+                                      "isDisabled": false,
+                                      "isOrderable": true,
+                                      "noShadow": false,
+                                      "type": "grouped",
+                                    }
+                                  }
+                                  clickDelay={150}
+                                  handleAddToCart={[Function]}
+                                  productId="4711"
+                                  stock={
+                                    Object {
+                                      "ignoreQuantity": false,
+                                      "info": "Info",
+                                      "maxOrderQuantity": 1000,
+                                      "minOrderQuantity": 1,
+                                      "orderable": true,
+                                      "quantity": 4,
+                                    }
+                                  }
+                                >
+                                  <Picker
+                                    buttonComponent={[Function]}
+                                    buttonProps={
+                                      Object {
+                                        "addedQuantity": 0,
+                                        "className": null,
+                                        "handleAddToCart": [Function],
+                                        "hasLoading": true,
+                                        "isDisabled": false,
+                                        "isLoading": false,
+                                        "isOrderable": true,
+                                        "noShadow": false,
+                                        "type": "grouped",
+                                      }
+                                    }
+                                    className="css-ibd9un"
+                                    disabled={false}
+                                    duration={300}
+                                    isOpen={false}
+                                    items={
+                                      Array [
+                                        Object {
+                                          "label": "1",
+                                          "value": 1,
+                                        },
+                                        Object {
+                                          "label": "2",
+                                          "value": 2,
+                                        },
+                                        Object {
+                                          "label": "3",
+                                          "value": 3,
+                                        },
+                                        Object {
+                                          "label": "4",
+                                          "value": 4,
+                                        },
+                                      ]
+                                    }
+                                    label=""
+                                    listComponent={[Function]}
+                                    modalComponent={[Function]}
+                                    onChange={[Function]}
+                                    onClose={[Function]}
+                                    onSelect={[Function]}
+                                    placeholder="Pick ..."
+                                    value={null}
+                                  >
+                                    <div
+                                      className="css-ibd9un"
+                                    >
+                                      <PickerAddToCartButton
+                                        addedQuantity={0}
+                                        className={null}
+                                        disabled={false}
+                                        handleAddToCart={[Function]}
+                                        hasLoading={true}
+                                        isDisabled={false}
+                                        isLoading={false}
+                                        isOrderable={true}
+                                        label="Pick ..."
+                                        noShadow={false}
+                                        openList={[Function]}
+                                        type="grouped"
+                                        value=""
+                                      >
+                                        <button
+                                          data-test-id="addToCartButton"
+                                          onClick={[Function]}
+                                        />
+                                      </PickerAddToCartButton>
+                                      <Portal
+                                        isOpened={true}
+                                        onClose={[Function]}
+                                        onOpen={[Function]}
+                                        onUpdate={[Function]}
+                                      />
+                                    </div>
+                                  </Picker>
+                                </AddToCartPicker>
+                              </Portal>
+                              <Portal
+                                name="grouped-product.add.after"
+                                props={
+                                  Object {
+                                    "productId": "4711",
+                                  }
+                                }
+                              />
+                              <ProductPrice
+                                price={
+                                  Object {
+                                    "currency": "EUR",
+                                    "discount": 50,
+                                    "info": "",
+                                    "msrp": 10,
+                                    "unitPrice": 5,
+                                    "unitPriceMin": 0,
+                                    "unitPriceStriked": 0,
+                                  }
+                                }
+                                renderLine={false}
+                              >
+                                <Portal
+                                  name="grouped-product.price.before"
+                                  props={
+                                    Object {
+                                      "price": Object {
+                                        "currency": "EUR",
+                                        "discount": 50,
+                                        "info": "",
+                                        "msrp": 10,
+                                        "unitPrice": 5,
+                                        "unitPriceMin": 0,
+                                        "unitPriceStriked": 0,
+                                      },
+                                      "renderLine": false,
+                                    }
+                                  }
+                                />
+                                <Portal
+                                  name="grouped-product.price"
+                                  props={
+                                    Object {
+                                      "price": Object {
+                                        "currency": "EUR",
+                                        "discount": 50,
+                                        "info": "",
+                                        "msrp": 10,
+                                        "unitPrice": 5,
+                                        "unitPriceMin": 0,
+                                        "unitPriceStriked": 0,
+                                      },
+                                      "renderLine": false,
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="css-nil"
+                                  >
+                                    <div
+                                      className="css-1en8fmq"
+                                    >
+                                      <Translate
+                                        className="css-14aq3ya"
+                                        params={Object {}}
+                                        string="price.msrp"
+                                      >
+                                        <span
+                                          className="css-14aq3ya"
+                                        >
+                                          price.msrp
+                                        </span>
+                                      </Translate>
+                                      <PriceStriked
+                                        className="css-117ocmm"
+                                        currency="EUR"
+                                        value={10}
+                                      >
+                                        <div
+                                          className="css-1sagvrb css-117ocmm "
+                                        >
+                                          <span
+                                            data-test-id="strikedPrice: 10"
+                                          >
+                                            <FormatPrice
+                                              className=""
+                                              currency="EUR"
+                                              fractions={true}
+                                              price={10}
+                                            >
+                                              <span
+                                                className=""
+                                              >
+                                                p
+                                              </span>
+                                            </FormatPrice>
+                                          </span>
+                                        </div>
+                                      </PriceStriked>
+                                    </div>
+                                    <Price
+                                      className="css-fisw11"
+                                      currency="EUR"
+                                      discounted={true}
+                                      fractions={true}
+                                      taxDisclaimer={false}
+                                      unitPrice={5}
+                                      unitPriceMin={0}
+                                    >
+                                      <div
+                                        className="css-izofhs css-fisw11 css-1ncyhu"
+                                        data-test-id="minPrice: 0 price: 5 currency: EUR"
+                                      >
+                                        <FormatPrice
+                                          className=""
+                                          currency="EUR"
+                                          fractions={true}
+                                          price={5}
+                                        >
+                                          <span
+                                            className=""
+                                          >
+                                            p
+                                          </span>
+                                        </FormatPrice>
+                                      </div>
+                                    </Price>
+                                  </div>
+                                </Portal>
+                                <Portal
+                                  name="grouped-product.price.after"
+                                  props={
+                                    Object {
+                                      "price": Object {
+                                        "currency": "EUR",
+                                        "discount": 50,
+                                        "info": "",
+                                        "msrp": 10,
+                                        "unitPrice": 5,
+                                        "unitPriceMin": 0,
+                                        "unitPriceStriked": 0,
+                                      },
+                                      "renderLine": false,
+                                    }
+                                  }
+                                />
+                              </ProductPrice>
+                            </Portal>
+                            <Portal
+                              name="grouped-product.cta.after"
+                              props={
+                                Object {
+                                  "productId": "4711",
+                                }
+                              }
+                            />
+                          </li>
+                        </GridItem>
+                      </ul>
+                    </Grid>
+                  </Portal>
+                  <Portal
+                    name="grouped-product.after"
+                    props={
+                      Object {
+                        "productId": "4711",
+                      }
+                    }
+                  />
                 </Product>
               </Connect(Product)>
             </li>
@@ -1024,302 +1478,529 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                   }
                   renderFlatButtons={false}
                 >
-                  <Grid
-                    className=""
-                    component="ul"
-                    wrap={false}
+                  <Portal
+                    name="grouped-product.before"
+                    props={
+                      Object {
+                        "productId": "1985",
+                      }
+                    }
+                  />
+                  <Portal
+                    name="grouped-product"
+                    props={
+                      Object {
+                        "productId": "1985",
+                      }
+                    }
                   >
-                    <ul
-                      className=" css-h7r55a"
+                    <Grid
+                      className=""
+                      component="ul"
+                      wrap={false}
                     >
-                      <GridItem
-                        className="css-sg184b"
-                        component="li"
-                        grow={0}
-                        shrink={0}
+                      <ul
+                        className=" css-h7r55a"
                       >
-                        <li
-                          className="css-sg184b css-1l9a57c"
+                        <GridItem
+                          className="css-sg184b"
+                          component="li"
+                          grow={0}
+                          shrink={0}
                         >
-                          <Image
-                            alt="A discounted product with stike price and info"
-                            animating={true}
-                            backgroundColor="#f2f2f2"
-                            className=""
-                            forcePlaceholder={false}
-                            highestResolutionLoaded={[Function]}
-                            itemProp="image"
-                            onError={null}
-                            onLoad={null}
-                            ratio={null}
-                            resolutions={
-                              Array [
+                          <li
+                            className="css-sg184b css-1l9a57c"
+                          >
+                            <Portal
+                              name="grouped-product.image.before"
+                              props={
                                 Object {
-                                  "blur": 2,
-                                  "height": 50,
-                                  "width": 50,
-                                },
-                                Object {
-                                  "height": 440,
-                                  "width": 440,
-                                },
-                              ]
-                            }
-                            src="https://cdn.acme.com/kitten.jpg"
-                            transition={null}
-                          >
-                            <div
-                              className="css-326p2s "
-                            />
-                          </Image>
-                        </li>
-                      </GridItem>
-                      <GridItem
-                        className="css-nil"
-                        component="li"
-                        grow={4}
-                        shrink={1}
-                      >
-                        <li
-                          className="css-nil css-ke56yp"
-                        >
-                          <Ellipsis
-                            className="css-ud99sa"
-                            ellipsis="..."
-                            rows={3}
-                          >
-                            <Dotdotdot
-                              clamp={3}
-                              className="css-ud99sa"
-                              ellipsis="..."
-                              tagName="div"
-                              truncationChar="…"
-                              useNativeClamp={true}
-                            >
-                              <div
-                                className="css-ud99sa"
-                              >
-                                A discounted product with stike price and info
-                              </div>
-                            </Dotdotdot>
-                          </Ellipsis>
-                          <Availability
-                            className="css-117ocmm"
-                            showWhenAvailable={true}
-                            state="ok"
-                            text="Lorem Ipsum"
-                          >
-                            <div
-                              className="css-117ocmm css-1ixzglu"
-                              data-test-id="availabilityText: Lorem Ipsum"
-                            >
-                              Lorem Ipsum
-                            </div>
-                          </Availability>
-                        </li>
-                      </GridItem>
-                      <GridItem
-                        className="css-1onmrls"
-                        component="li"
-                        grow={0}
-                        shrink={1}
-                      >
-                        <li
-                          className="css-1onmrls"
-                        >
-                          <AddToCartPicker
-                            buttonProps={
-                              Object {
-                                "isDisabled": false,
-                                "isOrderable": true,
-                                "noShadow": false,
-                                "type": "grouped",
-                              }
-                            }
-                            clickDelay={150}
-                            handleAddToCart={[Function]}
-                            productId="1985"
-                            stock={
-                              Object {
-                                "ignoreQuantity": false,
-                                "info": "Info",
-                                "maxOrderQuantity": 1000,
-                                "minOrderQuantity": 1,
-                                "orderable": true,
-                                "quantity": 4,
-                              }
-                            }
-                          >
-                            <Picker
-                              buttonComponent={[Function]}
-                              buttonProps={
-                                Object {
-                                  "addedQuantity": 0,
-                                  "className": null,
-                                  "handleAddToCart": [Function],
-                                  "hasLoading": true,
-                                  "isDisabled": false,
-                                  "isLoading": false,
-                                  "isOrderable": true,
-                                  "noShadow": false,
-                                  "type": "grouped",
+                                  "productId": "1985",
                                 }
                               }
-                              className="css-ibd9un"
-                              disabled={false}
-                              duration={300}
-                              isOpen={false}
-                              items={
-                                Array [
-                                  Object {
-                                    "label": "1",
-                                    "value": 1,
-                                  },
-                                  Object {
-                                    "label": "2",
-                                    "value": 2,
-                                  },
-                                  Object {
-                                    "label": "3",
-                                    "value": 3,
-                                  },
-                                  Object {
-                                    "label": "4",
-                                    "value": 4,
-                                  },
-                                ]
+                            />
+                            <Portal
+                              name="grouped-product.image"
+                              props={
+                                Object {
+                                  "productId": "1985",
+                                }
                               }
-                              label=""
-                              listComponent={[Function]}
-                              modalComponent={[Function]}
-                              onChange={[Function]}
-                              onClose={[Function]}
-                              onSelect={[Function]}
-                              placeholder="Pick ..."
-                              value={null}
                             >
-                              <div
-                                className="css-ibd9un"
+                              <Image
+                                alt="A discounted product with stike price and info"
+                                animating={true}
+                                backgroundColor="#f2f2f2"
+                                className=""
+                                forcePlaceholder={false}
+                                highestResolutionLoaded={[Function]}
+                                itemProp="image"
+                                onError={null}
+                                onLoad={null}
+                                ratio={null}
+                                resolutions={
+                                  Array [
+                                    Object {
+                                      "blur": 2,
+                                      "height": 50,
+                                      "width": 50,
+                                    },
+                                    Object {
+                                      "height": 440,
+                                      "width": 440,
+                                    },
+                                  ]
+                                }
+                                src="https://cdn.acme.com/kitten.jpg"
+                                transition={null}
                               >
-                                <PickerAddToCartButton
-                                  addedQuantity={0}
-                                  className={null}
-                                  disabled={false}
-                                  handleAddToCart={[Function]}
-                                  hasLoading={true}
-                                  isDisabled={false}
-                                  isLoading={false}
-                                  isOrderable={true}
-                                  label="Pick ..."
-                                  noShadow={false}
-                                  openList={[Function]}
-                                  type="grouped"
-                                  value=""
-                                >
-                                  <button
-                                    data-test-id="addToCartButton"
-                                    onClick={[Function]}
-                                  />
-                                </PickerAddToCartButton>
-                                <Portal
-                                  isOpened={true}
-                                  onClose={[Function]}
-                                  onOpen={[Function]}
-                                  onUpdate={[Function]}
+                                <div
+                                  className="css-326p2s "
                                 />
-                              </div>
-                            </Picker>
-                          </AddToCartPicker>
-                          <ProductPrice
-                            price={
-                              Object {
-                                "currency": "EUR",
-                                "discount": 50,
-                                "info": "5 EUR / kg",
-                                "msrp": 0,
-                                "unitPrice": 5,
-                                "unitPriceMin": 0,
-                                "unitPriceStriked": 10,
+                              </Image>
+                            </Portal>
+                            <Portal
+                              name="grouped-product.image.after"
+                              props={
+                                Object {
+                                  "productId": "1985",
+                                }
                               }
-                            }
-                            renderLine={false}
+                            />
+                          </li>
+                        </GridItem>
+                        <GridItem
+                          className="css-nil"
+                          component="li"
+                          grow={4}
+                          shrink={1}
+                        >
+                          <li
+                            className="css-nil css-ke56yp"
                           >
-                            <div
-                              className="css-nil"
+                            <Portal
+                              name="grouped-product.meta.before"
+                              props={
+                                Object {
+                                  "productId": "1985",
+                                }
+                              }
+                            />
+                            <Portal
+                              name="grouped-product.meta"
+                              props={
+                                Object {
+                                  "productId": "1985",
+                                }
+                              }
                             >
-                              <PriceStriked
-                                className="css-117ocmm"
-                                currency="EUR"
-                                value={10}
-                              >
-                                <div
-                                  className="css-1sagvrb css-117ocmm "
-                                >
-                                  <span
-                                    data-test-id="strikedPrice: 10"
-                                  >
-                                    <FormatPrice
-                                      className=""
-                                      currency="EUR"
-                                      fractions={true}
-                                      price={10}
-                                    >
-                                      <span
-                                        className=""
-                                      >
-                                        p
-                                      </span>
-                                    </FormatPrice>
-                                  </span>
-                                </div>
-                              </PriceStriked>
-                              <Price
-                                className="css-fisw11"
-                                currency="EUR"
-                                discounted={true}
-                                fractions={true}
-                                taxDisclaimer={false}
-                                unitPrice={5}
-                                unitPriceMin={0}
-                              >
-                                <div
-                                  className="css-izofhs css-fisw11 css-1ncyhu"
-                                  data-test-id="minPrice: 0 price: 5 currency: EUR"
-                                >
-                                  <FormatPrice
-                                    className=""
-                                    currency="EUR"
-                                    fractions={true}
-                                    price={5}
-                                  >
-                                    <span
-                                      className=""
-                                    >
-                                      p
-                                    </span>
-                                  </FormatPrice>
-                                </div>
-                              </Price>
-                            </div>
-                            <PriceInfo
-                              className="css-7hzrhp"
-                              text="5 EUR / kg"
-                            >
-                              <div
-                                className="css-1kqiarg css-7hzrhp"
-                                dangerouslySetInnerHTML={
+                              <Portal
+                                name="grouped-product.name.before"
+                                props={
                                   Object {
-                                    "__html": "5 EUR / kg",
+                                    "productId": "1985",
                                   }
                                 }
-                                data-test-id="priceInfo: 5 EUR / kg"
                               />
-                            </PriceInfo>
-                          </ProductPrice>
-                        </li>
-                      </GridItem>
-                    </ul>
-                  </Grid>
+                              <Portal
+                                name="grouped-product.name"
+                                props={
+                                  Object {
+                                    "productId": "1985",
+                                  }
+                                }
+                              >
+                                <Ellipsis
+                                  className="css-ud99sa"
+                                  ellipsis="..."
+                                  rows={3}
+                                >
+                                  <Dotdotdot
+                                    clamp={3}
+                                    className="css-ud99sa"
+                                    ellipsis="..."
+                                    tagName="div"
+                                    truncationChar="…"
+                                    useNativeClamp={true}
+                                  >
+                                    <div
+                                      className="css-ud99sa"
+                                    >
+                                      A discounted product with stike price and info
+                                    </div>
+                                  </Dotdotdot>
+                                </Ellipsis>
+                              </Portal>
+                              <Portal
+                                name="grouped-product.name.after"
+                                props={
+                                  Object {
+                                    "productId": "1985",
+                                  }
+                                }
+                              />
+                              <Portal
+                                name="grouped-product.availability.before"
+                                props={
+                                  Object {
+                                    "productId": "1985",
+                                  }
+                                }
+                              />
+                              <Portal
+                                name="grouped-product.availability"
+                                props={
+                                  Object {
+                                    "productId": "1985",
+                                  }
+                                }
+                              >
+                                <Availability
+                                  className="css-117ocmm"
+                                  showWhenAvailable={true}
+                                  state="ok"
+                                  text="Lorem Ipsum"
+                                >
+                                  <div
+                                    className="css-117ocmm css-1ixzglu"
+                                    data-test-id="availabilityText: Lorem Ipsum"
+                                  >
+                                    Lorem Ipsum
+                                  </div>
+                                </Availability>
+                              </Portal>
+                              <Portal
+                                name="grouped-product.availability.after"
+                                props={
+                                  Object {
+                                    "productId": "1985",
+                                  }
+                                }
+                              />
+                            </Portal>
+                            <Portal
+                              name="grouped-product.meta.after"
+                              props={
+                                Object {
+                                  "productId": "1985",
+                                }
+                              }
+                            />
+                          </li>
+                        </GridItem>
+                        <GridItem
+                          className="css-1onmrls"
+                          component="li"
+                          grow={0}
+                          shrink={1}
+                        >
+                          <li
+                            className="css-1onmrls"
+                          >
+                            <Portal
+                              name="grouped-product.cta.before"
+                              props={
+                                Object {
+                                  "productId": "1985",
+                                }
+                              }
+                            />
+                            <Portal
+                              name="grouped-product.cta"
+                              props={
+                                Object {
+                                  "productId": "1985",
+                                }
+                              }
+                            >
+                              <Portal
+                                name="grouped-product.add.before"
+                                props={
+                                  Object {
+                                    "productId": "1985",
+                                  }
+                                }
+                              />
+                              <Portal
+                                name="grouped-product.add-to-cart"
+                                props={
+                                  Object {
+                                    "productId": "1985",
+                                  }
+                                }
+                              >
+                                <AddToCartPicker
+                                  buttonProps={
+                                    Object {
+                                      "isDisabled": false,
+                                      "isOrderable": true,
+                                      "noShadow": false,
+                                      "type": "grouped",
+                                    }
+                                  }
+                                  clickDelay={150}
+                                  handleAddToCart={[Function]}
+                                  productId="1985"
+                                  stock={
+                                    Object {
+                                      "ignoreQuantity": false,
+                                      "info": "Info",
+                                      "maxOrderQuantity": 1000,
+                                      "minOrderQuantity": 1,
+                                      "orderable": true,
+                                      "quantity": 4,
+                                    }
+                                  }
+                                >
+                                  <Picker
+                                    buttonComponent={[Function]}
+                                    buttonProps={
+                                      Object {
+                                        "addedQuantity": 0,
+                                        "className": null,
+                                        "handleAddToCart": [Function],
+                                        "hasLoading": true,
+                                        "isDisabled": false,
+                                        "isLoading": false,
+                                        "isOrderable": true,
+                                        "noShadow": false,
+                                        "type": "grouped",
+                                      }
+                                    }
+                                    className="css-ibd9un"
+                                    disabled={false}
+                                    duration={300}
+                                    isOpen={false}
+                                    items={
+                                      Array [
+                                        Object {
+                                          "label": "1",
+                                          "value": 1,
+                                        },
+                                        Object {
+                                          "label": "2",
+                                          "value": 2,
+                                        },
+                                        Object {
+                                          "label": "3",
+                                          "value": 3,
+                                        },
+                                        Object {
+                                          "label": "4",
+                                          "value": 4,
+                                        },
+                                      ]
+                                    }
+                                    label=""
+                                    listComponent={[Function]}
+                                    modalComponent={[Function]}
+                                    onChange={[Function]}
+                                    onClose={[Function]}
+                                    onSelect={[Function]}
+                                    placeholder="Pick ..."
+                                    value={null}
+                                  >
+                                    <div
+                                      className="css-ibd9un"
+                                    >
+                                      <PickerAddToCartButton
+                                        addedQuantity={0}
+                                        className={null}
+                                        disabled={false}
+                                        handleAddToCart={[Function]}
+                                        hasLoading={true}
+                                        isDisabled={false}
+                                        isLoading={false}
+                                        isOrderable={true}
+                                        label="Pick ..."
+                                        noShadow={false}
+                                        openList={[Function]}
+                                        type="grouped"
+                                        value=""
+                                      >
+                                        <button
+                                          data-test-id="addToCartButton"
+                                          onClick={[Function]}
+                                        />
+                                      </PickerAddToCartButton>
+                                      <Portal
+                                        isOpened={true}
+                                        onClose={[Function]}
+                                        onOpen={[Function]}
+                                        onUpdate={[Function]}
+                                      />
+                                    </div>
+                                  </Picker>
+                                </AddToCartPicker>
+                              </Portal>
+                              <Portal
+                                name="grouped-product.add.after"
+                                props={
+                                  Object {
+                                    "productId": "1985",
+                                  }
+                                }
+                              />
+                              <ProductPrice
+                                price={
+                                  Object {
+                                    "currency": "EUR",
+                                    "discount": 50,
+                                    "info": "5 EUR / kg",
+                                    "msrp": 0,
+                                    "unitPrice": 5,
+                                    "unitPriceMin": 0,
+                                    "unitPriceStriked": 10,
+                                  }
+                                }
+                                renderLine={false}
+                              >
+                                <Portal
+                                  name="grouped-product.price.before"
+                                  props={
+                                    Object {
+                                      "price": Object {
+                                        "currency": "EUR",
+                                        "discount": 50,
+                                        "info": "5 EUR / kg",
+                                        "msrp": 0,
+                                        "unitPrice": 5,
+                                        "unitPriceMin": 0,
+                                        "unitPriceStriked": 10,
+                                      },
+                                      "renderLine": false,
+                                    }
+                                  }
+                                />
+                                <Portal
+                                  name="grouped-product.price"
+                                  props={
+                                    Object {
+                                      "price": Object {
+                                        "currency": "EUR",
+                                        "discount": 50,
+                                        "info": "5 EUR / kg",
+                                        "msrp": 0,
+                                        "unitPrice": 5,
+                                        "unitPriceMin": 0,
+                                        "unitPriceStriked": 10,
+                                      },
+                                      "renderLine": false,
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="css-nil"
+                                  >
+                                    <PriceStriked
+                                      className="css-117ocmm"
+                                      currency="EUR"
+                                      value={10}
+                                    >
+                                      <div
+                                        className="css-1sagvrb css-117ocmm "
+                                      >
+                                        <span
+                                          data-test-id="strikedPrice: 10"
+                                        >
+                                          <FormatPrice
+                                            className=""
+                                            currency="EUR"
+                                            fractions={true}
+                                            price={10}
+                                          >
+                                            <span
+                                              className=""
+                                            >
+                                              p
+                                            </span>
+                                          </FormatPrice>
+                                        </span>
+                                      </div>
+                                    </PriceStriked>
+                                    <Price
+                                      className="css-fisw11"
+                                      currency="EUR"
+                                      discounted={true}
+                                      fractions={true}
+                                      taxDisclaimer={false}
+                                      unitPrice={5}
+                                      unitPriceMin={0}
+                                    >
+                                      <div
+                                        className="css-izofhs css-fisw11 css-1ncyhu"
+                                        data-test-id="minPrice: 0 price: 5 currency: EUR"
+                                      >
+                                        <FormatPrice
+                                          className=""
+                                          currency="EUR"
+                                          fractions={true}
+                                          price={5}
+                                        >
+                                          <span
+                                            className=""
+                                          >
+                                            p
+                                          </span>
+                                        </FormatPrice>
+                                      </div>
+                                    </Price>
+                                  </div>
+                                  <PriceInfo
+                                    className="css-7hzrhp"
+                                    text="5 EUR / kg"
+                                  >
+                                    <div
+                                      className="css-1kqiarg css-7hzrhp"
+                                      dangerouslySetInnerHTML={
+                                        Object {
+                                          "__html": "5 EUR / kg",
+                                        }
+                                      }
+                                      data-test-id="priceInfo: 5 EUR / kg"
+                                    />
+                                  </PriceInfo>
+                                </Portal>
+                                <Portal
+                                  name="grouped-product.price.after"
+                                  props={
+                                    Object {
+                                      "price": Object {
+                                        "currency": "EUR",
+                                        "discount": 50,
+                                        "info": "5 EUR / kg",
+                                        "msrp": 0,
+                                        "unitPrice": 5,
+                                        "unitPriceMin": 0,
+                                        "unitPriceStriked": 10,
+                                      },
+                                      "renderLine": false,
+                                    }
+                                  }
+                                />
+                              </ProductPrice>
+                            </Portal>
+                            <Portal
+                              name="grouped-product.cta.after"
+                              props={
+                                Object {
+                                  "productId": "1985",
+                                }
+                              }
+                            />
+                          </li>
+                        </GridItem>
+                      </ul>
+                    </Grid>
+                  </Portal>
+                  <Portal
+                    name="grouped-product.after"
+                    props={
+                      Object {
+                        "productId": "1985",
+                      }
+                    }
+                  />
                 </Product>
               </Connect(Product)>
             </li>
@@ -1412,243 +2093,470 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                   }
                   renderFlatButtons={false}
                 >
-                  <Grid
-                    className=""
-                    component="ul"
-                    wrap={false}
+                  <Portal
+                    name="grouped-product.before"
+                    props={
+                      Object {
+                        "productId": "foo",
+                      }
+                    }
+                  />
+                  <Portal
+                    name="grouped-product"
+                    props={
+                      Object {
+                        "productId": "foo",
+                      }
+                    }
                   >
-                    <ul
-                      className=" css-h7r55a"
+                    <Grid
+                      className=""
+                      component="ul"
+                      wrap={false}
                     >
-                      <GridItem
-                        className="css-sg184b"
-                        component="li"
-                        grow={0}
-                        shrink={0}
+                      <ul
+                        className=" css-h7r55a"
                       >
-                        <li
-                          className="css-sg184b css-1l9a57c"
+                        <GridItem
+                          className="css-sg184b"
+                          component="li"
+                          grow={0}
+                          shrink={0}
                         >
-                          <Image
-                            alt="A not orderable product"
-                            animating={true}
-                            backgroundColor="#f2f2f2"
-                            className=""
-                            forcePlaceholder={false}
-                            highestResolutionLoaded={[Function]}
-                            itemProp="image"
-                            onError={null}
-                            onLoad={null}
-                            ratio={null}
-                            resolutions={
-                              Array [
+                          <li
+                            className="css-sg184b css-1l9a57c"
+                          >
+                            <Portal
+                              name="grouped-product.image.before"
+                              props={
                                 Object {
-                                  "blur": 2,
-                                  "height": 50,
-                                  "width": 50,
-                                },
-                                Object {
-                                  "height": 440,
-                                  "width": 440,
-                                },
-                              ]
-                            }
-                            src="https://cdn.acme.com/kitten.jpg"
-                            transition={null}
-                          >
-                            <div
-                              className="css-326p2s "
-                            />
-                          </Image>
-                        </li>
-                      </GridItem>
-                      <GridItem
-                        className="css-nil"
-                        component="li"
-                        grow={4}
-                        shrink={1}
-                      >
-                        <li
-                          className="css-nil css-ke56yp"
-                        >
-                          <Ellipsis
-                            className="css-ud99sa"
-                            ellipsis="..."
-                            rows={3}
-                          >
-                            <Dotdotdot
-                              clamp={3}
-                              className="css-ud99sa"
-                              ellipsis="..."
-                              tagName="div"
-                              truncationChar="…"
-                              useNativeClamp={true}
-                            >
-                              <div
-                                className="css-ud99sa"
-                              >
-                                A not orderable product
-                              </div>
-                            </Dotdotdot>
-                          </Ellipsis>
-                          <Availability
-                            className="css-117ocmm"
-                            showWhenAvailable={true}
-                            state="ok"
-                            text="Lorem Ipsum"
-                          >
-                            <div
-                              className="css-117ocmm css-1ixzglu"
-                              data-test-id="availabilityText: Lorem Ipsum"
-                            >
-                              Lorem Ipsum
-                            </div>
-                          </Availability>
-                        </li>
-                      </GridItem>
-                      <GridItem
-                        className="css-1onmrls"
-                        component="li"
-                        grow={0}
-                        shrink={1}
-                      >
-                        <li
-                          className="css-1onmrls"
-                        >
-                          <AddToCartPicker
-                            buttonProps={
-                              Object {
-                                "isDisabled": true,
-                                "isOrderable": false,
-                                "noShadow": false,
-                                "type": "grouped",
-                              }
-                            }
-                            clickDelay={150}
-                            handleAddToCart={[Function]}
-                            productId="foo"
-                            stock={
-                              Object {
-                                "ignoreQuantity": false,
-                                "info": "Info",
-                                "maxOrderQuantity": 1000,
-                                "minOrderQuantity": 1,
-                                "orderable": false,
-                                "quantity": 0,
-                              }
-                            }
-                          >
-                            <Picker
-                              buttonComponent={[Function]}
-                              buttonProps={
-                                Object {
-                                  "addedQuantity": 0,
-                                  "className": null,
-                                  "handleAddToCart": [Function],
-                                  "hasLoading": true,
-                                  "isDisabled": true,
-                                  "isLoading": false,
-                                  "isOrderable": false,
-                                  "noShadow": false,
-                                  "type": "grouped",
+                                  "productId": "foo",
                                 }
                               }
-                              className="css-ibd9un"
-                              disabled={false}
-                              duration={300}
-                              isOpen={false}
-                              items={Array []}
-                              label=""
-                              listComponent={[Function]}
-                              modalComponent={[Function]}
-                              onChange={[Function]}
-                              onClose={[Function]}
-                              onSelect={[Function]}
-                              placeholder="Pick ..."
-                              value={null}
-                            >
-                              <div
-                                className="css-ibd9un"
-                              >
-                                <PickerAddToCartButton
-                                  addedQuantity={0}
-                                  className={null}
-                                  disabled={false}
-                                  handleAddToCart={[Function]}
-                                  hasLoading={true}
-                                  isDisabled={true}
-                                  isLoading={false}
-                                  isOrderable={false}
-                                  label="Pick ..."
-                                  noShadow={false}
-                                  openList={[Function]}
-                                  type="grouped"
-                                  value=""
-                                >
-                                  <button
-                                    data-test-id="addToCartButton"
-                                    onClick={[Function]}
-                                  />
-                                </PickerAddToCartButton>
-                                <Portal
-                                  isOpened={true}
-                                  onClose={[Function]}
-                                  onOpen={[Function]}
-                                  onUpdate={[Function]}
-                                />
-                              </div>
-                            </Picker>
-                          </AddToCartPicker>
-                          <ProductPrice
-                            price={
-                              Object {
-                                "currency": "EUR",
-                                "discount": 0,
-                                "info": "",
-                                "msrp": 0,
-                                "unitPrice": 5,
-                                "unitPriceMin": 0,
-                                "unitPriceStriked": 0,
+                            />
+                            <Portal
+                              name="grouped-product.image"
+                              props={
+                                Object {
+                                  "productId": "foo",
+                                }
                               }
-                            }
-                            renderLine={false}
-                          >
-                            <div
-                              className="css-nil"
                             >
-                              <Price
-                                className="css-fisw11"
-                                currency="EUR"
-                                discounted={false}
-                                fractions={true}
-                                taxDisclaimer={false}
-                                unitPrice={5}
-                                unitPriceMin={0}
+                              <Image
+                                alt="A not orderable product"
+                                animating={true}
+                                backgroundColor="#f2f2f2"
+                                className=""
+                                forcePlaceholder={false}
+                                highestResolutionLoaded={[Function]}
+                                itemProp="image"
+                                onError={null}
+                                onLoad={null}
+                                ratio={null}
+                                resolutions={
+                                  Array [
+                                    Object {
+                                      "blur": 2,
+                                      "height": 50,
+                                      "width": 50,
+                                    },
+                                    Object {
+                                      "height": 440,
+                                      "width": 440,
+                                    },
+                                  ]
+                                }
+                                src="https://cdn.acme.com/kitten.jpg"
+                                transition={null}
                               >
                                 <div
-                                  className="css-izofhs css-fisw11"
-                                  data-test-id="minPrice: 0 price: 5 currency: EUR"
+                                  className="css-326p2s "
+                                />
+                              </Image>
+                            </Portal>
+                            <Portal
+                              name="grouped-product.image.after"
+                              props={
+                                Object {
+                                  "productId": "foo",
+                                }
+                              }
+                            />
+                          </li>
+                        </GridItem>
+                        <GridItem
+                          className="css-nil"
+                          component="li"
+                          grow={4}
+                          shrink={1}
+                        >
+                          <li
+                            className="css-nil css-ke56yp"
+                          >
+                            <Portal
+                              name="grouped-product.meta.before"
+                              props={
+                                Object {
+                                  "productId": "foo",
+                                }
+                              }
+                            />
+                            <Portal
+                              name="grouped-product.meta"
+                              props={
+                                Object {
+                                  "productId": "foo",
+                                }
+                              }
+                            >
+                              <Portal
+                                name="grouped-product.name.before"
+                                props={
+                                  Object {
+                                    "productId": "foo",
+                                  }
+                                }
+                              />
+                              <Portal
+                                name="grouped-product.name"
+                                props={
+                                  Object {
+                                    "productId": "foo",
+                                  }
+                                }
+                              >
+                                <Ellipsis
+                                  className="css-ud99sa"
+                                  ellipsis="..."
+                                  rows={3}
                                 >
-                                  <FormatPrice
-                                    className=""
-                                    currency="EUR"
-                                    fractions={true}
-                                    price={5}
+                                  <Dotdotdot
+                                    clamp={3}
+                                    className="css-ud99sa"
+                                    ellipsis="..."
+                                    tagName="div"
+                                    truncationChar="…"
+                                    useNativeClamp={true}
                                   >
-                                    <span
-                                      className=""
+                                    <div
+                                      className="css-ud99sa"
                                     >
-                                      p
-                                    </span>
-                                  </FormatPrice>
-                                </div>
-                              </Price>
-                            </div>
-                          </ProductPrice>
-                        </li>
-                      </GridItem>
-                    </ul>
-                  </Grid>
+                                      A not orderable product
+                                    </div>
+                                  </Dotdotdot>
+                                </Ellipsis>
+                              </Portal>
+                              <Portal
+                                name="grouped-product.name.after"
+                                props={
+                                  Object {
+                                    "productId": "foo",
+                                  }
+                                }
+                              />
+                              <Portal
+                                name="grouped-product.availability.before"
+                                props={
+                                  Object {
+                                    "productId": "foo",
+                                  }
+                                }
+                              />
+                              <Portal
+                                name="grouped-product.availability"
+                                props={
+                                  Object {
+                                    "productId": "foo",
+                                  }
+                                }
+                              >
+                                <Availability
+                                  className="css-117ocmm"
+                                  showWhenAvailable={true}
+                                  state="ok"
+                                  text="Lorem Ipsum"
+                                >
+                                  <div
+                                    className="css-117ocmm css-1ixzglu"
+                                    data-test-id="availabilityText: Lorem Ipsum"
+                                  >
+                                    Lorem Ipsum
+                                  </div>
+                                </Availability>
+                              </Portal>
+                              <Portal
+                                name="grouped-product.availability.after"
+                                props={
+                                  Object {
+                                    "productId": "foo",
+                                  }
+                                }
+                              />
+                            </Portal>
+                            <Portal
+                              name="grouped-product.meta.after"
+                              props={
+                                Object {
+                                  "productId": "foo",
+                                }
+                              }
+                            />
+                          </li>
+                        </GridItem>
+                        <GridItem
+                          className="css-1onmrls"
+                          component="li"
+                          grow={0}
+                          shrink={1}
+                        >
+                          <li
+                            className="css-1onmrls"
+                          >
+                            <Portal
+                              name="grouped-product.cta.before"
+                              props={
+                                Object {
+                                  "productId": "foo",
+                                }
+                              }
+                            />
+                            <Portal
+                              name="grouped-product.cta"
+                              props={
+                                Object {
+                                  "productId": "foo",
+                                }
+                              }
+                            >
+                              <Portal
+                                name="grouped-product.add.before"
+                                props={
+                                  Object {
+                                    "productId": "foo",
+                                  }
+                                }
+                              />
+                              <Portal
+                                name="grouped-product.add-to-cart"
+                                props={
+                                  Object {
+                                    "productId": "foo",
+                                  }
+                                }
+                              >
+                                <AddToCartPicker
+                                  buttonProps={
+                                    Object {
+                                      "isDisabled": true,
+                                      "isOrderable": false,
+                                      "noShadow": false,
+                                      "type": "grouped",
+                                    }
+                                  }
+                                  clickDelay={150}
+                                  handleAddToCart={[Function]}
+                                  productId="foo"
+                                  stock={
+                                    Object {
+                                      "ignoreQuantity": false,
+                                      "info": "Info",
+                                      "maxOrderQuantity": 1000,
+                                      "minOrderQuantity": 1,
+                                      "orderable": false,
+                                      "quantity": 0,
+                                    }
+                                  }
+                                >
+                                  <Picker
+                                    buttonComponent={[Function]}
+                                    buttonProps={
+                                      Object {
+                                        "addedQuantity": 0,
+                                        "className": null,
+                                        "handleAddToCart": [Function],
+                                        "hasLoading": true,
+                                        "isDisabled": true,
+                                        "isLoading": false,
+                                        "isOrderable": false,
+                                        "noShadow": false,
+                                        "type": "grouped",
+                                      }
+                                    }
+                                    className="css-ibd9un"
+                                    disabled={false}
+                                    duration={300}
+                                    isOpen={false}
+                                    items={Array []}
+                                    label=""
+                                    listComponent={[Function]}
+                                    modalComponent={[Function]}
+                                    onChange={[Function]}
+                                    onClose={[Function]}
+                                    onSelect={[Function]}
+                                    placeholder="Pick ..."
+                                    value={null}
+                                  >
+                                    <div
+                                      className="css-ibd9un"
+                                    >
+                                      <PickerAddToCartButton
+                                        addedQuantity={0}
+                                        className={null}
+                                        disabled={false}
+                                        handleAddToCart={[Function]}
+                                        hasLoading={true}
+                                        isDisabled={true}
+                                        isLoading={false}
+                                        isOrderable={false}
+                                        label="Pick ..."
+                                        noShadow={false}
+                                        openList={[Function]}
+                                        type="grouped"
+                                        value=""
+                                      >
+                                        <button
+                                          data-test-id="addToCartButton"
+                                          onClick={[Function]}
+                                        />
+                                      </PickerAddToCartButton>
+                                      <Portal
+                                        isOpened={true}
+                                        onClose={[Function]}
+                                        onOpen={[Function]}
+                                        onUpdate={[Function]}
+                                      />
+                                    </div>
+                                  </Picker>
+                                </AddToCartPicker>
+                              </Portal>
+                              <Portal
+                                name="grouped-product.add.after"
+                                props={
+                                  Object {
+                                    "productId": "foo",
+                                  }
+                                }
+                              />
+                              <ProductPrice
+                                price={
+                                  Object {
+                                    "currency": "EUR",
+                                    "discount": 0,
+                                    "info": "",
+                                    "msrp": 0,
+                                    "unitPrice": 5,
+                                    "unitPriceMin": 0,
+                                    "unitPriceStriked": 0,
+                                  }
+                                }
+                                renderLine={false}
+                              >
+                                <Portal
+                                  name="grouped-product.price.before"
+                                  props={
+                                    Object {
+                                      "price": Object {
+                                        "currency": "EUR",
+                                        "discount": 0,
+                                        "info": "",
+                                        "msrp": 0,
+                                        "unitPrice": 5,
+                                        "unitPriceMin": 0,
+                                        "unitPriceStriked": 0,
+                                      },
+                                      "renderLine": false,
+                                    }
+                                  }
+                                />
+                                <Portal
+                                  name="grouped-product.price"
+                                  props={
+                                    Object {
+                                      "price": Object {
+                                        "currency": "EUR",
+                                        "discount": 0,
+                                        "info": "",
+                                        "msrp": 0,
+                                        "unitPrice": 5,
+                                        "unitPriceMin": 0,
+                                        "unitPriceStriked": 0,
+                                      },
+                                      "renderLine": false,
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="css-nil"
+                                  >
+                                    <Price
+                                      className="css-fisw11"
+                                      currency="EUR"
+                                      discounted={false}
+                                      fractions={true}
+                                      taxDisclaimer={false}
+                                      unitPrice={5}
+                                      unitPriceMin={0}
+                                    >
+                                      <div
+                                        className="css-izofhs css-fisw11"
+                                        data-test-id="minPrice: 0 price: 5 currency: EUR"
+                                      >
+                                        <FormatPrice
+                                          className=""
+                                          currency="EUR"
+                                          fractions={true}
+                                          price={5}
+                                        >
+                                          <span
+                                            className=""
+                                          >
+                                            p
+                                          </span>
+                                        </FormatPrice>
+                                      </div>
+                                    </Price>
+                                  </div>
+                                </Portal>
+                                <Portal
+                                  name="grouped-product.price.after"
+                                  props={
+                                    Object {
+                                      "price": Object {
+                                        "currency": "EUR",
+                                        "discount": 0,
+                                        "info": "",
+                                        "msrp": 0,
+                                        "unitPrice": 5,
+                                        "unitPriceMin": 0,
+                                        "unitPriceStriked": 0,
+                                      },
+                                      "renderLine": false,
+                                    }
+                                  }
+                                />
+                              </ProductPrice>
+                            </Portal>
+                            <Portal
+                              name="grouped-product.cta.after"
+                              props={
+                                Object {
+                                  "productId": "foo",
+                                }
+                              }
+                            />
+                          </li>
+                        </GridItem>
+                      </ul>
+                    </Grid>
+                  </Portal>
+                  <Portal
+                    name="grouped-product.after"
+                    props={
+                      Object {
+                        "productId": "foo",
+                      }
+                    }
+                  />
                 </Product>
               </Connect(Product)>
             </li>
@@ -1741,446 +2649,673 @@ exports[`<GroupedProducts /> should render when grouped products are available 1
                   }
                   renderFlatButtons={false}
                 >
-                  <Grid
-                    className=""
-                    component="ul"
-                    wrap={false}
+                  <Portal
+                    name="grouped-product.before"
+                    props={
+                      Object {
+                        "productId": "1234",
+                      }
+                    }
+                  />
+                  <Portal
+                    name="grouped-product"
+                    props={
+                      Object {
+                        "productId": "1234",
+                      }
+                    }
                   >
-                    <ul
-                      className=" css-h7r55a"
+                    <Grid
+                      className=""
+                      component="ul"
+                      wrap={false}
                     >
-                      <GridItem
-                        className="css-sg184b"
-                        component="li"
-                        grow={0}
-                        shrink={0}
+                      <ul
+                        className=" css-h7r55a"
                       >
-                        <li
-                          className="css-sg184b css-1l9a57c"
+                        <GridItem
+                          className="css-sg184b"
+                          component="li"
+                          grow={0}
+                          shrink={0}
                         >
-                          <Image
-                            alt="A product with ignored quantity"
-                            animating={true}
-                            backgroundColor="#f2f2f2"
-                            className=""
-                            forcePlaceholder={false}
-                            highestResolutionLoaded={[Function]}
-                            itemProp="image"
-                            onError={null}
-                            onLoad={null}
-                            ratio={null}
-                            resolutions={
-                              Array [
+                          <li
+                            className="css-sg184b css-1l9a57c"
+                          >
+                            <Portal
+                              name="grouped-product.image.before"
+                              props={
                                 Object {
-                                  "blur": 2,
-                                  "height": 50,
-                                  "width": 50,
-                                },
-                                Object {
-                                  "height": 440,
-                                  "width": 440,
-                                },
-                              ]
-                            }
-                            src="https://cdn.acme.com/kitten.jpg"
-                            transition={null}
-                          >
-                            <div
-                              className="css-326p2s "
-                            />
-                          </Image>
-                        </li>
-                      </GridItem>
-                      <GridItem
-                        className="css-nil"
-                        component="li"
-                        grow={4}
-                        shrink={1}
-                      >
-                        <li
-                          className="css-nil css-ke56yp"
-                        >
-                          <Ellipsis
-                            className="css-ud99sa"
-                            ellipsis="..."
-                            rows={3}
-                          >
-                            <Dotdotdot
-                              clamp={3}
-                              className="css-ud99sa"
-                              ellipsis="..."
-                              tagName="div"
-                              truncationChar="…"
-                              useNativeClamp={true}
-                            >
-                              <div
-                                className="css-ud99sa"
-                              >
-                                A product with ignored quantity
-                              </div>
-                            </Dotdotdot>
-                          </Ellipsis>
-                          <Availability
-                            className="css-117ocmm"
-                            showWhenAvailable={true}
-                            state="ok"
-                            text="Lorem Ipsum"
-                          >
-                            <div
-                              className="css-117ocmm css-1ixzglu"
-                              data-test-id="availabilityText: Lorem Ipsum"
-                            >
-                              Lorem Ipsum
-                            </div>
-                          </Availability>
-                        </li>
-                      </GridItem>
-                      <GridItem
-                        className="css-1onmrls"
-                        component="li"
-                        grow={0}
-                        shrink={1}
-                      >
-                        <li
-                          className="css-1onmrls"
-                        >
-                          <AddToCartPicker
-                            buttonProps={
-                              Object {
-                                "isDisabled": false,
-                                "isOrderable": true,
-                                "noShadow": false,
-                                "type": "grouped",
-                              }
-                            }
-                            clickDelay={150}
-                            handleAddToCart={[Function]}
-                            productId="1234"
-                            stock={
-                              Object {
-                                "ignoreQuantity": true,
-                                "info": "Info",
-                                "maxOrderQuantity": 1000,
-                                "minOrderQuantity": 1,
-                                "orderable": true,
-                                "quantity": 30,
-                              }
-                            }
-                          >
-                            <Picker
-                              buttonComponent={[Function]}
-                              buttonProps={
-                                Object {
-                                  "addedQuantity": 0,
-                                  "className": null,
-                                  "handleAddToCart": [Function],
-                                  "hasLoading": true,
-                                  "isDisabled": false,
-                                  "isLoading": false,
-                                  "isOrderable": true,
-                                  "noShadow": false,
-                                  "type": "grouped",
+                                  "productId": "1234",
                                 }
                               }
-                              className="css-ibd9un"
-                              disabled={false}
-                              duration={300}
-                              isOpen={false}
-                              items={
-                                Array [
-                                  Object {
-                                    "label": "1",
-                                    "value": 1,
-                                  },
-                                  Object {
-                                    "label": "2",
-                                    "value": 2,
-                                  },
-                                  Object {
-                                    "label": "3",
-                                    "value": 3,
-                                  },
-                                  Object {
-                                    "label": "4",
-                                    "value": 4,
-                                  },
-                                  Object {
-                                    "label": "5",
-                                    "value": 5,
-                                  },
-                                  Object {
-                                    "label": "6",
-                                    "value": 6,
-                                  },
-                                  Object {
-                                    "label": "7",
-                                    "value": 7,
-                                  },
-                                  Object {
-                                    "label": "8",
-                                    "value": 8,
-                                  },
-                                  Object {
-                                    "label": "9",
-                                    "value": 9,
-                                  },
-                                  Object {
-                                    "label": "10",
-                                    "value": 10,
-                                  },
-                                  Object {
-                                    "label": "11",
-                                    "value": 11,
-                                  },
-                                  Object {
-                                    "label": "12",
-                                    "value": 12,
-                                  },
-                                  Object {
-                                    "label": "13",
-                                    "value": 13,
-                                  },
-                                  Object {
-                                    "label": "14",
-                                    "value": 14,
-                                  },
-                                  Object {
-                                    "label": "15",
-                                    "value": 15,
-                                  },
-                                  Object {
-                                    "label": "16",
-                                    "value": 16,
-                                  },
-                                  Object {
-                                    "label": "17",
-                                    "value": 17,
-                                  },
-                                  Object {
-                                    "label": "18",
-                                    "value": 18,
-                                  },
-                                  Object {
-                                    "label": "19",
-                                    "value": 19,
-                                  },
-                                  Object {
-                                    "label": "20",
-                                    "value": 20,
-                                  },
-                                  Object {
-                                    "label": "21",
-                                    "value": 21,
-                                  },
-                                  Object {
-                                    "label": "22",
-                                    "value": 22,
-                                  },
-                                  Object {
-                                    "label": "23",
-                                    "value": 23,
-                                  },
-                                  Object {
-                                    "label": "24",
-                                    "value": 24,
-                                  },
-                                  Object {
-                                    "label": "25",
-                                    "value": 25,
-                                  },
-                                  Object {
-                                    "label": "26",
-                                    "value": 26,
-                                  },
-                                  Object {
-                                    "label": "27",
-                                    "value": 27,
-                                  },
-                                  Object {
-                                    "label": "28",
-                                    "value": 28,
-                                  },
-                                  Object {
-                                    "label": "29",
-                                    "value": 29,
-                                  },
-                                  Object {
-                                    "label": "30",
-                                    "value": 30,
-                                  },
-                                  Object {
-                                    "label": "31",
-                                    "value": 31,
-                                  },
-                                  Object {
-                                    "label": "32",
-                                    "value": 32,
-                                  },
-                                  Object {
-                                    "label": "33",
-                                    "value": 33,
-                                  },
-                                  Object {
-                                    "label": "34",
-                                    "value": 34,
-                                  },
-                                  Object {
-                                    "label": "35",
-                                    "value": 35,
-                                  },
-                                  Object {
-                                    "label": "36",
-                                    "value": 36,
-                                  },
-                                  Object {
-                                    "label": "37",
-                                    "value": 37,
-                                  },
-                                  Object {
-                                    "label": "38",
-                                    "value": 38,
-                                  },
-                                  Object {
-                                    "label": "39",
-                                    "value": 39,
-                                  },
-                                  Object {
-                                    "label": "40",
-                                    "value": 40,
-                                  },
-                                  Object {
-                                    "label": "41",
-                                    "value": 41,
-                                  },
-                                  Object {
-                                    "label": "42",
-                                    "value": 42,
-                                  },
-                                  Object {
-                                    "label": "43",
-                                    "value": 43,
-                                  },
-                                  Object {
-                                    "label": "44",
-                                    "value": 44,
-                                  },
-                                  Object {
-                                    "label": "45",
-                                    "value": 45,
-                                  },
-                                  Object {
-                                    "label": "46",
-                                    "value": 46,
-                                  },
-                                  Object {
-                                    "label": "47",
-                                    "value": 47,
-                                  },
-                                  Object {
-                                    "label": "48",
-                                    "value": 48,
-                                  },
-                                  Object {
-                                    "label": "49",
-                                    "value": 49,
-                                  },
-                                  Object {
-                                    "label": "50",
-                                    "value": 50,
-                                  },
-                                ]
+                            />
+                            <Portal
+                              name="grouped-product.image"
+                              props={
+                                Object {
+                                  "productId": "1234",
+                                }
                               }
-                              label=""
-                              listComponent={[Function]}
-                              modalComponent={[Function]}
-                              onChange={[Function]}
-                              onClose={[Function]}
-                              onSelect={[Function]}
-                              placeholder="Pick ..."
-                              value={null}
                             >
-                              <div
-                                className="css-ibd9un"
-                              >
-                                <PickerAddToCartButton
-                                  addedQuantity={0}
-                                  className={null}
-                                  disabled={false}
-                                  handleAddToCart={[Function]}
-                                  hasLoading={true}
-                                  isDisabled={false}
-                                  isLoading={false}
-                                  isOrderable={true}
-                                  label="Pick ..."
-                                  noShadow={false}
-                                  openList={[Function]}
-                                  type="grouped"
-                                  value=""
-                                >
-                                  <button
-                                    data-test-id="addToCartButton"
-                                    onClick={[Function]}
-                                  />
-                                </PickerAddToCartButton>
-                                <Portal
-                                  isOpened={true}
-                                  onClose={[Function]}
-                                  onOpen={[Function]}
-                                  onUpdate={[Function]}
-                                />
-                              </div>
-                            </Picker>
-                          </AddToCartPicker>
-                          <ProductPrice
-                            price={
-                              Object {
-                                "currency": "EUR",
-                                "discount": 0,
-                                "info": "",
-                                "msrp": 0,
-                                "unitPrice": 5,
-                                "unitPriceMin": 0,
-                                "unitPriceStriked": 0,
-                              }
-                            }
-                            renderLine={false}
-                          >
-                            <div
-                              className="css-nil"
-                            >
-                              <Price
-                                className="css-fisw11"
-                                currency="EUR"
-                                discounted={false}
-                                fractions={true}
-                                taxDisclaimer={false}
-                                unitPrice={5}
-                                unitPriceMin={0}
+                              <Image
+                                alt="A product with ignored quantity"
+                                animating={true}
+                                backgroundColor="#f2f2f2"
+                                className=""
+                                forcePlaceholder={false}
+                                highestResolutionLoaded={[Function]}
+                                itemProp="image"
+                                onError={null}
+                                onLoad={null}
+                                ratio={null}
+                                resolutions={
+                                  Array [
+                                    Object {
+                                      "blur": 2,
+                                      "height": 50,
+                                      "width": 50,
+                                    },
+                                    Object {
+                                      "height": 440,
+                                      "width": 440,
+                                    },
+                                  ]
+                                }
+                                src="https://cdn.acme.com/kitten.jpg"
+                                transition={null}
                               >
                                 <div
-                                  className="css-izofhs css-fisw11"
-                                  data-test-id="minPrice: 0 price: 5 currency: EUR"
+                                  className="css-326p2s "
+                                />
+                              </Image>
+                            </Portal>
+                            <Portal
+                              name="grouped-product.image.after"
+                              props={
+                                Object {
+                                  "productId": "1234",
+                                }
+                              }
+                            />
+                          </li>
+                        </GridItem>
+                        <GridItem
+                          className="css-nil"
+                          component="li"
+                          grow={4}
+                          shrink={1}
+                        >
+                          <li
+                            className="css-nil css-ke56yp"
+                          >
+                            <Portal
+                              name="grouped-product.meta.before"
+                              props={
+                                Object {
+                                  "productId": "1234",
+                                }
+                              }
+                            />
+                            <Portal
+                              name="grouped-product.meta"
+                              props={
+                                Object {
+                                  "productId": "1234",
+                                }
+                              }
+                            >
+                              <Portal
+                                name="grouped-product.name.before"
+                                props={
+                                  Object {
+                                    "productId": "1234",
+                                  }
+                                }
+                              />
+                              <Portal
+                                name="grouped-product.name"
+                                props={
+                                  Object {
+                                    "productId": "1234",
+                                  }
+                                }
+                              >
+                                <Ellipsis
+                                  className="css-ud99sa"
+                                  ellipsis="..."
+                                  rows={3}
                                 >
-                                  <FormatPrice
-                                    className=""
-                                    currency="EUR"
-                                    fractions={true}
-                                    price={5}
+                                  <Dotdotdot
+                                    clamp={3}
+                                    className="css-ud99sa"
+                                    ellipsis="..."
+                                    tagName="div"
+                                    truncationChar="…"
+                                    useNativeClamp={true}
                                   >
-                                    <span
-                                      className=""
+                                    <div
+                                      className="css-ud99sa"
                                     >
-                                      p
-                                    </span>
-                                  </FormatPrice>
-                                </div>
-                              </Price>
-                            </div>
-                          </ProductPrice>
-                        </li>
-                      </GridItem>
-                    </ul>
-                  </Grid>
+                                      A product with ignored quantity
+                                    </div>
+                                  </Dotdotdot>
+                                </Ellipsis>
+                              </Portal>
+                              <Portal
+                                name="grouped-product.name.after"
+                                props={
+                                  Object {
+                                    "productId": "1234",
+                                  }
+                                }
+                              />
+                              <Portal
+                                name="grouped-product.availability.before"
+                                props={
+                                  Object {
+                                    "productId": "1234",
+                                  }
+                                }
+                              />
+                              <Portal
+                                name="grouped-product.availability"
+                                props={
+                                  Object {
+                                    "productId": "1234",
+                                  }
+                                }
+                              >
+                                <Availability
+                                  className="css-117ocmm"
+                                  showWhenAvailable={true}
+                                  state="ok"
+                                  text="Lorem Ipsum"
+                                >
+                                  <div
+                                    className="css-117ocmm css-1ixzglu"
+                                    data-test-id="availabilityText: Lorem Ipsum"
+                                  >
+                                    Lorem Ipsum
+                                  </div>
+                                </Availability>
+                              </Portal>
+                              <Portal
+                                name="grouped-product.availability.after"
+                                props={
+                                  Object {
+                                    "productId": "1234",
+                                  }
+                                }
+                              />
+                            </Portal>
+                            <Portal
+                              name="grouped-product.meta.after"
+                              props={
+                                Object {
+                                  "productId": "1234",
+                                }
+                              }
+                            />
+                          </li>
+                        </GridItem>
+                        <GridItem
+                          className="css-1onmrls"
+                          component="li"
+                          grow={0}
+                          shrink={1}
+                        >
+                          <li
+                            className="css-1onmrls"
+                          >
+                            <Portal
+                              name="grouped-product.cta.before"
+                              props={
+                                Object {
+                                  "productId": "1234",
+                                }
+                              }
+                            />
+                            <Portal
+                              name="grouped-product.cta"
+                              props={
+                                Object {
+                                  "productId": "1234",
+                                }
+                              }
+                            >
+                              <Portal
+                                name="grouped-product.add.before"
+                                props={
+                                  Object {
+                                    "productId": "1234",
+                                  }
+                                }
+                              />
+                              <Portal
+                                name="grouped-product.add-to-cart"
+                                props={
+                                  Object {
+                                    "productId": "1234",
+                                  }
+                                }
+                              >
+                                <AddToCartPicker
+                                  buttonProps={
+                                    Object {
+                                      "isDisabled": false,
+                                      "isOrderable": true,
+                                      "noShadow": false,
+                                      "type": "grouped",
+                                    }
+                                  }
+                                  clickDelay={150}
+                                  handleAddToCart={[Function]}
+                                  productId="1234"
+                                  stock={
+                                    Object {
+                                      "ignoreQuantity": true,
+                                      "info": "Info",
+                                      "maxOrderQuantity": 1000,
+                                      "minOrderQuantity": 1,
+                                      "orderable": true,
+                                      "quantity": 30,
+                                    }
+                                  }
+                                >
+                                  <Picker
+                                    buttonComponent={[Function]}
+                                    buttonProps={
+                                      Object {
+                                        "addedQuantity": 0,
+                                        "className": null,
+                                        "handleAddToCart": [Function],
+                                        "hasLoading": true,
+                                        "isDisabled": false,
+                                        "isLoading": false,
+                                        "isOrderable": true,
+                                        "noShadow": false,
+                                        "type": "grouped",
+                                      }
+                                    }
+                                    className="css-ibd9un"
+                                    disabled={false}
+                                    duration={300}
+                                    isOpen={false}
+                                    items={
+                                      Array [
+                                        Object {
+                                          "label": "1",
+                                          "value": 1,
+                                        },
+                                        Object {
+                                          "label": "2",
+                                          "value": 2,
+                                        },
+                                        Object {
+                                          "label": "3",
+                                          "value": 3,
+                                        },
+                                        Object {
+                                          "label": "4",
+                                          "value": 4,
+                                        },
+                                        Object {
+                                          "label": "5",
+                                          "value": 5,
+                                        },
+                                        Object {
+                                          "label": "6",
+                                          "value": 6,
+                                        },
+                                        Object {
+                                          "label": "7",
+                                          "value": 7,
+                                        },
+                                        Object {
+                                          "label": "8",
+                                          "value": 8,
+                                        },
+                                        Object {
+                                          "label": "9",
+                                          "value": 9,
+                                        },
+                                        Object {
+                                          "label": "10",
+                                          "value": 10,
+                                        },
+                                        Object {
+                                          "label": "11",
+                                          "value": 11,
+                                        },
+                                        Object {
+                                          "label": "12",
+                                          "value": 12,
+                                        },
+                                        Object {
+                                          "label": "13",
+                                          "value": 13,
+                                        },
+                                        Object {
+                                          "label": "14",
+                                          "value": 14,
+                                        },
+                                        Object {
+                                          "label": "15",
+                                          "value": 15,
+                                        },
+                                        Object {
+                                          "label": "16",
+                                          "value": 16,
+                                        },
+                                        Object {
+                                          "label": "17",
+                                          "value": 17,
+                                        },
+                                        Object {
+                                          "label": "18",
+                                          "value": 18,
+                                        },
+                                        Object {
+                                          "label": "19",
+                                          "value": 19,
+                                        },
+                                        Object {
+                                          "label": "20",
+                                          "value": 20,
+                                        },
+                                        Object {
+                                          "label": "21",
+                                          "value": 21,
+                                        },
+                                        Object {
+                                          "label": "22",
+                                          "value": 22,
+                                        },
+                                        Object {
+                                          "label": "23",
+                                          "value": 23,
+                                        },
+                                        Object {
+                                          "label": "24",
+                                          "value": 24,
+                                        },
+                                        Object {
+                                          "label": "25",
+                                          "value": 25,
+                                        },
+                                        Object {
+                                          "label": "26",
+                                          "value": 26,
+                                        },
+                                        Object {
+                                          "label": "27",
+                                          "value": 27,
+                                        },
+                                        Object {
+                                          "label": "28",
+                                          "value": 28,
+                                        },
+                                        Object {
+                                          "label": "29",
+                                          "value": 29,
+                                        },
+                                        Object {
+                                          "label": "30",
+                                          "value": 30,
+                                        },
+                                        Object {
+                                          "label": "31",
+                                          "value": 31,
+                                        },
+                                        Object {
+                                          "label": "32",
+                                          "value": 32,
+                                        },
+                                        Object {
+                                          "label": "33",
+                                          "value": 33,
+                                        },
+                                        Object {
+                                          "label": "34",
+                                          "value": 34,
+                                        },
+                                        Object {
+                                          "label": "35",
+                                          "value": 35,
+                                        },
+                                        Object {
+                                          "label": "36",
+                                          "value": 36,
+                                        },
+                                        Object {
+                                          "label": "37",
+                                          "value": 37,
+                                        },
+                                        Object {
+                                          "label": "38",
+                                          "value": 38,
+                                        },
+                                        Object {
+                                          "label": "39",
+                                          "value": 39,
+                                        },
+                                        Object {
+                                          "label": "40",
+                                          "value": 40,
+                                        },
+                                        Object {
+                                          "label": "41",
+                                          "value": 41,
+                                        },
+                                        Object {
+                                          "label": "42",
+                                          "value": 42,
+                                        },
+                                        Object {
+                                          "label": "43",
+                                          "value": 43,
+                                        },
+                                        Object {
+                                          "label": "44",
+                                          "value": 44,
+                                        },
+                                        Object {
+                                          "label": "45",
+                                          "value": 45,
+                                        },
+                                        Object {
+                                          "label": "46",
+                                          "value": 46,
+                                        },
+                                        Object {
+                                          "label": "47",
+                                          "value": 47,
+                                        },
+                                        Object {
+                                          "label": "48",
+                                          "value": 48,
+                                        },
+                                        Object {
+                                          "label": "49",
+                                          "value": 49,
+                                        },
+                                        Object {
+                                          "label": "50",
+                                          "value": 50,
+                                        },
+                                      ]
+                                    }
+                                    label=""
+                                    listComponent={[Function]}
+                                    modalComponent={[Function]}
+                                    onChange={[Function]}
+                                    onClose={[Function]}
+                                    onSelect={[Function]}
+                                    placeholder="Pick ..."
+                                    value={null}
+                                  >
+                                    <div
+                                      className="css-ibd9un"
+                                    >
+                                      <PickerAddToCartButton
+                                        addedQuantity={0}
+                                        className={null}
+                                        disabled={false}
+                                        handleAddToCart={[Function]}
+                                        hasLoading={true}
+                                        isDisabled={false}
+                                        isLoading={false}
+                                        isOrderable={true}
+                                        label="Pick ..."
+                                        noShadow={false}
+                                        openList={[Function]}
+                                        type="grouped"
+                                        value=""
+                                      >
+                                        <button
+                                          data-test-id="addToCartButton"
+                                          onClick={[Function]}
+                                        />
+                                      </PickerAddToCartButton>
+                                      <Portal
+                                        isOpened={true}
+                                        onClose={[Function]}
+                                        onOpen={[Function]}
+                                        onUpdate={[Function]}
+                                      />
+                                    </div>
+                                  </Picker>
+                                </AddToCartPicker>
+                              </Portal>
+                              <Portal
+                                name="grouped-product.add.after"
+                                props={
+                                  Object {
+                                    "productId": "1234",
+                                  }
+                                }
+                              />
+                              <ProductPrice
+                                price={
+                                  Object {
+                                    "currency": "EUR",
+                                    "discount": 0,
+                                    "info": "",
+                                    "msrp": 0,
+                                    "unitPrice": 5,
+                                    "unitPriceMin": 0,
+                                    "unitPriceStriked": 0,
+                                  }
+                                }
+                                renderLine={false}
+                              >
+                                <Portal
+                                  name="grouped-product.price.before"
+                                  props={
+                                    Object {
+                                      "price": Object {
+                                        "currency": "EUR",
+                                        "discount": 0,
+                                        "info": "",
+                                        "msrp": 0,
+                                        "unitPrice": 5,
+                                        "unitPriceMin": 0,
+                                        "unitPriceStriked": 0,
+                                      },
+                                      "renderLine": false,
+                                    }
+                                  }
+                                />
+                                <Portal
+                                  name="grouped-product.price"
+                                  props={
+                                    Object {
+                                      "price": Object {
+                                        "currency": "EUR",
+                                        "discount": 0,
+                                        "info": "",
+                                        "msrp": 0,
+                                        "unitPrice": 5,
+                                        "unitPriceMin": 0,
+                                        "unitPriceStriked": 0,
+                                      },
+                                      "renderLine": false,
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="css-nil"
+                                  >
+                                    <Price
+                                      className="css-fisw11"
+                                      currency="EUR"
+                                      discounted={false}
+                                      fractions={true}
+                                      taxDisclaimer={false}
+                                      unitPrice={5}
+                                      unitPriceMin={0}
+                                    >
+                                      <div
+                                        className="css-izofhs css-fisw11"
+                                        data-test-id="minPrice: 0 price: 5 currency: EUR"
+                                      >
+                                        <FormatPrice
+                                          className=""
+                                          currency="EUR"
+                                          fractions={true}
+                                          price={5}
+                                        >
+                                          <span
+                                            className=""
+                                          >
+                                            p
+                                          </span>
+                                        </FormatPrice>
+                                      </div>
+                                    </Price>
+                                  </div>
+                                </Portal>
+                                <Portal
+                                  name="grouped-product.price.after"
+                                  props={
+                                    Object {
+                                      "price": Object {
+                                        "currency": "EUR",
+                                        "discount": 0,
+                                        "info": "",
+                                        "msrp": 0,
+                                        "unitPrice": 5,
+                                        "unitPriceMin": 0,
+                                        "unitPriceStriked": 0,
+                                      },
+                                      "renderLine": false,
+                                    }
+                                  }
+                                />
+                              </ProductPrice>
+                            </Portal>
+                            <Portal
+                              name="grouped-product.cta.after"
+                              props={
+                                Object {
+                                  "productId": "1234",
+                                }
+                              }
+                            />
+                          </li>
+                        </GridItem>
+                      </ul>
+                    </Grid>
+                  </Portal>
+                  <Portal
+                    name="grouped-product.after"
+                    props={
+                      Object {
+                        "productId": "1234",
+                      }
+                    }
+                  />
                 </Product>
               </Connect(Product)>
             </li>
