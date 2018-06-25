@@ -13,7 +13,7 @@ jest.mock('@shopgate/pwa-common-commerce/cart/actions/addProductsToCart', () =>
 
 jest.mock(
   '@shopgate/pwa-ui-shared/AddToCartButton',
-  () => require.requireActual('./components/AddToCartButton/AddToCartButton.mock.js')
+  () => require.requireActual('./components/AddToCartButton/AddToCartButton.mock')
 );
 
 jest.mock('../../config', () => ({
@@ -108,6 +108,42 @@ describe('<AddToCartPicker />', () => {
       label: '5',
       value: 5,
     });
+  });
+
+  it('should update the component when expected', () => {
+    const component = createComponent(mockedProduct);
+    const picker = component.find('AddToCartPicker').first();
+
+    const props = picker.props();
+    const state = { ...picker.instance().state };
+
+    const scu = picker.instance().shouldComponentUpdate.bind(picker.instance());
+
+    // Nothing changed
+    expect(scu({ ...props }, { ...state })).toBe(false);
+
+    // Some ignored prop changed
+    expect(scu({
+      ...props,
+      clickDelay: 200,
+    }, { ...state })).toBe(false);
+
+    // Button props changed
+    expect(scu({
+      ...props,
+      buttonProps: {
+        ...props.buttonProps,
+        isLoading: true,
+      },
+    }, { ...state })).toBe(true);
+
+    // State changed
+    expect(scu({
+      ...props,
+    }, {
+      ...state,
+      addedQuantity: 3,
+    })).toBe(true);
   });
 
   it('should render a button with a shadow', () => {

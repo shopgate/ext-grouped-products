@@ -22,7 +22,7 @@ const buttonProps = {
 };
 
 jest.mock('@shopgate/pwa-ui-shared/AddToCartButton', () =>
-  require.requireActual('./AddToCartButton.mock.js'));
+  require.requireActual('./AddToCartButton.mock'));
 
 jest.useFakeTimers();
 

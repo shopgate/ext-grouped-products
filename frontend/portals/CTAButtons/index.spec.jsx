@@ -18,7 +18,7 @@ jest.mock('@shopgate/pwa-common-commerce/cart/actions/addCurrentProductToCart', 
 
 jest.mock(
   '@shopgate/pwa-ui-shared/AddToCartButton',
-  () => require('../../components/AddToCartPicker/components/AddToCartButton/AddToCartButton.mock.js')
+  () => require.requireActual('../../components/AddToCartPicker/components/AddToCartButton/AddToCartButton.mock')
 );
 
 /**
