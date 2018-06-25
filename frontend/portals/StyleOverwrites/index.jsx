@@ -2,7 +2,7 @@ import React from 'react';
 
 import sheetStyles from '@shopgate/pwa-ui-shared/Sheet/style';
 import { themeConfig } from '@shopgate/pwa-common/helpers/config';
-import { isGmdTheme } from '../../helpers';
+import { isGmdTheme } from '../../helpers/index';
 
 const { variables } = themeConfig;
 

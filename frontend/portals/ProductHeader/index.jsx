@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Rating from './components/Rating';
+import Rating from './components/Rating/index';
 import connect from './connector';
 import styles from './style';
 

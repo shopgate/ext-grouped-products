@@ -2,12 +2,12 @@ import setProductQuantity from '@shopgate/pwa-common-commerce/product/action-cre
 import {
   createWrappedComponent,
   getStoreFromWrappedComponent,
-} from '../mockStore';
+} from '../../components/mockStore';
 import {
   mockedState,
   mockedStateWithRegularProduct,
   mockedStateWithoutCurrentProductData,
-} from '../mock';
+} from '../../components/mock';
 import CTAButtons from './index';
 
 const mockedAddCurrentProductAction = {
@@ -18,7 +18,7 @@ jest.mock('@shopgate/pwa-common-commerce/cart/actions/addCurrentProductToCart', 
 
 jest.mock(
   '@shopgate/pwa-ui-shared/AddToCartButton',
-  () => require('../AddToCartPicker/components/AddToCartButton/AddToCartButton.mock.js')
+  () => require('../../components/AddToCartPicker/components/AddToCartButton/AddToCartButton.mock.js')
 );
 
 /**

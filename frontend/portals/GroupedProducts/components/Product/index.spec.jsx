@@ -1,10 +1,10 @@
 import addProductsToCart from '@shopgate/pwa-common-commerce/cart/actions/addProductsToCart';
-import { createWrappedComponent } from '../../../mockStore';
+import { createWrappedComponent } from '../../../../components/mockStore';
 import {
   mockedState,
   mockedProduct,
   mockedNotOrderableProduct,
-} from '../../../mock';
+} from '../../../../components/mock';
 import Product from './index';
 
 jest.mock('@shopgate/pwa-common-commerce/cart/actions/addProductsToCart', () => jest.fn());
@@ -12,7 +12,7 @@ jest.mock('@shopgate/pwa-common-commerce/cart/actions/addProductsToCart', () => 
 jest.mock(
   '@shopgate/pwa-ui-shared/AddToCartButton',
   () =>
-    require.requireActual('../../../AddToCartPicker/components/AddToCartButton/AddToCartButton.mock.js')
+    require.requireActual('../../../../components/AddToCartPicker/components/AddToCartButton/AddToCartButton.mock.js')
 );
 
 jest.useFakeTimers();

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import List from '@shopgate/pwa-common/components/List';
 import { hasFavorites, renderFlatButtons } from '../../helpers';
-import Product from './components/Product';
+import Product from './components/Product/index';
 import connect from './connector';
 import styles from './style';
 
