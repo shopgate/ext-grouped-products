@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import isEqual from 'lodash/isEqual';
 import BasePicker from '@shopgate/pwa-common/components/Picker';
 import Sheet from '@shopgate/pwa-ui-shared/Sheet';
 import List from './components/List';
@@ -94,7 +95,8 @@ class AddToCartPicker extends Component {
    * @return {boolean}
    */
   shouldComponentUpdate(nextProps, nextState) {
-    return nextState.addedQuantity !== this.state.addedQuantity;
+    return (nextState.addedQuantity !== this.state.addedQuantity) ||
+      !isEqual(nextProps.buttonProps, this.props.buttonProps);
   }
 
   /**

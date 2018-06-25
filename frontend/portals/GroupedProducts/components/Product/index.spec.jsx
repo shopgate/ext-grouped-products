@@ -12,7 +12,7 @@ jest.mock('@shopgate/pwa-common-commerce/cart/actions/addProductsToCart', () => 
 jest.mock(
   '@shopgate/pwa-ui-shared/AddToCartButton',
   () =>
-    require.requireActual('../../../../components/AddToCartPicker/components/AddToCartButton/AddToCartButton.mock.js')
+    require.requireActual('../../../../components/AddToCartPicker/components/AddToCartButton/AddToCartButton.mock')
 );
 
 jest.useFakeTimers();

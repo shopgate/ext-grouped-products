@@ -7,7 +7,7 @@ import GroupedProducts from './index';
 
 jest.mock(
   '@shopgate/pwa-ui-shared/AddToCartButton',
-  () => require.requireActual('../../components/AddToCartPicker/components/AddToCartButton/AddToCartButton.mock.js')
+  () => require.requireActual('../../components/AddToCartPicker/components/AddToCartButton/AddToCartButton.mock')
 );
 /**
  * Creates a component with a provided store state.
