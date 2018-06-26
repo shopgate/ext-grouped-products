@@ -4,10 +4,7 @@ import { shouldFetchData } from '@shopgate/pwa-common/helpers/redux';
 import requestProducts from '@shopgate/pwa-common-commerce/product/action-creators/requestProducts';
 import receiveProducts from '@shopgate/pwa-common-commerce/product/action-creators/receiveProducts';
 import errorProducts from '@shopgate/pwa-common-commerce/product/action-creators/errorProducts';
-import {
-  getCurrentBaseProduct,
-  getCurrentBaseProductId,
-} from '@shopgate/pwa-common-commerce/product/selectors/product';
+import { getCurrentBaseProductId } from '@shopgate/pwa-common-commerce/product/selectors/product';
 import { generateHash } from '../helpers';
 import { getResultsByHashEntry } from '../selectors';
 import { SHOPGATE_CATALOG_GET_PRODUCT_CHILDREN } from '../constants';
@@ -35,36 +32,7 @@ export const getProductChildren = () => (dispatch, getState) => {
     .setInput({ productId })
     .dispatch()
     .then((response) => {
-      let { products } = response;
-
-      // TODO remove when availability is implemented
-      // istanbul ignore next
-      if (process.env.NODE_ENV !== 'test') {
-        const { featuredImageUrl } = getCurrentBaseProduct(state);
-
-        products = products.map((product) => {
-          if (!product.availability) {
-            // eslint-disable-next-line no-param-reassign
-            product = {
-              ...product,
-              availability: {
-                text: 'Available (mock)',
-                state: 'ok',
-              },
-            };
-          }
-
-          if (!product.featuredImageUrl) {
-            // eslint-disable-next-line no-param-reassign
-            product = {
-              ...product,
-              featuredImageUrl,
-            };
-          }
-
-          return product;
-        });
-      }
+      const { products } = response;
 
       dispatch(receiveProducts({
         hash,
