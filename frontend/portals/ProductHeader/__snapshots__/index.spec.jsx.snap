@@ -38,23 +38,8 @@ exports[`<ProductHeader /> should not render when the current product has childr
   <Connect(ProductHeader)>
     <ProductHeader
       dispatch={[Function]}
-      isRendered={true}
-    >
-      <div
-        className={
-          Object {
-            "data-css-i93p5x": "",
-          }
-        }
-      >
-        <Connect(Rating)>
-          <Rating
-            dispatch={[Function]}
-            rating={null}
-          />
-        </Connect(Rating)>
-      </div>
-    </ProductHeader>
+      isRendered={false}
+    />
   </Connect(ProductHeader)>
 </Provider>
 `;

@@ -148,7 +148,7 @@ exports[`<AddToCartPicker /> should render the component as expected 1`] = `
                     className=""
                   >
                     <ul
-                      className="css-gkw1j5 "
+                      className=""
                     >
                       <ListItem
                         className="css-17flzkh"
@@ -157,6 +157,7 @@ exports[`<AddToCartPicker /> should render the component as expected 1`] = `
                       >
                         <li
                           className="css-1p5q8vq css-17flzkh css-16gj3o1"
+                          data-test-id="listItem"
                         >
                           <div
                             className="css-1nnz83b"
@@ -191,7 +192,7 @@ exports[`<AddToCartPicker /> should render the component as expected 1`] = `
                                   <div
                                     aria-hidden={true}
                                     className="css-13azwyo"
-                                    onTouchTap={[Function]}
+                                    onClick={[Function]}
                                     style={null}
                                   >
                                     <div
@@ -237,6 +238,7 @@ exports[`<AddToCartPicker /> should render the component as expected 1`] = `
                       >
                         <li
                           className="css-1p5q8vq css-17flzkh css-16gj3o1"
+                          data-test-id="listItem"
                         >
                           <div
                             className="css-1nnz83b"
@@ -271,7 +273,7 @@ exports[`<AddToCartPicker /> should render the component as expected 1`] = `
                                   <div
                                     aria-hidden={true}
                                     className="css-13azwyo"
-                                    onTouchTap={[Function]}
+                                    onClick={[Function]}
                                     style={null}
                                   >
                                     <div
@@ -317,6 +319,7 @@ exports[`<AddToCartPicker /> should render the component as expected 1`] = `
                       >
                         <li
                           className="css-1p5q8vq css-17flzkh css-16gj3o1"
+                          data-test-id="listItem"
                         >
                           <div
                             className="css-1nnz83b"
@@ -351,7 +354,7 @@ exports[`<AddToCartPicker /> should render the component as expected 1`] = `
                                   <div
                                     aria-hidden={true}
                                     className="css-13azwyo"
-                                    onTouchTap={[Function]}
+                                    onClick={[Function]}
                                     style={null}
                                   >
                                     <div
@@ -397,6 +400,7 @@ exports[`<AddToCartPicker /> should render the component as expected 1`] = `
                       >
                         <li
                           className="css-1p5q8vq css-17flzkh css-16gj3o1"
+                          data-test-id="listItem"
                         >
                           <div
                             className="css-1nnz83b"
@@ -431,7 +435,7 @@ exports[`<AddToCartPicker /> should render the component as expected 1`] = `
                                   <div
                                     aria-hidden={true}
                                     className="css-13azwyo"
-                                    onTouchTap={[Function]}
+                                    onClick={[Function]}
                                     style={null}
                                   >
                                     <div

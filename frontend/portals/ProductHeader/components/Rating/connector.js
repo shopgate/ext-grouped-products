@@ -4,10 +4,11 @@ import { getProductRating } from '@shopgate/pwa-common-commerce/product/selector
 /**
  * Maps the contents of the state to the component props.
  * @param {Object} state The current application state.
+ * @param {Object} props props.
  * @return {Object} The extended component props.
  */
-const mapStateToProps = state => ({
-  rating: getProductRating(state),
+const mapStateToProps = (state, props) => ({
+  rating: getProductRating(state, props),
 });
 
 export default connect(mapStateToProps);
