@@ -32,6 +32,7 @@ class AddToCartPicker extends Component {
      */
     buttonProps: {
       handleAddToCart: /* istanbul ignore next */ () => {},
+      onClick: () => {},
       isDisabled: false,
       isLoading: false,
       isOrderable: true,
@@ -143,6 +144,7 @@ class AddToCartPicker extends Component {
 
     return (
       <BasePicker
+        onClick={this.handleAddToCart}
         items={pickerItems}
         className={styles.buttonContainer}
         modalComponent={this.modalComponent}

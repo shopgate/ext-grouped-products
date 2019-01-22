@@ -9,10 +9,12 @@ import { showAddToCartBar, hideAddToCartBar } from '../action-creators';
  * @param {Function} subscribe The subscribe function.
  */
 const groupedProductsSubscriptions = (subscribe) => {
+  console.warn('groupedProudcts');
   /**
    * Gets triggered on entering the product details route.
    */
   subscribe(receivedVisibleProduct$, ({ dispatch, getState }) => {
+    console.warn('in processProduct');
     const productId = getProductIdFromRoute();
     if (productId === null) {
       return;
