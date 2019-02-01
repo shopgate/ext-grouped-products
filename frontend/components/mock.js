@@ -123,6 +123,14 @@ const mockedState = {
   },
 };
 
+const mockedProps = {
+  handleAddToCart: () => {},
+  isFavorite: false,
+  addToCartButtonProps: {},
+  isAddToCartButtonVisible: false,
+  product: {},
+};
+
 const mockedStateWithRegularProduct = set(
   cloneDeep(mockedState),
   ['product', 'productsById', product.id, 'productData', 'flags'],
@@ -132,13 +140,32 @@ const mockedStateWithRegularProduct = set(
   }
 );
 
+const mockedPropsWithRegularProduct = {
+  handleAddToCart: () => {},
+  isFavorite: true,
+  addToCartButtonProps: {},
+  isAddToCartButtonVisible: true,
+  product: {},
+};
+
 const mockedStateWithoutCurrentProductData = set(
   cloneDeep(mockedState),
   ['product', 'productsById', product.id],
   undefined
 );
 
+const mockedPropsWithoutCurrentProduct = {
+  handleAddToCart: () => {},
+  isFavorite: true,
+  addToCartButtonProps: {},
+  isAddToCartButtonVisible: true,
+  product: {},
+};
+
 export {
+  mockedProps,
+  mockedPropsWithRegularProduct,
+  mockedPropsWithoutCurrentProduct,
   mockedState,
   mockedStateWithRegularProduct,
   mockedStateWithoutCurrentProductData,

@@ -2,7 +2,6 @@ import { createSelector } from 'reselect';
 import {
   getCurrentBaseProduct,
   getProductById,
-  getProductIdFromRoute,
 } from '@shopgate/pwa-common-commerce/product/selectors/product';
 import { getFavoritesProductsIds } from '@shopgate/pwa-common-commerce/favorites/selectors';
 import { generateHash, isGmdTheme } from '../helpers';
@@ -21,14 +20,14 @@ const getResultsByHash = state => state.product.resultsByHash;
  */
 export const getResultsByHashEntry = createSelector(
   getResultsByHash,
-  getProductIdFromRoute,
-  (resultsByHash, productId) => {
-    if (!productId) {
+  getCurrentBaseProduct,
+  (resultsByHash, product) => {
+    if (!product) {
       return null;
     }
 
-    // Generate tha hash to access the state.
-    const hash = generateHash(productId);
+    // Generate the hash to access the state.
+    const hash = generateHash(product.id);
     return resultsByHash[hash] || null;
   }
 );
@@ -47,7 +46,6 @@ export const getGroupedProducts = createSelector(
     }
 
     const { products: productIds = [], isFetching } = result;
-
     if (isFetching === true) {
       return [];
     }
@@ -70,7 +68,6 @@ export const isGroupedProductOrderable = createSelector(
     if (!productId) {
       return false;
     }
-
     const product = products.find(({ id }) => id === productId) || {};
     const { stock: { orderable = false } = {} } = product;
     return orderable;

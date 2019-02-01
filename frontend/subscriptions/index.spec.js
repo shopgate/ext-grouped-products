@@ -1,61 +1,102 @@
-import {
-  stateWithoutGroupedProducts,
-  stateWithGroupedProducts,
-} from '../selectors/index.mock';
-import { productIsReady$ } from '../streams';
-import { getProductChildren } from '../actions';
+import { receivedVisibleProduct$ } from '@shopgate/pwa-common-commerce/product/streams';
+import subscription from './index';
+import { stateWithGroupedProducts, stateWithoutFlag } from '../selectors/index.mock';
+import { productChildrenReceived$ } from '../streams';
 import { showAddToCartBar, hideAddToCartBar } from '../action-creators';
-import subscriptions from './index';
+import { getProductChildren } from '../actions';
 
 jest.mock('../actions', () => ({
-  getProductChildren: jest.fn().mockReturnValue('get_product_children'),
+  getProductChildren: jest.fn(),
 }));
 
-describe('Grouped products subscriptions', () => {
+jest.mock('../action-creators', () => ({
+  showAddToCartBar: jest.fn(),
+  hideAddToCartBar: jest.fn(),
+}));
+
+describe('groupedProductsSubscriptions', () => {
   const subscribe = jest.fn();
-  const dispatch = jest.fn();
-
-  beforeEach(() => {
-    jest.clearAllMocks();
-    subscriptions(subscribe);
+  let receivedVisibleProduct$Subscription;
+  let productChildrenReceived$Subscription;
+  it('should subscribe', () => {
+    subscription(subscribe);
+    [
+      receivedVisibleProduct$Subscription,
+      productChildrenReceived$Subscription,
+    ] = subscribe.mock.calls;
   });
 
-  it('should subscribe as expected', () => {
-    expect(subscribe).toHaveBeenCalledTimes(1);
+  describe('receivedVisibleProduct$', () => {
+    it('should return if there is no productId', () => {
+      const [stream, callback] = receivedVisibleProduct$Subscription;
+      expect(stream === receivedVisibleProduct$).toBe(true);
+
+      const dispatch = jest.fn();
+      const action = {
+        productData:
+          {
+            id: null,
+          },
+      };
+        // eslint-disable-next-line require-jsdoc
+      const getState = () => (stateWithGroupedProducts);
+      callback({
+        dispatch,
+        getState,
+        action,
+      });
+      expect(getProductChildren).toHaveBeenCalledTimes(0);
+    });
+
+    it('should dispatch showAddToCartBar() if this is not a grouped product', () => {
+      const [stream, callback] = receivedVisibleProduct$Subscription;
+      expect(stream === receivedVisibleProduct$).toBe(true);
+
+      const dispatch = jest.fn();
+      const action = {
+        productData:
+          {
+            id: '1337',
+          },
+      };
+      // eslint-disable-next-line require-jsdoc
+      const getState = () => (stateWithoutFlag);
+      callback({
+        dispatch,
+        getState,
+        action,
+      });
+      expect(showAddToCartBar).toHaveBeenCalledTimes(1);
+    });
+    it('should dispatch getProductChildren() if there is a grouped product', () => {
+      const [stream, callback] = receivedVisibleProduct$Subscription;
+      expect(stream === receivedVisibleProduct$).toBe(true);
+
+      const dispatch = jest.fn();
+      const action = {
+        productData:
+          {
+            id: '1337',
+          },
+      };
+      // eslint-disable-next-line require-jsdoc
+      const getState = () => (stateWithGroupedProducts);
+      callback({
+        dispatch,
+        getState,
+        action,
+      });
+      expect(getProductChildren).toHaveBeenCalledTimes(1);
+    });
   });
 
-  describe('productIsReady$', () => {
-    let stream;
-    let callback;
-
-    beforeEach(() => {
-      [[stream, callback]] = subscribe.mock.calls;
-    });
-
-    it('should setup as expected', () => {
-      expect(stream).toEqual(productIsReady$);
-      expect(callback).toBeInstanceOf(Function);
-    });
-
-    it('should not fetch children when the product does not have children', () => {
-      callback({
-        dispatch,
-        getState: () => stateWithoutGroupedProducts,
-      });
-
-      expect(dispatch).toHaveBeenCalledTimes(1);
-      expect(dispatch).toHaveBeenCalledWith(showAddToCartBar());
-    });
-
-    it('should fetch children when the product has children', () => {
-      callback({
-        dispatch,
-        getState: () => stateWithGroupedProducts,
-      });
-
-      expect(dispatch).toHaveBeenCalledTimes(2);
-      expect(dispatch).toHaveBeenCalledWith(hideAddToCartBar());
-      expect(dispatch).toHaveBeenCalledWith(getProductChildren());
+  describe('productChildrenReceived', () => {
+    it('should dispatch hideAddToCartBar() if productChildrenReceived ', () => {
+      const [stream, callback] = productChildrenReceived$Subscription;
+      expect(stream === productChildrenReceived$).toBe(true);
+      const dispatch = jest.fn();
+      callback({ dispatch });
+      expect(hideAddToCartBar).toHaveBeenCalledTimes(1);
     });
   });
 });

@@ -28,6 +28,9 @@ export const stateWithGroupedProducts = {
           flags: {
             hasChildren: true,
           },
+          stock: {
+            orderable: true,
+          },
         },
       },
       4711: {
@@ -49,6 +52,9 @@ export const stateWithGroupedProducts = {
       1985: {
         productData: {
           id: '1985',
+          flags: {
+            hasChildren: true,
+          },
         },
       },
     },
@@ -98,7 +104,7 @@ export const stateWithResultsByHash = set(
   resultsByHashPath,
   {
     isFetching: false,
-    products: ['4711', '1234', '1985'],
+    products: ['4711', '1234', '1985', '1337'],
   }
 );
 
@@ -107,12 +113,22 @@ export const expectedResultsByHashEntry = get(
   resultsByHashPath
 );
 
-export const expectedProductDataFromResultsByHash = [{
-  id: '4711',
-  stock: { orderable: true },
-}, {
-  id: '1234',
-  stock: { orderable: false },
-}, {
-  id: '1985',
-}];
+export const expectedProductDataFromResultsByHash = [
+  {
+    id: '4711',
+    stock: { orderable: true },
+  },
+  {
+    id: '1234',
+    stock: { orderable: false },
+  },
+  {
+    id: '1985',
+    flags: { hasChildren: true },
+  },
+  {
+    flags: { hasChildren: true },
+    id: '1337',
+    stock: { orderable: true },
+  },
+];
