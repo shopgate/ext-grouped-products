@@ -13,7 +13,6 @@ const GroupedProductsContainer = connect(({
 
 /**
  * Renders GroupedProducts component in product.variant-select.before portal
- * @param {Object} params RouteContext params
  * @returns {JSX}
  */
 const GroupedProductsWrapper = () => (

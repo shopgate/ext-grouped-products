@@ -23,7 +23,6 @@ export const CTAButtonsContainer = connect(({
 
 /**
  * Renders CTAButtons component in product.ctas portal
- * @param {Object} params RouteContext params
  * @returns {JSX}
  */
 const CTAButtonsWrapper = () => (

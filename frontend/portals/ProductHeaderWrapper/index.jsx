@@ -13,7 +13,6 @@ const ProductHeaderContainer = connect(({
 
 /**
  * Renders ProductHeader component in product.header.before portal
- * @param {Object} params RouteContext params
  * @returns {JSX}
  */
 const ProductHeaderWrapper = () => (
