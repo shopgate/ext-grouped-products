@@ -1,10 +1,10 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "id": "@shopgate/grouped-products",
   "components": [
     {
-      "id": "GroupedProducts",
-      "path": "frontend/portals/GroupedProducts/index.jsx",
+      "id": "GroupedProductsWrapper",
+      "path": "frontend/portals/GroupedProductsWrapper/index.jsx",
       "target": "product.variant-select.before",
       "type": "portals"
     },
@@ -16,13 +16,13 @@
     },
     {
       "id": "CTAButtons",
-      "path": "frontend/portals/CTAButtons/index.jsx",
+      "path": "frontend/portals/CTAButtonsWrapper/index.jsx",
       "target": "product.ctas",
       "type": "portals"
     },
     {
-      "id": "ProductHeader",
-      "path": "frontend/portals/ProductHeader/index.jsx",
+      "id": "ProductHeaderWrapper",
+      "path": "frontend/portals/ProductHeaderWrapper/index.jsx",
       "target": "product.header.before",
       "type": "portals"
     },

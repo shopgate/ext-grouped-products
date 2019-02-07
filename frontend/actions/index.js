@@ -4,7 +4,7 @@ import { shouldFetchData } from '@shopgate/pwa-common/helpers/redux';
 import requestProducts from '@shopgate/pwa-common-commerce/product/action-creators/requestProducts';
 import receiveProducts from '@shopgate/pwa-common-commerce/product/action-creators/receiveProducts';
 import errorProducts from '@shopgate/pwa-common-commerce/product/action-creators/errorProducts';
-import { getCurrentBaseProductId } from '@shopgate/pwa-common-commerce/product/selectors/product';
+import { receivedProductChildren, requestProductChildren, errorNoProductChildren } from '../action-creators';
 import { generateHash } from '../helpers';
 import { getResultsByHashEntry } from '../selectors';
 import { SHOPGATE_CATALOG_GET_PRODUCT_CHILDREN } from '../constants';
@@ -14,18 +14,18 @@ import { SHOPGATE_CATALOG_GET_PRODUCT_CHILDREN } from '../constants';
  * @param {string} productId The id of the product for which children are supposed to be fetched.
  * @return {Function} A redux thunk.
  */
-export const getProductChildren = () => (dispatch, getState) => {
+export const getProductChildren = productId => (dispatch, getState) => {
   const state = getState();
-  const hashEntry = getResultsByHashEntry(state);
+  const hashEntry = getResultsByHashEntry(state, { productId });
 
   if (!shouldFetchData(hashEntry)) {
     // When the entry within the resultsByHash state is still valid no request is necessary.
     return;
   }
 
-  const productId = getCurrentBaseProductId(state);
   const hash = generateHash(productId);
 
+  dispatch(requestProductChildren());
   dispatch(requestProducts({ hash }));
 
   new PipelineRequest(SHOPGATE_CATALOG_GET_PRODUCT_CHILDREN)
@@ -33,15 +33,17 @@ export const getProductChildren = () => (dispatch, getState) => {
     .dispatch()
     .then((response) => {
       const { products } = response;
-
+      dispatch(receivedProductChildren());
+      // Set Cached to false in order to trigger update for received products.
       dispatch(receiveProducts({
         hash,
         products,
-        cached: true,
+        cached: false,
       }));
     })
     .catch((error) => {
       logger.error(error);
+      dispatch(errorNoProductChildren(error));
       dispatch(errorProducts({ hash }));
     });
 };
