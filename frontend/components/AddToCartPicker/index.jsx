@@ -36,7 +36,6 @@ class AddToCartPicker extends Component {
       onClick: () => {},
       isDisabled: false,
       isLoading: false,
-      conditioner: () => {},
       hasLoading: true,
       noShadow: false,
       type: ADD_TO_CART_BUTTON_TYPE_DEFAULT,
