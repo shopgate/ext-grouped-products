@@ -1,6 +1,5 @@
 import React from 'react';
-import { RouteContext } from '@shopgate/pwa-common/context';
-import { hex2bin } from '@shopgate/pwa-common/helpers/data';
+import { ThemeContext } from '@shopgate/pwa-common/context';
 import connect from './connector';
 
 import CTAButtons from '../../components/CTAButtons';
@@ -11,6 +10,7 @@ export const CTAButtonsContainer = connect(({
   isFavorite,
   product,
   handleAddToCart,
+  conditioner,
 }) => (
   <CTAButtons
     addToCartButtonProps={addToCartButtonProps}
@@ -18,6 +18,7 @@ export const CTAButtonsContainer = connect(({
     isFavorite={isFavorite}
     product={product}
     handleAddToCart={handleAddToCart}
+    conditioner={conditioner}
   />
 ));
 
@@ -26,13 +27,21 @@ export const CTAButtonsContainer = connect(({
  * @returns {JSX}
  */
 const CTAButtonsWrapper = () => (
-  <RouteContext.Consumer>
-    {({ params }) => (
-      <div>
-        <CTAButtonsContainer productId={hex2bin(params.productId)} />
-      </div>
+  <ThemeContext.Consumer>
+    {({ contexts: { ProductContext } }) => (
+      <ProductContext.Consumer>
+        {({
+          options, productId, variantId, conditioner,
+        }) => (
+          <CTAButtonsContainer
+            conditioner={conditioner}
+            productId={variantId || productId}
+            options={options}
+          />
+        )}
+      </ProductContext.Consumer>
     )}
-  </RouteContext.Consumer>
+  </ThemeContext.Consumer>
 );
 
 export default CTAButtonsWrapper;

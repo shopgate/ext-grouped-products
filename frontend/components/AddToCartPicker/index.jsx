@@ -14,6 +14,7 @@ import styles from './style';
  */
 class AddToCartPicker extends Component {
   static propTypes = {
+    conditioner: PropTypes.shape().isRequired,
     handleAddToCart: PropTypes.func.isRequired,
     buttonProps: PropTypes.shape(),
     clickDelay: PropTypes.number,
@@ -35,7 +36,7 @@ class AddToCartPicker extends Component {
       onClick: () => {},
       isDisabled: false,
       isLoading: false,
-      isOrderable: true,
+      conditioner: () => {},
       hasLoading: true,
       noShadow: false,
       type: ADD_TO_CART_BUTTON_TYPE_DEFAULT,
@@ -108,6 +109,7 @@ class AddToCartPicker extends Component {
     let props = {
       ...this.constructor.defaultProps.buttonProps,
       ...this.props.buttonProps,
+      conditioner: this.props.conditioner,
       addedQuantity: this.state.addedQuantity,
       className: null,
     };
@@ -141,7 +143,6 @@ class AddToCartPicker extends Component {
    */
   render() {
     const pickerItems = createPickerItems(this.props.stock);
-
     return (
       <BasePicker
         onClick={this.handleAddToCart}

@@ -20,9 +20,7 @@ const CTAButtons = (props) => {
     iconSize: styles.iconSize,
     type: ADD_TO_CART_BUTTON_TYPE_DEFAULT,
   };
-
   const { id, stock } = props.product;
-
   return (
     <div className={styles.buttons}>
       <FavoritesButton
@@ -36,6 +34,7 @@ const CTAButtons = (props) => {
       { props.isAddToCartButtonVisible && (
         <AddToCartPicker
           buttonProps={addToCartButtonProps}
+          conditioner={props.conditioner}
           handleAddToCart={props.handleAddToCart}
           productId={id}
           stock={stock}
@@ -47,6 +46,7 @@ const CTAButtons = (props) => {
 };
 
 CTAButtons.propTypes = {
+  conditioner: PropTypes.shape().isRequired,
   handleAddToCart: PropTypes.func.isRequired,
   isFavorite: PropTypes.bool.isRequired,
   addToCartButtonProps: PropTypes.shape(),

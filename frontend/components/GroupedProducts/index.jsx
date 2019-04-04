@@ -10,7 +10,7 @@ import styles from './style';
  * @param {props} param The component props.
  * @return {JSX}
  */
-const GroupedProducts = ({ products }) => {
+const GroupedProducts = ({ products, conditioner }) => {
   if (!products.length) {
     return null;
   }
@@ -20,6 +20,7 @@ const GroupedProducts = ({ products }) => {
       {products.map(product => (
         <List.Item className={styles.productListItem} key={product.id}>
           <Product
+            conditioner={conditioner}
             product={product}
             hasFavorites={hasFavorites()}
             renderFlatButtons={renderFlatButtons()}
@@ -31,6 +32,7 @@ const GroupedProducts = ({ products }) => {
 };
 
 GroupedProducts.propTypes = {
+  conditioner: PropTypes.shape().isRequired,
   products: PropTypes.arrayOf(PropTypes.shape()).isRequired,
 };
 
