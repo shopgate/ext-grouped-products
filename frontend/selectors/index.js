@@ -50,7 +50,7 @@ export const getGroupedProducts = createSelector(
       return [];
     }
     // Return a list of the actual products.
-    return productIds.map(id => getProductById(state, id).productData);
+    return productIds.map(id => getProductById(state, { productId: id }).productData);
   }
 );
 

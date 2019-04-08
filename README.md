@@ -4,7 +4,30 @@
 [![Build Status](https://travis-ci.org/shopgate/ext-grouped-products.svg?branch=master)](https://travis-ci.org/shopgate/ext-grouped-products)
 [![Coverage Status](https://coveralls.io/repos/github/shopgate/ext-grouped-products/badge.svg?branch=master)](https://coveralls.io/github/shopgate/ext-grouped-products?branch=master)
 
-Adds grouped proudcts functionality.
+Extension will enable grouped products display and functionality to products details page
+
+## Configuration
+Add the grouped-products extension to your Shopgate Connect deployment config.
+
+```
+(...)
+  {
+    "id": "@shopgate/grouped-products",
+    "version": "2.0.1"
+  }
+(...)
+```
+
+Set the following values in your Shopgate Connect Admin:
+* maxQuantityPickerEntries - (number) Maximum value in range allowed to be added to cart
+  * (default) is 50
+
+## Example config
+```
+{
+  "maxQuantityPickerEntries": 50
+}
+```
 
 ## Changelog
 

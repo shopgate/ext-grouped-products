@@ -1,14 +1,14 @@
 import React from 'react';
-import { RouteContext } from '@shopgate/pwa-common/context';
-import { hex2bin } from '@shopgate/pwa-common/helpers/data';
+import { ThemeContext } from '@shopgate/pwa-common/context';
 import connect from './connector';
 
 import GroupedProducts from '../../components/GroupedProducts';
 
 const GroupedProductsContainer = connect(({
   products,
+  conditioner,
 }) => (
-  <GroupedProducts products={products} />
+  <GroupedProducts products={products} conditioner={conditioner} />
 ));
 
 /**
@@ -16,14 +16,21 @@ const GroupedProductsContainer = connect(({
  * @returns {JSX}
  */
 const GroupedProductsWrapper = () => (
-  <RouteContext.Consumer>
-    {({ params }) => (
-      <div>
-        <GroupedProductsContainer productId={hex2bin(params.productId)} />
-      </div>
-      )
-    }
-  </RouteContext.Consumer>
+  <ThemeContext.Consumer>
+    {({ contexts: { ProductContext } }) => (
+      <ProductContext.Consumer>
+        {({ productId, variantId, conditioner }) => (
+          <div>
+            <GroupedProductsContainer
+              productId={variantId || productId}
+              conditioner={conditioner}
+            />
+          </div>
+          )
+        }
+      </ProductContext.Consumer>
+    )}
+  </ThemeContext.Consumer>
 );
 
 export default GroupedProductsWrapper;

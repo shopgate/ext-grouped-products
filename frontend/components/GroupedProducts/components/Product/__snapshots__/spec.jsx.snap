@@ -14,6 +14,7 @@ exports[`<Product /> should render as expected when the favorite list is not act
   }
 >
   <Connect(Product)
+    conditioner={Object {}}
     hasFavorites={false}
     product={
       Object {
@@ -55,6 +56,7 @@ exports[`<Product /> should render as expected when the favorite list is not act
           "isOrderable": true,
         }
       }
+      conditioner={Object {}}
       handleAddToCart={[Function]}
       hasFavorites={false}
       isFavorite={true}
@@ -166,10 +168,11 @@ exports[`<Product /> should render as expected when the favorite list is not act
                       ]
                     }
                     src="https://cdn.acme.com/kitten.jpg"
+                    srcmap={null}
                     transition={null}
                   >
                     <div
-                      className="css-326p2s "
+                      className="css-vfdozt "
                     />
                   </Image>
                 </Portal>
@@ -353,6 +356,7 @@ exports[`<Product /> should render as expected when the favorite list is not act
                         }
                       }
                       clickDelay={150}
+                      conditioner={Object {}}
                       handleAddToCart={[Function]}
                       productId="1337"
                       stock={
@@ -372,6 +376,7 @@ exports[`<Product /> should render as expected when the favorite list is not act
                           Object {
                             "addedQuantity": 0,
                             "className": null,
+                            "conditioner": Object {},
                             "handleAddToCart": [Function],
                             "hasLoading": true,
                             "isDisabled": false,
@@ -422,6 +427,7 @@ exports[`<Product /> should render as expected when the favorite list is not act
                           <PickerAddToCartButton
                             addedQuantity={0}
                             className={null}
+                            conditioner={Object {}}
                             disabled={false}
                             handleAddToCart={[Function]}
                             hasLoading={true}
@@ -597,6 +603,7 @@ exports[`<Product /> should render as expected when the favorite list is not act
   }
 >
   <Connect(Product)
+    conditioner={Object {}}
     hasFavorites={true}
     product={
       Object {
@@ -638,6 +645,7 @@ exports[`<Product /> should render as expected when the favorite list is not act
           "isOrderable": false,
         }
       }
+      conditioner={Object {}}
       handleAddToCart={[Function]}
       hasFavorites={true}
       isFavorite={false}
@@ -749,10 +757,11 @@ exports[`<Product /> should render as expected when the favorite list is not act
                       ]
                     }
                     src="https://cdn.acme.com/kitten.jpg"
+                    srcmap={null}
                     transition={null}
                   >
                     <div
-                      className="css-326p2s "
+                      className="css-vfdozt "
                     />
                   </Image>
                 </Portal>
@@ -1034,6 +1043,7 @@ exports[`<Product /> should render as expected when the favorite list is not act
                         }
                       }
                       clickDelay={150}
+                      conditioner={Object {}}
                       handleAddToCart={[Function]}
                       productId="foo"
                       stock={
@@ -1053,6 +1063,7 @@ exports[`<Product /> should render as expected when the favorite list is not act
                           Object {
                             "addedQuantity": 0,
                             "className": null,
+                            "conditioner": Object {},
                             "handleAddToCart": [Function],
                             "hasLoading": true,
                             "isDisabled": true,
@@ -1084,6 +1095,7 @@ exports[`<Product /> should render as expected when the favorite list is not act
                           <PickerAddToCartButton
                             addedQuantity={0}
                             className={null}
+                            conditioner={Object {}}
                             disabled={false}
                             handleAddToCart={[Function]}
                             hasLoading={true}
@@ -1207,6 +1219,7 @@ exports[`<Product /> should render as expected with flat buttons 1`] = `
   }
 >
   <Connect(Product)
+    conditioner={Object {}}
     hasFavorites={true}
     product={
       Object {
@@ -1249,6 +1262,7 @@ exports[`<Product /> should render as expected with flat buttons 1`] = `
           "isOrderable": true,
         }
       }
+      conditioner={Object {}}
       handleAddToCart={[Function]}
       hasFavorites={true}
       isFavorite={true}
@@ -1360,10 +1374,11 @@ exports[`<Product /> should render as expected with flat buttons 1`] = `
                       ]
                     }
                     src="https://cdn.acme.com/kitten.jpg"
+                    srcmap={null}
                     transition={null}
                   >
                     <div
-                      className="css-326p2s "
+                      className="css-vfdozt "
                     />
                   </Image>
                 </Portal>
@@ -1645,6 +1660,7 @@ exports[`<Product /> should render as expected with flat buttons 1`] = `
                         }
                       }
                       clickDelay={150}
+                      conditioner={Object {}}
                       handleAddToCart={[Function]}
                       productId="1337"
                       stock={
@@ -1664,6 +1680,7 @@ exports[`<Product /> should render as expected with flat buttons 1`] = `
                           Object {
                             "addedQuantity": 0,
                             "className": "css-l6qlih",
+                            "conditioner": Object {},
                             "handleAddToCart": [Function],
                             "hasLoading": true,
                             "isDisabled": false,
@@ -1714,6 +1731,7 @@ exports[`<Product /> should render as expected with flat buttons 1`] = `
                           <PickerAddToCartButton
                             addedQuantity={0}
                             className="css-l6qlih"
+                            conditioner={Object {}}
                             disabled={false}
                             handleAddToCart={[Function]}
                             hasLoading={true}
@@ -1837,6 +1855,7 @@ exports[`<Product /> should render as expected with regular buttons 1`] = `
   }
 >
   <Connect(Product)
+    conditioner={Object {}}
     hasFavorites={true}
     product={
       Object {
@@ -1879,6 +1898,7 @@ exports[`<Product /> should render as expected with regular buttons 1`] = `
           "isOrderable": true,
         }
       }
+      conditioner={Object {}}
       handleAddToCart={[Function]}
       hasFavorites={true}
       isFavorite={true}
@@ -1990,10 +2010,11 @@ exports[`<Product /> should render as expected with regular buttons 1`] = `
                       ]
                     }
                     src="https://cdn.acme.com/kitten.jpg"
+                    srcmap={null}
                     transition={null}
                   >
                     <div
-                      className="css-326p2s "
+                      className="css-vfdozt "
                     />
                   </Image>
                 </Portal>
@@ -2275,6 +2296,7 @@ exports[`<Product /> should render as expected with regular buttons 1`] = `
                         }
                       }
                       clickDelay={150}
+                      conditioner={Object {}}
                       handleAddToCart={[Function]}
                       productId="1337"
                       stock={
@@ -2294,6 +2316,7 @@ exports[`<Product /> should render as expected with regular buttons 1`] = `
                           Object {
                             "addedQuantity": 0,
                             "className": null,
+                            "conditioner": Object {},
                             "handleAddToCart": [Function],
                             "hasLoading": true,
                             "isDisabled": false,
@@ -2344,6 +2367,7 @@ exports[`<Product /> should render as expected with regular buttons 1`] = `
                           <PickerAddToCartButton
                             addedQuantity={0}
                             className={null}
+                            conditioner={Object {}}
                             disabled={false}
                             handleAddToCart={[Function]}
                             hasLoading={true}

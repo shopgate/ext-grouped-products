@@ -19,7 +19,13 @@ import * as portals from '../../../../constants/portals';
  * @return {Fragment}
  */
 const Product = ({
-  product, handleAddToCart, addToCartButtonProps, hasFavorites, isFavorite, renderFlatButtons,
+  product,
+  handleAddToCart,
+  addToCartButtonProps,
+  hasFavorites,
+  isFavorite,
+  renderFlatButtons,
+  conditioner,
 }) => {
   const props = {
     productId: product.id,
@@ -80,6 +86,7 @@ const Product = ({
                     noShadow: renderFlatButtons,
                     type: ADD_TO_CART_BUTTON_TYPE_GROUPED,
                   }}
+                  conditioner={conditioner}
                   handleAddToCart={handleAddToCart}
                   productId={product.id}
                   stock={product.stock}
@@ -114,6 +121,7 @@ const Product = ({
 };
 
 Product.propTypes = {
+  conditioner: PropTypes.shape().isRequired,
   handleAddToCart: PropTypes.func.isRequired,
   isFavorite: PropTypes.bool.isRequired,
   product: PropTypes.shape().isRequired,

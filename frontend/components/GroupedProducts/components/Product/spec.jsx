@@ -40,6 +40,7 @@ describe('<Product />', () => {
     const component = createComponent({
       product: mockedProduct,
       hasFavorites: false,
+      conditioner: {},
     });
 
     expect(component).toMatchSnapshot();
@@ -78,6 +79,7 @@ describe('<Product />', () => {
     const component = createComponent({
       product: mockedNotOrderableProduct,
       hasFavorites: true,
+      conditioner: {},
     });
 
     expect(component).toMatchSnapshot();
@@ -102,6 +104,7 @@ describe('<Product />', () => {
       product: mockedProduct,
       hasFavorites: true,
       renderFlatButtons: false,
+      conditioner: {},
     });
 
     expect(component).toMatchSnapshot();
@@ -114,6 +117,7 @@ describe('<Product />', () => {
       product: mockedProduct,
       hasFavorites: true,
       renderFlatButtons: true,
+      conditioner: {},
     });
 
     expect(component).toMatchSnapshot();
@@ -122,7 +126,10 @@ describe('<Product />', () => {
   });
 
   it('should dispatch the addProductsToCart action like expected', () => {
-    const component = createComponent({ product: mockedProduct });
+    const component = createComponent({
+      product: mockedProduct,
+      conditioner: {},
+    });
     const handleAddToCart = component.find('Product').prop('handleAddToCart');
 
     const quantity = 5;
