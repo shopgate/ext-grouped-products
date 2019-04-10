@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ManualsSection should render with correct config passed 1`] = `
+exports[`GroupedProducts should render 1`] = `
 <Provider
   store={
     Object {
@@ -13,26 +13,29 @@ exports[`ManualsSection should render with correct config passed 1`] = `
     }
   }
 >
-  <ProductHeaderWrapper>
+  <GroupedProductsWrapper>
     <div>
       <Connect(Component)
-        productId={false}
+        conditioner={Object {}}
+        productId="mock"
       >
         <Component
+          conditioner={Object {}}
           dispatch={[Function]}
-          isRendered={false}
-          productId={false}
+          productId="mock"
+          products={Array []}
         >
           <Component
-            isRendered={false}
+            conditioner={Object {}}
+            products={Array []}
           >
             <div>
-              ProductHeader
+              GroupedProducts
             </div>
           </Component>
         </Component>
       </Connect(Component)>
     </div>
-  </ProductHeaderWrapper>
+  </GroupedProductsWrapper>
 </Provider>
 `;

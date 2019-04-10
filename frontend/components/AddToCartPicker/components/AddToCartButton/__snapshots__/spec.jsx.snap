@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PickerAddToCartButton /> should render as expected 1`] = `
+<PickerAddToCartButton
+  addedQuantity={0}
+  conditioner={
+    Object {
+      "check": [MockFunction],
+    }
+  }
+  isDisabled={false}
+  isLoading={false}
+  noShadow={true}
+  openList={[MockFunction]}
+>
+  <button
+    data-test-id="addToCartButton"
+    onClick={[Function]}
+  />
+</PickerAddToCartButton>
+`;

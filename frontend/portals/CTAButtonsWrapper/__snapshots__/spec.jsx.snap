@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CTAButtons should render 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <CTAButtonsWrapper>
+    <Connect(Component)
+      conditioner={Object {}}
+      options={Object {}}
+      productId="mock"
+    >
+      <Component
+        addToCartButtonProps={
+          Object {
+            "isDisabled": true,
+            "isLoading": true,
+          }
+        }
+        conditioner={Object {}}
+        handleAddToCart={[Function]}
+        isAddToCartButtonVisible={true}
+        isFavorite={false}
+        options={Object {}}
+        product={Object {}}
+        productId="mock"
+      >
+        <Component
+          addToCartButtonProps={
+            Object {
+              "isDisabled": true,
+              "isLoading": true,
+            }
+          }
+          conditioner={Object {}}
+          handleAddToCart={[Function]}
+          isAddToCartButtonVisible={true}
+          isFavorite={false}
+          product={Object {}}
+        >
+          <div>
+            CTAButtons
+          </div>
+        </Component>
+      </Component>
+    </Connect(Component)>
+  </CTAButtonsWrapper>
+</Provider>
+`;

@@ -1,6 +1,6 @@
 import { receivedVisibleProduct$ } from '@shopgate/pwa-common-commerce/product/streams';
 import subscription from './index';
-import { stateWithGroupedProducts, stateWithoutFlag } from '../selectors/index.mock';
+import { stateWithGroupedProducts, stateWithoutFlag } from '../selectors/mock';
 import { productChildrenReceived$ } from '../streams';
 import { showAddToCartBar, hideAddToCartBar } from '../action-creators';
 import { getProductChildren } from '../actions';

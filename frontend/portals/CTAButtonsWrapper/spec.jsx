@@ -4,30 +4,42 @@ import configureStore from 'redux-mock-store';
 import { mount } from 'enzyme';
 import mockRenderOptions from '@shopgate/pwa-common/helpers/mocks/mockRenderOptions';
 import { basicProductState } from '@shopgate/pwa-common-commerce/product/mock';
-import { RouteContext } from '@shopgate/pwa-common/context';
-import ProductHeaderWrapper from './index';
+import { ThemeContext } from '@shopgate/pwa-common/context';
+import CTAButtonsWrapper from './index';
 
 const mockedStore = configureStore();
-jest.mock('../../components/ProductHeader', () => () => (<div>ProductHeader</div>));
-
+jest.mock('../../selectors/index', () => ({
+  isMainAddToCartButtonVisible: jest.fn().mockReturnValue(true),
+}));
+jest.mock('../../components/CTAButtons', () => () => (<div>CTAButtons</div>));
+const ProductContext = React.createContext({
+  options: {},
+  productId: 'mock',
+  variantId: null,
+  conditioner: {},
+});
+const mockThemeContext = {
+  contexts: {
+    ProductContext,
+  },
+};
 /**
- * Creates component
+ * Creates Component
  * @return {ReactWrapper}
  */
 const createComponent = () => mount(
-  <RouteContext.Provider value={{ params: { product: 'product_one' } }}>
+  <ThemeContext.Provider value={mockThemeContext}>
     <Provider store={mockedStore({ product: basicProductState })}>
-      <ProductHeaderWrapper />
+      <CTAButtonsWrapper />
     </Provider>
-  </RouteContext.Provider>,
+  </ThemeContext.Provider>,
   mockRenderOptions
 );
 
-describe('ManualsSection', () => {
-  it('should render with correct config passed', () => {
+describe('CTAButtons', () => {
+  it('should render', () => {
     const component = createComponent();
     expect(component.find('div').exists()).toBe(true);
     expect(component).toMatchSnapshot();
   });
 });
-

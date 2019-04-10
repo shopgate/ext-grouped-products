@@ -46,11 +46,11 @@ class PickerAddToCartButton extends AddToCartButton {
 
         return false;
       }
+      openList();
+
+      return true;
     });
-
-    openList();
-
-    return true;
+    return false;
   }
 
   /**

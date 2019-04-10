@@ -9,7 +9,7 @@ import {
   stateWithoutGroupedProducts,
   stateWithoutFlag,
   stateWithGroupedProducts,
-} from './index.mock';
+} from './mock';
 import {
   getResultsByHashEntry,
   getGroupedProducts,

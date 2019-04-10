@@ -17,7 +17,6 @@ import { SHOPGATE_CATALOG_GET_PRODUCT_CHILDREN } from '../constants';
 export const getProductChildren = productId => (dispatch, getState) => {
   const state = getState();
   const hashEntry = getResultsByHashEntry(state, { productId });
-
   if (!shouldFetchData(hashEntry)) {
     // When the entry within the resultsByHash state is still valid no request is necessary.
     return;
