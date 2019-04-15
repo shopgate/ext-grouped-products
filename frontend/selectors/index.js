@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 import {
-  getCurrentBaseProduct,
+  getBaseProduct,
   getProductById,
 } from '@shopgate/pwa-common-commerce/product/selectors/product';
 import { getFavoritesProductsIds } from '@shopgate/pwa-common-commerce/favorites/selectors';
@@ -20,7 +20,7 @@ const getResultsByHash = state => state.product.resultsByHash;
  */
 export const getResultsByHashEntry = createSelector(
   getResultsByHash,
-  getCurrentBaseProduct,
+  getBaseProduct,
   (resultsByHash, product) => {
     if (!product) {
       return null;
@@ -80,7 +80,7 @@ export const isGroupedProductOrderable = createSelector(
  * @return {boolean}
  */
 export const hasGroupedProducts = createSelector(
-  getCurrentBaseProduct,
+  getBaseProduct,
   (baseProduct) => {
     if (!baseProduct) {
       return false;

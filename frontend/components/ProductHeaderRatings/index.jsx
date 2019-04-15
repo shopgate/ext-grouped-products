@@ -4,17 +4,13 @@ import Rating from './components/Rating/index';
 import styles from './style';
 
 /**
- * The ProductHeader component. It's supposed to hide the default header
+ * The ProductHeaderRatings component. It's supposed to hide the default header
  * when the current active product has grouped products and render necessary elements.
  * @param {Object} props The component props.
  * @param {boolean} props.isRendered Should the component be rendered.
  * @return {JSX}
  */
-const ProductHeader = ({ isRendered }) => {
-  if (!isRendered) {
-    return null;
-  }
-
+const ProductHeaderRatings = () => {
   return (
     <div className={styles.content}>
       <Rating />
@@ -22,8 +18,4 @@ const ProductHeader = ({ isRendered }) => {
   );
 };
 
-ProductHeader.propTypes = {
-  isRendered: PropTypes.bool.isRequired,
-};
-
-export default ProductHeader;
+export default ProductHeaderRatings;

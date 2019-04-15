@@ -15,15 +15,15 @@
       "type": "portals"
     },
     {
-      "id": "CTAButtons",
-      "path": "frontend/portals/CTAButtonsWrapper/index.jsx",
-      "target": "product.ctas",
+      "id": "ProductHeaderBefore",
+      "path": "frontend/portals/ProductHeaderBefore/index.jsx",
+      "target": "product.header.before",
       "type": "portals"
     },
     {
-      "id": "ProductHeaderWrapper",
-      "path": "frontend/portals/ProductHeaderWrapper/index.jsx",
-      "target": "product.header.before",
+      "id": "ProductHeader",
+      "path": "frontend/portals/ProductHeader/index.jsx",
+      "target": "product.header",
       "type": "portals"
     },
     {

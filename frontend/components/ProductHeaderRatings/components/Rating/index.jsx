@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import appConfig from '@shopgate/pwa-common/helpers/config';
+import { withPageProductId } from '@shopgate-ps/pwa-extension-kit/connectors';
 import RatingStars from '@shopgate/pwa-ui-shared/RatingStars';
 import RatingCount from './components/RatingCount/index';
 import { container } from './style';
@@ -57,4 +58,4 @@ Rating.defaultProps = {
   rating: null,
 };
 
-export default connect(Rating);
+export default withPageProductId(connect(Rating));

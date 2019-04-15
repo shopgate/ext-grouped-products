@@ -1,7 +1,6 @@
 import React from 'react';
 import { ThemeContext } from '@shopgate/pwa-common/context';
 import connect from './connector';
-
 import GroupedProducts from '../../components/GroupedProducts';
 
 const GroupedProductsContainer = connect(({

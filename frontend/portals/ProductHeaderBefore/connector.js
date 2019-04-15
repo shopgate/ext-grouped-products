@@ -8,7 +8,7 @@ import { hasGroupedProducts } from '../../selectors';
  * @return {Object} The extended component props.
  */
 const mapStateToProps = (state, props) => ({
-  isRendered: hasGroupedProducts(state, props),
+  hasGroupedProducts: hasGroupedProducts(state, props),
 });
 
 export default connect(mapStateToProps);

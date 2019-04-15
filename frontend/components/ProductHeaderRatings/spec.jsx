@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import ProductHeader from './index';
 
-describe('<ProductHeader />', () => {
+describe('<ProductHeaderRatings />', () => {
   it('should render when isRendered is true', () => {
     const wrapper = shallow(<ProductHeader
       isRendered

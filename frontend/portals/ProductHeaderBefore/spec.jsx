@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import CTAButtons from './index';
+import ProductHeader from './index';
 
-describe('<CTAButtonsWrapper />', () => {
+describe('<ProductHeaderBefore />', () => {
   it('should render', () => {
-    const wrapper = shallow(<CTAButtons />);
+    const wrapper = shallow(<ProductHeader />);
     expect(wrapper).toMatchSnapshot();
   });
 });
