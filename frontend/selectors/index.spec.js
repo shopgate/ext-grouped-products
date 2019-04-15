@@ -143,34 +143,4 @@ describe('Grouped products selectors', () => {
       expect(result).toBe(true);
     });
   });
-
-  describe('isMainAddToCartButtonVisible()', () => {
-    it('should return true if the gmd theme is active but no grouped products are available', () => {
-      global.process.env.THEME = THEME_GMD;
-      const productId = '1337';
-      const result = isMainAddToCartButtonVisible(stateWithoutGroupedProducts, { productId });
-      expect(result).toBe(true);
-    });
-
-    it('should return false if the gmd theme is active and grouped products are available', () => {
-      global.process.env.THEME = THEME_GMD;
-      const productId = '1337';
-      const result = isMainAddToCartButtonVisible(stateWithGroupedProducts, { productId });
-      expect(result).toBe(false);
-    });
-
-    it('should return false if the gmd theme is active but no grouped products are available', () => {
-      global.process.env.THEME = THEME_IOS;
-      const productId = '1337';
-      const result = isMainAddToCartButtonVisible(stateWithoutGroupedProducts, { productId });
-      expect(result).toBe(false);
-    });
-
-    it('should return false if the gmd theme is active and grouped products are available', () => {
-      global.process.env.THEME = THEME_IOS;
-      const productId = '1337';
-      const result = isMainAddToCartButtonVisible(stateWithGroupedProducts, { productId });
-      expect(result).toBe(false);
-    });
-  });
 });

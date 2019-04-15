@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { isIOSTheme } from '@shopgate-ps/pwa-extension-kit/env/helpers';
 import sheetStyles from '@shopgate/pwa-ui-shared/Sheet/style';
 import { themeConfig } from '@shopgate/pwa-common/helpers/config';
 import { isGmdTheme } from '../../helpers/index';
@@ -12,7 +12,7 @@ const { variables } = themeConfig;
  * @return {JSX}
  */
 const StyleOverwrites = () => {
-  if (isGmdTheme()) {
+  if (!isIOSTheme()) {
     return null;
   }
 

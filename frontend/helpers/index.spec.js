@@ -3,7 +3,6 @@ import { SHOPGATE_CATALOG_GET_PRODUCT_CHILDREN, THEME_GMD, THEME_IOS } from '../
 import {
   generateHash,
   createPickerItems,
-  isGmdTheme,
   renderFlatButtons,
   hasFavorites,
 } from './index';
@@ -71,18 +70,6 @@ describe('Grouped products helpers', () => {
         label: '4',
         value: 4,
       });
-    });
-  });
-
-  describe('isGmdTheme()', () => {
-    it('should return false for gmd', () => {
-      global.process.env.THEME = THEME_GMD;
-      expect(isGmdTheme()).toBe(true);
-    });
-
-    it('should return true for ios', () => {
-      global.process.env.THEME = THEME_IOS;
-      expect(isGmdTheme()).toBe(false);
     });
   });
 

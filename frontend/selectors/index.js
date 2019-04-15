@@ -5,7 +5,7 @@ import {
   getProductRating,
 } from '@shopgate/pwa-common-commerce/product/selectors/product';
 import { getFavoritesProductsIds } from '@shopgate/pwa-common-commerce/favorites/selectors';
-import { generateHash, isGmdTheme } from '../helpers';
+import { generateHash } from '../helpers';
 
 /**
  * Retrieves the resultsByHash collection from the state.
@@ -102,15 +102,6 @@ export const isProductOnFavoriteList = createSelector(
   getFavoritesProductsIds,
   (state, props = {}) => props.productId,
   (productIds, productId) => !!productIds.find(id => id === productId)
-);
-
-/**
- * Determines if the main AddToCartButton should be visible.
- * @return {boolean}
- */
-export const isMainAddToCartButtonVisible = createSelector(
-  hasGroupedProducts,
-  hasPoducts => isGmdTheme() && !hasPoducts
 );
 
 export const getBaseProductRating = createSelector(
