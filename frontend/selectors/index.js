@@ -2,6 +2,7 @@ import { createSelector } from 'reselect';
 import {
   getBaseProduct,
   getProductById,
+  getProductRating,
 } from '@shopgate/pwa-common-commerce/product/selectors/product';
 import { getFavoritesProductsIds } from '@shopgate/pwa-common-commerce/favorites/selectors';
 import { generateHash, isGmdTheme } from '../helpers';
@@ -111,3 +112,14 @@ export const isMainAddToCartButtonVisible = createSelector(
   hasGroupedProducts,
   hasPoducts => isGmdTheme() && !hasPoducts
 );
+
+export const getBaseProductRating = createSelector(
+  state => state,
+  getBaseProduct,
+  (state, baseProduct) => {
+    if (!baseProduct) {
+      return null;
+    }
+    return getProductRating(state, { productId: baseProduct.id})
+  }
+)

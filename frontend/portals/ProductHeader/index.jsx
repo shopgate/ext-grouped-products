@@ -11,7 +11,7 @@ const ProductHeader = ({ children, hasGroupedProducts }) => {
 }
 
 const mapStateToProps = (state, props) => ({
-    hasGroupedProducts: hasGroupedProducts(state, props)
+  hasGroupedProducts: hasGroupedProducts(state, props)
 });
 
 const ConnectedProductHeader = connect(mapStateToProps)(ProductHeader);
