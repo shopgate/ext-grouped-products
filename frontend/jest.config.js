@@ -5,4 +5,8 @@ module.exports = {
   moduleNameMapper: {
     '^.+\\.(css|scss)$': 'identity-obj-proxy',
   },
+  setupFiles: [
+    './testSetup.js',
+    ...jestConfig.setupFiles,
+  ],
 };
