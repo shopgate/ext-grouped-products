@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CTAButtons /> should Render both buttons when isAddToCartButtonVisible is true 1`] = `
+<div
+  className="css-1ldzh7h"
+>
+  <Connect(FavoritesButton)
+    active={true}
+    className="css-17gign0"
+    rippleClassName="css-1tdptiz"
+  />
+  <AddToCartPicker
+    buttonProps={
+      Object {
+        "buttonSize": 56,
+        "iconSize": 24,
+        "type": "default",
+      }
+    }
+    clickDelay={150}
+    handleAddToCart={[MockFunction]}
+    productId=""
+    stock={null}
+  />
+</div>
+`;
+
+exports[`<CTAButtons /> should only render FavoritesButton when isAddToCartButtonVisible is not true 1`] = `
+<div
+  className="css-1ldzh7h"
+>
+  <Connect(FavoritesButton)
+    active={true}
+    className="css-17gign0"
+    rippleClassName="css-1tdptiz"
+  />
+</div>
+`;

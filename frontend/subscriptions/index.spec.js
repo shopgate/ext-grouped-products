@@ -1,4 +1,4 @@
-import { receivedVisibleProduct$ } from '@shopgate/pwa-common-commerce/product/streams';
+import { receivedVisibleProduct$, productReceived$ } from '@shopgate/pwa-common-commerce/product/streams';
 import subscription from './index';
 import { stateWithGroupedProducts, stateWithoutFlag } from '../selectors/index.mock';
 import { productChildrenReceived$ } from '../streams';
@@ -25,6 +25,51 @@ describe('groupedProductsSubscriptions', () => {
       receivedVisibleProduct$Subscription,
       productChildrenReceived$Subscription,
     ] = subscribe.mock.calls;
+  });
+
+  describe('receivedProduct$Subscription', () => {
+    it('should do nothing', () => {
+      const [stream, callback] = receivedProduct$Subscription;
+      expect(stream === productReceived$).toBe(true);
+
+      const dispatch = jest.fn();
+      const action = {
+        productData:
+          {
+            id: '1337',
+          },
+      };
+      // eslint-disable-next-line require-jsdoc
+      const getState = () => (stateWithoutFlag);
+      callback({
+        dispatch,
+        getState,
+        action,
+      });
+      expect(dispatch).not.toHaveBeenCalled();
+    });
+
+    it('should call getProductChildren', () => {
+      const [stream, callback] = receivedProduct$Subscription;
+      expect(stream === productReceived$).toBe(true);
+
+      const dispatch = jest.fn();
+      const action = {
+        productData:
+          {
+            id: '1337',
+          },
+      };
+      // eslint-disable-next-line require-jsdoc
+      const getState = () => (stateWithGroupedProducts);
+      callback({
+        dispatch,
+        getState,
+        action,
+      });
+      expect(dispatch).toHaveBeenCalledTimes(1);
+      expect(getProductChildren).toHaveBeenCalledTimes(1);
+    });
   });
 
   describe('receivedVisibleProduct$', () => {

@@ -15,10 +15,14 @@ describe('<PickerAddToCartButton />', () => {
       isLoading
       isOrderable
       isDisabled={false}
+      conditioner={{
+        check: () => new Promise(resolve => resolve(true))
+      }}
     />);
     expect(wrapper).toMatchSnapshot();
     expect(spy).toHaveBeenCalledTimes(0);
   });
+
   it('should render with checkmark icon and should be clickable', () => {
     const spy = jest.fn(() => new Promise(resolve => resolve()));
     const store = mockStore({});
@@ -29,6 +33,9 @@ describe('<PickerAddToCartButton />', () => {
       isLoading={false}
       isOrderable
       isDisabled={false}
+      conditioner={{
+        check: () => new Promise(resolve => resolve(true))
+      }}
     />);
     wrapper.find('button').prop('onClick')();
     wrapper.update();
