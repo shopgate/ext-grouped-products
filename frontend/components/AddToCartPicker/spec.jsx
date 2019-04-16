@@ -8,7 +8,7 @@ import {
 } from '../mock';
 
 // eslint-disable-next-line require-jsdoc
-class MockedAdToCartButton extends Component {
+class mockedAdToCartButton extends Component {
   // eslint-disable-next-line require-jsdoc
   static get propTypes() {
     return {};
@@ -28,7 +28,7 @@ class MockedAdToCartButton extends Component {
   }
 }
 // Missing css-spring mock on pwa-ui-shared
-jest.mock('@shopgate/pwa-ui-shared/AddToCartButton', () => MockedAdToCartButton);
+jest.mock('@shopgate/pwa-ui-shared/AddToCartButton', () => mockedAdToCartButton);
 
 jest.mock('@shopgate/pwa-common-commerce/cart/actions/addProductsToCart', () =>
   jest.fn().mockReturnValue('mocked_add_products_to_cart_action'));

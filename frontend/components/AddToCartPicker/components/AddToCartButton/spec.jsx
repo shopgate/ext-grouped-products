@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import configureStore from 'redux-mock-store';
 
 // eslint-disable-next-line require-jsdoc
-class MockedAdToCartButton extends Component {
+class mockedAdToCartButton extends Component {
   // eslint-disable-next-line require-jsdoc
   static get propTypes() {
     return {};
@@ -23,7 +23,7 @@ class MockedAdToCartButton extends Component {
   }
 }
 // Missing css-spring mock on pwa-ui-shared
-jest.mock('@shopgate/pwa-ui-shared/AddToCartButton', () => MockedAdToCartButton);
+jest.mock('@shopgate/pwa-ui-shared/AddToCartButton', () => mockedAdToCartButton);
 
 describe('<AddToCartButton />', () => {
   // eslint-disable-next-line global-require
