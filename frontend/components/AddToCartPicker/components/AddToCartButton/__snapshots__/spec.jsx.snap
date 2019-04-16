@@ -48,24 +48,12 @@ exports[`<AddToCartButton /> should render with checkmark icon and should be cli
       "calls": Array [
         Array [],
       ],
-      "results": Array [
-        Object {
-          "isThrow": false,
-          "value": Promise {},
-        },
-      ],
     }
   }
   openList={
     [MockFunction] {
       "calls": Array [
         Array [],
-      ],
-      "results": Array [
-        Object {
-          "isThrow": false,
-          "value": Promise {},
-        },
       ],
     }
   }
