@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import { renderFlatButtons } from '../../helpers/index';
 import CTAButtons from './index';
 
+jest.mock('../../components/AddToCartPicker/index', () => props => <div {...props}>Hello world</div>);
 jest.mock('../../helpers/index', () => ({
   renderFlatButtons: jest.fn(),
 }));

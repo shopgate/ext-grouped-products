@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 import { createWrappedComponent } from '../mockStore';
 import {
   mockedState,
@@ -6,15 +7,31 @@ import {
   mockedNotOrderableProduct,
 } from '../mock';
 
-import AddToCartPicker from './index';
+// eslint-disable-next-line require-jsdoc
+class MockedAdToCartButton extends Component {
+  // eslint-disable-next-line require-jsdoc
+  static get propTypes() {
+    return {};
+  }
+
+  // eslint-disable-next-line require-jsdoc
+  constructor(props) {
+    super(props);
+    this.state = {
+      // eslint-disable-next-line react/no-unused-state
+      showCheckMark: false,
+    };
+  }
+  // eslint-disable-next-line require-jsdoc
+  render() {
+    return <div><button onClick={this.handleClick}>Add to cart</button></div>;
+  }
+}
+// Missing css-spring mock on pwa-ui-shared
+jest.mock('@shopgate/pwa-ui-shared/AddToCartButton', () => MockedAdToCartButton);
 
 jest.mock('@shopgate/pwa-common-commerce/cart/actions/addProductsToCart', () =>
   jest.fn().mockReturnValue('mocked_add_products_to_cart_action'));
-
-jest.mock(
-  '@shopgate/pwa-ui-shared/AddToCartButton',
-  () => require.requireActual('./components/AddToCartButton/AddToCartButton.mock')
-);
 
 jest.mock('../../config', () => ({
   maxQuantityPickerEntries: 5,
@@ -39,28 +56,30 @@ jest.mock('@shopgate/pwa-ui-shared/Sheet', () => ({ children }) => children);
 
 const mockHandleAddToCart = jest.fn();
 
-/**
- * Creates a component with a provided store state.
- * @param {Object} product A product to set the component props for.
- * @param {Object} [buttonProps={}] Mocked button props.
- * @return {ReactWrapper}
- */
-const createComponent = (product, buttonProps = {}) => {
-  const { id, stock } = product;
-
-  const mockedProps = {
-    buttonProps,
-    productId: id,
-    handleAddToCart: mockHandleAddToCart,
-    stock,
-  };
-
-  return createWrappedComponent(AddToCartPicker, mockedState, mockedProps);
-};
-
 jest.useFakeTimers();
 
 describe('<AddToCartPicker />', () => {
+  const AddToCartPicker = require('./index.jsx').default;
+
+  /**
+   * Creates a component with a provided store state.
+   * @param {Object} product A product to set the component props for.
+   * @param {Object} [buttonProps={}] Mocked button props.
+   * @return {ReactWrapper}
+   */
+  const createComponent = (product, buttonProps = {}) => {
+    const { id, stock } = product;
+
+    const mockedProps = {
+      buttonProps,
+      productId: id,
+      handleAddToCart: mockHandleAddToCart,
+      stock,
+    };
+
+    return createWrappedComponent(AddToCartPicker, mockedState, mockedProps);
+  };
+
   it('should render the component as expected', () => {
     const { id, stock } = mockedProduct;
     const component = createComponent(mockedProduct);

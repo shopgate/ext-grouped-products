@@ -9,7 +9,7 @@ exports[`<CTAButtons /> should Render both buttons when isAddToCartButtonVisible
     className="css-17gign0"
     rippleClassName="css-1tdptiz"
   />
-  <AddToCartPicker
+  <Component
     buttonProps={
       Object {
         "buttonSize": 56,
@@ -17,10 +17,7 @@ exports[`<CTAButtons /> should Render both buttons when isAddToCartButtonVisible
         "type": "default",
       }
     }
-    clickDelay={150}
     handleAddToCart={[MockFunction]}
-    productId=""
-    stock={null}
   />
 </div>
 `;

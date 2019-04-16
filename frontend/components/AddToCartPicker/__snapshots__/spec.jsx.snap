@@ -97,10 +97,13 @@ exports[`<AddToCartPicker /> should render the component as expected 1`] = `
           type="default"
           value=""
         >
-          <button
-            data-test-id="addToCartButton"
-            onClick={[Function]}
-          />
+          <div>
+            <button
+              onClick={[Function]}
+            >
+              Add to cart
+            </button>
+          </div>
         </PickerAddToCartButton>
         <Component
           isOpened={true}
