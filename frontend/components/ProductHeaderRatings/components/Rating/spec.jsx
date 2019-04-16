@@ -13,6 +13,10 @@ import { getElementById } from './mock';
 
 setMocks();
 
+jest.mock('@shopgate-ps/pwa-extension-kit/connectors', () => ({
+  withPageProductId: (Component) => () => <Component productId="foo" />,
+}))
+
 describe('Rating (product header)', () => {
   const mockedStore = configureStore();
 
@@ -23,7 +27,7 @@ describe('Rating (product header)', () => {
    */
   const getComponent = state => mount(
     <Provider store={mockedStore(state)}>
-      <Rating productId="foo" />
+      <Rating />
     </Provider>,
     mockRenderOptions
   );

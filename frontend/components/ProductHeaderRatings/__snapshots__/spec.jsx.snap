@@ -1,15 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ProductHeader /> should not render when isRendered is false 1`] = `""`;
-
-exports[`<ProductHeader /> should render when isRendered is true 1`] = `
+exports[`<ProductHeaderRatings /> should render 1`] = `
 <div
   className={
     Object {
-      "data-css-i93p5x": "",
+      "data-css-1fagkvd": "",
     }
   }
 >
-  <Connect(Rating) />
+  <Component />
 </div>
 `;

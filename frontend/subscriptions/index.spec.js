@@ -9,18 +9,19 @@ jest.mock('../actions', () => ({
   getProductChildren: jest.fn(),
 }));
 
-jest.mock('../action-creators', () => ({
-  showAddToCartBar: jest.fn(),
-  hideAddToCartBar: jest.fn(),
-}));
-
 describe('groupedProductsSubscriptions', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   const subscribe = jest.fn();
+  let receivedProduct$Subscription;
   let receivedVisibleProduct$Subscription;
   let productChildrenReceived$Subscription;
   it('should subscribe', () => {
     subscription(subscribe);
     [
+      receivedProduct$Subscription,
       receivedVisibleProduct$Subscription,
       productChildrenReceived$Subscription,
     ] = subscribe.mock.calls;
@@ -66,7 +67,7 @@ describe('groupedProductsSubscriptions', () => {
         getState,
         action,
       });
-      expect(showAddToCartBar).toHaveBeenCalledTimes(1);
+      expect(dispatch).toHaveBeenCalledWith(showAddToCartBar());
     });
     it('should dispatch getProductChildren() if there is a grouped product', () => {
       const [stream, callback] = receivedVisibleProduct$Subscription;
@@ -96,7 +97,7 @@ describe('groupedProductsSubscriptions', () => {
       expect(stream === productChildrenReceived$).toBe(true);
       const dispatch = jest.fn();
       callback({ dispatch });
-      expect(hideAddToCartBar).toHaveBeenCalledTimes(1);
+      expect(dispatch).toHaveBeenCalledWith(hideAddToCartBar());
     });
   });
 });

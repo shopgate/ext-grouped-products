@@ -3,18 +3,9 @@ import { shallow } from 'enzyme';
 import ProductHeader from './index';
 
 describe('<ProductHeaderRatings />', () => {
-  it('should render when isRendered is true', () => {
-    const wrapper = shallow(<ProductHeader
-      isRendered
-    />);
+  it('should render', () => {
+    const wrapper = shallow(<ProductHeader />);
     expect(wrapper).toMatchSnapshot();
-    expect(wrapper.find('div').exists()).toBeTruthy();
-  });
-  it('should not render when isRendered is false', () => {
-    const wrapper = shallow(<ProductHeader
-      isRendered={false}
-    />);
-    expect(wrapper).toMatchSnapshot();
-    expect(wrapper.find('div').exists()).toBeFalsy();
+    expect(wrapper.find('div').exists()).toBe(true);
   });
 });
