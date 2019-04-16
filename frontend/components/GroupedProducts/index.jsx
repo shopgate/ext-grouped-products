@@ -5,6 +5,7 @@ import { hasFavorites, renderFlatButtons } from '../../helpers';
 import Product from './components/Product/index';
 import styles from './style';
 
+jest.mock('../AddToCartPicker', () => props => <div {...props}>Hello world</div>);
 /**
  * The GroupedProducts component.
  * @param {props} param The component props.
