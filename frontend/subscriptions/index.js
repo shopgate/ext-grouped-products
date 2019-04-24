@@ -12,7 +12,8 @@ const groupedProductsSubscriptions = (subscribe) => {
   /**
    * Gets triggered every time product is received, but only when A product was requested.
    * Would not trigger when app receives product from multiple product request (like getProducts).
-   * Makes sure there's always children for grouped products. Even if a child product is directly requested
+   * Makes sure there's always children for grouped products.
+   * Even if a child product is directly requested
    * and there's no base product yet.
    */
   subscribe(productReceived$, ({

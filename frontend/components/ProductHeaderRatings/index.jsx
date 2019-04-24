@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Rating from './components/Rating/index';
 import styles from './style';
 
@@ -10,12 +9,10 @@ import styles from './style';
  * @param {boolean} props.isRendered Should the component be rendered.
  * @return {JSX}
  */
-const ProductHeaderRatings = () => {
-  return (
-    <div className={styles.content}>
-      <Rating />
-    </div>
-  );
-};
+const ProductHeaderRatings = () => (
+  <div className={styles.content}>
+    <Rating />
+  </div>
+);
 
 export default ProductHeaderRatings;

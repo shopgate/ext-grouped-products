@@ -7,7 +7,10 @@ import { RECEIVED_PRODUCT_CHILDREN } from '../constants';
 
 describe('productChildrenReceived Stream', () => {
   let dispatch = null;
-  const store = createMockStore(combineReducers({ product, router }));
+  const store = createMockStore(combineReducers({
+    product,
+    router,
+  }));
   ({ dispatch } = store);
   let productChildrenReceivedSubscriber;
   beforeEach(() => {

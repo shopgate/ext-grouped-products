@@ -1,19 +1,15 @@
 import { withPageProductId } from '@shopgate-ps/pwa-extension-kit/connectors';
-import { connect } from 'react-redux';
-import { hasGroupedProducts } from "../../selectors";
+import connect from './connector';
 
+// eslint-disable-next-line require-jsdoc
 const ProductHeader = ({ children, hasGroupedProducts }) => {
-    if (hasGroupedProducts) {
-        return null;
-    }
+  if (hasGroupedProducts) {
+    return null;
+  }
 
-    return children;
-}
+  return children;
+};
 
-const mapStateToProps = (state, props) => ({
-  hasGroupedProducts: hasGroupedProducts(state, props)
-});
-
-const ConnectedProductHeader = connect(mapStateToProps)(ProductHeader);
+const ConnectedProductHeader = connect(ProductHeader);
 
 export default withPageProductId(ConnectedProductHeader);

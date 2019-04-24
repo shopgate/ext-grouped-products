@@ -1,4 +1,3 @@
-import { THEME_GMD, THEME_IOS } from '../constants';
 import {
   stateWithEmptyResultsByHash,
   stateWithFetchingResultsByHash,
@@ -16,7 +15,6 @@ import {
   hasGroupedProducts,
   isGroupedProductOrderable,
   isProductOnFavoriteList,
-  isMainAddToCartButtonVisible,
 } from './index';
 
 describe('Grouped products selectors', () => {

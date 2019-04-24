@@ -10,7 +10,7 @@ const content = css({
     marginBottom: 0,
     backgroundColor: colors.light,
     borderTop: 'rgba(0, 0, 0, 0.05) 2px solid',
-  }
+  },
 });
 
 export default {

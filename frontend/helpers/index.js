@@ -1,8 +1,8 @@
 import { generateResultHash } from '@shopgate/pwa-common/helpers/redux';
+import { isIOSTheme } from '@shopgate-ps/pwa-extension-kit/env/helpers';
 import appConfig from '@shopgate/pwa-common/helpers/config';
-import { SHOPGATE_CATALOG_GET_PRODUCT_CHILDREN, THEME_GMD } from '../constants';
+import { SHOPGATE_CATALOG_GET_PRODUCT_CHILDREN } from '../constants';
 import { maxQuantityPickerEntries as maxEntries } from '../config';
-
 /**
  * Generates a hash to read and write with the productsByHash store.
  * @param {string} productId A product id.
@@ -44,16 +44,10 @@ export const createPickerItems = (stock) => {
 };
 
 /**
- * Checks if the current theme is the GMD theme.
- * @return {boolean}
- */
-export const isGmdTheme = () => process.env.THEME.includes(THEME_GMD);
-
-/**
  * Tells if the extension shall render flat buttons.
  * @return {boolean}
  */
-export const renderFlatButtons = () => !isGmdTheme();
+export const renderFlatButtons = () => isIOSTheme();
 
 /**
  * Check if the favorite list feature is activated.

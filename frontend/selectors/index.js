@@ -111,6 +111,6 @@ export const getBaseProductRating = createSelector(
     if (!baseProduct) {
       return null;
     }
-    return getProductRating(state, { productId: baseProduct.id})
+    return getProductRating(state, { productId: baseProduct.id });
   }
-)
+);

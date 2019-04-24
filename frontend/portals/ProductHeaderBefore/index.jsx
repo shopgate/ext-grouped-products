@@ -11,8 +11,7 @@ const ProductHeaderContainer = connect(({
     return null;
   }
 
-  return  <ProductHeaderRatings />
+  return <ProductHeaderRatings />;
 });
-
 
 export default withPageProductId(ProductHeaderContainer);
