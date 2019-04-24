@@ -1,14 +1,11 @@
 import { mockedPipelineRequestFactory } from '@shopgate/pwa-core/classes/PipelineRequest/mock';
 import { getProductChildren } from './index';
+import { generateHash } from '../helpers';
 
 // eslint-disable-next-line require-jsdoc
 let mockedPipelineRequestResolver = () => {};
 jest.mock('@shopgate/pwa-core/classes/PipelineRequest', () => mockedPipelineRequestFactory((...args) => {
   mockedPipelineRequestResolver(...args);
-}));
-
-jest.mock('../selectors', () => ({
-  getResultsByHashEntry: () => {},
 }));
 
 const mockedErrorLogSpy = jest.fn();
@@ -18,16 +15,28 @@ jest.mock('@shopgate/pwa-core/helpers', () => ({
   },
 }));
 
-let mockedShouldFetchDataResult = false;
-jest.mock('@shopgate/pwa-common/helpers/redux', () => ({
-  shouldFetchData: () => mockedShouldFetchDataResult,
-  generateResultHash: () => 'hash',
-}));
-
 describe('actions', () => {
   const dispatch = jest.fn();
+  const hash = generateHash('foo');
+  const state = {
+    product: {
+      productsById: {
+        foo: {
+          productData: {
+            id: 'foo',
+          },
+        },
+      },
+      resultsByHash: {
+        [hash]: {
+          expires: undefined,
+          isFetching: undefined,
+        },
+      },
+    },
+  };
   // eslint-disable-next-line require-jsdoc
-  const getState = () => ({});
+  const getState = () => state;
 
   beforeEach(() => {
     jest.clearAllMocks();
@@ -35,24 +44,26 @@ describe('actions', () => {
 
   describe('getProductChildren', () => {
     it('should do nothing when data is cached', () => {
-      mockedShouldFetchDataResult = false;
-      getProductChildren(1)(dispatch, getState);
+      state.product.resultsByHash[hash].expires = Date.now() + 1000;
+      state.product.resultsByHash[hash].isFetching = false;
+      getProductChildren('foo')(dispatch, getState);
       expect(dispatch).not.toHaveBeenCalled();
     });
 
     it('should call the pipeline and resolve', (done) => {
-      mockedShouldFetchDataResult = true;
+      state.product.resultsByHash[hash].expires = 0;
+      state.product.resultsByHash[hash].isFetching = false;
       let request;
       mockedPipelineRequestResolver = (r, resolve) => {
         request = r;
         resolve({ products: {} });
       };
-      getProductChildren(1)(dispatch, getState);
+      getProductChildren('foo')(dispatch, getState);
       expect(dispatch).toHaveBeenCalledTimes(2);
       setTimeout(() => {
         expect(request.name).toBe('shopgate.catalog.getProductChildren');
         expect(request.input).toEqual({
-          productId: 1,
+          productId: 'foo',
         });
         expect(dispatch).toHaveBeenCalledTimes(4);
         expect(mockedErrorLogSpy).not.toHaveBeenCalled();
@@ -62,18 +73,19 @@ describe('actions', () => {
   });
 
   it('should call the pipeline and reject', (done) => {
-    mockedShouldFetchDataResult = true;
+    state.product.resultsByHash[hash].expires = 0;
+    state.product.resultsByHash[hash].isFetching = false;
     let request;
     mockedPipelineRequestResolver = (r, resolve, reject) => {
       request = r;
       reject();
     };
-    getProductChildren(1)(dispatch, getState);
+    getProductChildren('foo')(dispatch, getState);
     expect(dispatch).toHaveBeenCalledTimes(2);
     setTimeout(() => {
       expect(request.name).toBe('shopgate.catalog.getProductChildren');
       expect(request.input).toEqual({
-        productId: 1,
+        productId: 'foo',
       });
       expect(dispatch).toHaveBeenCalledTimes(4);
       expect(mockedErrorLogSpy).toHaveBeenCalled();
