@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductHeader should return original header when product has no grouped products 1`] = `
+<Component>
+  <Component>
+    <ProductHeader
+      hasGroupedProducts={false}
+    >
+      <Children>
+        <div>
+          Hello world
+        </div>
+      </Children>
+    </ProductHeader>
+  </Component>
+</Component>
+`;

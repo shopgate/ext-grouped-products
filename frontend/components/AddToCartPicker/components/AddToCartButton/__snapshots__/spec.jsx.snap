@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AddToCartButton /> Should render in loadingState and should not be clickable 1`] = `
+<PickerAddToCartButton
+  conditioner={
+    Object {
+      "check": [Function],
+    }
+  }
+  isDisabled={false}
+  isLoading={true}
+  isOrderable={true}
+  onClick={[MockFunction]}
+  openList={[MockFunction]}
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <div>
+    <button
+      onClick={[Function]}
+    >
+      Add to cart
+    </button>
+  </div>
+</PickerAddToCartButton>
+`;
+
+exports[`<AddToCartButton /> should render with checkmark icon and should be clickable 1`] = `
+<PickerAddToCartButton
+  conditioner={
+    Object {
+      "check": [Function],
+    }
+  }
+  isDisabled={false}
+  isLoading={false}
+  isOrderable={true}
+  onClick={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+    }
+  }
+  openList={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+    }
+  }
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <div>
+    <button
+      onClick={[Function]}
+    >
+      Add to cart
+    </button>
+  </div>
+</PickerAddToCartButton>
+`;

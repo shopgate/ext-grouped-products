@@ -17,10 +17,10 @@
     "@shopgate/pwa-common": "6.3.1",
     "@shopgate/pwa-common-commerce": "6.3.1",
     "@shopgate/pwa-core": "6.3.1",
-    "@shopgate/pwa-unit-test": "6.3.1",
     "@shopgate/pwa-ui-ios": "6.3.1",
     "@shopgate/pwa-ui-material": "6.3.1",
     "@shopgate/pwa-ui-shared": "6.3.1",
+    "@shopgate/pwa-unit-test": "6.3.1",
     "babel-core": "^6.26.3",
     "babel-plugin-dynamic-import-webpack": "^1.0.2",
     "babel-plugin-lodash": "^3.3.2",
@@ -56,5 +56,8 @@
     "@shopgate/pwa-ui-ios": "^6.3.1",
     "@shopgate/pwa-ui-material": "^6.3.1",
     "@shopgate/pwa-ui-shared": "^6.3.1"
+  },
+  "dependencies": {
+    "@shopgate-ps/pwa-extension-kit": "^0.6.0"
   }
 }

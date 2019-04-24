@@ -1,10 +1,11 @@
 import { createSelector } from 'reselect';
 import {
-  getCurrentBaseProduct,
+  getBaseProduct,
   getProductById,
+  getProductRating,
 } from '@shopgate/pwa-common-commerce/product/selectors/product';
 import { getFavoritesProductsIds } from '@shopgate/pwa-common-commerce/favorites/selectors';
-import { generateHash, isGmdTheme } from '../helpers';
+import { generateHash } from '../helpers';
 
 /**
  * Retrieves the resultsByHash collection from the state.
@@ -20,7 +21,7 @@ const getResultsByHash = state => state.product.resultsByHash;
  */
 export const getResultsByHashEntry = createSelector(
   getResultsByHash,
-  getCurrentBaseProduct,
+  getBaseProduct,
   (resultsByHash, product) => {
     if (!product) {
       return null;
@@ -80,7 +81,7 @@ export const isGroupedProductOrderable = createSelector(
  * @return {boolean}
  */
 export const hasGroupedProducts = createSelector(
-  getCurrentBaseProduct,
+  getBaseProduct,
   (baseProduct) => {
     if (!baseProduct) {
       return false;
@@ -103,11 +104,13 @@ export const isProductOnFavoriteList = createSelector(
   (productIds, productId) => !!productIds.find(id => id === productId)
 );
 
-/**
- * Determines if the main AddToCartButton should be visible.
- * @return {boolean}
- */
-export const isMainAddToCartButtonVisible = createSelector(
-  hasGroupedProducts,
-  hasPoducts => isGmdTheme() && !hasPoducts
+export const getBaseProductRating = createSelector(
+  state => state,
+  getBaseProduct,
+  (state, baseProduct) => {
+    if (!baseProduct) {
+      return null;
+    }
+    return getProductRating(state, { productId: baseProduct.id });
+  }
 );

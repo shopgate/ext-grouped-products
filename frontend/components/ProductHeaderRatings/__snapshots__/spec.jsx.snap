@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductHeaderRatings /> should render 1`] = `
+<div
+  className={
+    Object {
+      "data-css-1fagkvd": "",
+    }
+  }
+>
+  <Component />
+</div>
+`;

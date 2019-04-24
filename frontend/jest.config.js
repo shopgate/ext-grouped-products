@@ -5,15 +5,8 @@ module.exports = {
   moduleNameMapper: {
     '^.+\\.(css|scss)$': 'identity-obj-proxy',
   },
-  collectCoverageFrom: [
-    '*/**/*.{js|jsx}',
-    '!*/**/.eslintrc.js',
-    '!*/**/jest.config.js',
-  ],
-  testPathIgnorePatterns: [
-    '/node_modules/',
-  ],
-  transformIgnorePatterns: [
-    '/node_modules/',
+  setupFiles: [
+    './testSetup.js',
+    ...jestConfig.setupFiles,
   ],
 };
