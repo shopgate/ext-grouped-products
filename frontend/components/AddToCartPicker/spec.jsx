@@ -59,6 +59,7 @@ const mockHandleAddToCart = jest.fn();
 jest.useFakeTimers();
 
 describe('<AddToCartPicker />', () => {
+  // eslint-disable-next-line global-require
   const AddToCartPicker = require('./index.jsx').default;
 
   /**

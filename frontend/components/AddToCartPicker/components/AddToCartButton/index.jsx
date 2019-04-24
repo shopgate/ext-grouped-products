@@ -46,6 +46,8 @@ class PickerAddToCartButton extends AddToCartButton {
 
         return false;
       }
+
+      return undefined;
     });
 
     openList();

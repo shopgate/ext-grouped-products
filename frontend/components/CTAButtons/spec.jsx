@@ -15,6 +15,7 @@ describe('<CTAButtons />', () => {
       isFavorite
       isAddToCartButtonVisible
       renderFlatButtons={renderFlatButtons}
+      conditioner={{ check: () => new Promise(resolve => resolve()) }}
     />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -24,6 +25,7 @@ describe('<CTAButtons />', () => {
       isFavorite
       isAddToCartButtonVisible={false}
       renderFlatButtons={renderFlatButtons}
+      conditioner={{ check: () => new Promise(resolve => resolve()) }}
     />);
     expect(wrapper).toMatchSnapshot();
   });
