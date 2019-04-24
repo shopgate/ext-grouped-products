@@ -17,6 +17,11 @@ exports[`<CTAButtons /> should Render both buttons when isAddToCartButtonVisible
         "type": "default",
       }
     }
+    conditioner={
+      Object {
+        "check": [Function],
+      }
+    }
     handleAddToCart={[MockFunction]}
   />
 </div>
