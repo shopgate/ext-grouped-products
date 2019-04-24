@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { getBaseProductRating } from "../../../../selectors";
+import { getBaseProductRating } from '../../../../selectors';
 
 /**
  * Maps the contents of the state to the component props.

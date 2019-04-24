@@ -8,7 +8,8 @@ jest.mock('@shopgate-ps/pwa-extension-kit/connectors', () => ({
 
 let mockedHasGroupedProducts = false;
 jest.mock('react-redux', () => ({
-  connect: () => Component => props => <Component hasGroupedProducts={mockedHasGroupedProducts} {...props} />,
+  connect: () => Component => props =>
+    <Component hasGroupedProducts={mockedHasGroupedProducts} {...props} />,
 }));
 
 describe('ProductHeader', () => {

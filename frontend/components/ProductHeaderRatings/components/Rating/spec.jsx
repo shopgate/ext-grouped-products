@@ -14,8 +14,8 @@ import { getElementById } from './mock';
 setMocks();
 
 jest.mock('@shopgate-ps/pwa-extension-kit/connectors', () => ({
-  withPageProductId: (Component) => () => <Component productId="foo" />,
-}))
+  withPageProductId: Component => () => <Component productId="foo" />,
+}));
 
 describe('Rating (product header)', () => {
   const mockedStore = configureStore();
