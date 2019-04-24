@@ -3,6 +3,8 @@ import { shallow } from 'enzyme';
 import { hasFavorites, renderFlatButtons } from '../../helpers/index';
 import GroupedProducts from './index';
 
+jest.mock('../AddToCartPicker', () => props => <div {...props}>Hello world</div>);
+
 jest.mock('../../helpers/index', () => ({
   renderFlatButtons: jest.fn(),
   hasFavorites: jest.fn(),
