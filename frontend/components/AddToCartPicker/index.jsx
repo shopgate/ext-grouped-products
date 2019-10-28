@@ -78,11 +78,11 @@ class AddToCartPicker extends Component {
             key={item.value}
             title={item.label}
             onClick={() => {
-                setTimeout(() => {
-                  onSelect(item.value);
-                  onClose();
-                }, this.props.clickDelay);
-              }}
+              setTimeout(() => {
+                onSelect(item.value);
+                onClose();
+              }, this.props.clickDelay);
+            }}
           />
           ))}
       </List>
