@@ -70,7 +70,7 @@ class AddToCartPicker extends Component {
 
     // Prepare a list component for the BasePicker
     this.listComponent = ({
-      items, onSelect,
+      items, onSelect, onClose,
     }) => (
       <List>
         {items.map(item => (
@@ -80,6 +80,7 @@ class AddToCartPicker extends Component {
             onClick={() => {
                 setTimeout(() => {
                   onSelect(item.value);
+                  onClose();
                 }, this.props.clickDelay);
               }}
           />
@@ -144,7 +145,6 @@ class AddToCartPicker extends Component {
     const pickerItems = createPickerItems(this.props.stock);
     return (
       <BasePicker
-        onClick={this.handleAddToCart}
         items={pickerItems}
         className={styles.buttonContainer}
         modalComponent={this.modalComponent}
