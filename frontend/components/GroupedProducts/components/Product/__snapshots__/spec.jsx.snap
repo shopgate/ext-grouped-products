@@ -370,7 +370,7 @@ exports[`<Product /> should render as expected when the favorite list is not act
                         }
                       }
                     >
-                      <Picker
+                      <ForwardRef(WithForwardedRef(Picker))
                         buttonComponent={[Function]}
                         buttonProps={
                           Object {
@@ -388,9 +388,6 @@ exports[`<Product /> should render as expected when the favorite list is not act
                           }
                         }
                         className="css-ibd9un"
-                        disabled={false}
-                        duration={300}
-                        isOpen={false}
                         items={
                           Array [
                             Object {
@@ -411,49 +408,180 @@ exports[`<Product /> should render as expected when the favorite list is not act
                             },
                           ]
                         }
-                        label=""
                         listComponent={[Function]}
                         modalComponent={[Function]}
-                        onChange={[Function]}
-                        onClick={[Function]}
-                        onClose={[Function]}
                         onSelect={[Function]}
-                        placeholder="Pick ..."
-                        value={null}
                       >
-                        <div
+                        <Picker
+                          buttonComponent={[Function]}
+                          buttonProps={
+                            Object {
+                              "addedQuantity": 0,
+                              "className": null,
+                              "conditioner": Object {},
+                              "handleAddToCart": [Function],
+                              "hasLoading": true,
+                              "isDisabled": false,
+                              "isLoading": false,
+                              "isOrderable": true,
+                              "noShadow": false,
+                              "onClick": [Function],
+                              "type": "grouped",
+                            }
+                          }
                           className="css-ibd9un"
+                          disabled={false}
+                          duration={300}
+                          forwardedRef={null}
+                          isOpen={false}
+                          items={
+                            Array [
+                              Object {
+                                "label": "1",
+                                "value": 1,
+                              },
+                              Object {
+                                "label": "2",
+                                "value": 2,
+                              },
+                              Object {
+                                "label": "3",
+                                "value": 3,
+                              },
+                              Object {
+                                "label": "4",
+                                "value": 4,
+                              },
+                            ]
+                          }
+                          label=""
+                          listComponent={[Function]}
+                          modalComponent={[Function]}
+                          onChange={[Function]}
+                          onClose={[Function]}
+                          onSelect={[Function]}
+                          placeholder="Pick ..."
+                          value={null}
                         >
-                          <PickerAddToCartButton
-                            addedQuantity={0}
-                            className={null}
-                            conditioner={Object {}}
-                            disabled={false}
-                            handleAddToCart={[Function]}
-                            hasLoading={true}
-                            isDisabled={false}
-                            isLoading={false}
-                            isOrderable={true}
-                            label="Pick ..."
-                            noShadow={false}
-                            onClick={[Function]}
-                            openList={[Function]}
-                            type="grouped"
-                            value=""
+                          <div
+                            aria-haspopup={true}
+                            className="css-ibd9un"
+                            role="button"
+                            tabIndex={0}
                           >
-                            <button
-                              data-test-id="addToCartButton"
+                            <AddToCartButton
+                              addedQuantity={0}
+                              aria-hidden={false}
+                              aria-label={null}
+                              buttonSize={10}
+                              className={null}
+                              conditioner={Object {}}
+                              disabled={false}
+                              forwardedRef={null}
+                              handleAddToCart={[Function]}
+                              hasLoading={true}
+                              iconSize={10}
+                              isDisabled={false}
+                              isLoading={false}
+                              isOrderable={true}
+                              label="Pick ..."
+                              noShadow={false}
                               onClick={[Function]}
+                              onReset={[Function]}
+                              openList={[Function]}
+                              type="grouped"
+                              value=""
+                            >
+                              <button
+                                aria-hidden={false}
+                                aria-label={null}
+                                className="null undefined undefined"
+                                data-test-id="addToCartButton"
+                                onClick={[Function]}
+                                type="button"
+                              >
+                                <div
+                                  style={
+                                    Object {
+                                      "opacity": 1,
+                                      "transform": "translate3d(0, 300%, 0)",
+                                    }
+                                  }
+                                >
+                                  <Tick>
+                                    <Icon
+                                      className=""
+                                      color={null}
+                                      content="<path d=\\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\\"/>"
+                                      size="inherit"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <svg
+                                        className="css-yys9hb "
+                                        dangerouslySetInnerHTML={
+                                          Object {
+                                            "__html": "<path d=\\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\\"/>",
+                                          }
+                                        }
+                                        style={
+                                          Object {
+                                            "fill": null,
+                                            "fontSize": "inherit",
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      />
+                                    </Icon>
+                                  </Tick>
+                                </div>
+                                <div
+                                  onAnimationEnd={[Function]}
+                                  style={
+                                    Object {
+                                      "opacity": 1,
+                                      "transform": "translate3d(0, -50%, 0)",
+                                    }
+                                  }
+                                >
+                                  <CartPlus>
+                                    <Icon
+                                      className=""
+                                      color={null}
+                                      content="<path d=\\"M0 0h24v24H0zm18.31 6l-2.76 5z\\" fill=\\"none\\"/><path d=\\"M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z\\"/>"
+                                      size="inherit"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <svg
+                                        className="css-yys9hb "
+                                        dangerouslySetInnerHTML={
+                                          Object {
+                                            "__html": "<path d=\\"M0 0h24v24H0zm18.31 6l-2.76 5z\\" fill=\\"none\\"/><path d=\\"M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z\\"/>",
+                                          }
+                                        }
+                                        style={
+                                          Object {
+                                            "fill": null,
+                                            "fontSize": "inherit",
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      />
+                                    </Icon>
+                                  </CartPlus>
+                                </div>
+                              </button>
+                            </AddToCartButton>
+                            <Portal
+                              isOpened={true}
+                              onClose={[Function]}
+                              onOpen={[Function]}
+                              onUpdate={[Function]}
                             />
-                          </PickerAddToCartButton>
-                          <Portal
-                            isOpened={true}
-                            onClose={[Function]}
-                            onOpen={[Function]}
-                            onUpdate={[Function]}
-                          />
-                        </div>
-                      </Picker>
+                          </div>
+                        </Picker>
+                      </ForwardRef(WithForwardedRef(Picker))>
                     </AddToCartPicker>
                   </Portal>
                   <Portal
@@ -528,18 +656,23 @@ exports[`<Product /> should render as expected when the favorite list is not act
                             className="css-izofhs css-fisw11"
                             data-test-id="minPrice: 0 price: 5 currency: EUR"
                           >
-                            <FormatPrice
-                              className=""
-                              currency="EUR"
-                              fractions={true}
-                              price={5}
+                            <span
+                              aria-label="price.label"
+                              role="text"
                             >
-                              <span
+                              <FormatPrice
                                 className=""
+                                currency="EUR"
+                                fractions={true}
+                                price={5}
                               >
-                                p
-                              </span>
-                            </FormatPrice>
+                                <span
+                                  className=""
+                                >
+                                  p
+                                </span>
+                              </FormatPrice>
+                            </span>
                           </div>
                         </Price>
                       </div>
@@ -909,18 +1042,23 @@ exports[`<Product /> should render as expected when the favorite list is not act
                             className="css-izofhs css-fisw11"
                             data-test-id="minPrice: 0 price: 5 currency: EUR"
                           >
-                            <FormatPrice
-                              className=""
-                              currency="EUR"
-                              fractions={true}
-                              price={5}
+                            <span
+                              aria-label="price.label"
+                              role="text"
                             >
-                              <span
+                              <FormatPrice
                                 className=""
+                                currency="EUR"
+                                fractions={true}
+                                price={5}
                               >
-                                p
-                              </span>
-                            </FormatPrice>
+                                <span
+                                  className=""
+                                >
+                                  p
+                                </span>
+                              </FormatPrice>
+                            </span>
                           </div>
                         </Price>
                       </div>
@@ -1057,7 +1195,7 @@ exports[`<Product /> should render as expected when the favorite list is not act
                         }
                       }
                     >
-                      <Picker
+                      <ForwardRef(WithForwardedRef(Picker))
                         buttonComponent={[Function]}
                         buttonProps={
                           Object {
@@ -1075,53 +1213,162 @@ exports[`<Product /> should render as expected when the favorite list is not act
                           }
                         }
                         className="css-ibd9un"
-                        disabled={false}
-                        duration={300}
-                        isOpen={false}
                         items={Array []}
-                        label=""
                         listComponent={[Function]}
                         modalComponent={[Function]}
-                        onChange={[Function]}
-                        onClick={[Function]}
-                        onClose={[Function]}
                         onSelect={[Function]}
-                        placeholder="Pick ..."
-                        value={null}
                       >
-                        <div
+                        <Picker
+                          buttonComponent={[Function]}
+                          buttonProps={
+                            Object {
+                              "addedQuantity": 0,
+                              "className": null,
+                              "conditioner": Object {},
+                              "handleAddToCart": [Function],
+                              "hasLoading": true,
+                              "isDisabled": true,
+                              "isLoading": false,
+                              "isOrderable": false,
+                              "noShadow": false,
+                              "onClick": [Function],
+                              "type": "grouped",
+                            }
+                          }
                           className="css-ibd9un"
+                          disabled={false}
+                          duration={300}
+                          forwardedRef={null}
+                          isOpen={false}
+                          items={Array []}
+                          label=""
+                          listComponent={[Function]}
+                          modalComponent={[Function]}
+                          onChange={[Function]}
+                          onClose={[Function]}
+                          onSelect={[Function]}
+                          placeholder="Pick ..."
+                          value={null}
                         >
-                          <PickerAddToCartButton
-                            addedQuantity={0}
-                            className={null}
-                            conditioner={Object {}}
-                            disabled={false}
-                            handleAddToCart={[Function]}
-                            hasLoading={true}
-                            isDisabled={true}
-                            isLoading={false}
-                            isOrderable={false}
-                            label="Pick ..."
-                            noShadow={false}
-                            onClick={[Function]}
-                            openList={[Function]}
-                            type="grouped"
-                            value=""
+                          <div
+                            aria-haspopup={true}
+                            className="css-ibd9un"
+                            role="button"
+                            tabIndex={0}
                           >
-                            <button
-                              data-test-id="addToCartButton"
+                            <AddToCartButton
+                              addedQuantity={0}
+                              aria-hidden={false}
+                              aria-label={null}
+                              buttonSize={10}
+                              className={null}
+                              conditioner={Object {}}
+                              disabled={false}
+                              forwardedRef={null}
+                              handleAddToCart={[Function]}
+                              hasLoading={true}
+                              iconSize={10}
+                              isDisabled={true}
+                              isLoading={false}
+                              isOrderable={false}
+                              label="Pick ..."
+                              noShadow={false}
                               onClick={[Function]}
+                              onReset={[Function]}
+                              openList={[Function]}
+                              type="grouped"
+                              value=""
+                            >
+                              <button
+                                aria-hidden={false}
+                                aria-label={null}
+                                className="null undefined undefined"
+                                data-test-id="addToCartButton"
+                                onClick={[Function]}
+                                type="button"
+                              >
+                                <div
+                                  style={
+                                    Object {
+                                      "opacity": 1,
+                                      "transform": "translate3d(0, 300%, 0)",
+                                    }
+                                  }
+                                >
+                                  <Tick>
+                                    <Icon
+                                      className=""
+                                      color={null}
+                                      content="<path d=\\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\\"/>"
+                                      size="inherit"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <svg
+                                        className="css-yys9hb "
+                                        dangerouslySetInnerHTML={
+                                          Object {
+                                            "__html": "<path d=\\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\\"/>",
+                                          }
+                                        }
+                                        style={
+                                          Object {
+                                            "fill": null,
+                                            "fontSize": "inherit",
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      />
+                                    </Icon>
+                                  </Tick>
+                                </div>
+                                <div
+                                  onAnimationEnd={[Function]}
+                                  style={
+                                    Object {
+                                      "opacity": 1,
+                                      "transform": "translate3d(0, -50%, 0)",
+                                    }
+                                  }
+                                >
+                                  <CartPlus>
+                                    <Icon
+                                      className=""
+                                      color={null}
+                                      content="<path d=\\"M0 0h24v24H0zm18.31 6l-2.76 5z\\" fill=\\"none\\"/><path d=\\"M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z\\"/>"
+                                      size="inherit"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <svg
+                                        className="css-yys9hb "
+                                        dangerouslySetInnerHTML={
+                                          Object {
+                                            "__html": "<path d=\\"M0 0h24v24H0zm18.31 6l-2.76 5z\\" fill=\\"none\\"/><path d=\\"M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z\\"/>",
+                                          }
+                                        }
+                                        style={
+                                          Object {
+                                            "fill": null,
+                                            "fontSize": "inherit",
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      />
+                                    </Icon>
+                                  </CartPlus>
+                                </div>
+                              </button>
+                            </AddToCartButton>
+                            <Portal
+                              isOpened={true}
+                              onClose={[Function]}
+                              onOpen={[Function]}
+                              onUpdate={[Function]}
                             />
-                          </PickerAddToCartButton>
-                          <Portal
-                            isOpened={true}
-                            onClose={[Function]}
-                            onOpen={[Function]}
-                            onUpdate={[Function]}
-                          />
-                        </div>
-                      </Picker>
+                          </div>
+                        </Picker>
+                      </ForwardRef(WithForwardedRef(Picker))>
                     </AddToCartPicker>
                   </Portal>
                   <Portal
@@ -1158,6 +1405,7 @@ exports[`<Product /> should render as expected when the favorite list is not act
                       <FavoritesButton
                         active={false}
                         addFavorites={[Function]}
+                        aria-hidden={null}
                         className="css-1dps91a"
                         noShadow={false}
                         onRippleComplete={[Function]}
@@ -1526,18 +1774,23 @@ exports[`<Product /> should render as expected with flat buttons 1`] = `
                             className="css-izofhs css-fisw11"
                             data-test-id="minPrice: 0 price: 5 currency: EUR"
                           >
-                            <FormatPrice
-                              className=""
-                              currency="EUR"
-                              fractions={true}
-                              price={5}
+                            <span
+                              aria-label="price.label"
+                              role="text"
                             >
-                              <span
+                              <FormatPrice
                                 className=""
+                                currency="EUR"
+                                fractions={true}
+                                price={5}
                               >
-                                p
-                              </span>
-                            </FormatPrice>
+                                <span
+                                  className=""
+                                >
+                                  p
+                                </span>
+                              </FormatPrice>
+                            </span>
                           </div>
                         </Price>
                       </div>
@@ -1674,7 +1927,7 @@ exports[`<Product /> should render as expected with flat buttons 1`] = `
                         }
                       }
                     >
-                      <Picker
+                      <ForwardRef(WithForwardedRef(Picker))
                         buttonComponent={[Function]}
                         buttonProps={
                           Object {
@@ -1692,9 +1945,6 @@ exports[`<Product /> should render as expected with flat buttons 1`] = `
                           }
                         }
                         className="css-ibd9un"
-                        disabled={false}
-                        duration={300}
-                        isOpen={false}
                         items={
                           Array [
                             Object {
@@ -1715,49 +1965,180 @@ exports[`<Product /> should render as expected with flat buttons 1`] = `
                             },
                           ]
                         }
-                        label=""
                         listComponent={[Function]}
                         modalComponent={[Function]}
-                        onChange={[Function]}
-                        onClick={[Function]}
-                        onClose={[Function]}
                         onSelect={[Function]}
-                        placeholder="Pick ..."
-                        value={null}
                       >
-                        <div
+                        <Picker
+                          buttonComponent={[Function]}
+                          buttonProps={
+                            Object {
+                              "addedQuantity": 0,
+                              "className": "css-l6qlih",
+                              "conditioner": Object {},
+                              "handleAddToCart": [Function],
+                              "hasLoading": true,
+                              "isDisabled": false,
+                              "isLoading": false,
+                              "isOrderable": true,
+                              "noShadow": true,
+                              "onClick": [Function],
+                              "type": "grouped",
+                            }
+                          }
                           className="css-ibd9un"
+                          disabled={false}
+                          duration={300}
+                          forwardedRef={null}
+                          isOpen={false}
+                          items={
+                            Array [
+                              Object {
+                                "label": "1",
+                                "value": 1,
+                              },
+                              Object {
+                                "label": "2",
+                                "value": 2,
+                              },
+                              Object {
+                                "label": "3",
+                                "value": 3,
+                              },
+                              Object {
+                                "label": "4",
+                                "value": 4,
+                              },
+                            ]
+                          }
+                          label=""
+                          listComponent={[Function]}
+                          modalComponent={[Function]}
+                          onChange={[Function]}
+                          onClose={[Function]}
+                          onSelect={[Function]}
+                          placeholder="Pick ..."
+                          value={null}
                         >
-                          <PickerAddToCartButton
-                            addedQuantity={0}
-                            className="css-l6qlih"
-                            conditioner={Object {}}
-                            disabled={false}
-                            handleAddToCart={[Function]}
-                            hasLoading={true}
-                            isDisabled={false}
-                            isLoading={false}
-                            isOrderable={true}
-                            label="Pick ..."
-                            noShadow={true}
-                            onClick={[Function]}
-                            openList={[Function]}
-                            type="grouped"
-                            value=""
+                          <div
+                            aria-haspopup={true}
+                            className="css-ibd9un"
+                            role="button"
+                            tabIndex={0}
                           >
-                            <button
-                              data-test-id="addToCartButton"
+                            <AddToCartButton
+                              addedQuantity={0}
+                              aria-hidden={false}
+                              aria-label={null}
+                              buttonSize={10}
+                              className="css-l6qlih"
+                              conditioner={Object {}}
+                              disabled={false}
+                              forwardedRef={null}
+                              handleAddToCart={[Function]}
+                              hasLoading={true}
+                              iconSize={10}
+                              isDisabled={false}
+                              isLoading={false}
+                              isOrderable={true}
+                              label="Pick ..."
+                              noShadow={true}
                               onClick={[Function]}
+                              onReset={[Function]}
+                              openList={[Function]}
+                              type="grouped"
+                              value=""
+                            >
+                              <button
+                                aria-hidden={false}
+                                aria-label={null}
+                                className="css-l6qlih undefined undefined"
+                                data-test-id="addToCartButton"
+                                onClick={[Function]}
+                                type="button"
+                              >
+                                <div
+                                  style={
+                                    Object {
+                                      "opacity": 1,
+                                      "transform": "translate3d(0, 300%, 0)",
+                                    }
+                                  }
+                                >
+                                  <Tick>
+                                    <Icon
+                                      className=""
+                                      color={null}
+                                      content="<path d=\\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\\"/>"
+                                      size="inherit"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <svg
+                                        className="css-yys9hb "
+                                        dangerouslySetInnerHTML={
+                                          Object {
+                                            "__html": "<path d=\\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\\"/>",
+                                          }
+                                        }
+                                        style={
+                                          Object {
+                                            "fill": null,
+                                            "fontSize": "inherit",
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      />
+                                    </Icon>
+                                  </Tick>
+                                </div>
+                                <div
+                                  onAnimationEnd={[Function]}
+                                  style={
+                                    Object {
+                                      "opacity": 1,
+                                      "transform": "translate3d(0, -50%, 0)",
+                                    }
+                                  }
+                                >
+                                  <CartPlus>
+                                    <Icon
+                                      className=""
+                                      color={null}
+                                      content="<path d=\\"M0 0h24v24H0zm18.31 6l-2.76 5z\\" fill=\\"none\\"/><path d=\\"M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z\\"/>"
+                                      size="inherit"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <svg
+                                        className="css-yys9hb "
+                                        dangerouslySetInnerHTML={
+                                          Object {
+                                            "__html": "<path d=\\"M0 0h24v24H0zm18.31 6l-2.76 5z\\" fill=\\"none\\"/><path d=\\"M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z\\"/>",
+                                          }
+                                        }
+                                        style={
+                                          Object {
+                                            "fill": null,
+                                            "fontSize": "inherit",
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      />
+                                    </Icon>
+                                  </CartPlus>
+                                </div>
+                              </button>
+                            </AddToCartButton>
+                            <Portal
+                              isOpened={true}
+                              onClose={[Function]}
+                              onOpen={[Function]}
+                              onUpdate={[Function]}
                             />
-                          </PickerAddToCartButton>
-                          <Portal
-                            isOpened={true}
-                            onClose={[Function]}
-                            onOpen={[Function]}
-                            onUpdate={[Function]}
-                          />
-                        </div>
-                      </Picker>
+                          </div>
+                        </Picker>
+                      </ForwardRef(WithForwardedRef(Picker))>
                     </AddToCartPicker>
                   </Portal>
                   <Portal
@@ -1794,6 +2175,7 @@ exports[`<Product /> should render as expected with flat buttons 1`] = `
                       <FavoritesButton
                         active={true}
                         addFavorites={[Function]}
+                        aria-hidden={null}
                         className="css-1dps91a"
                         noShadow={true}
                         onRippleComplete={[Function]}
@@ -2162,18 +2544,23 @@ exports[`<Product /> should render as expected with regular buttons 1`] = `
                             className="css-izofhs css-fisw11"
                             data-test-id="minPrice: 0 price: 5 currency: EUR"
                           >
-                            <FormatPrice
-                              className=""
-                              currency="EUR"
-                              fractions={true}
-                              price={5}
+                            <span
+                              aria-label="price.label"
+                              role="text"
                             >
-                              <span
+                              <FormatPrice
                                 className=""
+                                currency="EUR"
+                                fractions={true}
+                                price={5}
                               >
-                                p
-                              </span>
-                            </FormatPrice>
+                                <span
+                                  className=""
+                                >
+                                  p
+                                </span>
+                              </FormatPrice>
+                            </span>
                           </div>
                         </Price>
                       </div>
@@ -2310,7 +2697,7 @@ exports[`<Product /> should render as expected with regular buttons 1`] = `
                         }
                       }
                     >
-                      <Picker
+                      <ForwardRef(WithForwardedRef(Picker))
                         buttonComponent={[Function]}
                         buttonProps={
                           Object {
@@ -2328,9 +2715,6 @@ exports[`<Product /> should render as expected with regular buttons 1`] = `
                           }
                         }
                         className="css-ibd9un"
-                        disabled={false}
-                        duration={300}
-                        isOpen={false}
                         items={
                           Array [
                             Object {
@@ -2351,49 +2735,180 @@ exports[`<Product /> should render as expected with regular buttons 1`] = `
                             },
                           ]
                         }
-                        label=""
                         listComponent={[Function]}
                         modalComponent={[Function]}
-                        onChange={[Function]}
-                        onClick={[Function]}
-                        onClose={[Function]}
                         onSelect={[Function]}
-                        placeholder="Pick ..."
-                        value={null}
                       >
-                        <div
+                        <Picker
+                          buttonComponent={[Function]}
+                          buttonProps={
+                            Object {
+                              "addedQuantity": 0,
+                              "className": null,
+                              "conditioner": Object {},
+                              "handleAddToCart": [Function],
+                              "hasLoading": true,
+                              "isDisabled": false,
+                              "isLoading": false,
+                              "isOrderable": true,
+                              "noShadow": false,
+                              "onClick": [Function],
+                              "type": "grouped",
+                            }
+                          }
                           className="css-ibd9un"
+                          disabled={false}
+                          duration={300}
+                          forwardedRef={null}
+                          isOpen={false}
+                          items={
+                            Array [
+                              Object {
+                                "label": "1",
+                                "value": 1,
+                              },
+                              Object {
+                                "label": "2",
+                                "value": 2,
+                              },
+                              Object {
+                                "label": "3",
+                                "value": 3,
+                              },
+                              Object {
+                                "label": "4",
+                                "value": 4,
+                              },
+                            ]
+                          }
+                          label=""
+                          listComponent={[Function]}
+                          modalComponent={[Function]}
+                          onChange={[Function]}
+                          onClose={[Function]}
+                          onSelect={[Function]}
+                          placeholder="Pick ..."
+                          value={null}
                         >
-                          <PickerAddToCartButton
-                            addedQuantity={0}
-                            className={null}
-                            conditioner={Object {}}
-                            disabled={false}
-                            handleAddToCart={[Function]}
-                            hasLoading={true}
-                            isDisabled={false}
-                            isLoading={false}
-                            isOrderable={true}
-                            label="Pick ..."
-                            noShadow={false}
-                            onClick={[Function]}
-                            openList={[Function]}
-                            type="grouped"
-                            value=""
+                          <div
+                            aria-haspopup={true}
+                            className="css-ibd9un"
+                            role="button"
+                            tabIndex={0}
                           >
-                            <button
-                              data-test-id="addToCartButton"
+                            <AddToCartButton
+                              addedQuantity={0}
+                              aria-hidden={false}
+                              aria-label={null}
+                              buttonSize={10}
+                              className={null}
+                              conditioner={Object {}}
+                              disabled={false}
+                              forwardedRef={null}
+                              handleAddToCart={[Function]}
+                              hasLoading={true}
+                              iconSize={10}
+                              isDisabled={false}
+                              isLoading={false}
+                              isOrderable={true}
+                              label="Pick ..."
+                              noShadow={false}
                               onClick={[Function]}
+                              onReset={[Function]}
+                              openList={[Function]}
+                              type="grouped"
+                              value=""
+                            >
+                              <button
+                                aria-hidden={false}
+                                aria-label={null}
+                                className="null undefined undefined"
+                                data-test-id="addToCartButton"
+                                onClick={[Function]}
+                                type="button"
+                              >
+                                <div
+                                  style={
+                                    Object {
+                                      "opacity": 1,
+                                      "transform": "translate3d(0, 300%, 0)",
+                                    }
+                                  }
+                                >
+                                  <Tick>
+                                    <Icon
+                                      className=""
+                                      color={null}
+                                      content="<path d=\\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\\"/>"
+                                      size="inherit"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <svg
+                                        className="css-yys9hb "
+                                        dangerouslySetInnerHTML={
+                                          Object {
+                                            "__html": "<path d=\\"M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z\\"/>",
+                                          }
+                                        }
+                                        style={
+                                          Object {
+                                            "fill": null,
+                                            "fontSize": "inherit",
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      />
+                                    </Icon>
+                                  </Tick>
+                                </div>
+                                <div
+                                  onAnimationEnd={[Function]}
+                                  style={
+                                    Object {
+                                      "opacity": 1,
+                                      "transform": "translate3d(0, -50%, 0)",
+                                    }
+                                  }
+                                >
+                                  <CartPlus>
+                                    <Icon
+                                      className=""
+                                      color={null}
+                                      content="<path d=\\"M0 0h24v24H0zm18.31 6l-2.76 5z\\" fill=\\"none\\"/><path d=\\"M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z\\"/>"
+                                      size="inherit"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <svg
+                                        className="css-yys9hb "
+                                        dangerouslySetInnerHTML={
+                                          Object {
+                                            "__html": "<path d=\\"M0 0h24v24H0zm18.31 6l-2.76 5z\\" fill=\\"none\\"/><path d=\\"M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z\\"/>",
+                                          }
+                                        }
+                                        style={
+                                          Object {
+                                            "fill": null,
+                                            "fontSize": "inherit",
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      />
+                                    </Icon>
+                                  </CartPlus>
+                                </div>
+                              </button>
+                            </AddToCartButton>
+                            <Portal
+                              isOpened={true}
+                              onClose={[Function]}
+                              onOpen={[Function]}
+                              onUpdate={[Function]}
                             />
-                          </PickerAddToCartButton>
-                          <Portal
-                            isOpened={true}
-                            onClose={[Function]}
-                            onOpen={[Function]}
-                            onUpdate={[Function]}
-                          />
-                        </div>
-                      </Picker>
+                          </div>
+                        </Picker>
+                      </ForwardRef(WithForwardedRef(Picker))>
                     </AddToCartPicker>
                   </Portal>
                   <Portal
@@ -2430,6 +2945,7 @@ exports[`<Product /> should render as expected with regular buttons 1`] = `
                       <FavoritesButton
                         active={true}
                         addFavorites={[Function]}
+                        aria-hidden={null}
                         className="css-1dps91a"
                         noShadow={false}
                         onRippleComplete={[Function]}

@@ -13,6 +13,8 @@ import { getElementById } from './mock';
 
 setMocks();
 
+jest.mock('../../../../config', () => { }, { virtual: true })
+
 jest.mock('@shopgate-ps/pwa-extension-kit/connectors', () => ({
   withPageProductId: Component => () => <Component productId="foo" />,
 }));
@@ -38,7 +40,7 @@ describe('Rating (product header)', () => {
     });
     it('should render nothing when data is not available', () => {
       const component = getComponent(mockedStateWithoutReview);
-      expect(component.html()).toBe(null);
+      expect(component.html()).toBe("");
     });
   });
   describe('Scroll on click', () => {

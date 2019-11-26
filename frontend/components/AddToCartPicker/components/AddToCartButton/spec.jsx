@@ -22,6 +22,15 @@ class mockedAdToCartButton extends Component {
     return <div><button onClick={this.handleClick}>Add to cart</button></div>;
   }
 }
+
+jest.mock('@shopgate/pwa-ui-shared/AddToCartButton/style', () => (
+  {
+    buttonSize: 10,
+    iconSize: 10,
+    buttonWrapper: () => { },
+  }
+))
+
 // Missing css-spring mock on pwa-ui-shared
 jest.mock('@shopgate/pwa-ui-shared/AddToCartButton', () => mockedAdToCartButton);
 

@@ -3,7 +3,10 @@ import { getProductChildren } from './index';
 import { generateHash } from '../helpers';
 
 // eslint-disable-next-line require-jsdoc
-let mockedPipelineRequestResolver = () => {};
+let mockedPipelineRequestResolver = () => { };
+
+jest.mock('../config', () => { }, { virtual: true })
+
 jest.mock('@shopgate/pwa-core/classes/PipelineRequest', () => mockedPipelineRequestFactory((...args) => {
   mockedPipelineRequestResolver(...args);
 }));

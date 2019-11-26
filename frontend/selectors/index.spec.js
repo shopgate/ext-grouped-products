@@ -17,6 +17,8 @@ import {
   isProductOnFavoriteList,
 } from './index';
 
+jest.mock('../config', () => { }, { virtual: true })
+
 describe('Grouped products selectors', () => {
   describe('getResultsByHashEntry()', () => {
     it('should return null when no current product is set', () => {
