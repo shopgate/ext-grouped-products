@@ -1,5 +1,1 @@
-const jestConfig = require('@shopgate/pwa-unit-test/jest.config');
-
-module.exports = {
-  ...jestConfig,
-};
+module.exports = require('@shopgate/pwa-unit-test/jest.config');
