@@ -22,6 +22,7 @@ class mockedAdToCartButton extends Component {
       showCheckMark: false,
     };
   }
+
   // eslint-disable-next-line require-jsdoc
   render() {
     return <div><button onClick={this.handleClick}>Add to cart</button></div>;
@@ -37,9 +38,9 @@ jest.mock('@shopgate/pwa-ui-shared/AddToCartButton/style', () => (
     buttonWrapper: () => { },
     buttonWrapperNoShadow: () => { },
   }
-))
+));
 
-jest.mock('../config', () => { }, { virtual: true })
+jest.mock('../config', () => { }, { virtual: true });
 
 jest.mock('@shopgate/pwa-common-commerce/cart/actions/addProductsToCart', () =>
   jest.fn().mockReturnValue('mocked_add_products_to_cart_action'));
@@ -87,7 +88,7 @@ describe('<AddToCartPicker />', () => {
       productId: id,
       handleAddToCart: mockHandleAddToCart,
       stock,
-      onClose: () => { }
+      onClose: () => { },
     };
 
     return createWrappedComponent(AddToCartPicker, mockedState, mockedProps);
