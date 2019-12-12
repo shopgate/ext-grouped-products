@@ -35,13 +35,7 @@
     [
       "module-resolver",
       {
-        "cwd": "packagejson",
-        "alias": {
-          "Components": "./components",
-          "Config": "./config",
-          "Extensions": "./extensions",
-          "Pages": "./pages"
-        }
+        "cwd": "packagejson"
       }
     ],
     [
