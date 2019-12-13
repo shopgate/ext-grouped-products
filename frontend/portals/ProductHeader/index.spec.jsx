@@ -2,6 +2,8 @@ import React from 'react';
 import { mount } from 'enzyme';
 import ProductHeader from './index';
 
+jest.mock('../../config', () => { }, { virtual: true })
+
 jest.mock('@shopgate-ps/pwa-extension-kit/connectors', () => ({
   withPageProductId: Component => props => <Component {...props} />,
 }));
@@ -17,7 +19,7 @@ describe('ProductHeader', () => {
   it('should return null when product has grouped products', () => {
     mockedHasGroupedProducts = true;
     const component = mount(<ProductHeader><Children /></ProductHeader>);
-    expect(component.html()).toBe(null);
+    expect(component.html()).toBe("");
   });
 
   it('should return original header when product has no grouped products', () => {

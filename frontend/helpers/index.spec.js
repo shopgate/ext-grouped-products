@@ -14,7 +14,7 @@ import {
 
 jest.mock('../config', () => ({
   maxQuantityPickerEntries: 5,
-}));
+}), { virtual: true });
 
 let mockedHasFavorites = true;
 

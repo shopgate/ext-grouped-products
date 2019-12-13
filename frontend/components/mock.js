@@ -124,11 +124,12 @@ const mockedState = {
 };
 
 const mockedProps = {
-  handleAddToCart: () => {},
+  handleAddToCart: () => { },
   isFavorite: false,
   addToCartButtonProps: {},
   isAddToCartButtonVisible: false,
   product: {},
+  onClose: () => { }
 };
 
 const mockedStateWithRegularProduct = set(
@@ -141,7 +142,7 @@ const mockedStateWithRegularProduct = set(
 );
 
 const mockedPropsWithRegularProduct = {
-  handleAddToCart: () => {},
+  handleAddToCart: () => { },
   isFavorite: true,
   addToCartButtonProps: {},
   isAddToCartButtonVisible: true,
@@ -155,7 +156,7 @@ const mockedStateWithoutCurrentProductData = set(
 );
 
 const mockedPropsWithoutCurrentProduct = {
-  handleAddToCart: () => {},
+  handleAddToCart: () => { },
   isFavorite: true,
   addToCartButtonProps: {},
   isAddToCartButtonVisible: true,

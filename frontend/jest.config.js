@@ -1,12 +1,1 @@
-const jestConfig = require('@shopgate/pwa-unit-test/jest.config');
-
-module.exports = {
-  ...jestConfig,
-  moduleNameMapper: {
-    '^.+\\.(css|scss)$': 'identity-obj-proxy',
-  },
-  setupFiles: [
-    './testSetup.js',
-    ...jestConfig.setupFiles,
-  ],
-};
+module.exports = require('@shopgate/pwa-unit-test/jest.config');

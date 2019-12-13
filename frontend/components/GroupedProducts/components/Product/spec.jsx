@@ -7,7 +7,20 @@ import {
 } from '../../../../components/mock';
 import Product from './index';
 
+jest.mock('../../../../config', () => ({
+  maxQuantityPickerEntries: 5,
+}), { virtual: true });
+
 jest.mock('@shopgate/pwa-common-commerce/cart/actions/addProductsToCart', () => jest.fn());
+
+jest.mock('@shopgate/pwa-ui-shared/AddToCartButton/style', () => (
+  {
+    buttonSize: 10,
+    iconSize: 10,
+    buttonWrapper: () => { },
+    buttonWrapperNoShadow: () => { },
+  }
+))
 
 jest.mock(
   '@shopgate/pwa-ui-shared/AddToCartButton',

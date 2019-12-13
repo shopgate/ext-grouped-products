@@ -9,6 +9,8 @@ jest.mock('../actions', () => ({
   getProductChildren: jest.fn(),
 }));
 
+jest.mock('../config', () => { }, { virtual: true })
+
 describe('groupedProductsSubscriptions', () => {
   beforeEach(() => {
     jest.clearAllMocks();
@@ -35,9 +37,9 @@ describe('groupedProductsSubscriptions', () => {
       const dispatch = jest.fn();
       const action = {
         productData:
-          {
-            id: '1337',
-          },
+        {
+          id: '1337',
+        },
       };
       // eslint-disable-next-line require-jsdoc
       const getState = () => (stateWithoutFlag);
@@ -56,9 +58,9 @@ describe('groupedProductsSubscriptions', () => {
       const dispatch = jest.fn();
       const action = {
         productData:
-          {
-            id: '1337',
-          },
+        {
+          id: '1337',
+        },
       };
       // eslint-disable-next-line require-jsdoc
       const getState = () => (stateWithGroupedProducts);
@@ -80,11 +82,11 @@ describe('groupedProductsSubscriptions', () => {
       const dispatch = jest.fn();
       const action = {
         productData:
-          {
-            id: null,
-          },
+        {
+          id: null,
+        },
       };
-        // eslint-disable-next-line require-jsdoc
+      // eslint-disable-next-line require-jsdoc
       const getState = () => (stateWithGroupedProducts);
       callback({
         dispatch,
@@ -101,9 +103,9 @@ describe('groupedProductsSubscriptions', () => {
       const dispatch = jest.fn();
       const action = {
         productData:
-          {
-            id: '1337',
-          },
+        {
+          id: '1337',
+        },
       };
       // eslint-disable-next-line require-jsdoc
       const getState = () => (stateWithoutFlag);
@@ -121,9 +123,9 @@ describe('groupedProductsSubscriptions', () => {
       const dispatch = jest.fn();
       const action = {
         productData:
-          {
-            id: '1337',
-          },
+        {
+          id: '1337',
+        },
       };
       // eslint-disable-next-line require-jsdoc
       const getState = () => (stateWithGroupedProducts);

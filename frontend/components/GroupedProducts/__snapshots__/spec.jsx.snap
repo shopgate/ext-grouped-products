@@ -5,11 +5,13 @@ exports[`<GroupedProducts /> should not render if there is no products 1`] = `""
 exports[`<GroupedProducts /> should render if there are products 1`] = `
 <List
   className="css-5bomak"
+  role={null}
 >
   <ListItem
     className="css-izecxm"
     isSelected={false}
     key="1234"
+    role={null}
   >
     <Connect(Product)
       product={
@@ -23,6 +25,7 @@ exports[`<GroupedProducts /> should render if there are products 1`] = `
     className="css-izecxm"
     isSelected={false}
     key="1337"
+    role={null}
   >
     <Connect(Product)
       product={

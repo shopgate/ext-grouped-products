@@ -22,6 +22,7 @@ class mockedAdToCartButton extends Component {
       showCheckMark: false,
     };
   }
+
   // eslint-disable-next-line require-jsdoc
   render() {
     return <div><button onClick={this.handleClick}>Add to cart</button></div>;
@@ -30,12 +31,23 @@ class mockedAdToCartButton extends Component {
 // Missing css-spring mock on pwa-ui-shared
 jest.mock('@shopgate/pwa-ui-shared/AddToCartButton', () => mockedAdToCartButton);
 
+jest.mock('@shopgate/pwa-ui-shared/AddToCartButton/style', () => (
+  {
+    buttonSize: 10,
+    iconSize: 10,
+    buttonWrapper: () => { },
+    buttonWrapperNoShadow: () => { },
+  }
+));
+
+jest.mock('../config', () => { }, { virtual: true });
+
 jest.mock('@shopgate/pwa-common-commerce/cart/actions/addProductsToCart', () =>
   jest.fn().mockReturnValue('mocked_add_products_to_cart_action'));
 
 jest.mock('../../config', () => ({
   maxQuantityPickerEntries: 5,
-}));
+}), { virtual: true });
 
 jest.mock('react-portal', () => (
   ({ isOpened, children }) => (
@@ -76,29 +88,11 @@ describe('<AddToCartPicker />', () => {
       productId: id,
       handleAddToCart: mockHandleAddToCart,
       stock,
+      onClose: () => { },
     };
 
     return createWrappedComponent(AddToCartPicker, mockedState, mockedProps);
   };
-
-  it('should render the component as expected', () => {
-    const { id, stock } = mockedProduct;
-    const component = createComponent(mockedProduct);
-    component.simulate('click');
-    expect(component).toMatchSnapshot();
-
-    expect(component.find(AddToCartPicker).first().prop('productId')).toEqual(id);
-    expect(component.find(AddToCartPicker).first().prop('stock')).toEqual(stock);
-
-    const pickerEntry = component.find('ListItem Item').first();
-    const quantity = parseInt(pickerEntry.text(), 10);
-
-    pickerEntry.simulate('click');
-    jest.runAllTimers();
-
-    expect(mockHandleAddToCart).toHaveBeenCalledTimes(1);
-    expect(mockHandleAddToCart).toHaveBeenCalledWith(quantity);
-  });
 
   it('should create picker items like expected when quantity is not ignored', () => {
     const component = createComponent(mockedProduct);
@@ -164,24 +158,5 @@ describe('<AddToCartPicker />', () => {
       ...state,
       addedQuantity: 3,
     })).toBe(true);
-  });
-
-  it('should render a button with a shadow', () => {
-    const component = createComponent(mockedProduct, { noShadow: false });
-    expect(component.find('PickerAddToCartButton').first().prop('noShadow')).toBe(false);
-  });
-
-  it('should render a flat button', () => {
-    const component = createComponent(mockedProduct, { noShadow: true });
-    expect(component.find('PickerAddToCartButton').first().prop('noShadow')).toBe(true);
-  });
-
-  it('should render a flat disabled button', () => {
-    const component = createComponent(mockedNotOrderableProduct, {
-      noShadow: true,
-      isDisabled: true,
-    });
-    expect(component.find('PickerAddToCartButton').first().prop('noShadow')).toBe(true);
-    expect(component.find('PickerAddToCartButton').first().prop('isDisabled')).toBe(true);
   });
 });

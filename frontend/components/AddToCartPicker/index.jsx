@@ -32,8 +32,8 @@ class AddToCartPicker extends Component {
      * to let animations complete first.
      */
     buttonProps: {
-      handleAddToCart: /* istanbul ignore next */ () => {},
-      onClick: () => {},
+      handleAddToCart: /* istanbul ignore next */ () => { },
+      onClick: () => { },
       isDisabled: false,
       isLoading: false,
       hasLoading: true,
@@ -70,22 +70,24 @@ class AddToCartPicker extends Component {
 
     // Prepare a list component for the BasePicker
     this.listComponent = ({
-      items, onSelect,
-    }) => (
-      <List>
-        {items.map(item => (
-          <List.Item
-            key={item.value}
-            title={item.label}
-            onClick={() => {
+      items, onSelect, onClose,
+    }) =>
+      (
+        <List>
+          {items.map(item => (
+            <List.Item
+              key={item.value}
+              title={item.label}
+              onClick={() => {
                 setTimeout(() => {
                   onSelect(item.value);
+                  onClose();
                 }, this.props.clickDelay);
               }}
-          />
+            />
           ))}
-      </List>
-    );
+        </List>
+      );
   }
 
   /**
@@ -144,7 +146,6 @@ class AddToCartPicker extends Component {
     const pickerItems = createPickerItems(this.props.stock);
     return (
       <BasePicker
-        onClick={this.handleAddToCart}
         items={pickerItems}
         className={styles.buttonContainer}
         modalComponent={this.modalComponent}
