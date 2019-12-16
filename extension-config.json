@@ -1,5 +1,5 @@
 {
-  "version": "2.0.3",
+  "version": "2.0.4",
   "id": "@shopgate/grouped-products",
   "components": [
     {
@@ -40,6 +40,11 @@
       "type": "translations",
       "path": "frontend/locale/de-DE.json",
       "id": "locale/de-DE"
+    },
+    {
+      "type": "translations",
+      "path": "frontend/locale/fr-FR.json",
+      "id": "locale/fr-FR"
     }
   ],
   "configuration": {
