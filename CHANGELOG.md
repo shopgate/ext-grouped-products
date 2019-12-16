@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 
+## [2.0.4] - 2019-12-16
+## Added
+- Added french translation file
+
 ## [2.0.3] - 2019-10-28
 ### Fixed
 - added support for PWA 6.7/6.8
