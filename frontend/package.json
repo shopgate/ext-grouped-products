@@ -1,6 +1,6 @@
 {
   "name": "@shopgate/ext-grouped-products",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "General grouped products extension",
   "license": "Apache-2.0",
   "scripts": {
