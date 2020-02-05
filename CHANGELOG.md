@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased]
 ## Fixed
-- Corrected jest and babel rc configs for Babel 7 compatability
+- Corrected jest and babel rc configs for Babel 7 compatibility
 
 ## [2.0.4] - 2019-12-16
 ## Added
