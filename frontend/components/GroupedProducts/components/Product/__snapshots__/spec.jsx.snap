@@ -661,16 +661,11 @@ exports[`<Product /> should render as expected when the favorite list is not act
                               role="text"
                             >
                               <FormatPrice
-                                className=""
                                 currency="EUR"
                                 fractions={true}
                                 price={5}
                               >
-                                <span
-                                  className=""
-                                >
-                                  p
-                                </span>
+                                p
                               </FormatPrice>
                             </span>
                           </div>
@@ -1047,16 +1042,11 @@ exports[`<Product /> should render as expected when the favorite list is not act
                               role="text"
                             >
                               <FormatPrice
-                                className=""
                                 currency="EUR"
                                 fractions={true}
                                 price={5}
                               >
-                                <span
-                                  className=""
-                                >
-                                  p
-                                </span>
+                                p
                               </FormatPrice>
                             </span>
                           </div>
@@ -1779,16 +1769,11 @@ exports[`<Product /> should render as expected with flat buttons 1`] = `
                               role="text"
                             >
                               <FormatPrice
-                                className=""
                                 currency="EUR"
                                 fractions={true}
                                 price={5}
                               >
-                                <span
-                                  className=""
-                                >
-                                  p
-                                </span>
+                                p
                               </FormatPrice>
                             </span>
                           </div>
@@ -2549,16 +2534,11 @@ exports[`<Product /> should render as expected with regular buttons 1`] = `
                               role="text"
                             >
                               <FormatPrice
-                                className=""
                                 currency="EUR"
                                 fractions={true}
                                 price={5}
                               >
-                                <span
-                                  className=""
-                                >
-                                  p
-                                </span>
+                                p
                               </FormatPrice>
                             </span>
                           </div>
