@@ -1,6 +1,6 @@
 {
   "name": "@shopgate/ext-grouped-products",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "General grouped products extension",
   "license": "Apache-2.0",
   "scripts": {
@@ -52,14 +52,6 @@
     "react-redux": "^5.0.6",
     "redux-mock-store": "^1.5.3",
     "reselect": "^3.0.1"
-  },
-  "peerDependencies": {
-    "@shopgate/pwa-common": "^6.7.2",
-    "@shopgate/pwa-common-commerce": "^6.7.2",
-    "@shopgate/pwa-core": "^6.7.2",
-    "@shopgate/pwa-ui-ios": "^6.7.2",
-    "@shopgate/pwa-ui-material": "^6.7.2",
-    "@shopgate/pwa-ui-shared": "^6.7.2"
   },
   "dependencies": {
     "@shopgate-ps/pwa-extension-kit": "^0.6.0"
